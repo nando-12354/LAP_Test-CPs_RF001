@@ -15,19 +15,20 @@ public class modconfiguracionPage extends util {
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[2]") protected WebElement btnVerConfiguracionB;
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[3]") protected WebElement btnVerConfiguracionC;
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[4]") protected WebElement btnVerConfiguracionD;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[5]") protected WebElement btnVerConfiguracionF;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[6]") protected WebElement btnVerConfiguracionG;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[7]") protected WebElement btnVerConfiguracionH;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[8]") protected WebElement btnVerConfiguracionI;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[9]") protected WebElement btnVerConfiguracionJ;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[10]") protected WebElement btnVerConfiguracionK;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[11]") protected WebElement btnVerConfiguracionL;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[12]") protected WebElement btnVerConfiguracionM;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[13]") protected WebElement btnVerConfiguracionN;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[14]") protected WebElement btnVerConfiguracionO;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[15]") protected WebElement btnVerConfiguracionP;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[16]") protected WebElement btnVerConfiguracionQ;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[17]") protected WebElement btnVerConfiguracionR;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[5]") protected WebElement btnVerConfiguracionE;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[6]") protected WebElement btnVerConfiguracionF;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[7]") protected WebElement btnVerConfiguracionG;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[8]") protected WebElement btnVerConfiguracionH;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[9]") protected WebElement btnVerConfiguracionI;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[10]") protected WebElement btnVerConfiguracionJ;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[11]") protected WebElement btnVerConfiguracionK;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[12]") protected WebElement btnVerConfiguracionL;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[13]") protected WebElement btnVerConfiguracionM;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[14]") protected WebElement btnVerConfiguracionN;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[15]") protected WebElement btnVerConfiguracionO;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[16]") protected WebElement btnVerConfiguracionP;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[17]") protected WebElement btnVerConfiguracionQ;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[18]") protected WebElement btnVerConfiguracionR;
     @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[1]") protected WebElement inputNombreCampo;
     @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[2]") protected WebElement inputCodigoAsociado;
     @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[3]") protected WebElement inputCodigo;
@@ -46,30 +47,77 @@ public class modconfiguracionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(opListaCampos));
         opListaCampos.click();
     }
-
-    public void clickBotonConfiguracion() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionA));
-            btnVerConfiguracionA.click();
-        } catch (NoSuchElementException a) {
-            try {
-                btnVerConfiguracionB.click();
-            } catch (NoSuchElementException b) {
-                try {
-                    btnVerConfiguracionC.click();
-                } catch (NoSuchElementException c) {
-                    try {
-                        btnVerConfiguracionD.click();
-                    } catch (NoSuchElementException d) {
-                        try {
-                            btnVerConfiguracionF.click();
-                        } catch (NoSuchElementException e) {
-                            throw new NoSuchElementException("No se encontró el boton");
-                        }
-                    }
-                }
-            }
-        }
+    public void clickBotonVerConfiguracionA() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionA));
+        btnVerConfiguracionA.click();
+    }
+    public void clickBotonVerConfiguracionB() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionB));
+        btnVerConfiguracionB.click();
+    }
+    public void clickBotonVerConfiguracionC() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionC));
+        btnVerConfiguracionC.click();
+    }
+    public void clickBotonVerConfiguracionD() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionD));
+        btnVerConfiguracionD.click();
+    }
+    public void clickBotonVerConfiguracionE() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionE));
+        btnVerConfiguracionE.click();
+    }
+    public void clickBotonVerConfiguracionF() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionF));
+        btnVerConfiguracionF.click();
+    }
+    public void clickBotonVerConfiguracionG() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionG));
+        btnVerConfiguracionG.click();
+    }
+    public void clickBotonVerConfiguracionH() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionH));
+        btnVerConfiguracionH.click();
+    }
+    public void clickBotonVerConfiguracionI() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionI));
+        btnVerConfiguracionI.click();
+    }
+    public void clickBotonVerConfiguracionJ() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionJ));
+        btnVerConfiguracionJ.click();
+    }
+    public void clickBotonVerConfiguracionK() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionK));
+        btnVerConfiguracionK.click();
+    }
+    public void clickBotonVerConfiguracionL() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionL));
+        btnVerConfiguracionL.click();
+    }
+    public void clickBotonVerConfiguracionM() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionM));
+        btnVerConfiguracionM.click();
+    }
+    public void clickBotonVerConfiguracionN() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionN));
+        btnVerConfiguracionN.click();
+    }
+    public void clickBotonVerConfiguracionO() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionO));
+        btnVerConfiguracionO.click();
+    }
+    public void clickBotonVerConfiguracionP() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionP));
+        btnVerConfiguracionP.click();
+    }
+    public void clickBotonVerConfiguracionQ() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionQ));
+        btnVerConfiguracionQ.click();
+    }
+    public void clickBotonVerConfiguracionR() {
+        wait.until(ExpectedConditions.visibilityOf(btnVerConfiguracionR));
+        btnVerConfiguracionR.click();
     }
     public void ingresarNombreCampo(String nombrecampo){
         inputNombreCampo.sendKeys(nombrecampo);

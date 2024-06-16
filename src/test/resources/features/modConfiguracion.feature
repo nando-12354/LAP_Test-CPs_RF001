@@ -1,5 +1,6 @@
 Feature: Funcionalidad del modulo Configuracion General
 
+  @reporte
   Scenario: CPF019 - Visualizar modulo configuracion general
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -11,6 +12,7 @@ Feature: Funcionalidad del modulo Configuracion General
 
 ######## PARAMETROS GENERALES ########
 
+  @reporte
   Scenario: CPF020 - Parametros generales/Visualizar pantalla de parametros generales
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -20,6 +22,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar a la opcion parametros generales
     And visualizar lista de "Parámetros Generales"
 
+  @reporte
   Scenario: CPF021 - Parametros generales/Visualizar configuracion atributos generales
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -27,9 +30,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION ATRIBUTOS GENERALES"
+    And click en el boton ver configuracion de atributos generales
+    And visualizar la "CONFIGURACION ATRIBUTOS GENERALES"
 
+  @reporte
   Scenario: CPF022 - Parametros generales/Visualizar configuracion caja tuua
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -37,9 +41,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION CAJA TUUA"
+    And click en el boton ver configuracion de caja tuua
+    And visualizar la "CONFIGURACION CAJA TUUA"
 
+  @reporte
   Scenario: CPF023 - Parametros generales/Visualizar configuracion comprobante seaf
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -47,9 +52,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION COMPROBANTE SEAE"
+    And click en el boton ver configuracion comprobante seae
+    And visualizar la "CONFIGURACION COMPROBANTE SEAE"
 
+  @reporte
   Scenario: CPF024 - Parametros generales/Visualizar configuracion alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -57,9 +63,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION DE ALARMAS"
+    And click en el boton ver configuracion de alarmas
+    And visualizar la "CONFIGURACION DE ALARMAS"
 
+  @reporte
   Scenario: CPF025 - Parametros generales/Visualizar configuracion archivamiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -67,9 +74,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION DEL ARCHIVAMIENTO"
+    And click en el boton ver configuracion de archivamiento
+    And visualizar la "CONFIGURACION DEL ARCHIVAMIENTO"
 
+  @reporte
   Scenario: CPF026 - Parametros generales/Visualizar configuracion impresion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -77,9 +85,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION IMPRESIÓN"
+    And click en el boton ver configuracion de impresion
+    And visualizar la "CONFIGURACION IMPRESIÓN"
 
+  @reporte
   Scenario: CPF027 - Parametros generales/Visualizar configuracion modulo web administrativo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -87,9 +96,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION MODULO WEB ADMINISTRATIVO"
+    And click en el boton ver configuracion de modulo web administrativo
+    And visualizar la "CONFIGURACION MODULO WEB ADMINISTRATIVO"
 
+  @reporte
   Scenario: CPF028 - Parametros generales/Visualizar configuracion rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -97,9 +107,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION REHABILITACIÓN"
+    And click en el boton ver configuracion de rehabilitacion
+    And visualizar la "CONFIGURACION REHABILITACIÓN"
 
+  @reporte
   Scenario: CPF029 - Parametros generales/Visualizar configuracion seguridad
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -107,9 +118,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION SEGURIDAD"
+    And click en el boton ver configuracion de seguridad
+    And visualizar la "CONFIGURACION SEGURIDAD"
 
+  @reporte
   Scenario: CPF030 - Parametros generales/Visualizar configuracion tuua
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -117,9 +129,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION TUUA"
+    And click en el boton ver configuracion de tuua
+    And visualizar la "CONFIGURACION TUUA"
 
+  @reporte
   Scenario: CPF031 - Parametros generales/Visualizar configuracion estadistico
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -127,9 +140,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "ESTADISTICO"
+    And click en el boton ver configuracion de estadistico
+    And visualizar la configuracion "ESTADISTICO"
 
+  @reporte
   Scenario: CPF032 - Parametros generales/Visualizar configuracion servicio compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -137,9 +151,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIO COMPAÑÍA"
+    And click en el boton ver configuracion de servicio compania
+    And visualizar la configuracion "SERVICIO COMPAÑÍA"
 
+  @reporte
   Scenario: CPF033 - Parametros generales/Visualizar configuracion tasa de cambio
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -147,9 +162,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIO TASA CAMBIO"
+    And click en el boton ver configuracion de servicio tasa cambio
+    And visualizar la configuracion "SERVICIO TASA CAMBIO"
 
+  @reporte
   Scenario: CPF034 - Parametros generales/Visualizar configuracion servicio vencimiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -157,9 +173,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIO VENCIMIENTO"
+    And click en el boton ver configuracion de servicio vencimiento
+    And visualizar la configuracion "SERVICIO VENCIMIENTO"
 
+  @reporte
   Scenario: CPF035 - Parametros generales/Visualizar configuracion servicio vuelo programado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -167,9 +184,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIO VENCIMIENTO"
+    And click en el boton ver configuracion de servicio vuelo programado
+    And visualizar la configuracion "SERVICIO VENCIMIENTO"
 
+  @reporte
   Scenario: CPF036 - Parametros generales/Visualizar configuracion servicio vuelo temporada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -177,9 +195,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIO VUELO TEMPORADA"
+    And click en el boton ver configuracion de servicio vuelo temporada
+    And visualizar la configuracion "SERVICIO VUELO TEMPORADA"
 
+  @reporte
   Scenario: CPF037 - Parametros generales/Visualizar configuracion servicio generales
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -187,9 +206,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "SERVICIOS GENERALES"
+    And click en el boton ver configuracion de servicios generales
+    And visualizar la configuracion "SERVICIOS GENERALES"
 
+  @reporte
   Scenario: CPF038 - Parametros generales/Visualizar configuracion archivo ventas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -197,8 +217,8 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
-    And click en el boton ver configuracion
-    And visualizar lista de "CONFIGURACION ARCHIVO VENTAS"
+    And click en el boton ver configuracion de archivo ventas
+    And visualizar la "CONFIGURACION ARCHIVO VENTAS"
 
   Scenario: CPF039 - Parametros generales/Grabar configuracion de parametros generales
     Given abre la ruta del aplicativo web
