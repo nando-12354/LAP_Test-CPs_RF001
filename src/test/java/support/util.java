@@ -16,9 +16,11 @@ import java.util.Set;
 public class util extends hooks {
     public static WebDriverWait wait;
     public static JavascriptExecutor js;
+    //public static SlowWebDriver slowDriver;
     private Alert dialogo;
 
     public util() {
+        //slowDriver = new SlowWebDriver(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         js = (JavascriptExecutor) driver;
     }

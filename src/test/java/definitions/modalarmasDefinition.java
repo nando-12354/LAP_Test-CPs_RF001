@@ -43,4 +43,84 @@ public class modalarmasDefinition {
     public void ingresarALaOpcionAlarmasGeneradas() {
         alarmas.ingresarOpcionAlarmasGeneradas();
     }
+
+    @And("seleccionar el modulo {string}")
+    public void seleccionarElModulo(String modulo) {
+        alarmas.abrirComboboxModulo();
+        alarmas.seleccionarOpcion(modulo);
+    }
+
+    @And("ingresar fin de mensaje {string}")
+    public void ingresarFinDeMensaje(String mensaje) {
+        alarmas.ingresarFinMensaje(mensaje);
+    }
+
+    @And("ingresar asunto de correo {string}")
+    public void ingresarAsuntoDeCorreo(String asunto) {
+        alarmas.ingresarAsuntoCorreo(asunto);
+    }
+
+    @And("seleccionar tipo de alarma {string}")
+    public void seleccionarTipoDeAlarma(String tipoalarma) {
+        alarmas.abrirComboboxTipoAlarma();
+        alarmas.seleccionarOpcion(tipoalarma);
+    }
+
+    @And("click en el boton +agregar")
+    public void clickEnElBotonAgregar() {
+        alarmas.clickBotonAgregar();
+    }
+
+    @And("seleccionar al usuario {string}")
+    public void seleccionarAlUsuario(String usuario) {
+        alarmas.abrirComboboxUsuarioA();
+        alarmas.seleccionarOpcion(usuario);
+    }
+
+    @And("ingresar correo electronico {string}")
+    public void ingresarCorreoElectronico(String correo) {
+        alarmas.ingresarCorreo(correo);
+    }
+
+    @And("click en el codigo")
+    public void clickEnElCodigo() {
+        alarmas.clickBotonEditarA();
+    }
+
+    @And("seleccionar otro usuario {string}")
+    public void seleccionarOtroUsuario(String usuariob) {
+        alarmas.abrirComboboxUsuarioB();
+        alarmas.seleccionarOpcion(usuariob);
+    }
+
+    @And("click en el boton actualizar")
+    public void clickEnElBotonActualizar() {
+        alarmas.clickBotonActualizar();
+    }
+
+    @And("click en boton eliminar")
+    public void clickEnBotonEliminar() {
+        alarmas.clickBotonEliminar();
+    }
+
+    @And("ingresar otro correo electronico {string}")
+    public void ingresarOtroCorreoElectronico(String actualizarcorreo) {
+        alarmas.ingresarActualizacionCorreo(actualizarcorreo);
+    }
+
+    @And("ingresar la hora desde {string}")
+    public void ingresarLaHoraDesde(String horadesde) {
+        alarmas.ingresarHoraDesde(horadesde);
+    }
+
+    @And("ingresar la hora hasta {string}")
+    public void ingresarLaHoraHasta(String horahasta) {
+        alarmas.ingresarHoraHasta(horahasta);
+    }
+
+    @And("seleccionar el estado {string}")
+    public void seleccionarElEstado(String estado) {
+        alarmas.abrirComboboxEstado();
+        alarmas.seleccionarOpcion(estado);
+    }
 }

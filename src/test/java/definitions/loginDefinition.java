@@ -24,13 +24,18 @@ public class loginDefinition {
         login.clickBotonLogin();
     }
 
-    @And("visualiza el sistema tuua {string}")
-    public void visualizaElSistemaTuua(String tuua) {
+    @And("visualizar el {string} tuua")
+    public void visualizarElTuua(String tuua) {
         login.validarTituloTuua(tuua);
     }
 
     @And("click en cambiar mi contrasena")
     public void clickEnCambiarMiContrasena() {
         login.ingresarCambioClave();
+    }
+
+    @And("visualizar el usuario del sistema {string}")
+    public void visualizarElUsuarioDelSistema(String logueado) {
+        login.validarUsuario(logueado);
     }
 }

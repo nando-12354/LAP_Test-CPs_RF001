@@ -246,6 +246,7 @@ public class modrehabilitacionPage extends util {
         Assert.assertEquals(exito, valor);
     }
     public void clickBotonExcel(){
+        wait.until(ExpectedConditions.visibilityOf(btnExcel));
         btnExcel.click();
     }
     public void clickBotonImprimir(){

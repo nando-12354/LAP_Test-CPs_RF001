@@ -5,7 +5,8 @@ Feature: Funcionalidad del login
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
-    And visualiza el sistema tuua "Sistema de Administración"
+    And visualizar el "Sistema de Administración" tuua
+    And visualizar el usuario del sistema "Nando"
 
   Scenario Outline: CPF004 - Ingreso al aplicativo web con 3 intentos fallidos
     Given abre la ruta del aplicativo web

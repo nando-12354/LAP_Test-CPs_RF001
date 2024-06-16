@@ -1,6 +1,9 @@
 package pageobject;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,5 +35,20 @@ public class loginPage extends util {
     }
     public void ingresarCambioClave(){
         lblCambioClave.click();
+    }
+    public void validarUsuario(String logueado){
+        boolean usuarioValido = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button/span[text()='" + logueado + "']")));
+        String xpath = "//button/span[text()='" + logueado + "']";
+
+        try {
+            WebElement usuarioElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (usuarioElemento.isDisplayed() && usuarioElemento.getText().equals(logueado)) {
+                usuarioValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se reconoce al usuario logueado
+        }
+        Assert.assertTrue("El usuario " + logueado + " no coincide.", usuarioValido);
     }
 }
