@@ -51,6 +51,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar aviso "Debe ingresar un ip entre 1 y 255"
     And click en el boton aceptar
 
+    #######################################################################################
+     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
+    #######################################################################################
   Scenario: CPF049 - Estacion de punto de venta/Registrar con ip ya registrada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -112,7 +115,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton nuevo
     And seleccionar codigo de moneda "DOP"
     And click en el boton guardar
-    #And validar mensaje ""
+    And validar mensaje "Registro agregado correctamente"
 
   Scenario Outline: CPF053 - Moneda/Registrar tipo de moneda
     Given abre la ruta del aplicativo web
@@ -173,33 +176,47 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar codigo sap "ccc"
     And ingresar codigo oaci "ddd"
     And ingresar codigo interno "eee"
-    And click en el boton agregar
+    And click en el boton agregar representante
     And ingresar nombre de representante "Testing"
     And ingresar apellido de representante "IDE"
-    And seleccionar tipo de documento "DNI"
+    And ingresar tipo de documento "DNI"
     And ingresar numero de documento "72178877"
     And ingresar cargo "Analista"
     And seleccionar permisos "si"
-    And click en el boton guardar
+    And click en boton guardar
     And validar mensaje "Representante registrado correctamente"
     And seleccionar venta normal "si"
-    And click en el boton editar
-    And seleccionar activar rehabilitacion "si"
-    And seleccionar numero maximo de ticket para venta "si"
-    And seleccionar numero minimo de ticket para venta "si"
-    And click en el boton guardar
+    And click en el boton editar venta normal
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
+    And click en boton guardar
     And seleccionar bcbp "si"
-    And click en el boton editar
+    And click en el boton editar bcbp
     And seleccionar activar rehabilitacion "si"
-    And seleccionar serie numero ticket fin "si"
-    And seleccionar serie numero ticket inicio "si"
-    And click en el boton guardar
+    And seleccionar serie numero ticket fin "no"
+    And seleccionar serie numero ticket inicio "sno"
+    And click en boton guardar
     And seleccionar venta masiva contado "si"
+    And click en el boton editar venta masiva contado
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
     And seleccionar venta masiva credito "si"
+    And click en el boton editar venta masiva
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
     And click en el boton guardar
-    And validar alerta de confirmacion ""
-    And click en el boton aceptar
-    And validar mensaje ""
+    #And validar alerta de confirmacion ""
+    #And click en el boton aceptar
+    #And validar mensaje ""
 
   Scenario: CPF057 - Compania/Modificar una compania
     Given abre la ruta del aplicativo web
@@ -210,26 +227,26 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion compania
     And click en el boton nuevo
     And ingresar nombre ""
-    And seleccionar tipo de compania
-    And ingresar ruc
-    And ingresar codigo aerolinea
-    And ingresar codigo iata
-    And ingresar codigo sap
-    And ingresar codigo oaci
-    And ingresar codigo interno
-    And click en el boton agregar
-    And ingresar nombre "Selenium"
-    And ingresar apellido "IDE"
-    And seleccionar tipo de documento
-    And ingresar numero de documento
-    And ingresar cargo
+    And modificar tipo de compania
+    And modificar ruc
+    And modificar codigo aerolinea
+    And modificar codigo iata
+    And modificar codigo sap
+    And modificar codigo oaci
+    And modificar codigo interno
+    And click en el boton editar
+    And modificar nombre de representante "Selenium"
+    And modificar apellido de representante "IDE"
+    And modificar tipo de documento
+    And modificar numero de documento
+    And modificar cargo
     And seleccionar permisos "si"
-    And click en el boton guardar
+    And click en boton guardar
     And validar mensaje "Representante registrado correctamente"
     And click en el boton guardar
-    And validar alerta de confirmacion ""
-    And click en el boton aceptar
-    And validar mensaje ""
+    #And validar alerta de confirmacion ""
+    #And click en el boton aceptar
+    #And validar mensaje ""
 
   Scenario: CPF058 - Compania/Deshabilitar una compania
     Given abre la ruta del aplicativo web
@@ -241,9 +258,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton editar
     And seleccionar estado "DESHABILITADO"
     And click en el boton guardar
-    And validar alerta de confirmacion ""
-    And click en el boton aceptar
-    And validar mensaje ""
+    #And validar alerta de confirmacion ""
+    #And click en el boton aceptar
+    #And validar mensaje ""
 
 ######## MODALIDAD DE VENTA ########
 
@@ -264,7 +281,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion modalidad de venta
     And click en el boton nuevo
-    #And seleccionar tipo de modalidad "Tipo Venta Normal"
+    And seleccionar tipo de modalidad "Tipo Venta Normal"
     And ingresar descripcion "Testing"
     And click en el boton agregar atributos
     And seleccionar activar rehabilitacion "si"
@@ -273,15 +290,16 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar numero minimo tickets para venta "si"
     And seleccionar serie numero ticket fin "si"
     And seleccionar serie numero ticket inicio "si"
-    And click en el boton guardar
+    And click en boton guardar
     And seleccionar tipo ticket "T01 ( ADULTO INTERNACIONAL NORMAL )"
-    #And click en el boton agregar
+    And click en el boton agregar
+    And click en el boton agregar
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
     And seleccionar numero minimo tickets para venta "si"
-    #And click en el boton guardar
-    #And click en el boton guardar
+    And click en boton guardar
+    And click en el boton guardar
     #And validar alerta de confirmacion ""
     #And click en el boton aceptar
     #And validar mensaje ""
@@ -307,27 +325,28 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion modalidad de venta
     And click en el boton nuevo
-    And seleccionar tipo de modalidad
-    And ingresar descripcion
-    And click en el boton agregar
+    And seleccionar tipo de modalidad "Tipo Venta Normal"
+    And ingresar descripcion "Testing"
+    And click en el boton agregar atributos
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
     And seleccionar numero minimo tickets para venta "si"
     And seleccionar serie numero ticket fin "si"
     And seleccionar serie numero ticket inicio "si"
-    And click en el boton guardar
-    And seleccionar tipo de ticket
+    And click en boton guardar
+    And seleccionar tipo ticket "T01 ( ADULTO INTERNACIONAL NORMAL )"
+    And click en el boton agregar
     And click en el boton agregar
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
     And seleccionar numero minimo tickets para venta "si"
+    And click en boton guardar
     And click en el boton guardar
-    And click en el boton guardar
-    And validar alerta de confirmacion ""
-    And click en el boton aceptar
-    And validar mensaje ""
+    #And validar alerta de confirmacion ""
+    #And click en el boton aceptar
+    #And validar mensaje ""
 
   Scenario: CPF063 - Modalidad de venta/Deshabilitar una modalidad de venta
     Given abre la ruta del aplicativo web

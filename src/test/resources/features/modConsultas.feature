@@ -65,7 +65,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar estado "VIGENTE"
     And seleccionar grupo "TOTAL"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en el boton imprimir
 
 ######## COMPAÑIAS ########
 

@@ -33,6 +33,17 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/p-checkbox/div)[1]") protected WebElement checkPermisoMasivaContado;
     @FindBy(xpath = "(//div/p-checkbox/div)[2]") protected WebElement checkPermisoMasivaCredito;
     @FindBy(xpath = "(//div/p-checkbox/div)[3]") protected WebElement checkPermisoRehabilitacion;
+    @FindBy(xpath = "(//table//tbody/tr//p-checkbox)[1]") protected WebElement checkModalidadVentaNormal;
+    @FindBy(xpath = "(//table//tbody/tr//p-checkbox)[2]") protected WebElement checkModalidaBCBP;
+    @FindBy(xpath = "(//table//tbody/tr//p-checkbox)[3]") protected WebElement checkModalidadVentaMasivaContado;
+    @FindBy(xpath = "(//table//tbody/tr//p-checkbox)[4]") protected WebElement checkModalidadVentaMasivaCredito;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[1]") protected WebElement checkCompActivarRehabilitacion;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[2]") protected WebElement checkCompNumemroMaximoTicketVenta;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[3]") protected WebElement checkCompNumemroMinimoTicketVenta;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[4]") protected WebElement checkCompSerieNumeroTicketFin;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[5]") protected WebElement checkCompSerieNumeroTicketInicio;
+
+
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[1]") protected WebElement checkActivarRehabilitacion;
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[3]") protected WebElement checkMaximoTicketsEmitidos;
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[4]") protected WebElement checkMaximoTicketVenta;
@@ -108,30 +119,172 @@ public class modmantenimientoPage extends util {
     public void ingresarCargoRepresentante(String cargo){
         inputCargoRepresentante.sendKeys(cargo);
     }
-    public void seleccionarPermisoRepresenante(String permiso){
+    public void seleccionarPermisoMasivaContado(String permiso){
+        wait.until(ExpectedConditions.visibilityOf(checkPermisoMasivaContado));
         if (permiso.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkPermisoMasivaContado));
             if (!checkPermisoMasivaContado.isSelected()) {
                 checkPermisoMasivaContado.click();
-            }
-            if (!checkPermisoMasivaCredito.isSelected()) {
-                checkPermisoMasivaCredito.click();
-            }
-            if (!checkPermisoRehabilitacion.isSelected()) {
-                checkPermisoRehabilitacion.click();
             }
         } else if (permiso.toLowerCase().equals("no")) {
             if (checkPermisoMasivaContado.isSelected()) {
                 checkPermisoMasivaContado.click();
             }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPermisoMasivaContado.isSelected());
+        }
+    }
+    public void seleccionarPermisoMasivaCredito(String permiso){
+        wait.until(ExpectedConditions.visibilityOf(checkPermisoMasivaCredito));
+        if (permiso.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkPermisoMasivaCredito));
+            if (!checkPermisoMasivaCredito.isSelected()) {
+                checkPermisoMasivaCredito.click();
+            }
+        } else if (permiso.toLowerCase().equals("no")) {
             if (checkPermisoMasivaCredito.isSelected()) {
                 checkPermisoMasivaCredito.click();
             }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPermisoMasivaCredito.isSelected());
+        }
+    }
+    public void seleccionarPermisoRehabilitacion(String permiso){
+        wait.until(ExpectedConditions.visibilityOf(checkPermisoRehabilitacion));
+        if (permiso.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkPermisoRehabilitacion));
+            if (!checkPermisoRehabilitacion.isSelected()) {
+                checkPermisoRehabilitacion.click();
+            }
+        } else if (permiso.toLowerCase().equals("no")) {
             if (checkPermisoRehabilitacion.isSelected()) {
                 checkPermisoRehabilitacion.click();
             }
-            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPermisoMasivaContado.isSelected());
-            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPermisoMasivaCredito.isSelected());
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPermisoRehabilitacion.isSelected());
+        }
+    }
+    public void seleccionarModalidadVentaNormal(String modalidad){
+        wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaNormal));
+        if (modalidad.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaNormal));
+            if (!checkModalidadVentaNormal.isSelected()) {
+                checkModalidadVentaNormal.click();
+            }
+        } else if (modalidad.toLowerCase().equals("no")) {
+            if (checkModalidadVentaNormal.isSelected()) {
+                checkModalidadVentaNormal.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkModalidadVentaNormal.isSelected());
+        }
+    }
+    public void seleccionarModalidadBcbp(String modalidad){
+        wait.until(ExpectedConditions.visibilityOf(checkModalidaBCBP));
+        if (modalidad.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkModalidaBCBP));
+            if (!checkModalidaBCBP.isSelected()) {
+                checkModalidaBCBP.click();
+            }
+        } else if (modalidad.toLowerCase().equals("no")) {
+            if (checkModalidaBCBP.isSelected()) {
+                checkModalidaBCBP.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkModalidaBCBP.isSelected());
+        }
+    }
+    public void seleccionarModalidadVentaMasivaContado(String modalidad){
+        wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaMasivaContado));
+        if (modalidad.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaMasivaContado));
+            if (!checkModalidadVentaMasivaContado.isSelected()) {
+                checkModalidadVentaMasivaContado.click();
+            }
+        } else if (modalidad.toLowerCase().equals("no")) {
+            if (checkModalidadVentaMasivaContado.isSelected()) {
+                checkModalidadVentaMasivaContado.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkModalidadVentaMasivaContado.isSelected());
+        }
+    }
+    public void seleccionarModalidadVentaVentaMasivaCredito(String modalidad){
+        wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaMasivaCredito));
+        if (modalidad.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkModalidadVentaMasivaCredito));
+            if (!checkModalidadVentaMasivaCredito.isSelected()) {
+                checkModalidadVentaMasivaCredito.click();
+            }
+        } else if (modalidad.toLowerCase().equals("no")) {
+            if (checkModalidadVentaMasivaCredito.isSelected()) {
+                checkModalidadVentaMasivaCredito.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkModalidadVentaMasivaCredito.isSelected());
+        }
+    }
+    public void seleccionarCompActivarRehabilitacion(String atributos){
+        wait.until(ExpectedConditions.visibilityOf(checkCompActivarRehabilitacion));
+        if (atributos.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompActivarRehabilitacion));
+            if (!checkCompActivarRehabilitacion.isSelected()) {
+                checkCompActivarRehabilitacion.click();
+            }
+        } else if (atributos.toLowerCase().equals("no")) {
+            if (checkCompActivarRehabilitacion.isSelected()) {
+                checkCompActivarRehabilitacion.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompActivarRehabilitacion.isSelected());
+        }
+    }
+    public void seleccionarCompNumeroMaximoTicketVenta(String atributos){
+        wait.until(ExpectedConditions.visibilityOf(checkCompNumemroMaximoTicketVenta));
+        if (atributos.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompNumemroMaximoTicketVenta));
+            if (!checkCompNumemroMaximoTicketVenta.isSelected()) {
+                checkCompNumemroMaximoTicketVenta.click();
+            }
+        } else if (atributos.toLowerCase().equals("no")) {
+            if (checkCompNumemroMaximoTicketVenta.isSelected()) {
+                checkCompNumemroMaximoTicketVenta.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompNumemroMaximoTicketVenta.isSelected());
+        }
+    }
+    public void seleccionarCompNumeroMinimoTicketVenta(String atributos){
+        wait.until(ExpectedConditions.visibilityOf(checkCompNumemroMinimoTicketVenta));
+        if (atributos.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompNumemroMinimoTicketVenta));
+            if (!checkCompNumemroMinimoTicketVenta.isSelected()) {
+                checkCompNumemroMinimoTicketVenta.click();
+            }
+        } else if (atributos.toLowerCase().equals("no")) {
+            if (checkCompNumemroMinimoTicketVenta.isSelected()) {
+                checkCompNumemroMinimoTicketVenta.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompNumemroMinimoTicketVenta.isSelected());
+        }
+    }
+    public void seleccionarCompSerieNumeroTicketFin(String atributos){
+        wait.until(ExpectedConditions.visibilityOf(checkCompSerieNumeroTicketFin));
+        if (atributos.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompSerieNumeroTicketFin));
+            if (!checkCompSerieNumeroTicketFin.isSelected()) {
+                checkCompSerieNumeroTicketFin.click();
+            }
+        } else if (atributos.toLowerCase().equals("no")) {
+            if (checkCompSerieNumeroTicketFin.isSelected()) {
+                checkCompSerieNumeroTicketFin.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompSerieNumeroTicketFin.isSelected());
+        }
+    }
+    public void seleccionarCompSerieNumeroTicketInicio(String atributos){
+        wait.until(ExpectedConditions.visibilityOf(checkCompSerieNumeroTicketInicio));
+        if (atributos.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompSerieNumeroTicketInicio));
+            if (!checkCompSerieNumeroTicketInicio.isSelected()) {
+                checkCompSerieNumeroTicketInicio.click();
+            }
+        } else if (atributos.toLowerCase().equals("no")) {
+            if (checkCompSerieNumeroTicketInicio.isSelected()) {
+                checkCompSerieNumeroTicketInicio.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompSerieNumeroTicketInicio.isSelected());
         }
     }
     public void seleccionarActivarRehabilitacion(String activar){

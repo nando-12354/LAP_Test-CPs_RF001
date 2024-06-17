@@ -56,7 +56,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion ticket normal
     And ingresar numero de ticket "5000604337477348"
     And click en el boton agregar ticket
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
@@ -74,7 +74,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -115,7 +115,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion ticket masivo
     And ingresar numero de ticket "5000604330876618"
     And click en el boton agregar ticket
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
@@ -130,13 +130,61 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero de ticket "5000604329977616"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
-    And seleccionar motivo "Mal estado de salud del pasajero prueba"
+    And seleccionar un motivo "Mal estado de salud del pasajero prueba"
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
+    And click en el boton aceptar
+
+######## TICKET POR SALIDA ########
+
+  Scenario: CPF122 - Ticket por salida/Agregar ticket por salida
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo rehabilitacion
+    And ingresar a la opcion ticket
+    And ingresar a la subopcion ticket por salida
+    And ingresar fecha de vuelo "03/07/2020"
+    And click en el boton agregar bp
+    And visualizar lista de "Tickets por salida"
+
+  Scenario: CPF123 - Ticket por salida/Ver detalle de ticket por salida
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo rehabilitacion
+    And ingresar a la opcion ticket
+    And ingresar a la subopcion ticket por salida
+    And ingresar fecha de vuelo "03/07/2020"
+    And click en el boton agregar bp
+    And click en el boton ver detalle
+    And visualizar el "Detalle: Ticket"
+    And click en el boton cerrar
+
+  Scenario: CPF124 - Ticket por salida/Rehabilitar ticket por salida
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo rehabilitacion
+    And ingresar a la opcion ticket
+    And ingresar a la subopcion ticket por salida
+    And ingresar fecha de vuelo "03/07/2020"
+    And click en el boton agregar bp
+    And seleccionar ticket "si"
+    And seleccionar motivo "Alertas de bomba en el AIJCh"
+    And click en el boton rehabilitar
+    And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
+    And click en el boton si
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And click en boton excel
+    And click en boton imprimir
     And click en el boton aceptar
 
 ######## TICKET POR VUELO ########
@@ -149,7 +197,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por vuelo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
     And seleccionar vuelo "4A024     "
     And click en el boton buscar
@@ -175,7 +223,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por vuelo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
     And seleccionar vuelo "4A024     "
     And click en el boton buscar
@@ -191,7 +239,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
     And seleccionar vuelo "4A024     "
     And click en el boton buscar
@@ -200,55 +248,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "Se rehabilitarán todos los tickets seleccionados."
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
-    And click en el boton imprimir
-    And click en el boton aceptar
-
-######## TICKET POR SALIDA ########
-
-  Scenario: CPF122 - Ticket por salida/Agregar ticket por salida
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo rehabilitacion
-    And ingresar a la opcion ticket
-    And ingresar a la subopcion ticket por salida
-    And ingresar fecha de vuelo "03/07/2020"
-    And click en el boton agregar ticket
-    And visualizar lista de "Tickets por salida"
-
-  Scenario: CPF123 - Ticket por salida/Ver detalle de ticket por salida
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo rehabilitacion
-    And ingresar a la opcion ticket
-    And ingresar a la subopcion ticket por salida
-    And ingresar fecha de vuelo "03/07/2020"
-    And click en el boton agregar ticket
-    And click en el boton ver detalle
-    And visualizar el "Detalle: Ticket"
-    And click en el boton cerrar
-
-  Scenario: CPF124 - Ticket por salida/Rehabilitar ticket por salida
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo rehabilitacion
-    And ingresar a la opcion ticket
-    And ingresar a la subopcion ticket por salida
-    And ingresar fecha de vuelo "03/07/2020"
-    And click en el boton agregar ticket
-    And seleccionar ticket "si"
-    And seleccionar motivo "Alertas de bomba en el AIJCh"
-    And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
-    And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
-    And click en el boton excel
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -308,9 +308,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar ticket "si"
     And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
-    ##And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -370,9 +370,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar ticket "si"
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
-    ##And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -386,7 +386,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass normal
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "4A4041"
     And ingresar asiento "010C"
@@ -418,7 +418,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "01/01/2024"
     And click en el boton agregar bp
     And click en el boton ver detalle
-    #And visualizar el "Detalle: Boarding"
+    And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
   Scenario: CPF136 - Boarding pass normal/Rehabilitar boarding pass normal
@@ -436,10 +436,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
-    And click en el boton imprimir
-    And click en el boton voucher
+    And click en el boton pdf
+    And click en el boton imprimir voucher
     And click en el boton aceptar
 
 ######## BOARDING PASS MASIVO ########
@@ -484,7 +484,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "31/01/2024"
     And click en el boton agregar bp
     And click en el boton ver detalle
-    #And visualizar el "Detalle: Boarding"
+    And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
   Scenario: CPF140 - Boarding pass masivo/Rehabilitar boarding pass masivo
@@ -503,7 +503,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton voucher
@@ -519,11 +519,27 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "18/01/2024"
     And ingresar numero de vuelo "4A4001"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass por Salida"
+
+  Scenario: CPF14x - Boarding pass por salida/Ver detalle de boarding pass por salida
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo rehabilitacion
+    And ingresar a la opcion boarding
+    And ingresar a la subopcion boarding pass por salida
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And ingresar fecha de vuelo "18/01/2024"
+    And ingresar numero de vuelo "4A4001"
+    And click en el boton agregar bp
+    And click en boton ver detalle
+    And visualizar el "Detalle: Boarding"
+    And click en el boton cerrar
 
   Scenario: CPF142 - Boarding pass por salida/Rehabilitar boarding pass por salida
     Given abre la ruta del aplicativo web
@@ -533,7 +549,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "18/01/2024"
     And ingresar numero de vuelo "4A4001"
     And click en el boton agregar bp
@@ -542,7 +558,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    ### BOTON EXCEL E IMPRIMIR NO FUNCIONAN ###
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -557,7 +574,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
@@ -583,11 +600,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
@@ -599,7 +616,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "01/01/2024"
     And click en el boton buscar
     And seleccionar boarding "si"
@@ -607,7 +624,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "Rehabilitación con éxito"
+    And validar el mensaje "Rehabilitación con éxito"
+    ### BOTON IMPRIMIR Y VOUCHER NO FUNCIONAN ###
     And click en el boton imprimir
     And click en el boton voucher
     And click en el boton aceptar
@@ -622,9 +640,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha desde "01/01/2024"
-    And ingresar fecha hasta "07/01/2024"
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And ingresar la fecha desde "01/01/2024"
+    And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
     And visualizar lista de "Boarding pass por fecha"
 
@@ -648,9 +666,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha desde "01/01/2024"
-    And ingresar fecha hasta "07/01/2024"
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And ingresar la fecha desde "01/01/2024"
+    And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
     And click en el boton ver detalle
     And visualizar el "Detalle: Boarding"
@@ -664,16 +682,16 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha desde "01/01/2024"
-    And ingresar fecha hasta "07/01/2024"
+    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And ingresar la fecha desde "01/01/2024"
+    And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And click en el boton pdf
     And click en el boton imprimir
-    And click en el boton voucher
     And click en el boton aceptar

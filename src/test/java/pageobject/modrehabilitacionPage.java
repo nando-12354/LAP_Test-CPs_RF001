@@ -23,37 +23,23 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-salida']") protected WebElement subopBoardingSalida;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-vuelo']") protected WebElement subopBoardingVuelo;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-fecha']") protected WebElement subopBoardingFecha;
-    @FindBy(xpath = "//div/span/input[@inputid='input']") protected WebElement txtTicket;
-    @FindBy(xpath = "//span[contains(.,'Agregar Ticket')]") protected WebElement btnAgregarTicket;
-    @FindBy(xpath = "//button[contains(.,'Agregar BP')]") protected  WebElement btnBuscarTicket;
+    @FindBy(xpath = "//form/div/div/span/input[@formcontrolname='sNumeroTicket']") protected WebElement txtTicket;
     @FindBy(xpath = "//table//tbody/tr/td[3]") protected WebElement txtTicketAgregado;
-    @FindBy(xpath = "//button[contains(.,'Representante')]") protected WebElement btnRepresentante;
     @FindBy(xpath = "//div//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaBoarding;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaVuelo;
     @FindBy(xpath = "//div//p-calendar//input") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[1]") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[2]") protected WebElement txtAsiento;
     @FindBy(xpath = "(//div//input[@id='textInput'])[3]") protected WebElement txtPersona;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@name='vuelos']//div[@role='button']") protected WebElement cmbVuelo;
     @FindBy(xpath = "//input[@inputid='nroTicketDesde']") protected WebElement txtTicketDesde;
     @FindBy(xpath = "//input[@inputid='nroTicketHasta']") protected WebElement txtTicketHasta;
     @FindBy(xpath = "//div//p-calendar[@formcontrolname='sTicketDesde']//input") protected WebElement txtFechaDesde;
     @FindBy(xpath = "//div//p-calendar[@formcontrolname='sTicketHasta']//input") protected WebElement txtFechaHasta;
-    @FindBy(xpath = "//button[contains(.,'Buscar')]") protected WebElement btnBuscar;
-    @FindBy(xpath = "//h5[text()='Representante']") protected WebElement lblRepresentante;
-    @FindBy(xpath = "(//table//tbody/tr/td/div/p-button/button)[1]") protected WebElement btnDetalle;
-    @FindBy(xpath = "//span[contains(.,'Detalle: Ticket')]") protected WebElement lblDetalle;
-    @FindBy(xpath = "//div/button[@type='button']/timesicon") protected WebElement btnCerrar;
+    @FindBy(xpath = "//div//p-calendar[@id='fechaDesde']//input") protected WebElement txtFechaDesdeBpFecha;
+    @FindBy(xpath = "//div//p-calendar[@id='fechaHasta']//input") protected WebElement txtFechaHastaBpFecha;
     @FindBy(xpath = "//table/tbody/tr/td/p-checkbox[1]") protected WebElement checkTicket;
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[2]") protected WebElement checkBoarding;
-    @FindBy(xpath = "(//p-button/button[@type='button'])[1]") protected WebElement btnRehabilitar;
-    @FindBy(xpath = "//div//div[text()='¿Desea continuar con la Rehabilitación?']") protected WebElement lblAlerta;
-    @FindBy(xpath = "//div//div/div/button[@label='Si']") protected WebElement btnSi;
-    @FindBy(xpath = "//h1[text()='La Rehabilitación concluyó satisfactoriamente']") protected WebElement lblExito;
-    @FindBy(xpath = "//p-button[@icon='pi pi-file-excel']/button") protected WebElement btnExcel;
-    @FindBy(xpath = "//p-button[@icon='pi pi-print']/button") protected WebElement btnImprimir;
-    @FindBy(xpath = "//p-button[@icon='pi pi-file-pdf']/button") protected WebElement btnVoucher;
-    @FindBy(xpath = "//div/button[@label='Aceptar']") protected WebElement btnAceptar;
+
     public modrehabilitacionPage() {
         PageFactory.initElements(driver, this);
     }
@@ -113,25 +99,10 @@ public class modrehabilitacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtTicket));
         txtTicket.sendKeys(ticket);
     }
-    public void clickBotonAgregarTicket(){
-        try{
-            btnAgregarTicket.click();
-        } catch (NoSuchElementException e){
-            try{
-                btnBuscarTicket.click();
-            } catch (NoSuchElementException ee){
-                throw new NoSuchElementException("No se encontró el boton");
-            }
-        }
-    }
     public void validarTicketAgregado(String ticketagregado){
         wait.until(ExpectedConditions.visibilityOf(txtTicketAgregado));
         String valor = txtTicketAgregado.getText();
         Assert.assertEquals(ticketagregado, valor);
-    }
-    public void clickBotonRepresentante(){
-        wait.until(ExpectedConditions.visibilityOf(btnRepresentante));
-        btnRepresentante.click();
     }
     public void abrirCompaniaVuelo(){
         wait.until(ExpectedConditions.elementToBeClickable(cmbCompaniaVuelo));
@@ -145,33 +116,6 @@ public class modrehabilitacionPage extends util {
     public void ingresarFechaVuelo(String fecha){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
         txtFechaVuelo.sendKeys(fecha);
-    }
-    public void abrirNumeroVuelo(){
-        wait.until(ExpectedConditions.elementToBeClickable(cmbVuelo));
-        cmbVuelo.click();
-    }
-    public void seleccionarNumeroVuelo(String vuelo){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='section']/ul[@role='listbox']")));
-        WebElement opcionVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + vuelo + "']"));
-        opcionVuelo.click();
-    }
-    public void clickBotonBuscar(){
-        btnBuscar.click();
-    }
-    public void validarTituloRepresentante(String representante){
-        Assert.assertEquals(representante, "Representante", lblRepresentante.getText());
-    }
-    public void clickBotonVerDetalle(){
-        wait.until(ExpectedConditions.visibilityOf(btnDetalle));
-        btnDetalle.click();
-    }
-    public void validarTituloDetalle(String detalle){
-        wait.until(ExpectedConditions.visibilityOf(lblDetalle));
-        String valor = lblDetalle.getText();
-        Assert.assertEquals(detalle, valor);
-    }
-    public void clickBotonCerrar(){
-        btnCerrar.click();
     }
     public void ingresarTicketDesde(String ticketdesde){
         wait.until(ExpectedConditions.visibilityOf(txtTicketDesde));
@@ -188,6 +132,14 @@ public class modrehabilitacionPage extends util {
     public void ingresarFechaHasta(String fechahasta){
         wait.until(ExpectedConditions.visibilityOf(txtFechaHasta));
         txtFechaHasta.sendKeys(fechahasta);
+    }
+    public void ingresarFechaDesdeBpFecha(String fechadesde){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaDesdeBpFecha));
+        txtFechaDesdeBpFecha.sendKeys(fechadesde);
+    }
+    public void ingresarFechaHastaBpFecha(String fechahasta){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaHastaBpFecha));
+        txtFechaHastaBpFecha.sendKeys(fechahasta);
     }
     public void ingresarAsiento(String asiento){
         txtAsiento.sendKeys(asiento);
@@ -228,34 +180,5 @@ public class modrehabilitacionPage extends util {
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoarding.isSelected());
         }
     }
-    public void clickBotonRehabilitar(){
-        btnRehabilitar.click();
-    }
-    public void validarTituloAlerta(String alerta){
-        wait.until(ExpectedConditions.visibilityOf(lblAlerta));
-        String valor = lblAlerta.getText();
-        Assert.assertEquals(alerta, valor);
-    }
-    public void clickBotonSi(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//div/div/button[@label='Si']")));
-        btnSi.click();
-    }
-    public void validarTituloExito(String exito){
-        wait.until(ExpectedConditions.visibilityOf(lblExito));
-        String valor = lblExito.getText();
-        Assert.assertEquals(exito, valor);
-    }
-    public void clickBotonExcel(){
-        wait.until(ExpectedConditions.visibilityOf(btnExcel));
-        btnExcel.click();
-    }
-    public void clickBotonImprimir(){
-        btnImprimir.click();
-    }
-    public void clickBotonVoucher(){
-        btnVoucher.click();
-    }
-    public void clickBotonAceptar(){
-        btnAceptar.click();
-    }
+
 }

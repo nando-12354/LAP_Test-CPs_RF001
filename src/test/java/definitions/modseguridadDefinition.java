@@ -1,20 +1,19 @@
 package definitions;
 
 import io.cucumber.java.en.And;
-import pageobject.comboboxPage;
-import pageobject.mensajesPage;
-import pageobject.menuPage;
-import pageobject.modseguridadPage;
+import pageobject.*;
 
 public class modseguridadDefinition {
     menuPage menu;
     comboboxPage combobox;
     mensajesPage mensajes;
+    botonPage boton;
     modseguridadPage seguridad;
     public modseguridadDefinition() {
         menu = new menuPage();
         combobox = new comboboxPage();
         mensajes = new mensajesPage();
+        boton = new botonPage();
         seguridad = new modseguridadPage();
     }
 
@@ -40,7 +39,7 @@ public class modseguridadDefinition {
 
     @And("click en el boton nuevo")
     public void clickEnElBotonNuevo() {
-        seguridad.botonNuevoRol();
+        boton.clickBotonNuevo();
     }
 
     @And("ingresar nombre del rol {string}")
@@ -72,7 +71,7 @@ public class modseguridadDefinition {
 */
     @And("click en el boton guardar")
     public void clickEnElBotonGuardar() {
-        seguridad.clickbotonGuardar();
+        boton.clickBotonGuardar();
     }
 
     @And("validar mensaje de confirmacion “”")
@@ -83,9 +82,9 @@ public class modseguridadDefinition {
     public void validarMensaje() {
     }
 
-    @And("click en el boton editar")
-    public void clickEnElBotonEditar() {
-        seguridad.clickBotonEditarRol();
+    @And("click en el boton editar venta normal")
+    public void clickEnElBotonEditarVentaNormal() {
+        boton.clickBotonEditar();
     }
 
     @And("validar mensaje de confirmacion {string}")
@@ -109,13 +108,13 @@ public class modseguridadDefinition {
 
     @And("ingresar rol {string}")
     public void ingresarRol(String rol) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxRolPadreUsuario();
         combobox.seleccionarOpcion(rol);
     }
 
     @And("ingresar estado {string}")
     public void ingresarEstado(String estado) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxEstadoUsuario();
         combobox.seleccionarOpcion(estado);
     }
 
@@ -150,7 +149,7 @@ public class modseguridadDefinition {
 
     @And("seleccionar rol padre {string}")
     public void seleccionarRolPadre(String rolpadre) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxRolPadre();
         combobox.seleccionarOpcion(rolpadre);
     }
 
@@ -161,7 +160,7 @@ public class modseguridadDefinition {
 
     @And("click en el boton eliminar")
     public void clickEnElBotonEliminar() {
-        seguridad.clickBotonEliminarRol();
+        boton.clickBotonEliminar();
     }
 
     @And("ingresar nombres {string}")
@@ -176,12 +175,43 @@ public class modseguridadDefinition {
 
     @And("ingresar privilegio {string}")
     public void ingresarPrivilegio(String privilegio) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxPrivilegioUsuario();
         combobox.seleccionarOpcion(privilegio);
     }
 
     @And("ingresar rol disponible {string}")
     public void ingresarRolDisponible(String roldisponible) {
         seguridad.seleccionarRolDisponible(roldisponible);
+    }
+
+    @And("ingresar fecha vigencia {string}")
+    public void ingresarFechaVigencia(String fechavigencia) {
+        seguridad.ingresarFechaVigencia(fechavigencia);
+    }
+
+    @And("modificar apellidos {string}")
+    public void modificarApellidos(String apellidos) {
+        seguridad.ingresarApellidosEditar(apellidos);
+    }
+
+    @And("modificar nombres {string}")
+    public void modificarNombres(String nombres) {
+        seguridad.ingresarNombresEditar(nombres);
+    }
+
+    @And("modificar nombre de usuario {string}")
+    public void modificarNombreDeUsuario(String usuario) {
+        seguridad.ingresarUsuarioEditar(usuario);
+    }
+
+    @And("modificar el estado a {string}")
+    public void modificarElEstadoA(String estado) {
+        combobox.abrirComboboxEstadoUsuarioEditar();
+        combobox.seleccionarOpcion(estado);
+    }
+
+    @And("seleccionar habilitar campos {string}")
+    public void seleccionarHabilitarCampos(String habilitar) {
+        seguridad.seleccionarHabilitarCampos(habilitar);
     }
 }

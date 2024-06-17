@@ -43,4 +43,34 @@ public class titulosPage extends util {
         }
         Assert.assertTrue("El subtitulo " + subtitulo + " no coincide.", subtituloValido);
     }
+    public void validarTituloRepresentante(String representante){
+        boolean representanteValido = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()='" + representante + "']")));
+        String xpath = "//h5[text()='" + representante + "']";
+
+        try {
+            WebElement representanteElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (representanteElemento.isDisplayed() && representanteElemento.getText().equals(representante)) {
+                representanteValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se pudo validar
+        }
+        Assert.assertTrue("El " + representante + " no coincide.", representanteValido);
+    }
+    public void validarTituloDetalle(String detalle){
+        boolean representanteValido = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@role='dialog']//span[text()='" + detalle + "'])[1]")));
+        String xpath = "(//div[@role='dialog']//span[text()='" + detalle + "'])[1]";
+
+        try {
+            WebElement representanteElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (representanteElemento.isDisplayed() && representanteElemento.getText().equals(detalle)) {
+                representanteValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se pudo validar
+        }
+        Assert.assertTrue("El " + detalle + " no coincide.", representanteValido);
+    }
 }

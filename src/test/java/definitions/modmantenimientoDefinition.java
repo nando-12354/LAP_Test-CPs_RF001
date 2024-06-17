@@ -1,20 +1,19 @@
 package definitions;
 
 import io.cucumber.java.en.And;
-import pageobject.alertasPage;
-import pageobject.comboboxPage;
-import pageobject.menuPage;
-import pageobject.modmantenimientoPage;
+import pageobject.*;
 
 public class modmantenimientoDefinition {
     menuPage menu;
     alertasPage alertas;
     comboboxPage combobox;
+    botonPage boton;
     modmantenimientoPage mantenimiento;
     public modmantenimientoDefinition() {
         menu = new menuPage();
         alertas = new alertasPage();
         combobox = new comboboxPage();
+        boton = new botonPage();
         mantenimiento = new modmantenimientoPage();
     }
 
@@ -120,8 +119,8 @@ public class modmantenimientoDefinition {
         mantenimiento.ingresarCodigoInterno(interno);
     }
 
-    @And("click en el boton agregar")
-    public void clickEnElBotonAgregar() {
+    @And("click en el boton agregar representante")
+    public void clickEnElBotonAgregarRepresentante() {
         mantenimiento.clickBotonAgregarRepresentante();
     }
 
@@ -147,7 +146,9 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar permisos {string}")
     public void seleccionarPermisos(String permiso) {
-        mantenimiento.seleccionarPermisoRepresenante(permiso);
+        mantenimiento.seleccionarPermisoMasivaContado(permiso);
+        mantenimiento.seleccionarPermisoMasivaCredito(permiso);
+        mantenimiento.seleccionarPermisoRehabilitacion(permiso);
     }
 
     @And("ingresar a la opcion modalidad de venta")
@@ -216,5 +217,81 @@ public class modmantenimientoDefinition {
     @And("ingresar nombre de tipo ticket {string}")
     public void ingresarNombreDeTipoTicket(String nombretipoticket) {
         mantenimiento.ingresarNombreTipoTicket(nombretipoticket);
+    }
+
+    @And("click en boton guardar")
+    public void clickEnBotonGuardar() {
+        boton.clickBotonGuardarB();
+    }
+
+    @And("seleccionar venta normal {string}")
+    public void seleccionarVentaNormal(String ventanormal) {
+        mantenimiento.seleccionarModalidadVentaNormal(ventanormal);
+    }
+
+    @And("seleccionar atributo activar rehabilitacion {string}")
+    public void seleccionarAtributoActivarRehabilitacion(String activarrehabilitacion) {
+        mantenimiento.seleccionarCompActivarRehabilitacion(activarrehabilitacion);
+    }
+
+    @And("seleccionar atributo numero maximo de ticket para venta {string}")
+    public void seleccionarAtributoNumeroMaximoDeTicketParaVenta(String maximoticket) {
+        mantenimiento.seleccionarCompNumeroMaximoTicketVenta(maximoticket);
+    }
+
+    @And("seleccionar atributo numero minimo de ticket para venta {string}")
+    public void seleccionarAtributoNumeroMinimoDeTicketParaVenta(String minimoticket) {
+        mantenimiento.seleccionarCompNumeroMinimoTicketVenta(minimoticket);
+    }
+
+    @And("seleccionar atributo serie numero ticket fin {string}")
+    public void seleccionarAtributoSerieNumeroTicketFin(String ticketfin) {
+        mantenimiento.seleccionarCompSerieNumeroTicketFin(ticketfin);
+    }
+
+    @And("seleccionar atributo serie numero ticket inicio {string}")
+    public void seleccionarAtributoSerieNumeroTicketInicio(String ticketinicio) {
+        mantenimiento.seleccionarCompSerieNumeroTicketInicio(ticketinicio);
+    }
+
+    @And("seleccionar bcbp {string}")
+    public void seleccionarBcbp(String modalidad) {
+        mantenimiento.seleccionarModalidadBcbp(modalidad);
+    }
+
+    @And("click en el boton editar bcbp")
+    public void clickEnElBotonEditarBcbp() {
+        boton.clickBotonEditarB();
+    }
+
+    @And("seleccionar venta masiva contado {string}")
+    public void seleccionarVentaMasivaContado(String modalidad) {
+        mantenimiento.seleccionarModalidadVentaMasivaContado(modalidad);
+    }
+
+    @And("click en el boton editar venta masiva contado")
+    public void clickEnElBotonEditarVentaMasivaContado() {
+        boton.clickBotonEditarC();
+    }
+
+    @And("seleccionar venta masiva credito {string}")
+    public void seleccionarVentaMasivaCredito(String modalidad) {
+        mantenimiento.seleccionarModalidadVentaVentaMasivaCredito(modalidad);
+    }
+
+    @And("click en el boton editar venta masiva")
+    public void clickEnElBotonEditarVentaMasiva() {
+        boton.clickBotonEditarD();
+    }
+
+    @And("ingresar tipo de documento {string}")
+    public void ingresarTipoDeDocumento(String documento) {
+        combobox.abrirComboboxTipoDocumentoRepresentante();
+        combobox.seleccionarOpcion(documento);
+    }
+
+    @And("click en el boton editar")
+    public void clickEnElBotonEditar() {
+        boton.clickBotonEditar();
     }
 }

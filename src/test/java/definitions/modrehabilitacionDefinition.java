@@ -7,19 +7,25 @@ public class modrehabilitacionDefinition {
     menuPage menu;
     titulosPage titulos;
     comboboxPage combobox;
+    botonPage boton;
     excelPage excel;
-    pdfPage imprimir;
+    pdfPage pdf;
     voucherPage voucher;
+    imprimirPage imprimir;
     mensajesPage mensajes;
+    alertasPage alerta;
     modrehabilitacionPage rehabilitacion;
     public modrehabilitacionDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
         combobox = new comboboxPage();
+        boton = new botonPage();
         excel = new excelPage();
-        imprimir = new pdfPage();
+        pdf = new pdfPage();
         voucher = new voucherPage();
+        imprimir = new imprimirPage();
         mensajes = new mensajesPage();
+        alerta = new alertasPage();
         rehabilitacion = new modrehabilitacionPage();
     }
 
@@ -110,7 +116,7 @@ public class modrehabilitacionDefinition {
 
     @And("click en el boton agregar ticket")
     public void clickEnElBotonAgregarTicket() {
-        rehabilitacion.clickBotonAgregarTicket();
+        boton.clickBotonAgregarTicket();
     }
 
     @And("visualizar el ticket agregado {string}")
@@ -120,33 +126,33 @@ public class modrehabilitacionDefinition {
 
     @And("click en el boton representante")
     public void clickEnElBotonRepresentante() {
-        rehabilitacion.clickBotonRepresentante();
+        boton.clickBotonRepresentante();
     }
 
     @And("elegir compania {string}")
     public void elegirCompania(String compania) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxRepresentanteCompania();
         combobox.seleccionarOpcion(compania);
     }
 
     @And("visualizar {string} de la compania")
     public void visualizarDeLaCompania(String representante) {
-        rehabilitacion.validarTituloRepresentante(representante);
+        titulos.validarTituloRepresentante(representante);
     }
 
     @And("click en el boton ver detalle")
     public void clickEnElBotonVerDetalle() {
-        rehabilitacion.clickBotonVerDetalle();
+        boton.clickBotonVerDetalle();
     }
 
     @And("visualizar el {string}")
     public void visualizarEl(String detalle) {
-        rehabilitacion.validarTituloDetalle(detalle);
+        titulos.validarTituloDetalle(detalle);
     }
 
     @And("click en el boton cerrar")
     public void clickEnElBotonCerrar() {
-        rehabilitacion.clickBotonCerrar();
+        boton.clickBotonCerrar();
     }
 
     @And("seleccionar ticket {string}")
@@ -156,17 +162,17 @@ public class modrehabilitacionDefinition {
 
     @And("click en el boton rehabilitar")
     public void clickEnElBotonRehabilitar() {
-        rehabilitacion.clickBotonRehabilitar();
+        boton.clickBotonRehabilitar();
     }
 
     @And("validar alerta de confirmacion {string}")
-    public void validarAlertaDeConfirmacion(String alerta) {
-        rehabilitacion.validarTituloAlerta(alerta);
+    public void validarAlertaDeConfirmacion(String confirmacion) {
+        alerta.validarAlerta(confirmacion);
     }
 
     @And("click en el boton si")
     public void clickEnElBotonSi() {
-        rehabilitacion.clickBotonSi();
+        boton.clickBotonSi();
     }
 
     @And("validar mensaje {string}")
@@ -176,17 +182,17 @@ public class modrehabilitacionDefinition {
 
     @And("click en el boton excel")
     public void clickEnElBotonExcel() {
-        rehabilitacion.clickBotonExcel();
+        excel.clickBotonExcel();
     }
 
     @And("click en el boton imprimir")
     public void clickEnElBotonImprimir() {
-        rehabilitacion.clickBotonImprimir();
+        imprimir.clickBotonImprimir();
     }
 
     @And("click en el boton aceptar")
     public void clickEnElBotonAceptar() {
-        rehabilitacion.clickBotonAceptar();
+        boton.clickBotonAceptar();
     }
 
     @And("ingresar a la subopcion ticket masivo")
@@ -194,9 +200,9 @@ public class modrehabilitacionDefinition {
         rehabilitacion.ingresarSubOpcionTicketMasivo();
     }
 
-    @And("seleccionar motivo {string}")
-    public void seleccionarMotivo(String motivo) {
-        combobox.abrirCombobox();
+    @And("seleccionar un motivo {string}")
+    public void seleccionarUnMotivo(String motivo) {
+        combobox.abrirComboboxMotivoTicketMasivo();
         combobox.seleccionarOpcion(motivo);
     }
 
@@ -207,8 +213,8 @@ public class modrehabilitacionDefinition {
 
     @And("seleccionar compania {string}")
     public void seleccionarCompania(String compania) {
-        rehabilitacion.abrirCompaniaVuelo();
-        rehabilitacion.seleccionarCompaniaVuelo(compania);
+        combobox.abrirComboboxCompaniaBpNormalBpMasivo();
+        combobox.seleccionarOpcion(compania);
     }
 
     @And("ingresar fecha de vuelo {string}")
@@ -218,13 +224,13 @@ public class modrehabilitacionDefinition {
 
     @And("seleccionar vuelo {string}")
     public void seleccionarVuelo(String vuelo) {
-        rehabilitacion.abrirNumeroVuelo();
-        rehabilitacion.seleccionarNumeroVuelo(vuelo);
+        combobox.abrirComboboxVueloTicketVueloBpVuelo();
+        combobox.seleccionarOpcion(vuelo);
     }
 
     @And("click en el boton buscar")
     public void clickEnElBotonBuscar() {
-        rehabilitacion.clickBotonBuscar();
+        boton.clickBotonBuscar();
     }
 
     @And("visualizar lista de {string}")
@@ -294,17 +300,12 @@ public class modrehabilitacionDefinition {
 
     @And("click en el boton agregar bp")
     public void clickEnElBotonAgregarBp() {
-        rehabilitacion.clickBotonAgregarTicket();
+        boton.clickBotonAgregarBoarding();
     }
 
     @And("seleccionar boarding {string}")
     public void seleccionarBoarding(String selectbp) {
         rehabilitacion.seleccionarBoarding(selectbp);
-    }
-
-    @And("click en el boton voucher")
-    public void clickEnElBotonVoucher() {
-        rehabilitacion.clickBotonVoucher();
     }
 
     @And("ingresar a la subopcion boarding pass masivo")
@@ -325,5 +326,62 @@ public class modrehabilitacionDefinition {
     @And("ingresar a la subopcion boarding pass por fecha")
     public void ingresarALaSubopcionBoardingPassPorFecha() {
         rehabilitacion.ingresarSubOpcionBoardingFecha();
+    }
+
+    @And("click en boton ver detalle")
+    public void clickEnBotonVerDetalle() {
+        boton.clickBotonVerDetalleB();
+    }
+    @And("validar el mensaje {string}")
+    public void validarElMensaje(String mensaje) {
+        alerta.validarAlertaConfirmacion(mensaje);
+    }
+
+    @And("seleccionar motivo {string}")
+    public void seleccionarMotivo(String motivos) {
+        combobox.abrirComboboxMotivos();
+        combobox.seleccionarOpcion(motivos);
+    }
+
+    @And("seleccionar una compania {string}")
+    public void seleccionarUnaCompania(String compania) {
+        combobox.abrirComboboxCompaniaTicketVuelo();
+        combobox.seleccionarOpcion(compania);
+    }
+
+    @And("seleccionar la compania {string}")
+    public void seleccionarLaCompania(String compania) {
+        combobox.abrirComboboxCompaniaBpSalidaBpVueloBpFecha();
+        combobox.seleccionarOpcion(compania);
+    }
+
+    @And("ingresar la fecha desde {string}")
+    public void ingresarLaFechaDesde(String fechadesde) {
+        rehabilitacion.ingresarFechaDesdeBpFecha(fechadesde);
+    }
+
+    @And("ingresar la fecha hasta {string}")
+    public void ingresarLaFechaHasta(String fechahasta) {
+        rehabilitacion.ingresarFechaHastaBpFecha(fechahasta);
+    }
+
+    @And("click en boton excel")
+    public void clickEnBotonExcel() {
+        excel.clickBotonExcelB();
+    }
+
+    @And("click en boton imprimir")
+    public void clickEnBotonImprimir() {
+        imprimir.clickBotonImprimirB();
+    }
+
+    @And("click en el boton imprimir voucher")
+    public void clickEnElBotonImprimirVoucher() {
+        voucher.clickBotonVoucher();
+    }
+
+    @And("click en el boton voucher")
+    public void clickEnElBotonVoucher() {
+        voucher.clickBotonVoucherB();
     }
 }

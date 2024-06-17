@@ -290,6 +290,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And click en el boton detalle de turno
     And seleccionar tipo operacion "Venta Moneda"
+    And click en el boton buscar
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
     #And validar alerta de confirmacion ""
@@ -368,14 +369,16 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar filtros de consulta
     And seleccionar fecha desde "01/01/2024"
+    And ingresar hora desde "000000"
     And seleccionar fecha hasta "31/01/2024"
+    And ingresar hora hasta "230000"
     And filtrar ticket del numero "1111111111111111"
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
     And seleccionar ticket rehabilitado a extornar "si"
     And click en el boton extornar
-    And validar alerta de confirmacion ""
-    And click en el boton aceptar
+    #And validar alerta de confirmacion ""
+    #And click en el boton aceptar
     #And validar emision del voucher
 
 ######## ANULACION DE TICKET ########

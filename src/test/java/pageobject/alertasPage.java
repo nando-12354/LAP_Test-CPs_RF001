@@ -42,6 +42,21 @@ public class alertasPage extends util {
         }
         Assert.assertTrue("El aviso " + aviso + " no coincide.", avisoValido);
     }
+    public void validarAlertaConfirmacion(String confirmacion) {
+        boolean confirmacionValido = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[contains(.,'" + confirmacion + "')])[5]")));
+        String xpath = "(//div[contains(.,'" + confirmacion + "')])[5]";
+
+        try {
+            WebElement confirmacionElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (confirmacionElemento.isDisplayed() && confirmacionElemento.getText().equals(confirmacion)) {
+                confirmacionValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // La alerta de confirmacion no se encontró
+        }
+        Assert.assertTrue("El alerta de confirmacion " + confirmacion + " no coincide.", confirmacionValido);
+    }
 }
 
 

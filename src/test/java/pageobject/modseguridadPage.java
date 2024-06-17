@@ -23,11 +23,15 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "//input[@inputid='apellidos']") protected WebElement inputApellidos;
     @FindBy(xpath = "//input[@inputid='nombres']") protected WebElement inputNombres;
     @FindBy(xpath = "//input[@inputid='usuario']") protected WebElement inputUsuarioCrear;
+    @FindBy(xpath = "//input[@inputid='apellidos']") protected WebElement inputApellidosEditar;
+    @FindBy(xpath = "//input[@inputid='nombres']") protected WebElement inputNombresEditar;
+    @FindBy(xpath = "//input[@inputid='usuario']") protected WebElement inputUsuarioEditar;
     @FindBy(xpath = "//input[@id='clave']") protected WebElement inputClave;
     @FindBy(xpath = "//input[@id='confirmar']") protected WebElement inputClaveConfirmar;
     @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//section/span/div/p-checkbox)[1]") protected WebElement checkRolDisponible;
     @FindBy(xpath = "//input[@id='vigencia']") protected WebElement inputFechaVigencia;
+    @FindBy(xpath = "//div/div/p-checkbox[@label='Habilitar campos']/div") protected WebElement checkHabilitarCampos;
     public modseguridadPage() {
         PageFactory.initElements(driver, this);
     }
@@ -116,5 +120,32 @@ public class modseguridadPage extends util {
     public void ingresarFechaVigencia(String fecha) {
         limpiarCampo(inputFechaVigencia);
         inputFechaVigencia.sendKeys(fecha);
+    }
+    public void ingresarApellidosEditar(String apellidos){
+        limpiarCampo(inputApellidosEditar);
+        inputApellidosEditar.sendKeys(apellidos);
+    }
+    public void ingresarNombresEditar(String nombres){
+        limpiarCampo(inputNombresEditar);
+        inputNombresEditar.sendKeys(nombres);
+    }
+    public void ingresarUsuarioEditar(String usuario){
+        limpiarCampo(inputUsuarioEditar);
+        inputUsuarioEditar.sendKeys(usuario);
+    }
+    public void seleccionarHabilitarCampos(String habilitar){
+        wait.until(ExpectedConditions.visibilityOf(checkHabilitarCampos));
+        if (habilitar.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkHabilitarCampos));
+            if (!checkHabilitarCampos.isSelected()) {
+                checkHabilitarCampos.click();
+            }
+        } else if (habilitar.toLowerCase().equals("no")) {
+            if (checkHabilitarCampos.isSelected()) {
+                checkHabilitarCampos.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkHabilitarCampos)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkHabilitarCampos.isSelected());
+        }
     }
 }

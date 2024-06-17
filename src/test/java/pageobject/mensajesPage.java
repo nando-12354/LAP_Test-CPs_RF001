@@ -11,11 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
 public class mensajesPage extends util {
-    @FindBy(xpath = "(//div[contains(.,'Registro modificado correctamente')])[5]")
-    protected WebElement lblModificado;
-    @FindBy(xpath = "(//div[contains(.,'Usuario registrado correctamente')])[5]")
-    protected WebElement lblUsuarioRegistrado;
-
     public mensajesPage() {
         PageFactory.initElements(driver, this);
     }

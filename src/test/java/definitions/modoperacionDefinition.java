@@ -1,20 +1,19 @@
 package definitions;
 
 import io.cucumber.java.en.And;
-import pageobject.comboboxPage;
-import pageobject.menuPage;
-import pageobject.modoperacionPage;
-import pageobject.titulosPage;
+import pageobject.*;
 
 public class modoperacionDefinition {
     menuPage menu;
     titulosPage titulos;
     comboboxPage combobox;
+    botonPage boton;
     modoperacionPage operacion;
     public modoperacionDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
         combobox = new comboboxPage();
+        boton = new botonPage();
         operacion = new modoperacionPage();
     }
 
@@ -161,7 +160,7 @@ public class modoperacionDefinition {
 
     @And("eliminar tasa de cambio programada")
     public void eliminarTasaDeCambioProgramada() {
-        operacion.clickBotonEliminarTCprogramadaA();
+        boton.clickBotonEliminarB();
     }
 
     @And("seleccionar tasa de cambio historica")
@@ -238,7 +237,7 @@ public class modoperacionDefinition {
 
     @And("eliminar precio tickets programada")
     public void eliminarPrecioTicketsProgramada() {
-        operacion.clickBotonEliminarTCprogramadaA();
+        boton.clickBotonEliminar();
     }
 
     @And("seleccionar precio tickets historica")
@@ -310,7 +309,7 @@ public class modoperacionDefinition {
 
     @And("click en el boton generar")
     public void clickEnElBotonGenerar() {
-        operacion.clickBotonGenerar();
+        boton.clickBotonGenerar();
     }
 
     @And("ingresar a la opcion registro tickets contingencia")
@@ -403,7 +402,7 @@ public class modoperacionDefinition {
 
     @And("click en el boton extornar")
     public void clickEnElBotonExtornar() {
-        operacion.clickBotonExtornar();
+        boton.clickBotonExtornar();
     }
 
     @And("ingresar a la opcion extorno tickets")
@@ -500,7 +499,7 @@ public class modoperacionDefinition {
 
     @And("click en el boton anular")
     public void clickEnElBotonAnular() {
-        operacion.clickBontonAnular();
+        boton.clickBotonAnular();
     }
 
     @And("ingresar a la opcion anulacion bcbp")
@@ -632,6 +631,6 @@ public class modoperacionDefinition {
 
     @And("click en el boton cerrar turno")
     public void clickEnElBotonCerrarTurno() {
-        operacion.clickBotonCerrarTurno();
+        boton.clickBotonCerrarTurno();
     }
 }
