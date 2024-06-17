@@ -24,14 +24,14 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/transaccion-critica']") protected WebElement opTransaccionCritica;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/depuracion']") protected WebElement opDepuracion;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/busqueda-pasajeros-fiscalia']") protected WebElement opFiscalia;
-    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbRol;
-    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[2]") protected WebElement cmbEstado;
-    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[3]") protected WebElement cmbGrupo;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbUsuario;
     @FindBy(xpath = "(//td[contains(.,'Cobro tasa internacional')])[2]") protected WebElement btnTablas;
     @FindBy(xpath = "//div/p-radiobutton[@value='NumeroTicket']") protected WebElement rdNumeroTicket;
     @FindBy(xpath = "//div/p-radiobutton[@value='RangoTicket']") protected WebElement rdRangoTicket;
     @FindBy(xpath = "//div/p-radiobutton[@value='Boarding']") protected WebElement rdBoarding;
+    @FindBy(xpath = "//app-input-text-2[@label='Número de Ticket']//input") protected WebElement inputNumeroTicket;
+    @FindBy(xpath = "//app-input-text-2[@label='Desde']//input") protected WebElement inputNumeroTicketDesde;
+    @FindBy(xpath = "//app-input-text-2[@label='Hasta']//input") protected WebElement inputNumeroTicketHasta;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button']") protected WebElement cmbTipoDocumento;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='company']//div[@role='button']") protected WebElement cmbCompania;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='ticket']//div[@role='button']") protected WebElement cmbTipoTicket;
@@ -61,6 +61,21 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTablaSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTablaSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fEstadoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTipoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTipoSincronizacion;
+    @FindBy(xpath = "//div/app-input-date[@label='Hora desde']/span//input") protected WebElement inputHoraDesde;
+    @FindBy(xpath = "//div/app-input-date[@label='Hora hasta']/span//input") protected WebElement inputHoraHasta;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='fNumeroCaja']//input") protected WebElement inputNumeroCaja;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]")
+    protected WebElement txtFechaDesde;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[3]")
+    protected WebElement txtFechaHasta;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]")
+    protected WebElement txtHoraDesdeB;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[4]")
+    protected WebElement txtHoraHastaB;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
+    @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
+    @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
+
     public modconsultasPage() {
         PageFactory.initElements(driver, this);
     }
@@ -103,58 +118,38 @@ public class modconsultasPage extends util {
     }
     public void ingresarOpcionAuditoria(){
         wait.until(ExpectedConditions.visibilityOf(opAuditoria));
+        scrollVertical(opAuditoria);
         opAuditoria.click();
     }
     public void ingresarOpcionTicketsProcesados(){
         wait.until(ExpectedConditions.visibilityOf(opTicketsProcesados));
+        scrollVertical(opTicketsProcesados);
         opTicketsProcesados.click();
     }
     public void ingresarOpcionLogErrores(){
         wait.until(ExpectedConditions.visibilityOf(opLogErrores));
+        scrollVertical(opLogErrores);
         opLogErrores.click();
     }
     public void ingresarOpcionSincronizacion(){
         wait.until(ExpectedConditions.visibilityOf(opSincronizacion));
+        scrollVertical(opSincronizacion);
         opSincronizacion.click();
     }
     public void ingresarOpcionTransaccionCritica(){
         wait.until(ExpectedConditions.visibilityOf(opTransaccionCritica));
+        scrollVertical(opTransaccionCritica);
         opTransaccionCritica.click();
     }
     public void ingresarOpcionDepuracion(){
         wait.until(ExpectedConditions.visibilityOf(opDepuracion));
+        scrollVertical(opDepuracion);
         opDepuracion.click();
     }
     public void ingresarOpcionFiscalia(){
         wait.until(ExpectedConditions.visibilityOf(opFiscalia));
+        scrollVertical(opFiscalia);
         opFiscalia.click();
-    }
-    public void abrirComboRol(){
-        wait.until(ExpectedConditions.visibilityOf(cmbRol));
-        cmbRol.click();
-    }
-    public void seleccionarRol(String rol){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionRol = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + rol + "']"));
-        opcionRol.click();
-    }
-    public void abrirComboEstado(){
-        wait.until(ExpectedConditions.visibilityOf(cmbEstado));
-        cmbEstado.click();
-    }
-    public void seleccionarEstado(String estado){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionEstado = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + estado + "']"));
-        opcionEstado.click();
-    }
-    public void abrirComboGrupo(){
-        wait.until(ExpectedConditions.visibilityOf(cmbGrupo));
-        cmbGrupo.click();
-    }
-    public void seleccionarGrupo(String grupo){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionGrupo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + grupo + "']"));
-        opcionGrupo.click();
     }
     public void abrirComboUsuario(){
         wait.until(ExpectedConditions.visibilityOf(cmbUsuario));
@@ -218,10 +213,6 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionTipoVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + tipovuelo + "']"));
         opcionTipoVuelo.click();
-    }
-    public void abrirComboEstadoTurno(){
-        wait.until(ExpectedConditions.visibilityOf(cmbEstadoTurno));
-        cmbEstadoTurno.click();
     }
     public void seleccionarEstadoTurno(String estadoturno){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
@@ -414,5 +405,48 @@ public class modconsultasPage extends util {
     }
     public void ingresarCodigoTurno(String codigoturno){
         txtCodigoTurno.sendKeys(codigoturno);
+    }
+    public void ingresarHoraDesde(String horadesde){
+        inputHoraDesde.sendKeys(horadesde);
+    }
+    public void ingresarHoraHasta(String horahasta){
+        inputHoraHasta.sendKeys(horahasta);
+    }
+    public void ingresarNumeroCaja(String caja){
+        inputNumeroCaja.sendKeys(caja);
+    }
+    public void ingresarNumeroTicket(String ticket){
+        inputNumeroTicket.sendKeys(ticket);
+    }
+    public void ingresarNumeroTicketDesde(String ticketdesde){
+        inputNumeroTicketDesde.sendKeys(ticketdesde);
+    }
+    public void ingresarNumeroTicketHasta(String tickethasta){
+        inputNumeroTicketHasta.sendKeys(tickethasta);
+    }
+    public void ingresarFechaDesde(String fechadesde){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaDesde));
+        limpiarCampo(txtFechaDesde);
+        txtFechaDesde.sendKeys(fechadesde);
+    }
+    public void ingresarFechaHasta(String fechahasta){
+        limpiarCampo(txtFechaHasta);
+        txtFechaHasta.sendKeys(fechahasta);
+    }
+    public void ingresarHoraDesdeB(String horadesde){
+        wait.until(ExpectedConditions.visibilityOf(txtHoraDesdeB));
+        txtHoraDesdeB.sendKeys(horadesde);
+    }
+    public void ingresarHoraHastaB(String horahasta){
+        txtHoraHastaB.sendKeys(horahasta);
+    }
+    public void abrirComboboxTicketBpUsado(String ticketbp){
+        cmbTipoDocumentoTicketBpUsado.click();
+    }
+    public void ingresarNumeroVuelo(String vuelo){
+        txtNumeroVuelo.sendKeys(vuelo);
+    }
+    public void ingresarFechaVuelo(String fechavuelo){
+        txtFechaVuelo.sendKeys(fechavuelo);
     }
 }

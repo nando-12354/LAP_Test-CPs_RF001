@@ -15,8 +15,8 @@ public class principalDefinition {
         hooks.driver.get("http://tuuaadministracionwebfrontend.k8sdevcp.lap.com.pe/");
     }
 
-    @And("visualiza la pantalla de acceso {string}")
-    public void visualizaLaPantallaDeAcceso(String titulo) {
+    @And("visualizar la pantalla de acceso {string}")
+    public void visualizarLaPantallaDeAcceso(String titulo) {
         principal.validarTitulo(titulo);
     }
 }

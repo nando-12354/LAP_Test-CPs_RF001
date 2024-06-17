@@ -31,6 +31,14 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='sDscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@optionvalue]//div[@role='button'])[3]") protected WebElement cmbVueloTicketVueloBpVuelo;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button'])[2]") protected WebElement cmbTipoDocumentoRepresentante;
+    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbRol;
+    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[2]") protected WebElement cmbEstado;
+    @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[3]") protected WebElement cmbGrupo;
+    @FindBy(xpath = "//p-dropdown[@optionvalue='sCodCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpFecha;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[3]") protected WebElement cmbTipoPasajeroTicketBpUsado;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[4]") protected WebElement cmbTipoVueloTicketBpUsado;
+    @FindBy(xpath = "//p-dropdown[@optionlabel='sDscCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpUsado;
 
     public comboboxPage() {
         PageFactory.initElements(driver, this);
@@ -77,6 +85,43 @@ public class comboboxPage extends util {
     public void abrirComboboxVueloTicketVueloBpVuelo(){
         cmbVueloTicketVueloBpVuelo.click();
     }
+    public void abrirComboboxTipoCompania(){
+        cmbTipoCompania.click();
+    }
+    public void abrirComboboxTipoModalidad(){
+        cmbTipoModalidad.click();
+    }
+    public void abrirComboboxTipoTicketModalidad(){
+        cmbTipoTicketModalidad.click();
+    }
+    public void abrirComboboxRol(){
+        wait.until(ExpectedConditions.visibilityOf(cmbRol));
+        cmbRol.click();
+    }
+    public void abrirComboboxEstado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstado));
+        cmbEstado.click();
+    }
+    public void abrirComboboxGrupo(){
+        wait.until(ExpectedConditions.visibilityOf(cmbGrupo));
+        cmbGrupo.click();
+    }
+    public void abrirComboCompaniaTicketBpFecha(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaTicketBpFecha));
+        cmbCompaniaTicketBpFecha.click();
+    }
+    public void abrirComboboxTicketBpUsado(){
+        cmbTipoDocumentoTicketBpUsado.click();
+    }
+    public void abrirComboboxTipoVueloTicketBpUsado(){
+        cmbTipoVueloTicketBpUsado.click();
+    }
+    public void abrirComboboxCompaniaTicketBpUsado(){
+        cmbCompaniaTicketBpUsado.click();
+    }
+    public void abrirComboboxTipoPasajeroTicketBpUsado(){
+        cmbTipoPasajeroTicketBpUsado.click();
+    }
     public void seleccionarOpcion(String item) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionItem = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + item + "']"));
@@ -87,15 +132,6 @@ public class comboboxPage extends util {
             try {
                 cmbMoneda.click();
             } catch (NoSuchElementException h) {
-                try {
-                    cmbTipoCompania.click();
-                } catch (NoSuchElementException i) {
-                    try {
-                        cmbTipoModalidad.click();
-                    } catch (NoSuchElementException j) {
-                        try {
-                            cmbTipoTicketModalidad.click();
-                        } catch (NoSuchElementException k) {
                             try {
                                 cmbMotivosTicket.click();
                             } catch (NoSuchElementException ee) {
@@ -113,9 +149,7 @@ public class comboboxPage extends util {
                                     }
                                 }
                             }
-                        }
-                    }
-                }
-            }
-        }
-    }
+
+                        }}}
+
+

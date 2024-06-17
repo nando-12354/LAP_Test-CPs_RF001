@@ -535,7 +535,7 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar ticket del numero "1111111111111111"
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
-    And visualizar lista de extension fecha vigencia tickets
+    And visualizar lista de "Extensión fecha vigencia tickets"
 
   Scenario: CPF098 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
     Given abre la ruta del aplicativo web
@@ -544,14 +544,15 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion extension fecha vigencia tickets
-    And filtrar ticket "5000604355577796"
+    And ingresar ticket "5000604355577796"
     And click en el boton buscar
-    And seleccionar ticket a extender
-    And ingresar numero de dias
+    And seleccionar ticket a extender "si"
+    And ingresar numero de dias a extender "30"
     And click en el boton extender
-    And validar alerta de confirmacion ""
+    And validar alerta confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton si
+    And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
-    And validar mensaje ""
 
   Scenario: CPF099 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
     Given abre la ruta del aplicativo web
@@ -560,16 +561,17 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion extension fecha vigencia tickets
-    And seleccionar rango de ticket
-    And filtrar ticket del numero "1111111111111111"
-    And filtrar ticket al numero "9999999999999999"
+    And seleccionar rango de ticket extension
+    And filtrar ticket desde "1111111111111111"
+    And filtrar ticket hasta "9999999999999999"
     And click en el boton buscar
-    And seleccionar ticket a extender
-    And ingresar numero de dias
+    And seleccionar ticket a extender "si"
+    And ingresar numero de dias a extender "30"
     And click en el boton extender
-    And validar alerta de confirmacion ""
+    And validar alerta confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton si
+    And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
-    And validar mensaje ""
 
 ######## GESTION DE MOLINETE ########
 

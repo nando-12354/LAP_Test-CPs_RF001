@@ -7,12 +7,14 @@ public class modoperacionDefinition {
     menuPage menu;
     titulosPage titulos;
     comboboxPage combobox;
+    alertasPage alertas;
     botonPage boton;
     modoperacionPage operacion;
     public modoperacionDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
         combobox = new comboboxPage();
+        alertas = new alertasPage();
         boton = new botonPage();
         operacion = new modoperacionPage();
     }
@@ -632,5 +634,50 @@ public class modoperacionDefinition {
     @And("click en el boton cerrar turno")
     public void clickEnElBotonCerrarTurno() {
         boton.clickBotonCerrarTurno();
+    }
+
+    @And("ingresar a la opcion extension fecha vigencia tickets")
+    public void ingresarALaOpcionExtensionFechaVigenciaTickets() {
+        operacion.ingresarOpcionExtensionFechaVigencia();
+    }
+
+    @And("click en el boton extender")
+    public void clickEnElBotonExtender() {
+        boton.clickBotonExtender();
+    }
+
+    @And("ingresar ticket {string}")
+    public void ingresarTicket(String ticketextension) {
+        operacion.ingresarTicketExtension(ticketextension);
+    }
+
+    @And("seleccionar ticket a extender {string}")
+    public void seleccionarTicketAExtender(String ticket) {
+        operacion.seleccionarTicketExtension(ticket);
+    }
+
+    @And("ingresar numero de dias a extender {string}")
+    public void ingresarNumeroDeDiasAExtender(String dias) {
+        operacion.ingresarDiasExtension(dias);
+    }
+
+    @And("validar alerta confirmacion {string}")
+    public void validarAlertaConfirmacion(String confirmacion) {
+        alertas.validarAlertaConfirmacion(confirmacion);
+    }
+
+    @And("seleccionar rango de ticket extension")
+    public void seleccionarRangoDeTicketExtension() {
+        operacion.seleccionarRangoTicketExtension();
+    }
+
+    @And("filtrar ticket desde {string}")
+    public void filtrarTicketDesde(String ticketdesde) {
+        operacion.ingresarTicketDesdeExtension(ticketdesde);
+    }
+
+    @And("filtrar ticket hasta {string}")
+    public void filtrarTicketHasta(String tickethasta) {
+        operacion.ingresarTicketHastaExtension(tickethasta);
     }
 }

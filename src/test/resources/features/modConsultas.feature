@@ -65,7 +65,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar estado "VIGENTE"
     And seleccionar grupo "TOTAL"
     And click en el boton buscar
-    And click en el boton imprimir
+    And click en imprimir
 
 ######## COMPAÑIAS ########
 
@@ -93,7 +93,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar estado "<Todos>"
     And seleccionar grupo "<Todos>"
     And click en el boton buscar
-    And click en el boton imprimir
+    And click en imprimir
 
 ######## TURNOS ########
 
@@ -104,10 +104,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion turnos
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar usuario "Tamara Olaechea"
     And ingresar numero de caja ""
     And click en el boton buscar
@@ -120,14 +120,14 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion turnos
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar usuario "Tamara Olaechea"
-    And ingresar numero de caja ""
+    And ingresar numero de caja "V00015"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And click en el registro de detalle del turno
     And click en el boton cerrar
 
@@ -138,17 +138,17 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion turnos
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar usuario "Tamara Olaechea"
-    And ingresar numero de caja ""
+    And ingresar numero de caja "V00015"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And click en el registro de detalle del turno
     And click en el boton cerrar
-    #And click en el boton imprimir
+    And click en imprimir
 
   Scenario: CPF159 - Turnos/Imprimir consulta de turnos
     Given abre la ruta del aplicativo web
@@ -157,14 +157,14 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion turnos
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar usuario "Tamara Olaechea"
-    And ingresar numero de caja ""
+    And ingresar numero de caja "V00015"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF160 - Turnos/Exportar excel consulta de turnos
     Given abre la ruta del aplicativo web
@@ -173,14 +173,14 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion turnos
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar usuario "Tamara Olaechea"
-    And ingresar numero de caja ""
+    And ingresar numero de caja "V00015"
     And click en el boton buscar
-    And click en el boton excel
+    And click en exportar excel
 
 ######## DETALLE TICKET / BP ########
 
@@ -192,12 +192,54 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar al modulo consultas
     And ingresar a la opcion detalle de ticket bp
     And seleccionar por numero de ticket
-    #And ingresar numero de ticket "1000602350183940"
+    And ingresar numero ticket "1000602350183940"
     And click en el boton buscar
     And seleccionar por rango de ticket
-    #And ingresar numero ticket desde "1000602350183940"
-    #And ingresar numero ticket hasta "1000602350183999"
+    And ingresar el numero de ticket desde "1000602350183940"
+    And ingresar el numero de ticket hasta "1000602350183999"
     And click en el boton buscar
+    And seleccionar por boarding
+    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And ingresar fecha de vuelo "01/01/2024"
+    And ingresar numero de vuelo "4A4001"
+    And ingresar asiento "016A"
+    And ingresar persona "ESCOBEDO FARJE MERCY"
+    And click en el boton buscar
+
+  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion detalle de ticket bp
+    And seleccionar por numero de ticket
+    And ingresar numero ticket "1000602350183940"
+    And click en el boton buscar
+    And click en exportar excel
+    And click en imprimir consulta
+
+  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion detalle de ticket bp
+    And seleccionar por rango de ticket
+    And ingresar el numero de ticket desde "1000602350183940"
+    And ingresar el numero de ticket hasta "1000602350183999"
+    And click en el boton buscar
+    And click en exportar excel
+    And click en imprimir consulta
+
+  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion detalle de ticket bp
     And seleccionar por boarding
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "01/01/2024"
@@ -215,15 +257,15 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
     And seleccionar indicador de cobro "Por Emision"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And ingresar una compania "AERO TRANSPORTE  S. A."
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
@@ -237,21 +279,21 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
     And seleccionar indicador de cobro "Por Emision"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And ingresar una compania "AERO TRANSPORTE  S. A."
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
     And seleccionar cajero "Tamara Olaechea"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And click en el boton cerrar
 
   Scenario: CPF164 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
@@ -261,44 +303,44 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
     And seleccionar indicador de cobro "Por Emision"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And ingresar una compania "AERO TRANSPORTE  S. A."
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
     And seleccionar cajero "Tamara Olaechea"
     And click en el boton buscar
-    And click en el boton imprimir
+    And click en imprimir consulta
 
-  Scenario: CPF165 - Tickets-bp por fecha/Exportar informe tickets-bp por fecha
+  Scenario: CPF165 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
-    And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
+    And seleccionar tipo de ticket "TODOS"
     And seleccionar estado "ANULADO"
     And seleccionar indicador de cobro "Por Emision"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And ingresar una compania "AERO TRANSPORTE  S. A."
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
     And seleccionar cajero "Tamara Olaechea"
     And click en el boton buscar
-    And click en el boton excel
+    And click en exportar excel
 
 ######## CUADRE DE STICKERS EMITIDOS O BP USADOS ########
 
@@ -309,9 +351,9 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Ticket"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Ticket"
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
@@ -322,9 +364,9 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Boarding"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Boarding"
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
@@ -335,11 +377,11 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Ticket"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Ticket"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
     Given abre la ruta del aplicativo web
@@ -348,11 +390,11 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Boarding"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Boarding"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Exportar informe por ticket
     Given abre la ruta del aplicativo web
@@ -361,11 +403,11 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Ticket"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Ticket"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en exportar excel
 
   Scenario: CPF172 - Cuadre de stickers emitidos o bp usados/Exportar informe por boarding
     Given abre la ruta del aplicativo web
@@ -374,11 +416,11 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion cuadre de stickers emitidos o bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "31/01/2024"
-    #And seleccionar tipo de documento "Boarding"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar tipo documento "Boarding"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en exportar excel
 
 ######## OPERACION COMPRA / VENTA ########
 
@@ -405,19 +447,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar fecha de proceso "01/01/2024"
     And seleccionar usuario "Estefania Olivo"
     And click en el boton buscar
-    #And click en el boton imprimir
-
-  Scenario: CPF175 - Operacion compra-venta/Exportar informe de operacion compra-venta
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion operacion compra venta
-    And ingresar fecha de proceso "01/01/2024"
-    And seleccionar usuario "Estefania Olivo"
-    And click en el boton buscar
-    #And click en el boton excel
+    And click en imprimir
 
 ######## TICKETS / BP USADOS ########
 
@@ -428,18 +458,18 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    #And seleccionar tipo de documento "Ticket"
-    #And seleccionar tipo de vuelo "INTERNACIONAL"
-    #And seleccionar estado "USADO"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
+    And seleccionar el tipo de documento "Ticket"
+    And seleccionar el tipo vuelo "INTERNACIONAL"
+    And seleccionar estado "USADO"
     And seleccionar tipo de transbordo "NORMAL"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
-    #And ingresar numero de vuelo "4A4001"
-    #And seleccionar tipo de persona "ADULTO"
-    #And ingresar fecha de vuelo "01/01/2024"
+    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
+    And ingresar el numero de vuelo "4A4001"
+    And ingresar tipo de persona "ADULTO"
+    #And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And visualizar lista de "Ticket / BP Usado"
 
@@ -450,20 +480,20 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    #And seleccionar tipo de documento "Ticket"
-    #And seleccionar tipo de vuelo "INTERNACIONAL"
-    #And seleccionar estado "USADO"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
+    And seleccionar el tipo de documento "Ticket"
+    And seleccionar el tipo vuelo "INTERNACIONAL"
+    And seleccionar estado "USADO"
     And seleccionar tipo de transbordo "NORMAL"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
-    #And ingresar numero de vuelo "4A4001"
-    #And seleccionar tipo de persona "ADULTO"
-    #And ingresar fecha de vuelo "01/01/2024"
+    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
+    And ingresar el numero de vuelo "4A4001"
+    And ingresar tipo de persona "ADULTO"
+    #And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And click en el boton cerrar
 
   Scenario: CPF178 - Tickets-bp usados/Imprimir tickets-bp usados
@@ -473,20 +503,20 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    #And seleccionar tipo de documento "Ticket"
-    #And seleccionar tipo de vuelo "INTERNACIONAL"
-    #And seleccionar estado "USADO"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
+    And seleccionar el tipo de documento "Ticket"
+    And seleccionar el tipo vuelo "INTERNACIONAL"
+    And seleccionar estado "USADO"
     And seleccionar tipo de transbordo "NORMAL"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
-    #And ingresar numero de vuelo "4A4001"
-    #And seleccionar tipo de persona "ADULTO"
-    #And ingresar fecha de vuelo "01/01/2024"
+    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
+    And ingresar el numero de vuelo "4A4001"
+    And ingresar tipo de persona "ADULTO"
+    #And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF179 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
@@ -495,20 +525,20 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    #And seleccionar tipo de documento "Ticket"
-    #And seleccionar tipo de vuelo "INTERNACIONAL"
-    #And seleccionar estado "USADO"
+    And seleccionar la fecha desde "01/01/2024"
+    And seleccionar la fecha hasta "02/01/2024"
+    And escribir la hora desde "00:00:00"
+    And escribir la hora hasta "23:00:00"
+    And seleccionar el tipo de documento "Ticket"
+    And seleccionar el tipo vuelo "INTERNACIONAL"
+    And seleccionar estado "USADO"
     And seleccionar tipo de transbordo "NORMAL"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
-    #And ingresar numero de vuelo "4A4001"
-    #And seleccionar tipo de persona "ADULTO"
-    #And ingresar fecha de vuelo "01/01/2024"
+    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
+    And ingresar el numero de vuelo "4A4001"
+    And ingresar tipo de persona "ADULTO"
+    #And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en exportar excel
 
 ######## AUDITORIA ########
 
@@ -519,15 +549,15 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion auditoria
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "16/06/2024"
+    And seleccionar fecha hasta "17/06/2024"
+    And escribir hora desde "000000"
+    And ingresar hora hasta "100000"
     And seleccionar operacion "Inicio Sesion"
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
     And seleccionar submodulo "Login Web"
-    And seleccionar usuario "Nando Luyo"
+    And seleccionar al usuario "Nando Luyo"
     And click en el boton buscar
     And visualizar informacion de "Auditoría"
 
@@ -538,17 +568,17 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion auditoria
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "16/06/2024"
+    And seleccionar fecha hasta "17/06/2024"
+    And escribir hora desde "000000"
+    And ingresar hora hasta "100000"
     And seleccionar operacion "Inicio Sesion"
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
     And seleccionar submodulo "Login Web"
     And seleccionar usuario "Nando Luyo"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
     And click en el boton cerrar
 
   Scenario: CPF183 - Auditoria/Imprimir auditoria
@@ -558,29 +588,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion auditoria
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar operacion "Inicio Sesion"
-    And seleccionar tabla "<Todos>"
-    And seleccionar modulo "Administracion Web"
-    And seleccionar submodulo "Login Web"
-    And seleccionar usuario "Nando Luyo"
-    And click en el boton buscar
-    And click en el boton imprimir
-
-  Scenario: CPF184 - Auditoria/Exportar excel de auditoria
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion auditoria
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar fecha desde "16/06/2024"
+    And seleccionar fecha hasta "17/06/2024"
+    And escribir hora desde "000000"
+    And ingresar hora hasta "100000"
     And seleccionar operacion "Inicio Sesion"
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
@@ -598,10 +609,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Carmen Vera"
+    And ingresar codigo de turno "031962"
     And click en el boton buscar
     And visualizar informacion de "Tickets Procesados"
 
@@ -612,12 +623,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Carmen Vera"
+    And ingresar codigo de turno "031962"
     And click en el boton buscar
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF187 - Tickets procesados/Exportar excel de tickets procesados
     Given abre la ruta del aplicativo web
@@ -626,12 +637,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Carmen Vera"
+    And ingresar codigo de turno "031962"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en exportar excel
 
   Scenario: CPF189 - Tickets procesados/Ver detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
@@ -640,12 +651,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Estefania Olivo"
+    And ingresar codigo de turno "031963"
     And click en el boton buscar
-    And click en el boton ver detalle
+    And click en boton ver detalle
 
   Scenario: CPF190 - Tickets procesados/Ver detalle de tickets de tickets procesados
     Given abre la ruta del aplicativo web
@@ -654,13 +665,13 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Estefania Olivo"
+    And ingresar codigo de turno "031963"
     And click en el boton buscar
-    And click en el boton ver detalle
-    And click en el boton ver detalle
+    And click en boton ver detalle
+    And click en el boton ver detalle de ticket
     And click en el boton cerrar
 
   Scenario: CPF191 - Tickets procesados/Imprimir detalle de turno de tickets procesados
@@ -670,13 +681,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Estefania Olivo"
+    And ingresar codigo de turno "031963"
     And click en el boton buscar
-    And click en el boton ver detalle
-    #And click en el boton imprimir
+    And click en imprimir consulta
 
   Scenario: CPF192 - Tickets procesados/Exportar excel de detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web

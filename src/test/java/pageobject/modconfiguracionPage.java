@@ -130,7 +130,6 @@ public class modconfiguracionPage extends util {
     }
     public void ingresarDescripcion(String descripcion){
         wait.until(ExpectedConditions.visibilityOf(inputDescripcion));
-        limpiarCampo(inputDescripcion);
         inputDescripcion.sendKeys(descripcion);
     }
     public void ingresarEditarDescripcion(String editardescripcion){

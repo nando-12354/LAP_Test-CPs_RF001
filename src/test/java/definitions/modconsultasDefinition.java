@@ -1,17 +1,23 @@
 package definitions;
 
 import io.cucumber.java.en.And;
-import pageobject.menuPage;
-import pageobject.modconsultasPage;
-import pageobject.titulosPage;
+import pageobject.*;
 
 public class modconsultasDefinition {
     menuPage menu;
     titulosPage titulos;
+    comboboxPage combobox;
+    imprimirPage imprimir;
+    botonPage boton;
+    excelPage excel;
     modconsultasPage consultas;
     public modconsultasDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
+        combobox = new comboboxPage();
+        imprimir = new imprimirPage();
+        boton = new botonPage();
+        excel = new excelPage();
         consultas = new modconsultasPage();
     }
 
@@ -102,20 +108,20 @@ public class modconsultasDefinition {
 
     @And("seleccionar rol {string}")
     public void seleccionarRol(String rol) {
-        consultas.abrirComboRol();
-        consultas.seleccionarRol(rol);
+        combobox.abrirComboboxRol();
+        combobox.seleccionarOpcion(rol);
     }
 
     @And("seleccionar estado {string}")
     public void seleccionarEstado(String estado) {
-        consultas.abrirComboEstado();
-        consultas.seleccionarEstado(estado);
+        combobox.abrirComboboxEstado();
+        combobox.seleccionarOpcion(estado);
     }
 
     @And("seleccionar grupo {string}")
     public void seleccionarGrupo(String grupo) {
-        consultas.abrirComboGrupo();
-        consultas.seleccionarGrupo(grupo);
+        combobox.abrirComboboxGrupo();
+        combobox.seleccionarOpcion(grupo);
     }
 
     @And("ingresar a la opcion companias")
@@ -136,7 +142,7 @@ public class modconsultasDefinition {
 
     @And("ingresar numero de caja {string}")
     public void ingresarNumeroDeCaja(String caja) {
-
+        consultas.ingresarNumeroCaja(caja);
     }
 
     @And("click en el registro de detalle del turno")
@@ -201,13 +207,13 @@ public class modconsultasDefinition {
 
     @And("seleccionar estado turno {string}")
     public void seleccionarEstadoTurno(String estadoturno) {
-        consultas.abrirComboEstado();
-        consultas.seleccionarEstadoTurno(estadoturno);
+        combobox.abrirComboboxEstado();
+        combobox.seleccionarOpcion(estadoturno);
     }
 
     @And("seleccionar cajero {string}")
     public void seleccionarCajero(String cajero) {
-        consultas.abrirComboCajero();
+        consultas.abrirComboUsuario();
         consultas.seleccionarCajero(cajero);
     }
 
@@ -351,5 +357,110 @@ public class modconsultasDefinition {
     public void seleccionarTipoDeSincronizacion(String tipo) {
         consultas.abrirComboTipoSincronizacion();
         consultas.seleccionarTipoSincronizacion(tipo);
+    }
+
+    @And("click en imprimir")
+    public void clickEnImprimir() {
+        imprimir.clickBotonImprimirC();
+    }
+
+    @And("escribir hora desde {string}")
+    public void escribirHoraDesde(String horadesde) {
+        consultas.ingresarHoraDesde(horadesde);
+    }
+
+    @And("escribir hora hasta {string}")
+    public void escribirHoraHasta(String horahasta) {
+        consultas.ingresarHoraHasta(horahasta);
+    }
+
+    @And("click en exportar excel")
+    public void clickEnExportarExcel() {
+        excel.clickBotonExcelC();
+    }
+
+    @And("click en imprimir consulta")
+    public void clickEnImprimirConsulta() {
+        imprimir.clickBotonImprimirD();
+    }
+
+    @And("ingresar numero ticket {string}")
+    public void ingresarNumeroTicket(String ticket) {
+        consultas.ingresarNumeroTicket(ticket);
+    }
+
+    @And("ingresar el numero de ticket desde {string}")
+    public void ingresarElNumeroDeTicketDesde(String ticketdesde) {
+        consultas.ingresarNumeroTicketDesde(ticketdesde);
+    }
+
+    @And("ingresar el numero de ticket hasta {string}")
+    public void ingresarElNumeroDeTicketHasta(String tickethasta) {
+        consultas.ingresarNumeroTicketHasta(tickethasta);
+    }
+
+    @And("ingresar una compania {string}")
+    public void ingresarUnaCompania(String compania) {
+        combobox.abrirComboCompaniaTicketBpFecha();
+        combobox.seleccionarOpcion(compania);
+    }
+
+    @And("seleccionar la fecha desde {string}")
+    public void seleccionarLaFechaDesde(String fechadesde) {
+        consultas.ingresarFechaDesde(fechadesde);
+    }
+
+    @And("seleccionar la fecha hasta {string}")
+    public void seleccionarLaFechaHasta(String fechahasta) {
+        consultas.ingresarFechaHasta(fechahasta);
+    }
+
+    @And("escribir la hora desde {string}")
+    public void escribirLaHoraDesde(String horadesde) {
+        consultas.ingresarHoraDesdeB(horadesde);
+    }
+
+    @And("escribir la hora hasta {string}")
+    public void escribirLaHoraHasta(String horahasta) {
+        consultas.ingresarHoraHastaB(horahasta);
+    }
+
+    @And("seleccionar el tipo de documento {string}")
+    public void seleccionarElTipoDeDocumento(String documento) {
+        combobox.abrirComboboxTicketBpUsado();
+        combobox.seleccionarOpcion(documento);
+    }
+
+    @And("seleccionar el tipo vuelo {string}")
+    public void seleccionarElTipoVuelo(String tipovuelo) {
+        combobox.abrirComboboxTipoVueloTicketBpUsado();
+        combobox.seleccionarOpcion(tipovuelo);
+    }
+
+    @And("seleccionar una aerolinea {string}")
+    public void seleccionarUnaAerolinea(String compania) {
+        combobox.abrirComboboxCompaniaTicketBpUsado();
+        combobox.seleccionarOpcion(compania);
+    }
+
+    @And("ingresar el numero de vuelo {string}")
+    public void ingresarElNumeroDeVuelo(String vuelo) {
+        consultas.ingresarNumeroVuelo(vuelo);
+    }
+
+    @And("ingresar tipo de persona {string}")
+    public void ingresarTipoDePersona(String pasajero) {
+        combobox.abrirComboboxTipoPasajeroTicketBpUsado();
+        combobox.seleccionarOpcion(pasajero);
+    }
+
+    @And("seleccionar fecha vuelo {string}")
+    public void seleccionarFechaVuelo(String fechavuelo) {
+        consultas.ingresarFechaVuelo(fechavuelo);
+    }
+
+    @And("click en el boton ver detalle de ticket")
+    public void clickEnElBotonVerDetalleDeTicket() {
+        boton.clickBotonVerDetalleC();
     }
 }

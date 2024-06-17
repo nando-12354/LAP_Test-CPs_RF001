@@ -19,6 +19,7 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//input[@type='number'])[2]") protected WebElement inputIpB;
     @FindBy(xpath = "(//input[@type='number'])[3]") protected WebElement inputIpC;
     @FindBy(xpath = "(//input[@type='number'])[4]") protected WebElement inputIpD;
+    @FindBy(xpath = "//input[@inputid='nombre']") protected WebElement inputNombreCompania;
     @FindBy(xpath = "//input[@inputid='ruc']") protected WebElement inputRuc;
     @FindBy(xpath = "//input[contains(@inputid,'codigo')]") protected WebElement inputCodigoAerolinea;
     @FindBy(xpath = "//input[@inputid='iata']") protected WebElement inputCodigoIata;
@@ -42,8 +43,6 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[3]") protected WebElement checkCompNumemroMinimoTicketVenta;
     @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[4]") protected WebElement checkCompSerieNumeroTicketFin;
     @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[5]") protected WebElement checkCompSerieNumeroTicketInicio;
-
-
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[1]") protected WebElement checkActivarRehabilitacion;
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[3]") protected WebElement checkMaximoTicketsEmitidos;
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[4]") protected WebElement checkMaximoTicketVenta;
@@ -52,6 +51,10 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[7]") protected WebElement checkSerieNumeroInicio;
     @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[1]") protected WebElement btnAgregarAtributos;
     @FindBy(xpath = "//input[@id='input']") protected WebElement inputNombreTipoTicket;
+    @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[1]") protected WebElement btnAgregarModalidadVenta;
+    @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[2]") protected WebElement btnAgregarModalidadTipoTicket;
+    @FindBy(xpath = "(//div/app-button-primary/p-button/button)[5]") protected WebElement btnAgregarAtributoTipoTicket;
+    @FindBy(xpath = "//textarea[@inputid='textarea']") protected WebElement inputDescripcion;
     public modmantenimientoPage() {
         PageFactory.initElements(driver, this);
     }
@@ -86,23 +89,48 @@ public class modmantenimientoPage extends util {
         limpiarCampo(inputIpD);
         inputIpD.sendKeys(ipSegments[3]);
     }
+    public void modificarNombreCompania(String modificarnombre){
+        wait.until(ExpectedConditions.visibilityOf(inputNombreCompania));
+        limpiarCampo(inputNombreCompania);
+        inputNombreCompania.sendKeys(modificarnombre);
+    }
     public void ingresarRucCompania(String ruc){
         inputRuc.sendKeys(ruc);
+    }
+    public void modificarRucCompania(String modificarruc){
+        limpiarCampo(inputRuc);
+        inputRuc.sendKeys(modificarruc);
     }
     public void ingresarCodigoAerolinea(String aerolinea){
         inputCodigoAerolinea.sendKeys(aerolinea);
     }
+    public void modificarCodigoAerolinea(String modificaraerolinea){
+        limpiarCampo(inputCodigoAerolinea);
+        inputCodigoAerolinea.sendKeys(modificaraerolinea);
+    }
     public void ingresarCodigoIata(String iata){
         inputCodigoIata.sendKeys(iata);
+    }
+    public void modificarCodigoIata(String modificariata){
+        inputCodigoIata.sendKeys(modificariata);
     }
     public void ingresarCodigoSap(String sap){
         inputCodigoSap.sendKeys(sap);
     }
+    public void modificarCodigoSap(String modificarsap){
+        inputCodigoSap.sendKeys(modificarsap);
+    }
     public void ingresarCodigoOaci(String oaci){
         inputCodigoOaci.sendKeys(oaci);
     }
+    public void modificarCodigoOaci(String modificaroaci){
+        inputCodigoOaci.sendKeys(modificaroaci);
+    }
     public void ingresarCodigoInterno(String interno){
         inputCodigoInterno.sendKeys(interno);
+    }
+    public void modificarCodigoInterno(String modificarinterno){
+        inputCodigoInterno.sendKeys(modificarinterno);
     }
     public void clickBotonAgregarRepresentante(){
         btnAgregarRepresentante.click();
@@ -110,14 +138,31 @@ public class modmantenimientoPage extends util {
     public void ingresarNombreRepresentante(String nombre){
         inputNombreRepresentante.sendKeys(nombre);
     }
+    public void modificarNombreRepresentante(String modificarnombre){
+        wait.until(ExpectedConditions.visibilityOf(inputNombreRepresentante));
+        limpiarCampo(inputNombreRepresentante);
+        inputNombreRepresentante.sendKeys(modificarnombre);
+    }
     public void ingresarApellidoRepresentante(String apellido){
         inputApellidoRepresentante.sendKeys(apellido);
+    }
+    public void modificarApellidoRepresentante(String modificarapellido){
+        limpiarCampo(inputApellidoRepresentante);
+        inputApellidoRepresentante.sendKeys(modificarapellido);
     }
     public void ingresarDocumentoRepresentante(String documento){
         inputDocumentoRepresentante.sendKeys(documento);
     }
+    public void modificarDocumentoRepresentante(String modificardocumento){
+        limpiarCampo(inputDocumentoRepresentante);
+        inputDocumentoRepresentante.sendKeys(modificardocumento);
+    }
     public void ingresarCargoRepresentante(String cargo){
         inputCargoRepresentante.sendKeys(cargo);
+    }
+    public void modificarCargoRepresentante(String modificarcargo){
+        limpiarCampo(inputCargoRepresentante);
+        inputCargoRepresentante.sendKeys(modificarcargo);
     }
     public void seleccionarPermisoMasivaContado(String permiso){
         wait.until(ExpectedConditions.visibilityOf(checkPermisoMasivaContado));
@@ -378,5 +423,19 @@ public class modmantenimientoPage extends util {
         wait.until(ExpectedConditions.visibilityOf(inputNombreTipoTicket));
         limpiarCampo(inputNombreTipoTicket);
         inputNombreTipoTicket.sendKeys(tipoticket);
+    }
+    public void clickBotonAgregarModalidadVenta(){
+        btnAgregarModalidadVenta.click();
+    }
+    public void clickBotonAgregarModalidadTipoTicket(){
+        btnAgregarModalidadTipoTicket.click();
+    }
+    public void clickBotonAgregarAtributoTipoTicket(){
+        btnAgregarAtributoTipoTicket.click();
+    }
+    public void ingresarDescripcion(String descripcion){
+        wait.until(ExpectedConditions.visibilityOf(inputDescripcion));
+        limpiarCampo(inputDescripcion);
+        inputDescripcion.sendKeys(descripcion);
     }
 }

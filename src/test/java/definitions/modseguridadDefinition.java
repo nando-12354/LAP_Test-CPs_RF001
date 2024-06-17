@@ -84,7 +84,7 @@ public class modseguridadDefinition {
 
     @And("click en el boton editar venta normal")
     public void clickEnElBotonEditarVentaNormal() {
-        boton.clickBotonEditar();
+        boton.clickBotonEditarB();
     }
 
     @And("validar mensaje de confirmacion {string}")

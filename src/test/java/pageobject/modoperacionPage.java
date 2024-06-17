@@ -175,13 +175,18 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//button[contains(.,'Extornar')]") WebElement btnExtornar;
     @FindBy(xpath = "//div/app-input-text[@label='Motivo']//input") WebElement inputMotivoExtorno;
     @FindBy(xpath = "//div/div/div/app-input-text-2/span/input") protected WebElement inputTicketRehabilitacion;
+    @FindBy(xpath = "(//app-input-text//input)[1]") protected WebElement inputTicketExtension;
+    @FindBy(xpath = "(//app-input-text//input)[2]") protected WebElement inputDiasExtension;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Del Nro:']/span/input") protected WebElement inputTicketDesdeRehabilitacion;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Al Nro:']/span/input") protected WebElement inputTicketHastaRehabilitacion;
+    @FindBy(xpath = "//app-input-text[@label='Desde Número']//input") protected WebElement inputTicketDesdeExtension;
+    @FindBy(xpath = "//app-input-text[@label='Hasta Número']//input") protected WebElement inputTicketHastaExtension;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Número Vuelo']/span/input") protected WebElement inputNumVueloRehabilitacion;
     @FindBy(xpath = "//div//div//p-radiobutton[@inputid='filters']") protected WebElement rdFiltroConsulta;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='fEstadoTurno']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoTurnoAnulacion;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='fTipoTicket']//p-dropdown//div[@role='button']") protected WebElement cmbTipoTicketAnulacion;
     @FindBy(xpath = "//div/div/div/div/div/div/p-radiobutton[@inputid='rangoTicketRadioButton2']") protected WebElement rdRangoTicketsAnulacion;
+    @FindBy(xpath = "//p-radiobutton[@inputid='tasaCambioRadioButton2']") protected WebElement rdRangoTicketsExtension;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fDesdeNumero']/span/input") protected WebElement inputTicketDesdeAnulacion;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fHastaNumero']/span/input") protected WebElement inputTicketHastaAnulacion;
     @FindBy(xpath = "//div/app-input-text-2[@label='Motivo de Anulación']//input") protected WebElement inputMotivoAnulacion;
@@ -203,6 +208,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement txtFechaArchivoSeae;
     @FindBy(xpath = "//p-dropdown[@inputid='selectInput']//div[@role='button']") protected WebElement cmbTipoDocumentoArchivoSeae;
     @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
+    @FindBy(xpath = "//p-table//table/tbody/tr/td/input[@type='checkbox']") WebElement checkTicketExtension;
     public modoperacionPage() {
         PageFactory.initElements(driver, this);
     }
@@ -954,5 +960,36 @@ public class modoperacionPage extends util {
     }
     public void clickBotonCerrarTurno(){
         btnCerrarTurno.click();
+    }
+    public void ingresarTicketExtension(String ticketextension){
+        wait.until(ExpectedConditions.visibilityOf(inputTicketExtension));
+        inputTicketExtension.sendKeys(ticketextension);
+    }
+    public void ingresarDiasExtension(String dias){
+        wait.until(ExpectedConditions.visibilityOf(inputDiasExtension));
+        inputDiasExtension.sendKeys(dias);
+    }
+    public void seleccionarTicketExtension(String ticket) {
+        wait.until(ExpectedConditions.visibilityOf(checkTicketExtension));
+        if (ticket.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkTicketExtension));
+            if (!checkTicketExtension.isSelected()) {
+                checkTicketExtension.click();
+            }
+        } else if (ticket.toLowerCase().equals("no")) {
+            if (checkTicketExtension.isSelected()) {
+                checkTicketExtension.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkTicketExtension.isSelected());
+        }
+    }
+    public void seleccionarRangoTicketExtension(){
+        rdRangoTicketsExtension.click();
+    }
+    public void ingresarTicketDesdeExtension(String ticketdesde){
+        inputTicketDesdeExtension.sendKeys(ticketdesde);
+    }
+    public void ingresarTicketHastaExtension(String tickethasta){
+        inputTicketHastaExtension.sendKeys(tickethasta);
     }
 }

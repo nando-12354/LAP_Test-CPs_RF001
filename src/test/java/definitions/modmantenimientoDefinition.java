@@ -85,7 +85,7 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar tipo de compania {string}")
     public void seleccionarTipoDeCompania(String tipocompania) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxTipoCompania();
         combobox.seleccionarOpcion(tipocompania);
     }
 
@@ -158,7 +158,7 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar tipo de modalidad {string}")
     public void seleccionarTipoDeModalidad(String tipomodalidad) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxTipoModalidad();
         combobox.seleccionarOpcion(tipomodalidad);
     }
 
@@ -194,7 +194,7 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar tipo ticket {string}")
     public void seleccionarTipoTicket(String tipoticket) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxTipoTicketModalidad();
         combobox.seleccionarOpcion(tipoticket);
     }
 
@@ -261,7 +261,7 @@ public class modmantenimientoDefinition {
 
     @And("click en el boton editar bcbp")
     public void clickEnElBotonEditarBcbp() {
-        boton.clickBotonEditarB();
+        boton.clickBotonEditarC();
     }
 
     @And("seleccionar venta masiva contado {string}")
@@ -271,7 +271,7 @@ public class modmantenimientoDefinition {
 
     @And("click en el boton editar venta masiva contado")
     public void clickEnElBotonEditarVentaMasivaContado() {
-        boton.clickBotonEditarC();
+        boton.clickBotonEditarD();
     }
 
     @And("seleccionar venta masiva credito {string}")
@@ -281,7 +281,7 @@ public class modmantenimientoDefinition {
 
     @And("click en el boton editar venta masiva")
     public void clickEnElBotonEditarVentaMasiva() {
-        boton.clickBotonEditarD();
+        boton.clickBotonEditarE();
     }
 
     @And("ingresar tipo de documento {string}")
@@ -293,5 +293,85 @@ public class modmantenimientoDefinition {
     @And("click en el boton editar")
     public void clickEnElBotonEditar() {
         boton.clickBotonEditar();
+    }
+
+    @And("modificar nombre {string}")
+    public void modificarNombre(String nombres) {
+        mantenimiento.modificarNombreCompania(nombres);
+    }
+
+    @And("modificar ruc {string}")
+    public void modificarRuc(String ruc) {
+        mantenimiento.modificarRucCompania(ruc);
+    }
+
+    @And("modificar codigo aerolinea {string}")
+    public void modificarCodigoAerolinea(String aerolinea) {
+        mantenimiento.modificarCodigoAerolinea(aerolinea);
+    }
+
+    @And("modificar codigo iata {string}")
+    public void modificarCodigoIata(String iata) {
+        mantenimiento.modificarCodigoIata(iata);
+    }
+
+    @And("modificar codigo sap {string}")
+    public void modificarCodigoSap(String sap) {
+        mantenimiento.modificarCodigoSap(sap);
+    }
+
+    @And("modificar codigo oaci {string}")
+    public void modificarCodigoOaci(String oaci) {
+        mantenimiento.modificarCodigoOaci(oaci);
+    }
+
+    @And("modificar codigo interno {string}")
+    public void modificarCodigoInterno(String interno) {
+        mantenimiento.modificarCodigoInterno(interno);
+    }
+
+    @And("click en el boton editar representante")
+    public void clickEnElBotonEditarRepresentante() {
+        boton.clickBotonEditar();
+    }
+
+    @And("modificar nombre de representante {string}")
+    public void modificarNombreDeRepresentante(String nombres) {
+        mantenimiento.modificarNombreRepresentante(nombres);
+    }
+
+    @And("modificar apellido de representante {string}")
+    public void modificarApellidoDeRepresentante(String apellidos) {
+        mantenimiento.modificarApellidoRepresentante(apellidos);
+    }
+
+    @And("modificar numero de documento {string}")
+    public void modificarNumeroDeDocumento(String documento) {
+        mantenimiento.modificarDocumentoRepresentante(documento);
+    }
+
+    @And("modificar cargo {string}")
+    public void modificarCargo(String cargo) {
+        mantenimiento.modificarCargoRepresentante(cargo);
+    }
+
+    @And("click en el boton agregar modalidad de venta")
+    public void clickEnElBotonAgregarModalidadDeVenta() {
+        mantenimiento.clickBotonAgregarModalidadVenta();
+    }
+
+    @And("click en el boton agregar modalidad tipo ticket")
+    public void clickEnElBotonAgregarModalidadipoTicket() {
+        mantenimiento.clickBotonAgregarModalidadTipoTicket();
+    }
+
+    @And("click en el boton agregar atributos tipo ticket")
+    public void clickEnElBotonAgregarAtributosTipoTicket() {
+        mantenimiento.clickBotonAgregarAtributoTipoTicket();
+    }
+
+    @And("cambiar descripcion {string}")
+    public void cambiarDescripcion(String descripcion) {
+        mantenimiento.ingresarDescripcion(descripcion);
     }
 }

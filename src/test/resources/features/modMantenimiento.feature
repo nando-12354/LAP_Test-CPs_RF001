@@ -160,6 +160,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion compania
     And visualizar lista de "Compañías"
 
+  #######################################################################################
+   ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
+  #######################################################################################
   Scenario: CPF056 - Compania/Registrar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -169,7 +172,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion compania
     And click en el boton nuevo
     And ingresar nombre "zCompGen01"
-    And seleccionar tipo de compania "BANCO"
+    And seleccionar tipo de compania "AEROLINEA"
     And ingresar ruc "2078965485"
     And ingresar codigo aerolinea "aaa"
     And ingresar codigo iata "bbb"
@@ -197,7 +200,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton editar bcbp
     And seleccionar activar rehabilitacion "si"
     And seleccionar serie numero ticket fin "no"
-    And seleccionar serie numero ticket inicio "sno"
+    And seleccionar serie numero ticket inicio "no"
     And click en boton guardar
     And seleccionar venta masiva contado "si"
     And click en el boton editar venta masiva contado
@@ -218,6 +221,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     #And click en el boton aceptar
     #And validar mensaje ""
 
+   #######################################################################################
+    ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
+   #######################################################################################
   Scenario: CPF057 - Compania/Modificar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -225,29 +231,60 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton iniciar sesion
     And ingresar al modulo mantenimiento
     And ingresar a la opcion compania
-    And click en el boton nuevo
-    And ingresar nombre ""
-    And modificar tipo de compania
-    And modificar ruc
-    And modificar codigo aerolinea
-    And modificar codigo iata
-    And modificar codigo sap
-    And modificar codigo oaci
-    And modificar codigo interno
     And click en el boton editar
-    And modificar nombre de representante "Selenium"
+    And modificar nombre "zCompGen01"
+    And seleccionar tipo de compania "AEROLINEA"
+    And modificar ruc "2078965485"
+    And modificar codigo aerolinea "aaa"
+    And modificar codigo iata "bbb"
+    And modificar codigo sap "ccc"
+    And modificar codigo oaci "ddd"
+    And modificar codigo interno "eee"
+    And click en el boton editar representante
+    And modificar nombre de representante "Testing"
     And modificar apellido de representante "IDE"
-    And modificar tipo de documento
-    And modificar numero de documento
-    And modificar cargo
-    And seleccionar permisos "si"
+    And ingresar tipo de documento "DNI"
+    And modificar numero de documento "72178888"
+    And modificar cargo "QAAA"
+    And seleccionar permisos "no"
     And click en boton guardar
     And validar mensaje "Representante registrado correctamente"
+    And seleccionar venta normal "si"
+    And click en el boton editar venta normal
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
+    And click en boton guardar
+    And seleccionar bcbp "si"
+    And click en el boton editar bcbp
+    And seleccionar activar rehabilitacion "si"
+    And seleccionar serie numero ticket fin "no"
+    And seleccionar serie numero ticket inicio "no"
+    And click en boton guardar
+    And seleccionar venta masiva contado "si"
+    And click en el boton editar venta masiva contado
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
+    And seleccionar venta masiva credito "si"
+    And click en el boton editar venta masiva
+    And seleccionar atributo activar rehabilitacion "si"
+    And seleccionar atributo numero maximo de ticket para venta "si"
+    And seleccionar atributo numero minimo de ticket para venta "si"
+    And seleccionar atributo serie numero ticket fin "si"
+    And seleccionar atributo serie numero ticket inicio "si"
     And click en el boton guardar
     #And validar alerta de confirmacion ""
     #And click en el boton aceptar
     #And validar mensaje ""
 
+   #######################################################################################
+    ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
+   #######################################################################################
   Scenario: CPF058 - Compania/Deshabilitar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -273,6 +310,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion modalidad de venta
     And visualizar lista de "Modalidades de Venta"
 
+   #######################################################################################
+    ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
+   #######################################################################################
   Scenario: CPF060 - Modalidad de venta/Registrar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -283,7 +323,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton nuevo
     And seleccionar tipo de modalidad "Tipo Venta Normal"
     And ingresar descripcion "Testing"
-    And click en el boton agregar atributos
+    And click en el boton agregar modalidad de venta
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
@@ -292,8 +332,8 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar serie numero ticket inicio "si"
     And click en boton guardar
     And seleccionar tipo ticket "T01 ( ADULTO INTERNACIONAL NORMAL )"
-    And click en el boton agregar
-    And click en el boton agregar
+    And click en el boton agregar modalidad tipo ticket
+    And click en el boton agregar atributos tipo ticket
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
@@ -313,7 +353,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion modalidad de venta
     And click en el boton editar
     And seleccionar estado "Vigente"
-    And ingresar descripcion "Pruebas"
+    And cambiar descripcion "Pruebas"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
@@ -327,7 +367,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton nuevo
     And seleccionar tipo de modalidad "Tipo Venta Normal"
     And ingresar descripcion "Testing"
-    And click en el boton agregar atributos
+    And click en el boton agregar modalidad de venta
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
@@ -336,8 +376,8 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar serie numero ticket inicio "si"
     And click en boton guardar
     And seleccionar tipo ticket "T01 ( ADULTO INTERNACIONAL NORMAL )"
-    And click en el boton agregar
-    And click en el boton agregar
+    And click en el boton agregar modalidad tipo ticket
+    And click en el boton agregar atributos tipo ticket
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
     And seleccionar numero maximo tickets para venta "si"
