@@ -74,7 +74,7 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar codigo de moneda {string}")
     public void seleccionarCodigoDeMoneda(String codigomoneda) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxMoneda();
         combobox.seleccionarOpcion(codigomoneda);
     }
 
@@ -210,7 +210,7 @@ public class modmantenimientoDefinition {
 
     @And("seleccionar tipo de pasajero {string}")
     public void seleccionarTipoDePasajero(String pasajero) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxTipoPasajeroTipoTicket();
         combobox.seleccionarOpcion(pasajero);
     }
 

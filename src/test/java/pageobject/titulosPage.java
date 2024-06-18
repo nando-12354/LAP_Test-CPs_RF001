@@ -11,7 +11,7 @@ import support.util;
 
 public class titulosPage extends util {
     public titulosPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void validarTitulo(String titulo){
         boolean tituloValido = false;

@@ -11,7 +11,7 @@ import support.util;
 
 public class resumenPage extends util {
     public resumenPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void validarResumen(String resumen) {
         boolean resumenValido = false;

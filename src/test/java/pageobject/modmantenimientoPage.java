@@ -56,7 +56,7 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/app-button-primary/p-button/button)[5]") protected WebElement btnAgregarAtributoTipoTicket;
     @FindBy(xpath = "//textarea[@inputid='textarea']") protected WebElement inputDescripcion;
     public modmantenimientoPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionEstacionPuntoVenta(){
         wait.until(ExpectedConditions.visibilityOf(opEstacionPuntoVenta));

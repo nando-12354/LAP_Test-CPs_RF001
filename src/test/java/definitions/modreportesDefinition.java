@@ -7,12 +7,14 @@ public class modreportesDefinition {
     menuPage menu;
     titulosPage titulos;
     pdfPage pdf;
+    imprimirPage imprimir;
     resumenPage resumen;
     modreportesPage reportes;
     public modreportesDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
         pdf = new pdfPage();
+        imprimir = new imprimirPage();
         resumen = new resumenPage();
         reportes = new modreportesPage();
     }
@@ -419,5 +421,10 @@ public class modreportesDefinition {
     @And("seleccionar mes de uso {string}")
     public void seleccionarMesDeUso(String mes) {
         reportes.ingresarMesUso(mes);
+    }
+
+    @And("click en el boton imprimir resumen")
+    public void clickEnElBotonImprimirResumen() {
+        imprimir.clickBotonImprimirResumen();
     }
 }

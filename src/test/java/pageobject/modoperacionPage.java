@@ -210,7 +210,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
     @FindBy(xpath = "//p-table//table/tbody/tr/td/input[@type='checkbox']") WebElement checkTicketExtension;
     public modoperacionPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
 
     public void ingresarOpcionTasaCambio() {

@@ -254,7 +254,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## TICKET POR RANGO ########
 
-  Scenario: CPF125 - Ticket por rango/Agregar ticket por rango
+  Scenario: CPF125 - Ticket por rango/Buscar ticket por rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -316,7 +316,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## TICKET POR FECHA ########
 
-  Scenario: CPF129 - Ticket por fecha/Agregar ticket por fecha
+  Scenario: CPF129 - Ticket por fecha/Buscar ticket por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -566,7 +566,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## BOARDING PASS POR VUELO ########
 
-  Scenario: CPF143 - Boarding pass por vuelo/Agregar boarding pass por vuelo
+  Scenario: CPF143 - Boarding pass por vuelo/Buscar boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -632,7 +632,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## BOARDING PASS POR FECHA ########
 
-  Scenario: CPF147 - Boarding pass por fecha/Agregar boarding pass por fecha
+  Scenario: CPF147 - Boarding pass por fecha/Buscar boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

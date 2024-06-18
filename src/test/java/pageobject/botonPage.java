@@ -35,7 +35,7 @@ public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Extender')]") protected WebElement btnExtender;
 
     public botonPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void clickBotonNuevo(){
         wait.until(ExpectedConditions.visibilityOf(btnNuevo));
@@ -134,6 +134,7 @@ public class botonPage extends util {
         btnCerrar.click();
     }
     public void clickBotonAceptar(){
+        wait.until(ExpectedConditions.visibilityOf(btnAceptar));
         btnAceptar.click();
     }
     public void clickBotonExtender(){

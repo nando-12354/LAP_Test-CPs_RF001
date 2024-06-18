@@ -344,7 +344,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## CUADRE DE STICKERS EMITIDOS O BP USADOS ########
 
-  Scenario: CPF167 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
+  Scenario: CPF166 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -357,7 +357,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  Scenario: CPF168 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
+  Scenario: CPF167 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -370,7 +370,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  Scenario: CPF169 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
+  Scenario: CPF168 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -383,7 +383,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
+  Scenario: CPF169 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -396,7 +396,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Exportar informe por ticket
+  Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -409,7 +409,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  Scenario: CPF172 - Cuadre de stickers emitidos o bp usados/Exportar informe por boarding
+  Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -424,7 +424,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## OPERACION COMPRA / VENTA ########
 
-  Scenario: CPF173 - Operacion compra-venta/Buscar operacion compra-venta
+  Scenario: CPF172 - Operacion compra-venta/Buscar operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -437,7 +437,7 @@ Feature: Funcionalidad del modulo Consultas
     And visualizar operacion compra
     And visualizar operacion venta
 
-  Scenario: CPF174 - Operacion compra-venta/Imprimir operacion compra-venta
+  Scenario: CPF173 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -451,7 +451,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## TICKETS / BP USADOS ########
 
-  Scenario: CPF176 - Tickets-bp usados/Buscar tickets-bp usados
+  Scenario: CPF174 - Tickets-bp usados/Buscar tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -473,7 +473,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Ticket / BP Usado"
 
-  Scenario: CPF177 - Tickets-bp usados/Ver detalle de tickets-bp usados
+  Scenario: CPF175 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -496,7 +496,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  Scenario: CPF178 - Tickets-bp usados/Imprimir tickets-bp usados
+  Scenario: CPF176 - Tickets-bp usados/Imprimir tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -518,7 +518,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF179 - Tickets-bp usados/Exportar excel de tickets-bp usados
+  Scenario: CPF177 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -576,7 +576,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
     And seleccionar submodulo "Login Web"
-    And seleccionar usuario "Nando Luyo"
+    And seleccionar al usuario "Nando Luyo"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
@@ -596,7 +596,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
     And seleccionar submodulo "Login Web"
-    And seleccionar usuario "Nando Luyo"
+    And seleccionar al usuario "Nando Luyo"
     And click en el boton buscar
     And click en el boton imprimir
 
@@ -695,13 +695,15 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets procesados
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And seleccionar cajero "Carmen Vera"
-    And ingresar codigo de turno "031969"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar cajero "Estefania Olivo"
+    And ingresar codigo de turno "031963"
     And click en el boton buscar
     And click en el boton ver detalle
-    #And click en el boton imprimir
+    And click en exportar excel
+
+######## LOG DE ERRORES MOLINETE ########
 
   Scenario: CPF193 - Log de errores de molinetes/Buscar tipo de error funcional
     Given abre la ruta del aplicativo web
@@ -710,18 +712,18 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion log de errores de molinetes
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "03/12/2023"
+    And seleccionar la fecha hasta "04/12/2023"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar tipo error "Funcional"
     And seleccionar error "Todos"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
-    #And ingresar fecha de vuelo "01/01/2024"
-    #And ingresar numero de vuelo ""
-    And ingresar asiento "008A"
-    And ingresar persona ""
+    And ingresar fecha vuelo "03/12/2023"
+    And ingresar numero de vuelo "AV696"
+    And ingresar asiento "016C"
+    And ingresar persona "CARRASCO"
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
@@ -734,18 +736,18 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion log de errores de molinetes
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar tipo error "No funcional"
+    And seleccionar la fecha desde "03/12/2023"
+    And seleccionar la fecha hasta "04/12/2023"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar tipo error "No Funcional"
     And seleccionar error "Todos"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
-    #And ingresar fecha de vuelo "01/01/2024"
-    #And ingresar numero de vuelo ""
-    And ingresar asiento "008A"
-    And ingresar persona ""
+    And ingresar fecha vuelo "03/12/2023"
+    And ingresar numero de vuelo "AV696"
+    And ingresar asiento "016C"
+    And ingresar persona "CARRASCO"
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
@@ -758,22 +760,22 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion log de errores de molinetes
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
+    And seleccionar la fecha desde "03/12/2023"
+    And seleccionar la fecha hasta "04/12/2023"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
     And seleccionar tipo error "Funcional"
     And seleccionar error "Todos"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
-    #And ingresar fecha de vuelo "01/01/2024"
-    #And ingresar numero de vuelo ""
-    And ingresar asiento "008A"
-    And ingresar persona ""
+    And ingresar fecha vuelo "03/12/2023"
+    And ingresar numero de vuelo "AV696"
+    And ingresar asiento "016C"
+    And ingresar persona "CARRASCO"
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en el boton reporte
 
   Scenario: CPF196 - Log de errores de molinetes/Exportar excel de error no funcional
     Given abre la ruta del aplicativo web
@@ -782,118 +784,22 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion log de errores de molinetes
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar tipo error "No funcional"
+    And seleccionar la fecha desde "03/12/2023"
+    And seleccionar la fecha hasta "04/12/2023"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar tipo error "No Funcional"
     And seleccionar error "Todos"
-    #And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
-    #And ingresar fecha de vuelo "01/01/2024"
-    #And ingresar numero de vuelo ""
-    And ingresar asiento "008A"
-    And ingresar persona ""
+    And ingresar fecha vuelo "03/12/2023"
+    And ingresar numero de vuelo "AV696"
+    And ingresar asiento "016C"
+    And ingresar persona "CARRASCO"
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    #And click en el boton excel
-
-######## TRANSACCION CRITICA ########
-
-  Scenario: CPF200 - Transaccion critica/Buscar transaccion critica
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion transaccion critica
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
-    And seleccionar usuario "<Todos>"
-    And click en el boton buscar
-    And visualizar informacion de "Transaccion crítica"
-
-  Scenario: CPF201 - Transaccion critica/Ver detalle de transaccion critica
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion transaccion critica
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
-    And seleccionar usuario "<Todos>"
-    And click en el boton buscar
-    And click en el boton ver detalle
-    And click en el boton cerrar
-
-  Scenario: CPF202 - Transaccion critica/Imprimir transaccion critica
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion transaccion critica
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "02/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
-    And seleccionar usuario "<Todos>"
-    And click en el boton buscar
-   #And click en el boton imprimir
-
-######## DEPURACION ########
-
-  Scenario: CPF204 - Depuracion/Buscar depuracion
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion depuracion
-    #And ingresar fecha desde "01/03/2022"
-    #And ingresar fecha hasta "31/12/2023"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "23:00:00"
-    And seleccionar molinete "NORMAL INTER M4"
-    And seleccionar tabla "Ticket"
-    And seleccionar estado "En Proceso"
-    And click en el boton buscar
-    And visualizar informacion de "Depuración"
-
-  Scenario: CPF207 - Depuracion/Exportar informe depuracion
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion depuracion
-    #And ingresar fecha desde "01/03/2022"
-    #And ingresar fecha hasta "31/12/2023"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "23:00:00"
-    And seleccionar molinete "NORMAL INTER M4"
-    And seleccionar tabla "Ticket"
-    And seleccionar estado "En Proceso"
-    And click en el boton buscar
-    #And click en el boton excel
+    And click en el boton reporte
 
 ######## SINCRONIZACION ########
 
@@ -904,12 +810,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion sincronizacion
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "01/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    #And seleccionar molinete "NORMAL INTER M4"
-    #And seleccionar estado "Terminado"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar el molinete "NORMAL INTER M4"
+    And seleccionar un estado "Terminado"
     And seleccionar tabla de sincronizacion "Boarding"
     And seleccionar tipo de sincronizacion "<Todos>"
     And click en el boton buscar
@@ -922,13 +828,109 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion sincronizacion
-    #And ingresar fecha desde "01/01/2024"
-    #And ingresar fecha hasta "01/01/2024"
-    #And ingresar hora desde "00:00:00"
-    #And ingresar hora hasta "10:00:00"
-    And seleccionar molinete "NORMAL INTER M4"
-    And seleccionar estado "Terminado"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar el molinete "NORMAL INTER M4"
+    And seleccionar un estado "Terminado"
     And seleccionar tabla de sincronizacion "Boarding"
     And seleccionar tipo de sincronizacion "<Todos>"
     And click en el boton buscar
-    #And click en el boton excel
+    And click en exportar excel
+
+######## TRANSACCION CRITICA ########
+
+  Scenario: CPF200 - Transaccion critica/Buscar transaccion critica
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion transaccion critica
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar operacion "Eliminación"
+    And seleccionar tabla "TUA_ModVentaCompAtr"
+    And seleccionar modulo "Mantenimiento"
+    And seleccionar submodulo "Compañía"
+    And seleccionar el usuario "<Todos>"
+    And click en el boton buscar
+    And visualizar informacion de "Transaccion crítica"
+
+  Scenario: CPF201 - Transaccion critica/Ver detalle de transaccion critica
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion transaccion critica
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar operacion "Eliminación"
+    And seleccionar tabla "TUA_ModVentaCompAtr"
+    And seleccionar modulo "Mantenimiento"
+    And seleccionar submodulo "Compañía"
+    And seleccionar el usuario "<Todos>"
+    And click en el boton buscar
+    And click en boton ver detalle
+    And click en el boton cerrar
+
+  Scenario: CPF202 - Transaccion critica/Imprimir transaccion critica
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion transaccion critica
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "100000"
+    And seleccionar operacion "Eliminación"
+    And seleccionar tabla "TUA_ModVentaCompAtr"
+    And seleccionar modulo "Mantenimiento"
+    And seleccionar submodulo "Compañía"
+    And seleccionar el usuario "<Todos>"
+    And click en el boton buscar
+    And click en imprimir
+
+######## DEPURACION ########
+
+  Scenario: CPF204 - Depuracion/Buscar depuracion
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion depuracion
+    And seleccionar fecha desde "01/03/2022"
+    And seleccionar fecha hasta "31/12/2023"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
+    And ingresar molinete "NORMAL INTER M4"
+    And ingresar tabla "Ticket"
+    And ingresar el estado "En Proceso"
+    And click en el boton buscar
+    And visualizar informacion de "Depuración"
+
+  Scenario: CPF207 - Depuracion/Exportar informe depuracion
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion depuracion
+    And seleccionar fecha desde "01/03/2022"
+    And seleccionar fecha hasta "31/12/2023"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
+    And ingresar molinete "NORMAL INTER M4"
+    And ingresar tabla "Ticket"
+    And ingresar el estado "En Proceso"
+    And click en el boton buscar
+    And click en el boton excel

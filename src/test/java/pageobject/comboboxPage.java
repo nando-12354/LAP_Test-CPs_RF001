@@ -16,12 +16,10 @@ public class comboboxPage extends util {
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbEstadoUsuarioEditar;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[2]") protected WebElement cmbPrivilegioUsuarioEditar;
     @FindBy(xpath = "//div/div/span/p-dropdown//div[@role='button']") protected WebElement cmbMotivoTicketMasivo;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@id='motivos']//div[@role='button']") protected WebElement cmbMotivosTicket;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@id='motivos']//div[@role='button']") protected WebElement cmbMotivoTicketVuelo;
-    @FindBy(xpath = "//div/div/p-dropdown[@optionvalue='sCodCampo']//div[@role='button']") protected WebElement cmbMotivoTicketRango;
-    @FindBy(xpath = "//div/app-input-select[@inputid='motivocmb']//div[@role='button']") protected WebElement cmbMotivoTicketFecha;
+    @FindBy(xpath = "//app-input-select-2[@name='selectedTipoTasa']//p-dropdown//div[@role='button']") protected WebElement cmbTipoOperacionTC;
     @FindBy(xpath = "//app-representante-compania//p-dropdown//div[@role='button']") protected WebElement cmbRepresentanteCompania;
     @FindBy(xpath = "//div/div//span/p-dropdown//div[@role='button']") protected WebElement cmbMoneda;
+    @FindBy(xpath = "(//div/app-input-select//p-dropdown//div[@role='button'])[1]") protected WebElement cmbTipoPasajeroTipoTicket;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='listaTipos']//div[@role='button']") protected WebElement cmbTipoCompania;
     @FindBy(xpath = "//div/app-input-select[@inputid='modalidadVenta']//div[@role='button']") protected WebElement cmbTipoModalidad;
     @FindBy(xpath = "//div/app-input-select[@inputid]//div[@role='button']") protected WebElement cmbTipoTicketModalidad;
@@ -39,9 +37,15 @@ public class comboboxPage extends util {
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[3]") protected WebElement cmbTipoPasajeroTicketBpUsado;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[4]") protected WebElement cmbTipoVueloTicketBpUsado;
     @FindBy(xpath = "//p-dropdown[@optionlabel='sDscCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpUsado;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteSincronizacion;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fEstadoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoSincronizacion;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fUsuario']//p-dropdown//div[@role='button']") protected WebElement cmbAuditoriaUsuario;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteDepuracion;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoTabla']//p-dropdown//div[@role='button']") protected WebElement cmbTablaDepuracion;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoEstado']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoDepuracion;
 
     public comboboxPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void abrirComboboxRolPadre(){
         cmbRolPadre.click();
@@ -122,34 +126,47 @@ public class comboboxPage extends util {
     public void abrirComboboxTipoPasajeroTicketBpUsado(){
         cmbTipoPasajeroTicketBpUsado.click();
     }
+    public void abrirComboboxMolineteSincronizacion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbMolineteSincronizacion));
+        cmbMolineteSincronizacion.click();
+    }
+    public void abrirComboboxEstadoSincronizacion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoSincronizacion));
+        cmbEstadoSincronizacion.click();
+    }
+    public void abrirComboAuditoriaUsuario(){
+        wait.until(ExpectedConditions.visibilityOf(cmbAuditoriaUsuario));
+        cmbAuditoriaUsuario.click();
+    }
+    public void abrirComboboxMolineteDepuracion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbMolineteDepuracion));
+        cmbMolineteDepuracion.click();
+    }
+    public void abrirComboboxTablaDepuracion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTablaDepuracion));
+        cmbTablaDepuracion.click();
+    }
+    public void abrirComboboxEstadoDepuracion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoDepuracion));
+        cmbEstadoDepuracion.click();
+    }
+    public void abrirComboboxMoneda(){
+        wait.until(ExpectedConditions.visibilityOf(cmbMoneda));
+        cmbMoneda.click();
+    }
+    public void abrirComboboxTipoPasajeroTipoTicket(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoPasajeroTipoTicket));
+        cmbTipoPasajeroTipoTicket.click();
+    }
+    public void abrirComboboxTipoOperacionTasaCambio(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoOperacionTC));
+        cmbTipoOperacionTC.click();
+    }
     public void seleccionarOpcion(String item) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionItem = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + item + "']"));
         opcionItem.click();
     }
-
-    public void abrirCombobox() {
-            try {
-                cmbMoneda.click();
-            } catch (NoSuchElementException h) {
-                            try {
-                                cmbMotivosTicket.click();
-                            } catch (NoSuchElementException ee) {
-                                try {
-                                    cmbMotivoTicketVuelo.click();
-                                } catch (NoSuchElementException eee) {
-                                    try {
-                                        cmbMotivoTicketRango.click();
-                                    } catch (NoSuchElementException eeee) {
-                                        try {
-                                            cmbMotivoTicketFecha.click();
-                                        } catch (NoSuchElementException eeeee) {
-                                            throw new NoSuchElementException("No se encontró el desplegable");
-                                        }
-                                    }
-                                }
-                            }
-
-                        }}}
+}
 
 

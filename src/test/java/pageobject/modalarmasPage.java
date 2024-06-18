@@ -32,7 +32,7 @@ public class modalarmasPage extends util {
     @FindBy(xpath = "//div/app-input-date[@label='Hora de fin']/span//input") protected WebElement txtHoraHasta;
 
     public modalarmasPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionConfigurarAlarmas(){
         wait.until(ExpectedConditions.visibilityOf(opConfigurarAlarmas));

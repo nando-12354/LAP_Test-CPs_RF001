@@ -27,8 +27,9 @@ Feature: Funcionalidad del login
     And click en cambiar mi contrasena
     And ingresar nueva contrasena "intellij2"
     And confirmar contraseña "intellij2"
-    And validar alerta de confirmacion "Contraseña actualizada correctamente"
-    And validar mensaje ""
+    And click en el boton cambiar contraseña
+    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And validar mensaje "Contraseña actualizada correctamente"
 
   Scenario: CPF006 - Ingreso al aplicativo web y cambiar contraseña ya usada
     Given abre la ruta del aplicativo web

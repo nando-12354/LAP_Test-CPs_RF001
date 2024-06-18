@@ -11,9 +11,10 @@ public class imprimirPage extends util {
     @FindBy(xpath = "(//div[@class='dialog-botones']//p-button/button)[1]") protected WebElement btnImprimirB;
     @FindBy(xpath = "(//p-button[@styleclass='p-button-success']/button[@type='button'])[1]") protected WebElement btnImprimirC;
     @FindBy(xpath = "(//p-button[@styleclass='p-button-success']/button[@type='button'])[2]") protected WebElement btnImprimirD;
+    @FindBy(xpath = "(//p-button[@icon='pi pi-print']/button)[2]") protected WebElement btnImprimirResumen;
 
     public imprimirPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void clickBotonImprimir(){
         btnImprimir.click();
@@ -28,5 +29,9 @@ public class imprimirPage extends util {
     public void clickBotonImprimirD(){
         wait.until(ExpectedConditions.visibilityOf(btnImprimirD));
         btnImprimirD.click();
+    }
+    public void clickBotonImprimirResumen(){
+        wait.until(ExpectedConditions.visibilityOf(btnImprimirResumen));
+        btnImprimirResumen.click();
     }
 }

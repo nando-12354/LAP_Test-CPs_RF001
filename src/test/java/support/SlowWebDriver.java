@@ -1,4 +1,4 @@
-/*package support;
+package support;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class SlowWebDriver extends RemoteWebDriver {
     private final WebDriver driver;
-    private long delay = 500;
+    private long delay = 1500;
 
     public SlowWebDriver(WebDriver driver) {
         this.driver = driver;
@@ -93,4 +93,3 @@ public class SlowWebDriver extends RemoteWebDriver {
         return driver.manage();
     }
 }
-*/

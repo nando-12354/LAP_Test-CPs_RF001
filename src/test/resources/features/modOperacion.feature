@@ -46,7 +46,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
     #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
+    #And click en el boton si
     #And click en ok
 
   Scenario: CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
@@ -66,7 +66,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
     #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
+    #And click en el boton si
     #And click en ok
 
   Scenario: CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
@@ -123,8 +123,8 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
     #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    #And click en el boton si
+    #And click en ok
 
   Scenario: CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
@@ -142,8 +142,8 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
     #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    #And click en el boton si
+    #And click en ok
 
   Scenario: CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
@@ -383,7 +383,7 @@ Feature: Funcionalidad del modulo Operacion
 
 ######## ANULACION DE TICKET ########
 
-  Scenario: CPF090 - Anulacion/Visualizar lista de anulacion de ticket
+  Scenario: CPF090 - Anulacion de ticket/Visualizar lista de anulacion de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -403,7 +403,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And visualizar lista de "Anulación Ticket"
 
-  Scenario: CPF091 - Anulacion/Anular numero de ticket
+  Scenario: CPF091 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -422,7 +422,7 @@ Feature: Funcionalidad del modulo Operacion
     #And click en el boton aceptar
     #And validar mensaje ""
 
-  Scenario: CPF092 - Anulacion/Anular rango de tickets
+  Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -445,7 +445,7 @@ Feature: Funcionalidad del modulo Operacion
 
 ######## ANULACION BCBP ########
 
-  Scenario: CPF093 - Anulacion/Visualizar lista de anulacion bcbp
+  Scenario: CPF093 - Anulacion de bcbp/Visualizar lista de anulacion bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -459,7 +459,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And visualizar lista de "Anulación BCBP"
 
-  Scenario: CPF094 - Anulacion/Anular numero de bcbp
+  Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -646,31 +646,9 @@ Feature: Funcionalidad del modulo Operacion
     #And click en el boton aceptar
     #And validar mensaje ""
 
-######## GENERACION ARCHIVO SEAE ########
-
-  Scenario: CPF105 - Generacion archivo seae/Visualizar pantalla de generacion archivo seae
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo operacion
-    And ingresar a la opcion generacion archivo seae
-    And visualizar lista de "Generacion Comprobante SEAE"
-
-  Scenario: CPF106 - Generacion archivo seae/Generar archivo seae
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo operacion
-    And ingresar a la opcion generacion archivo seae
-    And ingresar fecha "Enero-2024"
-    And seleccionar tipo documento "Boarding"
-    And click en el boton generar
-
 ######## CERRAR TURNO ########
 
-  Scenario: CPF107 - Cerrar turno/Visualizar lista de turnos abiertos o activos
+  Scenario: CPF105 - Cerrar turno/Visualizar lista de turnos abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -679,7 +657,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion cerrar turno
     And visualizar lista de "Cerrar Turno"
 
-  Scenario: CPF108 - Cerrar turno/Cerrar turno abiertos o activos
+  Scenario: CPF106 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -692,3 +670,25 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton si
     And validar aviso "Operación realizada correctamente"
     And click en el boton aceptar
+
+    ######## GENERACION COMPROBANTE SEAE ########
+
+  Scenario: CPF107 - Generacion comprobante seae/Visualizar pantalla de generacion comprobante seae
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo operacion
+    And ingresar a la opcion generacion archivo seae
+    And visualizar lista de "Generacion Comprobante SEAE"
+
+  Scenario: CPF108 - Generacion archivo seae/Generar archivo seae
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo operacion
+    And ingresar a la opcion generacion archivo seae
+    And ingresar fecha "Enero-2024"
+    And seleccionar tipo documento "Boarding"
+    And click en el boton generar

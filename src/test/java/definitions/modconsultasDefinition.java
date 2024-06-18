@@ -463,4 +463,50 @@ public class modconsultasDefinition {
     public void clickEnElBotonVerDetalleDeTicket() {
         boton.clickBotonVerDetalleC();
     }
+
+    @And("ingresar fecha vuelo {string}")
+    public void ingresarFechaVuelo(String fechavuelo) {
+        consultas.ingresarFechaVueloLogError(fechavuelo);
+    }
+
+    @And("click en el boton reporte")
+    public void clickEnElBotonReporte() {
+        excel.clickBotonExcelD();
+    }
+
+    @And("seleccionar el molinete {string}")
+    public void seleccionarElMolinete(String molinete) {
+        combobox.abrirComboboxMolineteSincronizacion();
+        combobox.seleccionarOpcion(molinete);
+    }
+
+    @And("seleccionar un estado {string}")
+    public void seleccionarUnEstado(String estado) {
+        combobox.abrirComboboxEstadoSincronizacion();
+        combobox.seleccionarOpcion(estado);
+    }
+
+    @And("seleccionar el usuario {string}")
+    public void seleccionarElUsuario(String usuario) {
+        combobox.abrirComboAuditoriaUsuario();
+        combobox.seleccionarOpcion(usuario);
+    }
+
+    @And("ingresar molinete {string}")
+    public void ingresarMolinete(String molinete) {
+        combobox.abrirComboboxMolineteDepuracion();
+        combobox.seleccionarOpcion(molinete);
+    }
+
+    @And("ingresar tabla {string}")
+    public void ingresarTabla(String tabla) {
+        combobox.abrirComboboxTablaDepuracion();
+        combobox.seleccionarOpcion(tabla);
+    }
+
+    @And("ingresar el estado {string}")
+    public void ingresarElEstado(String estado) {
+        combobox.abrirComboboxEstadoDepuracion();
+        combobox.seleccionarOpcion(estado);
+    }
 }

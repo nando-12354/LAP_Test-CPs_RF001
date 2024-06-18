@@ -172,7 +172,7 @@ public class modoperacionDefinition {
 
     @And("seleccionar tipo de operacion {string}")
     public void seleccionarTipoDeOperacion(String tipooperacion) {
-        combobox.abrirCombobox();
+        combobox.abrirComboboxTipoOperacionTasaCambio();
         combobox.seleccionarOpcion(tipooperacion);
     }
 

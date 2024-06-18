@@ -65,7 +65,7 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/app-input-text-2[@label='Destino']//input[@id]") protected WebElement inputDestinoB;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement txtMesUso;
     public modreportesPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionLiquidacionStickers(){
         wait.until(ExpectedConditions.visibilityOf(opLiquidacionStickers));

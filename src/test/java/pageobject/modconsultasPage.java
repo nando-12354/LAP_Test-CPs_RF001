@@ -49,7 +49,6 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTabla']//p-dropdown//div[@role='button']") protected WebElement cmbTabla;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fModulo']//p-dropdown//div[@role='button']") protected WebElement cmbModulo;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fSubModulo']//p-dropdown//div[@role='button']") protected WebElement cmbSubModulo;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fUsuario']//p-dropdown//div[@role='button']") protected WebElement cmbAuditoriaUsuario;
     @FindBy(xpath = "//div/app-input-text-2[@label='Cod. Turno']//input") protected WebElement txtCodigoTurno;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sIDError']//p-dropdown//div[@role='button']") protected WebElement cmbTipoError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sTipoError']//p-dropdown//div[@role='button']") protected WebElement cmbError;
@@ -57,9 +56,7 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sCompania']//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sCodMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sTipIngreso']//p-dropdown//div[@role='button']") protected WebElement cmbTipoIngresoError;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTablaSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTablaSincronizacion;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fEstadoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTipoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTipoSincronizacion;
     @FindBy(xpath = "//div/app-input-date[@label='Hora desde']/span//input") protected WebElement inputHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora hasta']/span//input") protected WebElement inputHoraHasta;
@@ -75,9 +72,12 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
     @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
+    @FindBy(xpath = "//app-input-date[@formcontrolname='sFchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
+
+
 
     public modconsultasPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionUsuarios(){
         wait.until(ExpectedConditions.visibilityOf(opUsuarios));
@@ -282,10 +282,7 @@ public class modconsultasPage extends util {
         WebElement opcionSubModulo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + submodulo + "']"));
         opcionSubModulo.click();
     }
-    public void abrirComboAuditoriaUsuario(){
-        wait.until(ExpectedConditions.visibilityOf(cmbAuditoriaUsuario));
-        cmbAuditoriaUsuario.click();
-    }
+
     public void seleccionarAuditoriaUsuario(String auditoriausuario){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionAuditoriaUsuario = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + auditoriausuario + "']"));
@@ -345,15 +342,6 @@ public class modconsultasPage extends util {
         WebElement opcionTipoIngreso = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + tipoingreso + "']"));
         opcionTipoIngreso.click();
     }
-    public void abrirComboMolineteSincronizacion(){
-        wait.until(ExpectedConditions.visibilityOf(cmbMolineteSincronizacion));
-        cmbMolineteSincronizacion.click();
-    }
-    public void seleccionarMolineteSincronizacion(String molinetesincronizacion){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionMolSincro = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + molinetesincronizacion + "']"));
-        opcionMolSincro.click();
-    }
     public void abrirComboTablaSincronizacion(){
         wait.until(ExpectedConditions.visibilityOf(cmbTablaSincronizacion));
         cmbTablaSincronizacion.click();
@@ -362,15 +350,6 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionTablaSincro = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + tablasincronizacion + "']"));
         opcionTablaSincro.click();
-    }
-    public void abrirComboEstadoSincronizacion(){
-        wait.until(ExpectedConditions.visibilityOf(cmbEstadoSincronizacion));
-        cmbEstadoSincronizacion.click();
-    }
-    public void seleccionarEstadoSincronizacion(String estadosincronizacion){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionEstadoSincro = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + estadosincronizacion + "']"));
-        opcionEstadoSincro.click();
     }
     public void abrirComboTipoSincronizacion(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoSincronizacion));
@@ -448,5 +427,8 @@ public class modconsultasPage extends util {
     }
     public void ingresarFechaVuelo(String fechavuelo){
         txtFechaVuelo.sendKeys(fechavuelo);
+    }
+    public void ingresarFechaVueloLogError(String vuelologerror){
+        txtFechaVueloLogError.sendKeys(vuelologerror);
     }
 }

@@ -9,7 +9,7 @@ import support.util;
 public class modayudaPage extends util {
 
     public modayudaPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
 
 }

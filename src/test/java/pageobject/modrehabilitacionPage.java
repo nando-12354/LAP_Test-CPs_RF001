@@ -41,7 +41,7 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[2]") protected WebElement checkBoarding;
 
     public modrehabilitacionPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionTicket(){
         wait.until(ExpectedConditions.visibilityOf(opTicket));

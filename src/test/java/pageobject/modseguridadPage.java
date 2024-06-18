@@ -33,7 +33,7 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "//input[@id='vigencia']") protected WebElement inputFechaVigencia;
     @FindBy(xpath = "//div/div/p-checkbox[@label='Habilitar campos']/div") protected WebElement checkHabilitarCampos;
     public modseguridadPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionRoles(){
         wait.until(ExpectedConditions.visibilityOf(opRoles));

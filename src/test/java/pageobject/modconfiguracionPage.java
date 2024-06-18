@@ -38,7 +38,7 @@ public class modconfiguracionPage extends util {
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[2]") protected WebElement lblCodigo;
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[3]") protected WebElement lblCodigoAsociado;
     public modconfiguracionPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionParametros(){
         opParametros.click();

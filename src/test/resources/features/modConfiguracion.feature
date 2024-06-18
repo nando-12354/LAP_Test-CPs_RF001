@@ -168,7 +168,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion parametros generales
     And click en el boton ver configuracion de servicio vuelo programado
-    And visualizar la configuracion "SERVICIO VENCIMIENTO"
+    And visualizar la configuracion "SERVICIO VUELO PROGRAMADO"
 
   Scenario: CPF036 - Parametros generales/Visualizar configuracion servicio vuelo temporada
     Given abre la ruta del aplicativo web
@@ -248,7 +248,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And validar codigo del campo "101"
     And validar codigo del campo asociado "100"
 
-  Scenario: CPF043 - Lista de campos/Editar de lista de campo
+  Scenario: CPF043 - Lista de campos/Editar lista de campo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -259,3 +259,14 @@ Feature: Funcionalidad del modulo Configuracion General
     And editar descripcion del valor "Selenium IDE"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
+
+  Scenario: CPF044 - Lista de campos/Eliminar lista de campo
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo configuracion general
+    And ingresar a la opcion lista de campos
+    #And click en el boton eliminar
+    #And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    #And validar mensaje "Lista de campo eliminado correctamente"
