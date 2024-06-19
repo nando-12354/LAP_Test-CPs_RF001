@@ -18,10 +18,17 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
     And visualizar la opcion roles
+    And validar columna "Código"
+    And validar columna "Nombre de rol"
+    And validar columna "Rol padre"
+    And validar columna "Fecha creación"
+    And validar columna "Usuario creación"
+    And validar columna "Acciones"
 
     #######################################################################################
      ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
     #######################################################################################
+
   Scenario: CPF011 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -30,13 +37,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
     And click en el boton nuevo
-    And ingresar nombre del rol "ADMINTEST"
+    And ingresar nombre del rol "TEST001"
     And seleccionar rol padre "ADMIN"
     #And configurar perfil "si"
     And click en el boton guardar
     #And validar mensaje de confirmacion “”
     #And click en el boton aceptar
-    #And Validar mensaje “Registro agregado correctamente”
+    #And validar mensaje “Registro agregado correctamente”
 
   Scenario: CPF012 - Roles/Modificar informacion de rol
     Given abre la ruta del aplicativo web
@@ -52,6 +59,7 @@ Feature: Funcionalidad del modulo Seguridad
    #######################################################################################
     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
    #######################################################################################
+
   Scenario: CPF013 - Roles/Eliminar rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -73,6 +81,19 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
     And visualizar la opcion usuarios
+    And validar columna "Código"
+    And validar columna "Apellidos y nombres"
+    And validar columna "Cuenta"
+    And validar columna "Usuario Modificación"
+    And validar columna "Fecha Modificación"
+    And validar columna "Estado"
+    And click en ver mas campos
+    And validar datos de "Usuario creación"
+    And validar datos de "Fecha de Creación"
+    And validar datos de "Fecha de vigencia"
+    And validar datos de "Grupo"
+    And validar datos de "Roles asociados"
+    And validar columna "Acciones"
 
   Scenario: CPF015 - Usuarios/Filtrar lista de usuarios
     Given abre la ruta del aplicativo web
@@ -98,45 +119,16 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresa a la opcion usuarios
     And click en el boton nuevo
-    And ingresar apellidos "teste"
-    And ingresar nombres "teste"
-    And ingresar nombre de usuario "teste"
+    And ingresar apellidos "teste22"
+    And ingresar nombres "teste22"
+    And ingresar nombre de usuario "teste22"
     And ingresar fecha vigencia "30/12/2024"
-    And ingresar contrasena "teste"
-    And confirmar contrasena "teste"
+    And ingresar contrasena "teste22"
+    And confirmar contrasena "teste22"
     And ingresar privilegio "TOTAL"
     And ingresar rol disponible "si"
     And click en el boton guardar
-    #And validar mensaje exito "Usuario registrado correctamente"
-
-  #######################################################################################
-  ############# FALTA LOS MENSAJES PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
- #######################################################################################
-  Scenario Outline: CPF016 - Usuarios/Crear nuevo usuario
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "fluyo"
-    And ingresa la contrasena "fluyo987"
-    And click en el boton iniciar sesion
-    And ingresar al modulo seguridad
-    And ingresa a la opcion usuarios
-    And click en el boton nuevo
-    And ingresar apellidos "<apellido>"
-    And ingresar nombres "<nombre>"
-    And ingresar nombre de usuario "<usuario>"
-    And ingresar fecha vigencia "<vigencia>"
-    And ingresar contrasena "<clave>"
-    And confirmar contrasena "<confirmar clave>"
-    And ingresar privilegio "TOTAL"
-    And ingresar rol disponible "si"
-    And click en el boton guardar
-    #And validar mensaje exito "Usuario registrado correctamente"
-    Examples:
-      | apellido | nombre | usuario | vigencia   | clave | confirmar clave |
-      | test1    | test   | test1   | 30/12/2024 | test1 | test1           |
-      | test1    | test   | test2   | 30/12/2024 | test2 | test2           |
-      | test1    | test   | test3   | 30/12/2024 | test3 | test3           |
-      | test1    | test   | test4   | 30/12/2024 | test4 | test4           |
-      | test1    | test   | test5   | 30/12/2024 | test5 | test5           |
+    And validar aviso "Usuario registrado correctamente"
 
   Scenario: CPF017 - Usuarios/Modificar informacion de usuario
     Given abre la ruta del aplicativo web

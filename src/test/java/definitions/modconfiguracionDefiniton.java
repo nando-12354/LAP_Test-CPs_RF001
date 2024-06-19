@@ -1,17 +1,19 @@
 package definitions;
 
 import io.cucumber.java.en.And;
-import pageobject.menuPage;
-import pageobject.modconfiguracionPage;
-import pageobject.titulosPage;
+import pageobject.*;
 
 public class modconfiguracionDefiniton {
     menuPage menu;
     titulosPage titulos;
+    bodyPage body;
+    botonPage boton;
     modconfiguracionPage configuracion;
     public modconfiguracionDefiniton() {
         menu = new menuPage();
         titulos = new titulosPage();
+        body = new bodyPage();
+        boton = new botonPage();
         configuracion = new modconfiguracionPage();
     }
 
@@ -178,5 +180,80 @@ public class modconfiguracionDefiniton {
     @And("click en el boton ver configuracion de archivo ventas")
     public void clickEnElBotonVerConfiguracionDeArchivoVentas() {
         configuracion.clickBotonVerConfiguracionR();
+    }
+
+    @And("click en editar activar rehabilitacion")
+    public void clickEnEditarActivarRehabilitacion() {
+        boton.clickBotonEditarParametrosGeneralesA();
+    }
+
+    @And("click en editar maximo ticket emitidos por semana al credito")
+    public void clickEnEditarMaximoTicketEmitidosPorSemanaAlCredito() {
+        boton.clickBotonEditarParametrosGeneralesB();
+    }
+
+    @And("click en editar numero maximo ticket contingencia")
+    public void clickEnEditarNumeroMaximoTicketContingencia() {
+        boton.clickBotonEditarParametrosGeneralesC();
+    }
+
+    @And("click en editar numero maximo ticket para venta")
+    public void clickEnEditarNumeroMaximoTicketParaVenta() {
+        boton.clickBotonEditarParametrosGeneralesD();
+    }
+
+    @And("click en editar numero minimo ticket para venta")
+    public void clickEnEditarNumeroMinimoTicketParaVenta() {
+        boton.clickBotonEditarParametrosGeneralesE();
+    }
+
+    @And("click en editar numero minimo ticket contingencia")
+    public void clickEnEditarNumeroMinimoTicketContingencia() {
+        boton.clickBotonEditarParametrosGeneralesF();
+    }
+
+    @And("click en editar numero ruc")
+    public void clickEnEditarNumeroRuc() {
+        boton.clickBotonEditarParametrosGeneralesG();
+    }
+
+    @And("click en editar serie contingencia fin")
+    public void clickEnEditarSerieContingenciaFin() {
+        boton.clickBotonEditarParametrosGeneralesH();
+    }
+
+    @And("click en editar serie contingencia inicio")
+    public void clickEnEditarSerieContingenciaInicio() {
+        boton.clickBotonEditarParametrosGeneralesI();
+    }
+
+    @And("click en editar serie numero ticket fin")
+    public void clickEnEditarSerieNumeroTicketFin() {
+        boton.clickBotonEditarParametrosGeneralesJ();
+    }
+
+    @And("click en editar serie numero ticket inicio")
+    public void clickEnEditarSerieNumeroTicketInicio() {
+        boton.clickBotonEditarParametrosGeneralesK();
+    }
+
+    @And("validar configuracion de {string}")
+    public void validarConfiguracionDe(String cuerpo) {
+        body.validarCuerpoGrilla(cuerpo);
+    }
+
+    @And("visualizar el concepto {string}")
+    public void visualizarElConcepto(String cuerposub) {
+        body.validarCuerpoGrilla(cuerposub);
+    }
+
+    @And("visualizar el limte maximo")
+    public void visualizarElLimteMaximo() {
+        configuracion.clickPestanaLimiteMaximo();
+    }
+
+    @And("visualizar el limte minimo")
+    public void visualizarElLimteMinimo() {
+        configuracion.clickPestanaLimiteMinimo();
     }
 }

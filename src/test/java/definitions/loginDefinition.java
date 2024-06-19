@@ -38,4 +38,39 @@ public class loginDefinition {
     public void visualizarElUsuarioDelSistema(String logueado) {
         login.validarUsuario(logueado);
     }
+
+    @And("ingresar nueva contrasena {string}")
+    public void ingresarNuevaContrasena(String nuevaclave) {
+        login.ingresarNuevaClave(nuevaclave);
+    }
+
+    @And("confirmar contraseña {string}")
+    public void confirmarContraseña(String claveconf) {
+        login.ingresarNuevaClaveConfirmar(claveconf);
+    }
+
+    @And("click en el boton cambiar contraseña")
+    public void clickEnElBotonCambiarContraseña() {
+        login.clickBotonCambiarClave();
+    }
+
+    @And("ingresar contrasena ya usada {string}")
+    public void ingresarContrasenaYaUsada(String claveusada) {
+        login.ingresarNuevaClave(claveusada);
+    }
+
+    @And("confirmar contrasena ya usada {string}")
+    public void confirmarContrasenaYaUsada(String claveusadaconf) {
+        login.ingresarNuevaClaveConfirmar(claveusadaconf);
+    }
+
+    @And("confirmar contrasena usada la primera vez {string}")
+    public void confirmarContrasenaUsadaLaPrimeraVez(String claveprimeravezconf) {
+        login.ingresarNuevaClaveConfirmar(claveprimeravezconf);
+    }
+
+    @And("ingresar contrasena usada la primera vez {string}")
+    public void ingresarContrasenaUsadaLaPrimeraVez(String claveprimeravez) {
+        login.ingresarNuevaClaveConfirmar(claveprimeravez);
+    }
 }

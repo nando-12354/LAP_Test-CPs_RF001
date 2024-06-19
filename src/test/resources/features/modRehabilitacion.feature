@@ -33,6 +33,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero de ticket "1000602341073618"
     And click en el boton agregar ticket
     And visualizar el ticket agregado "1000602341073618"
+    And visualizar el campo "Número"
+    And visualizar datos de "Código de ticket"
+    And visualizar datos de "Observaciones"
+    And visualizar el campo "Motivo"
+    And visualizar el campo "Acciones"
 
   Scenario: CPF111 - Ticket normal/Consultar representante de ticket normal
     Given abre la ruta del aplicativo web
@@ -141,7 +146,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## TICKET POR SALIDA ########
 
-  Scenario: CPF122 - Ticket por salida/Agregar ticket por salida
+  Scenario: CPF118 - Ticket por salida/Agregar ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -153,7 +158,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton agregar bp
     And visualizar lista de "Tickets por salida"
 
-  Scenario: CPF123 - Ticket por salida/Ver detalle de ticket por salida
+  Scenario: CPF119 - Ticket por salida/Ver detalle de ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -167,7 +172,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-  Scenario: CPF124 - Ticket por salida/Rehabilitar ticket por salida
+  Scenario: CPF120 - Ticket por salida/Rehabilitar ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -189,7 +194,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## TICKET POR VUELO ########
 
-  Scenario: CPF118 - Ticket por vuelo/Buscar ticket por vuelo
+  Scenario: CPF121 - Ticket por vuelo/Buscar ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -203,7 +208,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton buscar
     And visualizar lista de "Tickets por vuelo"
 
-  Scenario: CPF119 - Ticket por vuelo/Consultar representante de ticket por vuelo
+  Scenario: CPF122 - Ticket por vuelo/Consultar representante de ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -215,7 +220,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-  Scenario: CPF120 - Ticket por vuelo/Ver detalle de ticket por vuelo
+  Scenario: CPF123 - Ticket por vuelo/Ver detalle de ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -231,7 +236,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-  Scenario: CPF121 - Ticket por vuelo/Rehabilitar ticket por vuelo
+  Scenario: CPF124 - Ticket por vuelo/Rehabilitar ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -525,7 +530,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass por Salida"
 
-  Scenario: CPF14x - Boarding pass por salida/Ver detalle de boarding pass por salida
+  Scenario: CPF142 - Boarding pass por salida/Ver detalle de boarding pass por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -541,7 +546,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-  Scenario: CPF142 - Boarding pass por salida/Rehabilitar boarding pass por salida
+  Scenario: CPF143 - Boarding pass por salida/Rehabilitar boarding pass por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -566,7 +571,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## BOARDING PASS POR VUELO ########
 
-  Scenario: CPF143 - Boarding pass por vuelo/Buscar boarding pass por vuelo
+  Scenario: CPF144 - Boarding pass por vuelo/Buscar boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -580,7 +585,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton buscar
     And visualizar lista de "Boarding Pass por Vuelo"
 
-  Scenario: CPF144 - Boarding pass por vuelo/Consultar representante de boarding pass por vuelo
+  Scenario: CPF145 - Boarding pass por vuelo/Consultar representante de boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -592,7 +597,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-  Scenario: CPF145 - Boarding pass por vuelo/Ver detalle de boarding pass por vuelo
+  Scenario: CPF146 - Boarding pass por vuelo/Ver detalle de boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -608,7 +613,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-  Scenario: CPF146 - Boarding pass por vuelo/Rehabilitar boarding pass por vuelo
+  Scenario: CPF147 - Boarding pass por vuelo/Rehabilitar boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -632,7 +637,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
 
 ######## BOARDING PASS POR FECHA ########
 
-  Scenario: CPF147 - Boarding pass por fecha/Buscar boarding pass por fecha
+  Scenario: CPF148 - Boarding pass por fecha/Buscar boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -646,7 +651,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton buscar
     And visualizar lista de "Boarding pass por fecha"
 
-  Scenario: CPF148 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
+  Scenario: CPF149 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -658,7 +663,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-  Scenario: CPF149 - Boarding pass por fecha/Ver detalle de boarding pass por fecha
+  Scenario: CPF150 - Boarding pass por fecha/Ver detalle de boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -674,7 +679,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-  Scenario: CPF150 - Boarding pass por fecha/Rehabilitar boarding pass por fecha
+  Scenario: CPF151 - Boarding pass por fecha/Rehabilitar boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

@@ -836,6 +836,7 @@ public class modoperacionPage extends util {
         inputMotivoExtorno.sendKeys(motivo);
     }
     public void ingresarTicketRehabilitacion(String ticketrehabilitacion){
+        wait.until(ExpectedConditions.visibilityOf(inputTicketRehabilitacion));
         inputTicketRehabilitacion.sendKeys(ticketrehabilitacion);
     }
     public void ingresarTicketDesdeRehabilitacion(String ticketdesde){

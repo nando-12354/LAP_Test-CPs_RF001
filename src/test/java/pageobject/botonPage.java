@@ -33,6 +33,18 @@ public class botonPage extends util {
     @FindBy(xpath = "//div/button[@type='button']/timesicon") protected WebElement btnCerrar;
     @FindBy(xpath = "//button[contains(.,'Aceptar')]") protected WebElement btnAceptar;
     @FindBy(xpath = "//button[contains(.,'Extender')]") protected WebElement btnExtender;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditarParametrosGeneralesA;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[2]") protected WebElement btnEditarParametrosGeneralesB;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[3]") protected WebElement btnEditarParametrosGeneralesC;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[4]") protected WebElement btnEditarParametrosGeneralesD;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[5]") protected WebElement btnEditarParametrosGeneralesE;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[6]") protected WebElement btnEditarParametrosGeneralesF;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[7]") protected WebElement btnEditarParametrosGeneralesG;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[8]") protected WebElement btnEditarParametrosGeneralesH;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[9]") protected WebElement btnEditarParametrosGeneralesI;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[10]") protected WebElement btnEditarParametrosGeneralesJ;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[11]") protected WebElement btnEditarParametrosGeneralesK;
+    @FindBy(xpath = "(//p-table//table/tbody/tr/td/button)[1]") protected WebElement btnVerCampos;
 
     public botonPage() {
         PageFactory.initElements(slowDriver, this);
@@ -140,5 +152,53 @@ public class botonPage extends util {
     public void clickBotonExtender(){
         wait.until(ExpectedConditions.visibilityOf(btnExtender));
         btnExtender.click();
+    }
+    public void clickBotonEditarParametrosGeneralesA(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesA));
+        btnEditarParametrosGeneralesA.click();
+    }
+    public void clickBotonEditarParametrosGeneralesB(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesB));
+        btnEditarParametrosGeneralesB.click();
+    }
+    public void clickBotonEditarParametrosGeneralesC(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesC));
+        btnEditarParametrosGeneralesC.click();
+    }
+    public void clickBotonEditarParametrosGeneralesD(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesD));
+        btnEditarParametrosGeneralesD.click();
+    }
+    public void clickBotonEditarParametrosGeneralesE(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesE));
+        btnEditarParametrosGeneralesE.click();
+    }
+    public void clickBotonEditarParametrosGeneralesF(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesF));
+        btnEditarParametrosGeneralesF.click();
+    }
+    public void clickBotonEditarParametrosGeneralesG(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesG));
+        btnEditarParametrosGeneralesG.click();
+    }
+    public void clickBotonEditarParametrosGeneralesH(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesH));
+        btnEditarParametrosGeneralesH.click();
+    }
+    public void clickBotonEditarParametrosGeneralesI(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesI));
+        btnEditarParametrosGeneralesI.click();
+    }
+    public void clickBotonEditarParametrosGeneralesJ(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesJ));
+        btnEditarParametrosGeneralesJ.click();
+    }
+    public void clickBotonEditarParametrosGeneralesK(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarParametrosGeneralesK));
+        btnEditarParametrosGeneralesK.click();
+    }
+    public void clickBotonVerCampos(){
+        wait.until(ExpectedConditions.visibilityOf(btnVerCampos));
+        btnVerCampos.click();
     }
 }

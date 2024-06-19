@@ -1,6 +1,6 @@
 Feature: Funcionalidad del modulo Consultas
 
-  Scenario: CPF151 - Visualizar modulo consultas
+  Scenario: CPF152 - Visualizar modulo consultas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -24,7 +24,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## USUARIOS ########
 
-  Scenario: CPF152 - Usuarios/Buscar usuarios
+  Scenario: CPF153 - Usuarios/Buscar usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -37,24 +37,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Usuario"
 
-  Scenario Outline: CPF152 - Usuarios/Buscar usuarios
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "<usuario>"
-    And ingresa la contrasena "<contrasena>"
-    And click en el boton iniciar sesion
-    And ingresar al modulo consultas
-    And ingresar a la opcion usuarios
-    And seleccionar rol "<rol>"
-    And seleccionar estado "<estado>"
-    And seleccionar grupo "<grupo>"
-    And click en el boton buscar
-    And visualizar lista de "<titulo>"
-    Examples:
-      | usuario | contrasena | rol         | estado  | grupo | titulo  |
-      | fluyo   | fluyo987   | CAJERO TUUA | ANULADO | LAP   | Usuario |
-      | fluyo   | fluyo987   | ADMIN       | VIGENTE | TOTAL | Users   |
-
-  Scenario: CPF153 - Usuarios/Imprimir lista de usuarios
+  Scenario: CPF154 - Usuarios/Imprimir lista de usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -69,7 +52,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## COMPAÑIAS ########
 
-  Scenario: CPF154 - Companias/Buscar companias
+  Scenario: CPF155 - Companias/Buscar companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -82,7 +65,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Compañias"
 
-  Scenario: CPF155 - Companias/Imprimir lista de companias
+  Scenario: CPF156 - Companias/Imprimir lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -97,7 +80,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## TURNOS ########
 
-  Scenario: CPF156 - Turnos/Buscar turnos
+  Scenario: CPF157 - Turnos/Buscar turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -113,7 +96,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Turnos"
 
-  Scenario: CPF157 - Turnos/Ver detalle de turno
+  Scenario: CPF158 - Turnos/Ver detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -131,7 +114,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el registro de detalle del turno
     And click en el boton cerrar
 
-  Scenario: CPF158 - Turnos/Imprimir detalle de turno
+  Scenario: CPF159 - Turnos/Imprimir detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -150,7 +133,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton cerrar
     And click en imprimir
 
-  Scenario: CPF159 - Turnos/Imprimir consulta de turnos
+  Scenario: CPF160 - Turnos/Imprimir consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -166,7 +149,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF160 - Turnos/Exportar excel consulta de turnos
+  Scenario: CPF161 - Turnos/Exportar excel consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -184,7 +167,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## DETALLE TICKET / BP ########
 
-  Scenario: CPF161 - Detalle de ticket-bp/Buscar detalle de ticket-bp
+  Scenario: CPF162 - Detalle de ticket-bp/Buscar detalle de ticket-bp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -206,7 +189,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar persona "ESCOBEDO FARJE MERCY"
     And click en el boton buscar
 
-  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
+  Scenario: CPF163 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -219,7 +202,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
     And click en imprimir consulta
 
-  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
+  Scenario: CPF164 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -233,7 +216,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
     And click en imprimir consulta
 
-  Scenario: CPF16x - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
+  Scenario: CPF165 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -250,7 +233,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## TICKET / BP POR FECHA ########
 
-  Scenario: CPF162 - Tickets-bp por fecha/Buscar tickets-bp por fecha
+  Scenario: CPF166 - Tickets-bp por fecha/Buscar tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -272,7 +255,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar cajero "Tamara Olaechea"
     And click en el boton buscar
 
-  Scenario: CPF163 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
+  Scenario: CPF167 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -296,7 +279,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  Scenario: CPF164 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
+  Scenario: CPF168 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -319,7 +302,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF165 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
+  Scenario: CPF169 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -344,7 +327,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## CUADRE DE STICKERS EMITIDOS O BP USADOS ########
 
-  Scenario: CPF166 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
+  Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -357,7 +340,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  Scenario: CPF167 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
+  Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -370,7 +353,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  Scenario: CPF168 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
+  Scenario: CPF172 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -383,7 +366,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF169 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
+  Scenario: CPF173 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -396,7 +379,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
+  Scenario: CPF174 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -409,7 +392,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
+  Scenario: CPF175 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -424,7 +407,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## OPERACION COMPRA / VENTA ########
 
-  Scenario: CPF172 - Operacion compra-venta/Buscar operacion compra-venta
+  Scenario: CPF176 - Operacion compra-venta/Buscar operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -437,7 +420,7 @@ Feature: Funcionalidad del modulo Consultas
     And visualizar operacion compra
     And visualizar operacion venta
 
-  Scenario: CPF173 - Operacion compra-venta/Imprimir operacion compra-venta
+  Scenario: CPF177 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -449,9 +432,9 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir
 
-######## TICKETS / BP USADOS ########
+######## TICKETS / BP USADOS ########  ################# FALTA TICKET/BP ANULADOS
 
-  Scenario: CPF174 - Tickets-bp usados/Buscar tickets-bp usados
+  Scenario: CPF178 - Tickets-bp usados/Buscar tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -473,7 +456,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Ticket / BP Usado"
 
-  Scenario: CPF175 - Tickets-bp usados/Ver detalle de tickets-bp usados
+  Scenario: CPF179 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -496,7 +479,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  Scenario: CPF176 - Tickets-bp usados/Imprimir tickets-bp usados
+  Scenario: CPF180 - Tickets-bp usados/Imprimir tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -518,7 +501,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF177 - Tickets-bp usados/Exportar excel de tickets-bp usados
+  Scenario: CPF181 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -542,7 +525,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## AUDITORIA ########
 
-  Scenario: CPF181 - Auditoria/Buscar auditoria
+  Scenario: CPF182 - Auditoria/Buscar auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -561,7 +544,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Auditoría"
 
-  Scenario: CPF182 - Auditoria/Ver detalle de auditoria
+  Scenario: CPF183 - Auditoria/Ver detalle de auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -581,7 +564,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  Scenario: CPF183 - Auditoria/Imprimir auditoria
+  Scenario: CPF184 - Auditoria/Imprimir auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -644,7 +627,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  Scenario: CPF189 - Tickets procesados/Ver detalle de turno de tickets procesados
+  Scenario: CPF188 - Tickets procesados/Ver detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

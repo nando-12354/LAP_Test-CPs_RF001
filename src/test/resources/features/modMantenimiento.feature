@@ -22,6 +22,14 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And visualizar lista de "Estación de punto de venta"
+    And validar columna "Código"
+    And validar columna "Número IP"
+    And validar columna "Descripción"
+    And validar columna "Usuario Logueado"
+    And validar columna "Fecha modificación"
+    And validar columna "Usuario Modificación"
+    And validar columna "Estado"
+    And validar columna "Acciones"
 
   Scenario: CPF047 - Estacion de punto de venta/Registrar estacion de punto de venta
     Given abre la ruta del aplicativo web
@@ -104,6 +112,14 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion moneda
     And visualizar lista de "Moneda"
+    And validar columna "Código"
+    And validar columna "Descripción"
+    And validar columna "Símbolo"
+    And validar columna "Nemónico"
+    And validar columna "Estado"
+    And validar columna "Fecha modificación"
+    And validar columna "Usuario modificación"
+    And validar columna "Acciones"
 
   Scenario: CPF053 - Moneda/Registrar tipo de moneda
     Given abre la ruta del aplicativo web
@@ -159,6 +175,26 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion compania
     And visualizar lista de "Compañías"
+    And validar columna "Código"
+    And validar columna "Tipo"
+    And validar columna "Descripción"
+    And validar columna "Fecha de modificación"
+    And validar columna "Usuario modificación"
+    And validar columna "Estado"
+    And click en ver mas campos
+    And validar datos de "Código aerolínea"
+    And validar datos de "OACI"
+    And validar datos de "IATA"
+    And validar datos de "Tipo de transbordo"
+    And validar datos de "Código interno"
+    And validar datos de "Código SAP"
+    And validar datos de "Fecha de creación"
+    And validar datos de "RUC"
+    And validar datos de "Venta Normal"
+    And validar datos de "BCBP"
+    And validar datos de "Venta Masiva Contado"
+    And validar datos de "Venta Masiva Crédito"
+    And visualizar el campo "Acciones"
 
   #######################################################################################
    ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
@@ -309,6 +345,14 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion modalidad de venta
     And visualizar lista de "Modalidades de Venta"
+    And validar columna "Código"
+    And validar columna "Descripción"
+    And validar columna "Tipo"
+    And validar columna "Tipo de Ticket asociado"
+    And validar columna "Estado"
+    And validar columna "Fecha de Modificación"
+    And validar columna "Usuario de Modificación"
+    And validar columna "Acciones"
 
    #######################################################################################
     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
@@ -410,6 +454,14 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion tipo de ticket
     And visualizar lista de "Lista de Tipos de Ticket"
+    And validar columna "Codigo"
+    And validar columna "Tipo"
+    And validar columna "Precio"
+    And validar columna "Moneda"
+    And validar columna "Estado"
+    And validar columna "Fecha modificación"
+    And validar columna "Usuario modificación"
+    And validar columna "Acciones"
 
   Scenario: CPF065 - Tipo de ticket/Registrar un tipo de Ticket
     Given abre la ruta del aplicativo web

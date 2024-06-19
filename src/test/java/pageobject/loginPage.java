@@ -16,6 +16,10 @@ public class loginPage extends util {
     @FindBy(xpath = "//button[@type='button']") protected WebElement btnLogin;
     @FindBy(xpath = "//h1[text()='Sistema de Administración']") protected WebElement txtTuua;
     @FindBy(xpath = "//a[contains(.,'Cambiar mi contraseña')]") protected WebElement lblCambioClave;
+    @FindBy(xpath = "//p-password[@formcontrolname='new_password']//input") protected WebElement inputNuevaClave;
+    @FindBy(xpath = "//p-password[@formcontrolname='repeat_password']//input") protected WebElement inputNuevaClaveConfimar;
+    @FindBy(xpath = "//p-button[@label='Cambiar Contraseña']/button") protected WebElement btnCambiarClave;
+
     public loginPage() {
         PageFactory.initElements(driver, this);
     }
@@ -50,5 +54,16 @@ public class loginPage extends util {
             // No se reconoce al usuario logueado
         }
         Assert.assertTrue("El usuario " + logueado + " no coincide.", usuarioValido);
+    }
+    public void ingresarNuevaClave(String nuevaclave){
+        wait.until(ExpectedConditions.visibilityOf(inputNuevaClave));
+        inputNuevaClave.sendKeys(nuevaclave);
+    }
+    public void ingresarNuevaClaveConfirmar(String claveconf){
+        inputNuevaClaveConfimar.sendKeys(claveconf);
+    }
+    public void clickBotonCambiarClave(){
+        wait.until(ExpectedConditions.visibilityOf(btnCambiarClave));
+        btnCambiarClave.click();
     }
 }

@@ -37,6 +37,9 @@ public class modconfiguracionPage extends util {
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[1]") protected WebElement lblNombreCampo;
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[2]") protected WebElement lblCodigo;
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[3]") protected WebElement lblCodigoAsociado;
+    @FindBy(xpath = "(//div//div/ul[@role='tablist']/li[@role='presentation']/a)[1]") protected WebElement pesLimiteMaximo;
+    @FindBy(xpath = "(//div//div/ul[@role='tablist']/li[@role='presentation']/a)[2]") protected WebElement pesLimiteMinimo;
+
     public modconfiguracionPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -151,5 +154,13 @@ public class modconfiguracionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(lblCodigoAsociado));
         String valor = lblCodigoAsociado.getText();
         Assert.assertEquals(valcodigo, valor);
+    }
+    public void clickPestanaLimiteMaximo(){
+        wait.until(ExpectedConditions.visibilityOf(pesLimiteMaximo));
+        pesLimiteMaximo.click();
+    }
+    public void clickPestanaLimiteMinimo(){
+        wait.until(ExpectedConditions.visibilityOf(pesLimiteMinimo));
+        pesLimiteMinimo.click();
     }
 }

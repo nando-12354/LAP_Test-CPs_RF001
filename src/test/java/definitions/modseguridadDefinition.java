@@ -5,12 +5,16 @@ import pageobject.*;
 
 public class modseguridadDefinition {
     menuPage menu;
+    headPage head;
+    bodyPage body;
     comboboxPage combobox;
     mensajesPage mensajes;
     botonPage boton;
     modseguridadPage seguridad;
     public modseguridadDefinition() {
         menu = new menuPage();
+        head = new headPage();
+        body = new bodyPage();
         combobox = new comboboxPage();
         mensajes = new mensajesPage();
         boton = new botonPage();
@@ -213,5 +217,25 @@ public class modseguridadDefinition {
     @And("seleccionar habilitar campos {string}")
     public void seleccionarHabilitarCampos(String habilitar) {
         seguridad.seleccionarHabilitarCampos(habilitar);
+    }
+
+    @And("validar columna {string}")
+    public void validarColumna(String cabecera) {
+        head.validarCabeceraGrilla(cabecera);
+    }
+
+    @And("click en ver mas campos")
+    public void clickEnVerMasCampos() {
+        boton.clickBotonVerCampos();
+    }
+
+    @And("validar datos de {string}")
+    public void validarDatosDe(String cuerpo) {
+        body.validarCuerpoGrilla(cuerpo);
+    }
+
+    @And("visualizar el campo {string}")
+    public void visualizarElCampo(String acciones) {
+        head.validarCabeceraGrilla(acciones);
     }
 }

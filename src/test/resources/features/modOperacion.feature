@@ -28,8 +28,32 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion ingresar tasa de cambio
     And visualizar tasa de cambio actual
+    And validar columna "Código"
+    And validar columna "Tipo Cambio"
+    And validar columna "Moneda"
+    And validar columna "Valor Tasa"
+    And validar columna "Fecha de inicio de vigencia"
+    And validar columna "Usuario modificación"
     And visualizar tasa de cambio programada
+    And validar columna "Código"
+    And validar columna "Tipo Cambio"
+    And validar columna "Moneda"
+    And validar columna "Valor Tasa"
+    And validar columna "Fecha Programada"
+    And validar columna "Usuario modificación"
+    And validar columna "Acciones"
     And visualizar tasa de cambio historica
+    And seleccionar tipo de operacion "Compra"
+    And seleccionar fecha desde "01/03/2024"
+    And seleccionar fecha hasta "31/03/2024"
+    And click en el boton buscar
+    And validar columna "Código"
+    And validar columna "Tipo Cambio"
+    And validar columna "Moneda"
+    And validar columna "Valor Tasa"
+    And validar columna "Fecha Inicio de vigencia"
+    And validar columna "Fecha Fin de vigencia"
+    And validar columna "Usuario modificación"
 
   Scenario: CPF070 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
     Given abre la ruta del aplicativo web
@@ -45,9 +69,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton si
-    #And click en ok
+    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And click en el boton si
+    And click en ok
 
   Scenario: CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
     Given abre la ruta del aplicativo web
@@ -65,9 +89,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton si
-    #And click en ok
+    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And click en el boton si
+    And click en ok
 
   Scenario: CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
     Given abre la ruta del aplicativo web
@@ -78,9 +102,9 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion ingresar tasa de cambio
     And seleccionar tasa de cambio programada
     And eliminar tasa de cambio programada
-    #And validar alerta de confirmacion ""
-    #And click en el boton si
-    #And validar mensaje ""
+    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And click en el boton si
+    And validar mensaje "copiar le mensaje aqui"
 
   Scenario: CPF073 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
     Given abre la ruta del aplicativo web
@@ -105,8 +129,31 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion gestion precio ticket
     And visualizar precio tickets actual
+    And validar columna "Código"
+    And validar columna "Tipo ticket"
+    And validar columna "Moneda"
+    And validar columna "Precio"
+    And validar columna "Fecha de inicio de vigencia"
+    And validar columna "Usuario modificación"
     And visualizar precio tickets programada
+    And validar columna "Código"
+    And validar columna "Tipo ticket"
+    And validar columna "Moneda"
+    And validar columna "Precio"
+    And validar columna "Fecha Programada"
+    And validar columna "Usuario modificación"
+    And validar columna "Acciones"
     And visualizar precio tickets historica
+    And seleccionar fecha desde "01/04/2024"
+    And seleccionar fecha hasta "30/04/2024"
+    And click en el boton buscar
+    And validar columna "Código"
+    And validar columna "Tipo ticket"
+    And validar columna "Moneda"
+    And validar columna "Precio"
+    And validar columna "Fecha de inicio de vigencia"
+    And validar columna "Fecha de fin de vigencia"
+    And validar columna "Usuario modificación"
 
   Scenario: CPF075 - Gestion precio ticket/Registrar precio ticket con fecha actual
     Given abre la ruta del aplicativo web
@@ -122,9 +169,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton si
-    #And click en ok
+    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And click en el boton si
+    And click en ok
 
   Scenario: CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
@@ -274,6 +321,11 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha hasta "31/01/2020"
     And click en el boton buscar
     And visualizar lista de "Extorno operación"
+    And validar columna "Turno"
+    And validar columna "Estación de venta"
+    And validar columna "Usuario"
+    And validar columna "Fecha inicio"
+    And validar columna "Acciones"
 
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
@@ -293,11 +345,10 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar emision del voucher
-    #And click en el boton imprimir
-    #And validar alerta de confirmacion ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And click en el boton imprimir
+    And validar alerta de confirmacion ""
 
 ######## EXTORNO TICKETS ########
 
@@ -314,6 +365,11 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha hasta "31/01/2020"
     And click en el boton buscar
     And visualizar lista de "Extorno tickets"
+    And validar columna "Turno"
+    And validar columna "Número IP"
+    And validar columna "Usuario"
+    And validar columna "Fecha inicio"
+    And validar columna "Acciones"
 
   Scenario: CPF087 - Extorno tickets/Extornar tickets
     Given abre la ruta del aplicativo web
@@ -332,11 +388,10 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar ticket a extornar "si"
     And ingresar el motivo de extorno ""
     And click en el boton extornar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar emision del voucher
-    #And click en el boton imprimir
-    #And validar alerta de confirmacion ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And click en el boton imprimir
+    And validar alerta de confirmacion ""
 
 ######## EXTORNO REHABILITACION ########
 
@@ -356,6 +411,12 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar ticket del numero "1111111111111111"
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
+    And validar columna "Turno ticket"
+    And validar columna "Compania"
+    And validar columna "Num. Vuelo"
+    And validar columna "Num. Ticket"
+    And validar columna "Fecha Proceso"
+    And validar columna "Estado"
 
   Scenario: CPF089 - Extorno rehabilitacion/Extonar rehabilitacion
     Given abre la ruta del aplicativo web
@@ -365,11 +426,11 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion extorno
     And ingresar a la opcion extorno rehabilitacion
-    And filtrar ticket "1000602350183946"
+    And filtrar ticket "5000604354376193"
     And click en el boton buscar
     And seleccionar filtros de consulta
     And seleccionar fecha desde "01/01/2024"
-    And ingresar hora desde "000000"
+    And escribir hora desde "000000"
     And seleccionar fecha hasta "31/01/2024"
     And ingresar hora hasta "230000"
     And filtrar ticket del numero "1111111111111111"
@@ -377,9 +438,8 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar ticket rehabilitado a extornar "si"
     And click en el boton extornar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar emision del voucher
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
 
 ######## ANULACION DE TICKET ########
 
@@ -583,6 +643,13 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion gestion de molinete
     And visualizar lista de "Gestión de molinete"
+    And visualizar datos de "Código"
+    And visualizar datos de "Descripción"
+    And visualizar datos de "Tipo de Vuelo"
+    And visualizar datos de "Tipo de Acceso"
+    And visualizar datos de "Tipo de Molinete"
+    And visualizar datos de "Estado"
+    And visualizar el campo "Acción"
 
   Scenario: CPF101 - Gestion de molinete/Modificar gestion de molinete
     Given abre la ruta del aplicativo web
@@ -656,6 +723,10 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion cerrar turno
     And visualizar lista de "Cerrar Turno"
+    And visualizar datos de "Usuario"
+    And visualizar datos de "Número de caja"
+    And visualizar datos de "Fecha apertura"
+    And visualizar datos de "Fecha cierre"
 
   Scenario: CPF106 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web
