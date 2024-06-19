@@ -209,6 +209,8 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//p-dropdown[@inputid='selectInput']//div[@role='button']") protected WebElement cmbTipoDocumentoArchivoSeae;
     @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
     @FindBy(xpath = "//p-table//table/tbody/tr/td/input[@type='checkbox']") WebElement checkTicketExtension;
+    @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Desde']/span//input") WebElement inputHoraEmisionDesde;
+    @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Hasta']/span//input") WebElement inputHoraEmisionHasta;
     public modoperacionPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -852,6 +854,7 @@ public class modoperacionPage extends util {
         rdFiltroConsulta.click();
     }
     public void abrirComboboxEstadoTurnoAnulacion(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoTurnoAnulacion));
         cmbEstadoTurnoAnulacion.click();
     }
     public void abrirComboboxTipoTicketAnulacion(){
@@ -992,5 +995,11 @@ public class modoperacionPage extends util {
     }
     public void ingresarTicketHastaExtension(String tickethasta){
         inputTicketHastaExtension.sendKeys(tickethasta);
+    }
+    public void ingresarHoraEmisionDesde(String horadesde){
+        inputHoraEmisionDesde.sendKeys(horadesde);
+    }
+    public void ingresarHoraEmisionHasta(String horahasta){
+        inputHoraEmisionHasta.sendKeys(horahasta);
     }
 }

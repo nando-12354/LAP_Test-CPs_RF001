@@ -15,6 +15,7 @@ public class botonPage extends util {
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[5]") protected WebElement btnEditarE;
     @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//button[contains(.,'Guardar')])[2]") protected WebElement btnGuardarB;
+    @FindBy(xpath = "(//p-button/button[@type='button'])[3]") protected WebElement btnGuardarC;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarB;
     @FindBy(xpath = "//button[contains(.,'Buscar')]") protected WebElement btnBuscar;
@@ -44,7 +45,7 @@ public class botonPage extends util {
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[9]") protected WebElement btnEditarParametrosGeneralesI;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[10]") protected WebElement btnEditarParametrosGeneralesJ;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[11]") protected WebElement btnEditarParametrosGeneralesK;
-    @FindBy(xpath = "(//p-table//table/tbody/tr/td/button)[1]") protected WebElement btnVerCampos;
+    @FindBy(xpath = "(//p-table//table/tbody/tr/td//button)[1]") protected WebElement btnVerCampos;
 
     public botonPage() {
         PageFactory.initElements(slowDriver, this);
@@ -80,6 +81,10 @@ public class botonPage extends util {
     public void clickBotonGuardarB(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardarB));
         btnGuardarB.click();
+    }
+    public void clickBotonGuardarC(){
+        wait.until(ExpectedConditions.visibilityOf(btnGuardarC));
+        btnGuardarC.click();
     }
     public void clickBotonEliminar(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminar));

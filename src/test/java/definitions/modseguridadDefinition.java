@@ -56,23 +56,7 @@ public class modseguridadDefinition {
         seguridad.clickRolPadre();
         seguridad.ingresarRolPadre();
     }
-/*
-    @And("configurar perfil")
-    public void configurarPerfil() {
-        seguridad.checkPerfilSeguridad();
-        seguridad.checkPerfilConfGeneral();
-        seguridad.checkPerfilMantenimiento();
-        seguridad.checkPerfilOperacion();
-        seguridad.checkPerfilRehabilitacion();
-        seguridad.checkPerfilConsultas();
-        seguridad.checkPerfilReportes();
-        seguridad.checkPerfilAlarmas();
-        seguridad.checkPerfilOperaciones();
-        seguridad.checkPerfilTurno();
-        seguridad.checkPerfilAyuda();
-        seguridad.checkPerfilArchivamiento();
-    }
-*/
+
     @And("click en el boton guardar")
     public void clickEnElBotonGuardar() {
         boton.clickBotonGuardar();
@@ -237,5 +221,31 @@ public class modseguridadDefinition {
     @And("visualizar el campo {string}")
     public void visualizarElCampo(String acciones) {
         head.validarCabeceraGrilla(acciones);
+    }
+
+    @And("configurar perfil {string}")
+    public void configurarPerfil(String perfil) {
+        seguridad.seleccionarCheckPerfilA(perfil);
+        seguridad.seleccionarCheckPerfilB(perfil);
+        seguridad.seleccionarCheckPerfilC(perfil);
+        seguridad.seleccionarCheckPerfilD(perfil);
+        seguridad.seleccionarCheckPerfilE(perfil);
+        seguridad.seleccionarCheckPerfilF(perfil);
+        seguridad.seleccionarCheckPerfilG(perfil);
+        seguridad.seleccionarCheckPerfilH(perfil);
+        seguridad.seleccionarCheckPerfilI(perfil);
+        seguridad.seleccionarCheckPerfilJ(perfil);
+        seguridad.seleccionarCheckPerfilK(perfil);
+        seguridad.seleccionarCheckPerfilL(perfil);
+    }
+
+    @And("validar notificacion exito {string}")
+    public void validarNotificacionExito(String notificacion) {
+        mensajes.validarNotificacionExito(notificacion);
+    }
+
+    @And("click en guardar")
+    public void clickEnGuardar() {
+        boton.clickBotonGuardarC();
     }
 }

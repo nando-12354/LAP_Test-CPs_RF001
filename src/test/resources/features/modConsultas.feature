@@ -36,6 +36,15 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar grupo "TOTAL"
     And click en el boton buscar
     And visualizar lista de "Usuario"
+    And validar columna "Código"
+    And validar columna "Cuenta"
+    And validar columna "Nombre"
+    And validar columna "Fecha Creación"
+    And validar columna "Grupo"
+    And validar columna "Roles asociados"
+    And validar columna "Estado"
+    And validar columna "Días por vencer cuenta usuario"
+    And validar columna "Días por vencer clave"
 
   Scenario: CPF154 - Usuarios/Imprimir lista de usuarios
     Given abre la ruta del aplicativo web
@@ -64,6 +73,15 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar grupo "<Todos>"
     And click en el boton buscar
     And visualizar lista de "Compañias"
+    And validar columna "Código"
+    And validar columna "Cuenta"
+    And validar columna "Nombre"
+    And validar columna "Fecha Creación"
+    And validar columna "Grupo"
+    And validar columna "Roles asociados"
+    And validar columna "Estado"
+    And validar columna "Días por vencer cuenta usuario"
+    And validar columna "Días por vencer clave"
 
   Scenario: CPF156 - Companias/Imprimir lista de companias
     Given abre la ruta del aplicativo web
@@ -95,6 +113,16 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar numero de caja ""
     And click en el boton buscar
     And visualizar lista de "Turnos"
+    And validar la columna "Código Turno"
+    And validar la columna "Usuario"
+    And validar la columna "Número de caja"
+    And validar la columna "Fecha apertura"
+    And validar la columna "Fecha cierre"
+    And validar columna de moneda inicio "SOL"
+    And validar columna de moneda inicio "DOL"
+    And validar columna de moneda fin "SOL"
+    And validar columna de moneda fin "OOL"
+
 
   Scenario: CPF158 - Turnos/Ver detalle de turno
     Given abre la ruta del aplicativo web
@@ -254,6 +282,21 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar estado turno "TODOS"
     And seleccionar cajero "Tamara Olaechea"
     And click en el boton buscar
+    And validar columna "Número ticket"
+    And validar columna "Secuencial"
+    And validar columna "Tipo ticket"
+    And validar columna "Compañia"
+    And validar columna "Fch. Creación"
+    And validar columna "Fch. Vuelo"
+    And validar columna "Nro. Vuelo"
+    And validar columna "Fch. Emisión"
+    And validar columna "Fch. Uso"
+    And validar columna "Fch. Rehab."
+    And validar columna "Estado Turno"
+    And validar columna "Cajero Emisión"
+    And validar columna "Estado actual"
+    And validar columna "Acciones"
+
 
   Scenario: CPF167 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
     Given abre la ruta del aplicativo web
@@ -419,6 +462,12 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar operacion compra
     And visualizar operacion venta
+    And validar columna "Turno"
+    And validar columna "Hora"
+    And validar columna "Tasa de cambio"
+    And validar columna "Monto moneda"
+    And validar columna "Nuevo soles"
+    And validar columna "Usuario"
 
   Scenario: CPF177 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
@@ -452,9 +501,27 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
     And ingresar el numero de vuelo "4A4001"
     And ingresar tipo de persona "ADULTO"
-    #And seleccionar fecha vuelo "01/01/2024"
+    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And visualizar lista de "Ticket / BP Usado"
+    And validar columna "Número documento"
+    And validar columna "Secuencial"
+    And validar columna "Tipo documento"
+    And validar columna "Destino"
+    And validar columna "Modalidad Venta"
+    And validar columna "Aerolinea"
+    And validar columna "Nro. Vuelo"
+    And validar columna "Fecha Vuelo"
+    And validar columna "Fecha uso"
+    And validar columna "Nro. Asiento"
+    And validar columna "Tipo Vuelo"
+    And validar columna "Tipo Persona"
+    And click en ver mas campos
+    And validar datos de "Tipo Trasbordo"
+    And validar datos de "Estado Actual"
+    And validar datos de "Secuencia"
+    And validar datos de "Asociado"
+    And validar columna "Acciones"
 
   Scenario: CPF179 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
@@ -474,7 +541,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
     And ingresar el numero de vuelo "4A4001"
     And ingresar tipo de persona "ADULTO"
-    #And seleccionar fecha vuelo "01/01/2024"
+    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
@@ -497,7 +564,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
     And ingresar el numero de vuelo "4A4001"
     And ingresar tipo de persona "ADULTO"
-    #And seleccionar fecha vuelo "01/01/2024"
+    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en imprimir consulta
 
@@ -519,7 +586,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
     And ingresar el numero de vuelo "4A4001"
     And ingresar tipo de persona "ADULTO"
-    #And seleccionar fecha vuelo "01/01/2024"
+    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en exportar excel
 
@@ -543,6 +610,14 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar al usuario "Nando Luyo"
     And click en el boton buscar
     And visualizar informacion de "Auditoría"
+    And validar columna "Detalle"
+    And validar columna "Fecha"
+    And validar columna "Modulo"
+    And validar columna "Submódulo"
+    And validar columna "Tabla"
+    And validar columna "Operación"
+    And validar columna "Usuario"
+    And validar columna "Acciones"
 
   Scenario: CPF183 - Auditoria/Ver detalle de auditoria
     Given abre la ruta del aplicativo web
@@ -598,6 +673,12 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar codigo de turno "031962"
     And click en el boton buscar
     And visualizar informacion de "Tickets Procesados"
+    And validar columna "Código Turno"
+    And validar columna "Cajero"
+    And validar columna "Equipo"
+    And validar columna "Fecha de Apertura"
+    And validar columna "Número de Tickets Vendidos"
+    And validar columna "Acciones"
 
   Scenario: CPF186 - Tickets procesados/Imprimir tickets procesados
     Given abre la ruta del aplicativo web
@@ -711,6 +792,18 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
     And visualizar informacion de "Log de errores molinete"
+    And validar columna "Identificador"
+    And validar columna "Fecha Error"
+    And validar columna "Molinete"
+    And validar columna "Descripción"
+    And validar columna "Tipo Ingreso"
+    And validar columna "Tipo BP"
+    And validar columna "Aerolínea"
+    And validar columna "Fecha Vuelo"
+    And validar columna "Nro Vuelo"
+    And validar columna "Nro asiento"
+    And validar columna "Pasajero"
+    And validar columna "Log Error"
 
   Scenario: CPF194 - Log de errores de molinetes/Buscar tipo de error no funcional
     Given abre la ruta del aplicativo web
@@ -803,6 +896,16 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de sincronizacion "<Todos>"
     And click en el boton buscar
     And visualizar informacion de "Sincronización"
+    And validar columna "Código"
+    And validar columna "Tabla de Sincronización"
+    And validar columna "Código de Molinete"
+    And validar columna "Tipo de Estado"
+    And validar columna "Descripción del Estado"
+    And validar columna "Fecha inicio"
+    And validar columna "Fecha fin"
+    And validar columna "Tipo de Sincronización"
+    And validar columna "Número de Registro"
+    And validar columna "Número de Registro Error"
 
   Scenario: CPF20x - Sincronizacion/Exportar informe de sincronizacion
     Given abre la ruta del aplicativo web
@@ -842,6 +945,14 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar el usuario "<Todos>"
     And click en el boton buscar
     And visualizar informacion de "Transaccion crítica"
+    And validar columna "Detalle"
+    And validar columna "Fecha"
+    And validar columna "Modulo"
+    And validar columna "SubModulo"
+    And validar columna "Tabla"
+    And validar columna "Operación"
+    And validar columna "Usuario"
+    And validar columna "Acciones"
 
   Scenario: CPF201 - Transaccion critica/Ver detalle de transaccion critica
     Given abre la ruta del aplicativo web
@@ -900,6 +1011,15 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar el estado "En Proceso"
     And click en el boton buscar
     And visualizar informacion de "Depuración"
+    And validar columna "Código"
+    And validar columna "Tabla de Depuración"
+    And validar columna "Código de Molinete"
+    And validar columna "Tipo Estado"
+    And validar columna "Descripción Estado"
+    And validar columna "Fecha inicio"
+    And validar columna "Fecha fin"
+    And validar columna "Tipo de Depuración"
+    And validar columna "Nro Registro"
 
   Scenario: CPF207 - Depuracion/Exportar informe depuracion
     Given abre la ruta del aplicativo web

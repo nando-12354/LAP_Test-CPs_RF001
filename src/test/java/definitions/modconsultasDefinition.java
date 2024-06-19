@@ -6,6 +6,7 @@ import pageobject.*;
 public class modconsultasDefinition {
     menuPage menu;
     titulosPage titulos;
+    headPage head;
     comboboxPage combobox;
     imprimirPage imprimir;
     botonPage boton;
@@ -14,6 +15,7 @@ public class modconsultasDefinition {
     public modconsultasDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
+        head = new headPage();
         combobox = new comboboxPage();
         imprimir = new imprimirPage();
         boton = new botonPage();
@@ -508,5 +510,20 @@ public class modconsultasDefinition {
     public void ingresarElEstado(String estado) {
         combobox.abrirComboboxEstadoDepuracion();
         combobox.seleccionarOpcion(estado);
+    }
+
+    @And("validar la columna {string}")
+    public void validarLaColumna(String cabecera) {
+        head.validarCabeceraGrillaB(cabecera);
+    }
+
+    @And("validar columna de moneda inicio {string}")
+    public void validarColumnaDeMonedaInicio(String cabecera) {
+        head.validarCabeceraGrillaB(cabecera);
+    }
+
+    @And("validar columna de moneda fin {string}")
+    public void validarColumnaDeMonedaFin(String cabecera) {
+        head.validarCabeceraGrillaB(cabecera);
     }
 }

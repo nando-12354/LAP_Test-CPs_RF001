@@ -33,11 +33,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero de ticket "1000602341073618"
     And click en el boton agregar ticket
     And visualizar el ticket agregado "1000602341073618"
-    And visualizar el campo "Número"
-    And visualizar datos de "Código de ticket"
-    And visualizar datos de "Observaciones"
-    And visualizar el campo "Motivo"
-    And visualizar el campo "Acciones"
+    And validar columna "Número"
+    And validar columna "Código de ticket"
+    And validar columna "Observaciones"
+    And validar columna "Motivo"
+    And validar columna "Acciones"
 
   Scenario: CPF111 - Ticket normal/Consultar representante de ticket normal
     Given abre la ruta del aplicativo web
@@ -97,6 +97,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero de ticket "1000602341073618"
     And click en el boton agregar ticket
     And visualizar el ticket agregado "1000602341073618"
+    And validar columna "Número"
+    And validar columna "Código de ticket"
+    And validar columna "Observaciones"
+    And validar columna "Acciones"
 
   Scenario: CPF115 - Ticket masivo/Consultar representante de ticket masivo
     Given abre la ruta del aplicativo web
@@ -157,6 +161,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "03/07/2020"
     And click en el boton agregar bp
     And visualizar lista de "Tickets por salida"
+    And validar columna "Número de vuelo"
+    And validar columna "Código ticket"
+    And validar columna "Fecha de creación"
+    And validar columna "Fecha de registro en tabla temporal"
+    And validar columna "Acciones"
 
   Scenario: CPF119 - Ticket por salida/Ver detalle de ticket por salida
     Given abre la ruta del aplicativo web
@@ -207,6 +216,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar vuelo "4A024     "
     And click en el boton buscar
     And visualizar lista de "Tickets por vuelo"
+    And validar columna "Nro"
+    And validar columna "Código de ticket"
+    And validar columna "Observaciones"
+    And validar columna "Acciones"
 
   Scenario: CPF122 - Ticket por vuelo/Consultar representante de ticket por vuelo
     Given abre la ruta del aplicativo web
@@ -271,6 +284,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero ticket hasta "5000604373685999"
     And click en el boton buscar
     And visualizar lista de "Tickets por Rango"
+    And validar columna "Número"
+    And validar columna "Código de ticket"
+    And validar columna "Observaciones"
+    And validar columna "Acciones"
 
   Scenario: CPF126 - Ticket por rango/Consultar representante de ticket por rango
     Given abre la ruta del aplicativo web
@@ -333,6 +350,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha hasta "03/01/2024"
     And click en el boton buscar
     And visualizar lista de "Tickets por Fecha"
+    And validar columna "Número"
+    And validar columna "Código de ticket"
+    And validar columna "Observaciones"
+    And validar columna "Acciones"
 
   Scenario: CPF130 - Ticket por fecha/Consultar representante de ticket por fecha
     Given abre la ruta del aplicativo web
@@ -398,6 +419,15 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar persona "CHAMORRO SILVA DORIS"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass Normal"
+    And validar columna "Número"
+    And validar columna "Descripción BCBP"
+    And validar columna "Observaciones"
+    And validar columna "Motivo"
+    And validar columna "Asociar"
+    And validar columna "BCBP Asociado"
+    And validar columna "Bloquear"
+    And validar columna "Seleccionar"
+    And validar columna "Acciones"
 
   Scenario: CPF134 - Boarding pass normal/Consultar representante de boarding pass normal
     Given abre la ruta del aplicativo web
@@ -464,6 +494,15 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar persona "CHAMORRO SILVA DORIS"
     And click en el boton agregar bp
     And visualizar lista de "Boarding pass masivo"
+    And validar columna "Número"
+    And validar columna "Descripción BCBP"
+    And validar columna "Observaciones"
+    And validar columna "Motivo"
+    And validar columna "Asociar"
+    And validar columna "BCBP Asociado"
+    And validar columna "Bloquear"
+    And validar columna "Seleccionar"
+    And validar columna "Acciones"
 
   Scenario: CPF138 - Boarding pass masivo/Consultar representante de boarding pass masivo
     Given abre la ruta del aplicativo web
@@ -529,6 +568,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero de vuelo "4A4001"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass por Salida"
+    And validar columna "Número Vuelo"
+    And validar columna "Código BCBP"
+    And validar columna "Fecha Creación"
+    And validar columna "Fecha de registro en tabla temporal"
+    And validar columna "Acciones"
 
   Scenario: CPF142 - Boarding pass por salida/Ver detalle de boarding pass por salida
     Given abre la ruta del aplicativo web
@@ -584,6 +628,12 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And visualizar lista de "Boarding Pass por Vuelo"
+    And validar columna "Nro."
+    And validar columna "Descripción BCBP"
+    And validar columna "Observaciones"
+    And validar columna "Bloquear"
+    And validar columna "Seleccionar"
+    And validar columna "Acciones"
 
   Scenario: CPF145 - Boarding pass por vuelo/Consultar representante de boarding pass por vuelo
     Given abre la ruta del aplicativo web
@@ -650,6 +700,12 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
     And visualizar lista de "Boarding pass por fecha"
+    And validar columna "Número"
+    And validar columna "Descripción BCBP"
+    And validar columna "Observaciones"
+    And validar columna "Bloquear"
+    And validar columna "Seleccionar"
+    And validar columna "Acciones"
 
   Scenario: CPF149 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
     Given abre la ruta del aplicativo web

@@ -8,6 +8,7 @@ public class modoperacionDefinition {
     titulosPage titulos;
     comboboxPage combobox;
     alertasPage alertas;
+    headPage head;
     botonPage boton;
     modoperacionPage operacion;
     public modoperacionDefinition() {
@@ -15,6 +16,7 @@ public class modoperacionDefinition {
         titulos = new titulosPage();
         combobox = new comboboxPage();
         alertas = new alertasPage();
+        head = new headPage();
         boton = new botonPage();
         operacion = new modoperacionPage();
     }
@@ -679,5 +681,20 @@ public class modoperacionDefinition {
     @And("filtrar ticket hasta {string}")
     public void filtrarTicketHasta(String tickethasta) {
         operacion.ingresarTicketHastaExtension(tickethasta);
+    }
+
+    @And("ingresar hora emision desde {string}")
+    public void ingresarHoraEmisionDesde(String horadesde) {
+        operacion.ingresarHoraEmisionDesde(horadesde);
+    }
+
+    @And("ingresar hora emision hasta {string}")
+    public void ingresarHoraEmisionHasta(String horahasta) {
+        operacion.ingresarHoraEmisionHasta(horahasta);
+    }
+
+    @And("validar columna de moneda {string}")
+    public void validarColumnaDeMoneda(String moneda) {
+        head.validarCabeceraGrilla(moneda);
     }
 }

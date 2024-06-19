@@ -430,9 +430,9 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar filtros de consulta
     And seleccionar fecha desde "01/01/2024"
-    And escribir hora desde "000000"
+    And ingresar hora emision desde "000000"
     And seleccionar fecha hasta "31/01/2024"
-    And ingresar hora hasta "230000"
+    And ingresar hora emision hasta "230000"
     And filtrar ticket del numero "1111111111111111"
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
@@ -462,6 +462,14 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar tipo ticket "Todos"
     And click en el boton buscar
     And visualizar lista de "Anulación Ticket"
+    And validar columna "Número"
+    And validar columna "Número de ticket"
+    And validar columna "Tipo Ticket"
+    And validar columna "Compañia"
+    And validar columna "Fecha Vuelo"
+    And validar columna "Nro. de Vuelo"
+    And validar columna "Estado Actual"
+    And validar columna "Acciones"
 
   Scenario: CPF091 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
@@ -478,9 +486,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And validar mensaje ""
 
   Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
@@ -499,9 +507,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "Mensaje va aquí"
+    And click en el boton aceptar
+    And validar mensaje "Mensaje va aqui"
 
 ######## ANULACION BCBP ########
 
@@ -518,6 +526,15 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar aerolinea "UNITED AIRLINES INC. SUCURSAL PERU"
     And click en el boton buscar
     And visualizar lista de "Anulación BCBP"
+    And validar columna "Número"
+    And validar columna "Tipo BP"
+    And validar columna "Compañía"
+    And validar columna "Fecha vuelo"
+    And validar columna "Número de vuelo"
+    And validar columna "Asiento"
+    And validar columna "Pasajero"
+    And validar columna "Estado Actual"
+
 
   Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
     Given abre la ruta del aplicativo web
@@ -534,9 +551,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar el bcbp a anular "si"
     And ingresar el motivo de anulacion "Testeo"
     And click en el boton anular
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnnnn"
+    And click en el boton aceptar
+    And validar mensaje "nnnnnn"
 
 ######## VENTA MASIVA CREDITO ########
 
@@ -596,6 +613,14 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
     And visualizar lista de "Extensión fecha vigencia tickets"
+    And validar columna "Número"
+    And validar columna "Número ticket"
+    And validar columna "Fecha de emisión"
+    And validar columna "Tipo ticket"
+    And validar columna "Fecha de vencimiento"
+    And validar columna "Número de veces"
+    And validar columna "Número de días"
+    And validar columna "Estado"
 
   Scenario: CPF098 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
     Given abre la ruta del aplicativo web
@@ -643,13 +668,13 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion gestion de molinete
     And visualizar lista de "Gestión de molinete"
-    And visualizar datos de "Código"
-    And visualizar datos de "Descripción"
-    And visualizar datos de "Tipo de Vuelo"
-    And visualizar datos de "Tipo de Acceso"
-    And visualizar datos de "Tipo de Molinete"
-    And visualizar datos de "Estado"
-    And visualizar el campo "Acción"
+    And validar columna "Código"
+    And validar columna "Descripción"
+    And validar columna "Tipo de Vuelo"
+    And validar columna "Tipo de Acceso"
+    And validar columna "Tipo de Molinete"
+    And validar columna "Estado"
+    And validar columna "Acción"
 
   Scenario: CPF101 - Gestion de molinete/Modificar gestion de molinete
     Given abre la ruta del aplicativo web
@@ -709,9 +734,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar formato excel "Excel"
     And seleccionar archivo a generar "si"
     And click en el boton generar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnnn"
+    And click en el boton aceptar
+    And validar mensaje "nnnnn"
 
 ######## CERRAR TURNO ########
 
@@ -723,10 +748,14 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion cerrar turno
     And visualizar lista de "Cerrar Turno"
-    And visualizar datos de "Usuario"
-    And visualizar datos de "Número de caja"
-    And visualizar datos de "Fecha apertura"
-    And visualizar datos de "Fecha cierre"
+    And validar columna "Seleccionar"
+    And validar columna "Código Turno"
+    And validar columna "Usuario"
+    And validar columna "Número de caja"
+    And validar columna "Fecha apertura"
+    And validar columna "Fecha cierre"
+    And validar columna de moneda "SOL"
+    And validar columna de moneda "DOL"
 
   Scenario: CPF106 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web

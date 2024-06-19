@@ -25,10 +25,6 @@ Feature: Funcionalidad del modulo Seguridad
     And validar columna "Usuario creación"
     And validar columna "Acciones"
 
-    #######################################################################################
-     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
-    #######################################################################################
-
   Scenario: CPF011 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -37,13 +33,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
     And click en el boton nuevo
-    And ingresar nombre del rol "TEST001"
+    #And ingresar nombre del rol "TEST001"
     And seleccionar rol padre "ADMIN"
-    #And configurar perfil "si"
+    And configurar perfil "si"
     And click en el boton guardar
-    #And validar mensaje de confirmacion “”
-    #And click en el boton aceptar
-    #And validar mensaje “Registro agregado correctamente”
+    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton aceptar
+    And validar mensaje "Registro agregado correctamente"
 
   Scenario: CPF012 - Roles/Modificar informacion de rol
     Given abre la ruta del aplicativo web
@@ -56,10 +52,6 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje exito "Registro modificado correctamente"
 
-   #######################################################################################
-    ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
-   #######################################################################################
-
   Scenario: CPF013 - Roles/Eliminar rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -68,9 +60,9 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
     And click en el boton eliminar
-    #And validar mensaje de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje exito "Registro eliminado correctamente"
+    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton aceptar
+    And validar mensaje "Registro eliminado correctamente"
 
 ######## USUARIOS ########
 
@@ -108,9 +100,6 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar estado "VIGENTE"
     And click en el boton buscar
 
-  #######################################################################################
-  ############# FALTA LOS MENSAJES PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
- #######################################################################################
   Scenario: CPF016 - Usuarios/Crear nuevo usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -119,16 +108,16 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresa a la opcion usuarios
     And click en el boton nuevo
-    And ingresar apellidos "teste22"
-    And ingresar nombres "teste22"
-    And ingresar nombre de usuario "teste22"
+    And ingresar apellidos "Jimenez"
+    And ingresar nombres "Armando"
+    And ingresar nombre de usuario "albez321"
     And ingresar fecha vigencia "30/12/2024"
-    And ingresar contrasena "teste22"
-    And confirmar contrasena "teste22"
+    And ingresar contrasena "321321"
+    And confirmar contrasena "321321"
     And ingresar privilegio "TOTAL"
     And ingresar rol disponible "si"
-    And click en el boton guardar
-    And validar aviso "Usuario registrado correctamente"
+    And click en guardar
+    And validar mensaje exito "Usuario registrado correctamente"
 
   Scenario: CPF017 - Usuarios/Modificar informacion de usuario
     Given abre la ruta del aplicativo web
@@ -139,13 +128,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa a la opcion usuarios
     And click en el boton editar
     And modificar el estado a "VIGENTE"
-    And modificar apellidos "Cain"
-    And modificar nombres "Juanito"
+    And modificar apellidos "Jimenez"
+    And modificar nombres "Armando"
     And modificar nombre de usuario "jcain001"
     And modificar fecha vigencia "30/12/2025"
     And seleccionar habilitar campos "si"
-    And ingresar contrasena "test"
-    And confirmar contrasena "test"
+    And ingresar contrasena "aji123"
+    And confirmar contrasena "aji123"
     And ingresar rol disponible "no"
     And click en el boton guardar
     And validar mensaje exito "Usuario actualizado correctamente"

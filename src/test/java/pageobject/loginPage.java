@@ -13,12 +13,14 @@ import support.util;
 public class loginPage extends util {
     @FindBy(xpath = "//input[@id='user']") protected WebElement inputUsuario;
     @FindBy(xpath = "//input[@id='password']") protected WebElement inputClave;
+    @FindBy(xpath = "//input[@id='password']") protected WebElement inputClaveError;
     @FindBy(xpath = "//button[@type='button']") protected WebElement btnLogin;
     @FindBy(xpath = "//h1[text()='Sistema de Administración']") protected WebElement txtTuua;
     @FindBy(xpath = "//a[contains(.,'Cambiar mi contraseña')]") protected WebElement lblCambioClave;
     @FindBy(xpath = "//p-password[@formcontrolname='new_password']//input") protected WebElement inputNuevaClave;
     @FindBy(xpath = "//p-password[@formcontrolname='repeat_password']//input") protected WebElement inputNuevaClaveConfimar;
     @FindBy(xpath = "//p-button[@label='Cambiar Contraseña']/button") protected WebElement btnCambiarClave;
+    @FindBy(xpath = "//form/div/span[text()='Usuario no registrado']") protected WebElement lblMensajeUsuarioNoRegistrado;
 
     public loginPage() {
         PageFactory.initElements(driver, this);
@@ -29,6 +31,10 @@ public class loginPage extends util {
     }
     public void ingresarClave(String clave){
         inputClave.sendKeys(clave);
+    }
+    public void ingresarClaveError(String claveerror){
+        limpiarCampo(inputClaveError);
+        inputClaveError.sendKeys(claveerror);
     }
     public void clickBotonLogin(){
         btnLogin.click();
@@ -66,4 +72,10 @@ public class loginPage extends util {
         wait.until(ExpectedConditions.visibilityOf(btnCambiarClave));
         btnCambiarClave.click();
     }
+    /*
+    public void validarMensajeUsuarioNoRegistrado(String usuario){
+        wait.until(ExpectedConditions.visibilityOf(lblMensajeUsuarioNoRegistrado));
+        Assert.assertEquals(usuario, "Usuario no registrado", lblMensajeUsuarioNoRegistrado.getText());
+    }
+     */
 }

@@ -253,9 +253,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar atributo serie numero ticket fin "si"
     And seleccionar atributo serie numero ticket inicio "si"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "NNN"
+    And click en el boton aceptar
+    And validar mensaje "NNN"
 
    #######################################################################################
     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
@@ -314,9 +314,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar atributo serie numero ticket fin "si"
     And seleccionar atributo serie numero ticket inicio "si"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnn"
+    And click en el boton aceptar
+    And validar mensaje "nnn"
 
    #######################################################################################
     ############# FALTA LAS ALERTAS PARA CONTINUAR CON ESTE CASO DE PRUEBA ##############
@@ -331,9 +331,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton editar
     And seleccionar estado "DESHABILITADO"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnnn"
+    And click en el boton aceptar
+    And validar mensaje "nnnn"
 
 ######## MODALIDAD DE VENTA ########
 
@@ -384,9 +384,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar numero minimo tickets para venta "si"
     And click en boton guardar
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnn"
+    And click en el boton aceptar
+    And validar mensaje "nnn"
 
   Scenario: CPF061 - Modalidad de venta/Modificar una modalidad de venta
     Given abre la ruta del aplicativo web
@@ -428,9 +428,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar numero minimo tickets para venta "si"
     And click en boton guardar
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion "nnnn"
+    And click en el boton aceptar
+    And validar mensaje "nnnn"
 
   Scenario: CPF063 - Modalidad de venta/Deshabilitar una modalidad de venta
     Given abre la ruta del aplicativo web

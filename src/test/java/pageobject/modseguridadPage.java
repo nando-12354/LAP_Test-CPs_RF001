@@ -32,6 +32,19 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//section/span/div/p-checkbox)[1]") protected WebElement checkRolDisponible;
     @FindBy(xpath = "//input[@id='vigencia']") protected WebElement inputFechaVigencia;
     @FindBy(xpath = "//div/div/p-checkbox[@label='Habilitar campos']/div") protected WebElement checkHabilitarCampos;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[1]") protected WebElement checkPefilA;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[2]") protected WebElement checkPefilB;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[3]") protected WebElement checkPefilC;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[4]") protected WebElement checkPefilD;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[5]") protected WebElement checkPefilE;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[6]") protected WebElement checkPefilF;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[7]") protected WebElement checkPefilG;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[8]") protected WebElement checkPefilH;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[9]") protected WebElement checkPefilI;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[10]") protected WebElement checkPefilJ;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[11]") protected WebElement checkPefilK;
+    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[12]") protected WebElement checkPefilL;
+
     public modseguridadPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -103,6 +116,7 @@ public class modseguridadPage extends util {
         inputClaveConfirmar.sendKeys(claveconf);
     }
     public void seleccionarRolDisponible(String rol){
+        scrollVertical(checkRolDisponible);
         wait.until(ExpectedConditions.visibilityOf(checkRolDisponible));
         if (rol.toLowerCase().equals("si")) {
             wait.until(ExpectedConditions.elementToBeClickable(checkRolDisponible));
@@ -146,6 +160,186 @@ public class modseguridadPage extends util {
             }
             wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkHabilitarCampos)));
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkHabilitarCampos.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilA(String perfila){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilA));
+        if (perfila.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilA));
+            if (!checkPefilA.isSelected()) {
+                checkPefilA.click();
+            }
+        } else if (perfila.toLowerCase().equals("no")) {
+            if (checkPefilA.isSelected()) {
+                checkPefilA.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilA)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilA.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilB(String perfilb){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilB));
+        if (perfilb.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilB));
+            if (!checkPefilB.isSelected()) {
+                checkPefilB.click();
+            }
+        } else if (perfilb.toLowerCase().equals("no")) {
+            if (checkPefilB.isSelected()) {
+                checkPefilB.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilB)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilB.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilC(String perfilc){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilC));
+        if (perfilc.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilC));
+            if (!checkPefilC.isSelected()) {
+                checkPefilC.click();
+            }
+        } else if (perfilc.toLowerCase().equals("no")) {
+            if (checkPefilC.isSelected()) {
+                checkPefilC.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilC)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilC.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilD(String perfild){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilD));
+        if (perfild.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilD));
+            if (!checkPefilD.isSelected()) {
+                checkPefilD.click();
+            }
+        } else if (perfild.toLowerCase().equals("no")) {
+            if (checkPefilD.isSelected()) {
+                checkPefilD.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilD)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilD.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilE(String perfile){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilE));
+        if (perfile.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilE));
+            if (!checkPefilE.isSelected()) {
+                checkPefilE.click();
+            }
+        } else if (perfile.toLowerCase().equals("no")) {
+            if (checkPefilE.isSelected()) {
+                checkPefilE.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilE)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilE.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilF(String perfilf){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilF));
+        if (perfilf.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilF));
+            if (!checkPefilF.isSelected()) {
+                checkPefilF.click();
+            }
+        } else if (perfilf.toLowerCase().equals("no")) {
+            if (checkPefilF.isSelected()) {
+                checkPefilF.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilF)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilF.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilG(String perfilg){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilG));
+        if (perfilg.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilG));
+            if (!checkPefilG.isSelected()) {
+                checkPefilG.click();
+            }
+        } else if (perfilg.toLowerCase().equals("no")) {
+            if (checkPefilG.isSelected()) {
+                checkPefilG.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilG)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilG.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilH(String perfilh){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilH));
+        if (perfilh.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilH));
+            if (!checkPefilH.isSelected()) {
+                checkPefilH.click();
+            }
+        } else if (perfilh.toLowerCase().equals("no")) {
+            if (checkPefilH.isSelected()) {
+                checkPefilH.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilH)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilH.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilI(String perfili){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilI));
+        if (perfili.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilI));
+            if (!checkPefilI.isSelected()) {
+                checkPefilI.click();
+            }
+        } else if (perfili.toLowerCase().equals("no")) {
+            if (checkPefilI.isSelected()) {
+                checkPefilI.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilI)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilI.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilJ(String perfilj){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilJ));
+        if (perfilj.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilJ));
+            if (!checkPefilJ.isSelected()) {
+                checkPefilJ.click();
+            }
+        } else if (perfilj.toLowerCase().equals("no")) {
+            if (checkPefilJ.isSelected()) {
+                checkPefilJ.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilJ)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilJ.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilK(String perfilk){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilK));
+        if (perfilk.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilK));
+            if (!checkPefilK.isSelected()) {
+                checkPefilK.click();
+            }
+        } else if (perfilk.toLowerCase().equals("no")) {
+            if (checkPefilK.isSelected()) {
+                checkPefilK.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilK)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilK.isSelected());
+        }
+    }
+    public void seleccionarCheckPerfilL(String perfill){
+        wait.until(ExpectedConditions.visibilityOf(checkPefilA));
+        if (perfill.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkPefilL));
+            if (!checkPefilL.isSelected()) {
+                checkPefilL.click();
+            }
+        } else if (perfill.toLowerCase().equals("no")) {
+            if (checkPefilL.isSelected()) {
+                checkPefilL.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilL)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilL.isSelected());
         }
     }
 }
