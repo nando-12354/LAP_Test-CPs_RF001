@@ -37,8 +37,6 @@ Feature: Funcionalidad del modulo Seguridad
     And seleccionar rol padre "ADMIN"
     And configurar perfil "si"
     And click en el boton guardar
-    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
   Scenario: CPF012 - Roles/Modificar informacion de rol
