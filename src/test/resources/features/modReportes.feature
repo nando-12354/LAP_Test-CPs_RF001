@@ -108,7 +108,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar rango de fechas
     And seleccionar fecha desde "01/01/2024"
     And ingresar hora desde "000000"
-    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar fecha hasta "05/01/2024"
     And ingresar hora hasta "230000"
     And click en el boton buscar
 
@@ -122,7 +122,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar rango de fechas
     And seleccionar fecha desde "01/01/2024"
     And ingresar hora desde "000000"
-    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar fecha hasta "05/01/2024"
     And ingresar hora hasta "230000"
     And click en el boton buscar
     And click en el boton pdf
@@ -137,11 +137,12 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar rango de fechas
     And seleccionar fecha desde "01/01/2024"
     And ingresar hora desde "000000"
-    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar fecha hasta "05/01/2024"
     And ingresar hora hasta "230000"
     And click en el boton buscar
     And click en el boton excel
 
+### Solucionado
   Scenario: CPF213 - Resumen diario/Imprimir reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -152,13 +153,14 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar rango de fechas
     And seleccionar fecha desde "01/01/2024"
     And ingresar hora desde "000000"
-    And seleccionar fecha hasta "31/01/2024"
+    And seleccionar fecha hasta "05/01/2024"
     And ingresar hora hasta "230000"
     And click en el boton buscar
     And click en el boton imprimir
 
 ######## Movimiento Tickets Contingencia ########
 
+### Solucionado
   Scenario: CPF214 - Movimiento tickets contingencia/Visualizar pantalla de movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -166,7 +168,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion movimiento tickets contingencia
-    And visualizar pantalla de "Movimiento tickets contingencia"
+    And visualizar pantalla de "Movimientos tickets contingencia"
 
   Scenario: CPF215 - Movimiento tickets contingencia/Consultar reporte de movimiento tickets contingencia
     Given abre la ruta del aplicativo web
@@ -328,6 +330,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion detalle por linea de vuelo
     And visualizar pantalla de "Detalle Linea Vuelo"
 
+    ### Solucionado
   Scenario: CPF225 - Detalle por linea de vuelo/Consultar reporte de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -340,7 +343,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar aerolinea "AEROVIAS DE MEXICO SUCURSAL PERU C.V. S.A."
     And click en el boton buscar
     And click en el boton resumen
-    And visualizar resumen "Detalle por Linea de Vuelo"
+    And visualizar resumen "Resumen: Detalle por Linea de Vuelo"
     And click en el boton cerrar
 
   Scenario: CPF226 - Detalle por Linea de Vuelo/Exportar excel de reporte de detalle por linea de vuelo
@@ -402,36 +405,38 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion bp leidos en el molinete
     And visualizar pantalla de "BP leidos en el Molinete"
 
+    ### Solucionado
   Scenario: CPF230 - BP leidos en el molinete/Consultar reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
-    And ingresar a la opcion detalle por linea de vuelo
-    And seleccionar fecha desde "01/01/2024"
+    And ingresar a la opcion bp leidos en el molinete
     And seleccionar fecha hasta "02/01/2024"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
+    And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "BP leidos en el Molinete"
     And click en el boton cerrar
 
+    ### Solucionado
   Scenario: CPF231 - BP leidos en el molinete/Exportar pdf de reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
-    And ingresar a la opcion detalle por linea de vuelo
-    And seleccionar fecha desde "01/01/2024"
+    And ingresar a la opcion bp leidos en el molinete
     And seleccionar fecha hasta "02/01/2024"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
+    And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -439,18 +444,19 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
+    ### Solucionado
   Scenario: CPF232 - BP leidos en el molinete/Exportar excel de reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
-    And ingresar a la opcion detalle por linea de vuelo
-    And seleccionar fecha desde "01/01/2024"
+    And ingresar a la opcion bp leidos en el molinete
     And seleccionar fecha hasta "02/01/2024"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
+    And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -458,18 +464,19 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
+    ### Solucionado
   Scenario: CPF233 - BP leidos en el molinete/Imprimir reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
-    And ingresar a la opcion detalle por linea de vuelo
-    And seleccionar fecha desde "01/01/2024"
+    And ingresar a la opcion bp leidos en el molinete
     And seleccionar fecha hasta "02/01/2024"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
+    And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -1446,15 +1453,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo vuelo "INTERNACIONAL"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "01/11/2023"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "02/11/2023"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "03/11/2023"
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "INTERNACIONAL"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1471,15 +1478,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo vuelo "INTERNACIONAL"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "01/11/2023"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "02/11/2023"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "03/11/2023"
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "INTERNACIONAL"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1508,15 +1515,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo vuelo "Todos"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "08/04/2022"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "11/04/2022"
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "Todos"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And ingresar numero de vuelo ""
     And click en el boton buscar
     And visualizar boarding pass usados
@@ -1531,15 +1538,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo vuelo "Todos"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "08/04/2022"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "11/04/2022"
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "Todos"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And ingresar numero de vuelo ""
     And click en el boton buscar
     And visualizar boarding pass usados

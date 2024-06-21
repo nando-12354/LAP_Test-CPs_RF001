@@ -193,6 +193,7 @@ public class modreportesPage extends util {
         inputTicketHasta.sendKeys(tickethasta);
     }
     public void clickBotonResumne(){
+        wait.until(ExpectedConditions.visibilityOf(btnResumen));
         btnResumen.click();
     }
     public void ingresarFechaAl(String fechaal){
@@ -201,6 +202,7 @@ public class modreportesPage extends util {
         txtfechaAl.sendKeys(fechaal);
     }
     public void seleccionarFechaVuelo(String fechavuelo){
+        wait.until(ExpectedConditions.visibilityOf(txtfechaVuelo));
         txtfechaVuelo.sendKeys(fechavuelo);
     }
     public void ingresarNumeroBoarding(String numeroboarding){

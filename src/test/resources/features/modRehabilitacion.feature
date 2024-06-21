@@ -450,7 +450,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass normal
     And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "01/01/2024"
+    And ingresar fecha de vuelo "05/01/2024"
     And click en el boton agregar bp
     And click en el boton ver detalle
     And visualizar el "Detalle: Boarding"
@@ -465,13 +465,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass normal
     And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "01/01/2024"
+    And ingresar fecha de vuelo "05/01/2024"
     And click en el boton agregar bp
     And seleccionar boarding "si"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton pdf
     And click en el boton imprimir voucher
@@ -545,9 +545,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar boarding "si"
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton voucher
@@ -605,9 +605,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -676,9 +676,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar el mensaje "Rehabilitación con éxito"
+    And validar mensaje exitoso "Rehabilitación con éxito"
     And click en el boton imprimir
     And click en el boton voucher
     And click en el boton aceptar
@@ -748,9 +748,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton pdf
     And click en el boton imprimir
     And click en el boton aceptar

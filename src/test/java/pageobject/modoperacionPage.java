@@ -880,6 +880,7 @@ public class modoperacionPage extends util {
         btnAnular.click();
     }
     public void abrirComboboxAerolineaBcbp(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaAnulacionBcbp));
         cmbCompaniaAnulacionBcbp.click();
     }
     public void ingresarCantidadVentaMasiva(String cantidad){

@@ -451,7 +451,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## OPERACION COMPRA / VENTA ########
-
+### Solucionado
   Scenario: CPF176 - Operacion compra-venta/Buscar operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -460,7 +460,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar al modulo consultas
     And ingresar a la opcion operacion compra venta
     And ingresar fecha de proceso "01/01/2024"
-    And seleccionar usuario "Estefania Olivo"
+    And seleccionar usuario "<Todos>"
     And click en el boton buscar
     And visualizar operacion compra
     And visualizar operacion venta
@@ -471,6 +471,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Nuevo soles"
     And validar columna "Usuario"
 
+### Solucionado
   Scenario: CPF177 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -479,12 +480,13 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar al modulo consultas
     And ingresar a la opcion operacion compra venta
     And ingresar fecha de proceso "01/01/2024"
-    And seleccionar usuario "Estefania Olivo"
+    And seleccionar usuario "<Todos>"
     And click en el boton buscar
     And click en imprimir
 
 ######## TICKETS / BP USADOS ########  ################# FALTA TICKET/BP ANULADOS
 
+### Solucionado
   Scenario: CPF178 - Tickets-bp usados/Buscar tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -492,18 +494,17 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
+    And seleccionar la fecha desde "01/05/2020"
+    And seleccionar la fecha hasta "31/05/2020"
     And escribir la hora desde "00:00:00"
     And escribir la hora hasta "23:00:00"
     And seleccionar el tipo de documento "Ticket"
-    And seleccionar el tipo vuelo "INTERNACIONAL"
-    And seleccionar estado "USADO"
-    And seleccionar tipo de transbordo "NORMAL"
-    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
-    And ingresar el numero de vuelo "4A4001"
-    And ingresar tipo de persona "ADULTO"
-    And seleccionar fecha vuelo "01/01/2024"
+    And seleccionar el tipo vuelo "<Todos>"
+    And seleccionar estado "<Todos>"
+    And seleccionar tipo de transbordo "<Todos>"
+    And seleccionar una aerolinea "AEROLINEA GENERICA"
+    And ingresar el numero de vuelo ""
+    And ingresar tipo de persona "<Todos>"
     And click en el boton buscar
     And visualizar lista de "Ticket / BP Usado"
     And validar columna "Número documento"
@@ -519,12 +520,13 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Tipo Vuelo"
     And validar columna "Tipo Persona"
     And click en ver mas campos
-    And validar datos de "Tipo Trasbordo"
-    And validar datos de "Estado Actual"
-    And validar datos de "Secuencia"
-    And validar datos de "Asociado"
+    And validar datos del "Tipo Trasbordo"
+    And validar datos del "Estado Actual"
+    And validar datos del "Secuencia"
+    And validar datos del "Asociado"
     And validar columna "Acciones"
 
+### Solucionado
   Scenario: CPF179 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -532,22 +534,22 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
+    And seleccionar la fecha desde "01/05/2020"
+    And seleccionar la fecha hasta "31/05/2020"
     And escribir la hora desde "00:00:00"
     And escribir la hora hasta "23:00:00"
     And seleccionar el tipo de documento "Ticket"
-    And seleccionar el tipo vuelo "INTERNACIONAL"
-    And seleccionar estado "USADO"
-    And seleccionar tipo de transbordo "NORMAL"
-    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
-    And ingresar el numero de vuelo "4A4001"
+    And seleccionar el tipo vuelo "<Todos>"
+    And seleccionar estado "<Todos>"
+    And seleccionar tipo de transbordo "<Todos>"
+    And seleccionar una aerolinea "AEROLINEA GENERICA"
+    And ingresar el numero de vuelo ""
     And ingresar tipo de persona "ADULTO"
-    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
 
+### Solucionado
   Scenario: CPF180 - Tickets-bp usados/Imprimir tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -555,21 +557,21 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
+    And seleccionar la fecha desde "01/05/2020"
+    And seleccionar la fecha hasta "31/05/2020"
     And escribir la hora desde "00:00:00"
     And escribir la hora hasta "23:00:00"
     And seleccionar el tipo de documento "Ticket"
-    And seleccionar el tipo vuelo "INTERNACIONAL"
-    And seleccionar estado "USADO"
-    And seleccionar tipo de transbordo "NORMAL"
-    And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
-    And ingresar el numero de vuelo "4A4001"
+    And seleccionar el tipo vuelo "<Todos>"
+    And seleccionar estado "<Todos>"
+    And seleccionar tipo de transbordo "<Todos>"
+    And seleccionar una aerolinea "AEROLINEA GENERICA"
+    And ingresar el numero de vuelo ""
     And ingresar tipo de persona "ADULTO"
-    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en imprimir consulta
 
+### Solucionado
   Scenario: CPF181 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -581,19 +583,19 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar la fecha hasta "02/01/2024"
     And escribir la hora desde "00:00:00"
     And escribir la hora hasta "23:00:00"
-    And seleccionar el tipo de documento "Ticket"
-    And seleccionar el tipo vuelo "INTERNACIONAL"
+    And seleccionar el tipo de documento "<Todos>"
+    And seleccionar el tipo vuelo "<Todos>"
     And seleccionar estado "USADO"
     And seleccionar tipo de transbordo "NORMAL"
     And seleccionar una aerolinea "AERO TRANSPORTE  S. A."
     And ingresar el numero de vuelo "4A4001"
     And ingresar tipo de persona "ADULTO"
-    And seleccionar fecha vuelo "01/01/2024"
     And click en el boton buscar
     And click en exportar excel
 
 ######## AUDITORIA ########
 
+### Solucionado
   Scenario: CPF182 - Auditoria/Buscar auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -615,9 +617,9 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Detalle"
     And validar columna "Fecha"
     And validar columna "Modulo"
-    And validar columna "Submódulo"
+    And validar columna "Submodulo"
     And validar columna "Tabla"
-    And validar columna "Operación"
+    And validar columna "Operacion"
     And validar columna "Usuario"
     And validar columna "Acciones"
 
@@ -656,7 +658,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tabla "<Todos>"
     And seleccionar modulo "Administracion Web"
     And seleccionar submodulo "Login Web"
-    And seleccionar al usuario "Nando Luyo"
+    And seleccionar el usuario "Nando Luyo"
     And click en el boton buscar
     And click en el boton imprimir
 
@@ -754,6 +756,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
+### Solucionado
   Scenario: CPF191 - Tickets procesados/Exportar excel de detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -766,11 +769,11 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar cajero "Estefania Olivo"
     And ingresar codigo de turno "031963"
     And click en el boton buscar
-    And click en el boton ver detalle
     And click en exportar excel
 
 ######## LOG DE ERRORES MOLINETE ########
 
+### Solucionado
   Scenario: CPF192 - Log de errores de molinetes/Buscar tipo de error funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -797,7 +800,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Identificador"
     And validar columna "Fecha Error"
     And validar columna "Molinete"
-    And validar columna "Descripción"
+    And validar columna "Descripción Error"
     And validar columna "Tipo Ingreso"
     And validar columna "Tipo BP"
     And validar columna "Aerolínea"
@@ -807,6 +810,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Pasajero"
     And validar columna "Log Error"
 
+### Solucionado
   Scenario: CPF193 - Log de errores de molinetes/Buscar tipo de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -818,7 +822,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar la fecha hasta "04/12/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar tipo error "No Funcional"
+    And seleccionar tipo error "No funcional"
     And seleccionar error "Todos"
     And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
@@ -855,6 +859,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en el boton reporte
 
+### Solucionado
   Scenario: CPF195 - Log de errores de molinetes/Exportar excel de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -866,7 +871,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar la fecha hasta "04/12/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar tipo error "No Funcional"
+    And seleccionar tipo error "No funcional"
     And seleccionar error "Todos"
     And seleccionar compania "AVIANCA-AEROVIAS DEL CONTINENTE AMERICANO"
     And seleccionar molinete "Todos"
@@ -888,8 +893,8 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion sincronizacion
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "01/01/2024"
+    And seleccionar fecha desde "01/07/2023"
+    And seleccionar fecha hasta "01/07/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
     And seleccionar el molinete "NORMAL INTER M4"
@@ -929,6 +934,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## TRANSACCION CRITICA ########
 
+### Solucionado
   Scenario: CPF198 - Transaccion critica/Buscar transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -936,26 +942,27 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar fecha desde "01/11/2023"
+    And seleccionar fecha hasta "01/11/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
+    And seleccionar operacion "<Todos>"
+    And seleccionar tabla "<Todos>"
+    And seleccionar un modulo "<Todos>"
+    And seleccionar submodulo "<Todos>"
     And seleccionar el usuario "<Todos>"
     And click en el boton buscar
-    And visualizar informacion de "Transaccion crítica"
-    And validar columna "Detalle"
-    And validar columna "Fecha"
-    And validar columna "Modulo"
-    And validar columna "SubModulo"
-    And validar columna "Tabla"
-    And validar columna "Operación"
-    And validar columna "Usuario"
+    And visualizar informacion de "Transacción crítica"
+    And validar la columna "Detalle"
+    And validar la columna "Fecha"
+    And validar la columna "Modulo"
+    And validar la columna "SubModulo"
+    And validar la columna "Tabla"
+    And validar la columna "Operacion"
+    And validar la columna "Usuario"
     And validar columna "Acciones"
 
+### Solucionado
   Scenario: CPF199 - Transaccion critica/Ver detalle de transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -963,19 +970,20 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar fecha desde "01/11/2023"
+    And seleccionar fecha hasta "01/11/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
+    And seleccionar operacion "<Todos>"
+    And seleccionar tabla "<Todos>"
+    And seleccionar un modulo "<Todos>"
+    And seleccionar submodulo "<Todos>"
     And seleccionar el usuario "<Todos>"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
 
+### Solucionado
   Scenario: CPF200 - Transaccion critica/Imprimir transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -983,20 +991,21 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "02/01/2024"
+    And seleccionar fecha desde "01/11/2023"
+    And seleccionar fecha hasta "01/11/2023"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar operacion "Eliminación"
-    And seleccionar tabla "TUA_ModVentaCompAtr"
-    And seleccionar modulo "Mantenimiento"
-    And seleccionar submodulo "Compañía"
+    And seleccionar operacion "<Todos>"
+    And seleccionar tabla "<Todos>"
+    And seleccionar un modulo "<Todos>"
+    And seleccionar submodulo "<Todos>"
     And seleccionar el usuario "<Todos>"
     And click en el boton buscar
     And click en imprimir
 
 ######## DEPURACION ########
 
+### Solucionado
   Scenario: CPF201 - Depuracion/Buscar depuracion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1018,8 +1027,8 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Código de Molinete"
     And validar columna "Tipo Estado"
     And validar columna "Descripción Estado"
-    And validar columna "Fecha inicio"
-    And validar columna "Fecha fin"
+    And validar columna "Fecha Inicio"
+    And validar columna "Fecha Fin"
     And validar columna "Tipo de Depuración"
     And validar columna "Nro Registro"
 

@@ -220,7 +220,6 @@ public class modrehabilitacionDefinition {
     @And("ingresar fecha de vuelo {string}")
     public void ingresarFechaDeVuelo(String fecha) {
         rehabilitacion.ingresarFechaVuelo(fecha);
-        combobox.clickInternoValidar();
     }
 
     @And("seleccionar vuelo {string}")

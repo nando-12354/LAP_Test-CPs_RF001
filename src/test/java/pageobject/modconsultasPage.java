@@ -50,12 +50,12 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fModulo']//p-dropdown//div[@role='button']") protected WebElement cmbModulo;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fSubModulo']//p-dropdown//div[@role='button']") protected WebElement cmbSubModulo;
     @FindBy(xpath = "//div/app-input-text-2[@label='Cod. Turno']//input") protected WebElement txtCodigoTurno;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sIDError']//p-dropdown//div[@role='button']") protected WebElement cmbTipoError;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sTipoError']//p-dropdown//div[@role='button']") protected WebElement cmbError;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sTipoBoarding']//p-dropdown//div[@role='button']") protected WebElement cmbTipoBp;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='iDError']//p-dropdown//div[@role='button']") protected WebElement cmbTipoError;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipoError']//p-dropdown//div[@role='button']") protected WebElement cmbError;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipoBoarding']//p-dropdown//div[@role='button']") protected WebElement cmbTipoBp;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sCompania']//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaError;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sCodMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteError;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sTipIngreso']//p-dropdown//div[@role='button']") protected WebElement cmbTipoIngresoError;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteError;
+    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipIngreso']//p-dropdown//div[@role='button']") protected WebElement cmbTipoIngresoError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTablaSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTablaSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTipoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTipoSincronizacion;
     @FindBy(xpath = "//div/app-input-date[@label='Hora desde']/span//input") protected WebElement inputHoraDesde;
@@ -72,9 +72,7 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
     @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
-    @FindBy(xpath = "//app-input-date[@formcontrolname='sFchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
-
-
+    @FindBy(xpath = "//app-input-date[@formcontrolname='fchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
 
     public modconsultasPage() {
         PageFactory.initElements(slowDriver, this);
@@ -365,25 +363,32 @@ public class modconsultasPage extends util {
         btnTablas.click();
     }
     public void clickPorNumeroTicket(){
+        wait.until(ExpectedConditions.visibilityOf(rdNumeroTicket));
         rdNumeroTicket.click();
     }
     public void clickPorRangoTicket(){
+        wait.until(ExpectedConditions.visibilityOf(rdRangoTicket));
         rdRangoTicket.click();
     }
     public void clickPorBoarding(){
+        wait.until(ExpectedConditions.visibilityOf(rdBoarding));
         rdBoarding.click();
     }
     public void ingresarFechaProceso(String fechaproceso){
         wait.until(ExpectedConditions.visibilityOf(txtFechaProceso));
+        limpiarCampo(txtFechaProceso);
         txtFechaProceso.sendKeys(fechaproceso);
     }
     public void clickRadioBotonCompra(){
+        wait.until(ExpectedConditions.visibilityOf(rdCompra));
         rdCompra.click();
     }
     public void clickRadioBotonCVenta(){
+        wait.until(ExpectedConditions.visibilityOf(rdVenta));
         rdVenta.click();
     }
     public void ingresarCodigoTurno(String codigoturno){
+        wait.until(ExpectedConditions.visibilityOf(txtCodigoTurno));
         txtCodigoTurno.sendKeys(codigoturno);
     }
     public void ingresarHoraDesde(String horadesde){
@@ -430,7 +435,7 @@ public class modconsultasPage extends util {
         txtNumeroVuelo.sendKeys(vuelo);
     }
     public void ingresarFechaVuelo(String fechavuelo){
-        wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//p-calendar[@id='fechaDesde'])[2]")));
         txtFechaVuelo.sendKeys(fechavuelo);
     }
     public void ingresarFechaVueloLogError(String vuelologerror){

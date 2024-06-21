@@ -7,6 +7,7 @@ public class modconsultasDefinition {
     menuPage menu;
     titulosPage titulos;
     headPage head;
+    bodyPage body;
     comboboxPage combobox;
     imprimirPage imprimir;
     botonPage boton;
@@ -16,6 +17,7 @@ public class modconsultasDefinition {
         menu = new menuPage();
         titulos = new titulosPage();
         head = new headPage();
+        body = new bodyPage();
         combobox = new comboboxPage();
         imprimir = new imprimirPage();
         boton = new botonPage();
@@ -525,5 +527,16 @@ public class modconsultasDefinition {
     @And("validar columna de moneda fin {string}")
     public void validarColumnaDeMonedaFin(String cabecera) {
         head.validarCabeceraGrillaB(cabecera);
+    }
+
+    @And("validar datos del {string}")
+    public void validarDatosDel(String cuerpob) {
+        body.validarCuerpoGrillaB(cuerpob);
+    }
+
+    @And("seleccionar un modulo {string}")
+    public void seleccionarUnModulo(String modulo) {
+        combobox.abrirComboboxModuloTransaccionCritica();
+        combobox.seleccionarOpcion(modulo);
     }
 }
