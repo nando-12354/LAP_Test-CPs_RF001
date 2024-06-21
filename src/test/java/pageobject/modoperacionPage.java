@@ -174,7 +174,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//div/app-input-text[@label='Motivo']//input") WebElement inputMotivoExtorno;
     @FindBy(xpath = "//div/div/div/app-input-text-2/span/input") protected WebElement inputTicketRehabilitacion;
     @FindBy(xpath = "(//app-input-text//input)[1]") protected WebElement inputTicketExtension;
-    @FindBy(xpath = "(//app-input-text//input)[3]") protected WebElement inputDiasExtension;
+    @FindBy(xpath = "//app-input-text[@label='Dias de extensión']//input") protected WebElement inputDiasExtension;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Del Nro:']/span/input") protected WebElement inputTicketDesdeRehabilitacion;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Al Nro:']/span/input") protected WebElement inputTicketHastaRehabilitacion;
     @FindBy(xpath = "//app-input-text[@label='Desde Número']//input") protected WebElement inputTicketDesdeExtension;
@@ -212,7 +212,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fCodTicket']/span/input") WebElement inputTicketAnulacion;
 
     public modoperacionPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
 
     public void ingresarOpcionTasaCambio() {
@@ -848,9 +848,11 @@ public class modoperacionPage extends util {
         cmbEstadoturno.click();
     }
     public void ingresarCodigoTurno(String turno){
+        wait.until(ExpectedConditions.visibilityOf(inputTurno));
         inputTurno.sendKeys(turno);
     }
     public void clickBotonVerDetalleTurno(){
+        wait.until(ExpectedConditions.visibilityOf(btnVerDetalleTurno));
         btnVerDetalleTurno.click();
     }
     public void abrirComboboxTipoOperacion(){
@@ -889,6 +891,7 @@ public class modoperacionPage extends util {
         cmbTipoTicketAnulacion.click();
     }
     public void seleccionarRangoTicketAnulacion(){
+        wait.until(ExpectedConditions.visibilityOf(rdRangoTicketsAnulacion));
         rdRangoTicketsAnulacion.click();
     }
     public void ingresarTicketDesdeAnulacion(String ticketdesdeanulacion){

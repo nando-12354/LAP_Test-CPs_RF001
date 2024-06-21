@@ -340,6 +340,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
+  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -359,7 +360,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -402,7 +403,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar el motivo de extorno "Solo prueba"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -432,6 +433,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Proceso"
     And validar columna "Estado"
 
+  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
   Scenario: CPF089 - Extorno rehabilitacion/Extonar rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -485,6 +487,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Estado Actual"
     And validar columna "Acciones"
 
+  ### Solucionado
   Scenario: CPF091 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -494,16 +497,17 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion anulacion
     And ingresar a la opcion anulacion de ticket
     And filtrar estado de turno "Cerrado"
-    And filtrar el ticket "6000600318289951"
+    And filtrar el ticket "6000600318381058"
     And filtrar tipo ticket "Todos"
     And click en el boton buscar
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    And validar la alerta de confirmacion "¿Está seguro de Anular los Tickets Seleccionados?"
+    And validar alerta de confirmacion "¿Está seguro de anular los tickets seleccionados?"
     And click en el boton aceptar
-    And validar mensaje "El mensaje va aquí"
+    And validar mensaje "Registro anulado correctamente"
 
+  ### Solucionado
   Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -521,9 +525,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    And validar alerta de confirmacion "¿Está seguro de Anular los Tickets Seleccionados?"
+    And validar alerta de confirmacion "¿Está seguro de anular los tickets seleccionados?"
     And click en el boton aceptar
-    And validar mensaje "Mensaje va aqui"
+    And validar mensaje "Registro anulado correctamente"
 
 ######## ANULACION BCBP ########
 
@@ -548,7 +552,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Pasajero"
     And validar columna "Estado actual"
 
-
+  ### Solucionado
   Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -564,11 +568,12 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar el motivo de anulacion "Testeo"
     And click en el boton anular
     And validar alerta de confirmacion "¿Está seguro de Anular los BCBPs Seleccionados?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar el mensaje "BCBPs se anularon correctamente"
 
 ######## VENTA MASIVA CREDITO ########
 
+  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
   Scenario: CPF095 - Venta masiva credito/Registrar venta masiva credito con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -586,9 +591,10 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación con cierre de turno?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
+  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
   Scenario: CPF096 - Venta masiva credito/Registrar venta masiva credito sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -606,7 +612,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación sin cierre de turno?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 ######## EXTENSION FECHA VIGENCIA TICKETS ########
@@ -641,16 +647,16 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion extension fecha vigencia tickets
-    And ingresar ticket "5000604355577796"
+    And ingresar ticket "5000604355577797"
     And click en el boton buscar
     And seleccionar ticket a extender "si"
     And ingresar numero de dias a extender "30"
     And click en el boton extender
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton si
-    And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
+    And validar el mensaje "Registro agregado correctamente"
 
+  ### Solucionado
   Scenario: CPF099 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -666,9 +672,8 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar numero de dias a extender "30"
     And click en el boton extender
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton si
-    And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
+    And validar el mensaje "Registro agregado correctamente"
 
 ######## GESTION DE MOLINETE ########
 
@@ -703,10 +708,9 @@ Feature: Funcionalidad del modulo Operacion
     And modificar estado "ACTIVO"
     And modificar descripcion "NACIONAL NORMAL M4"
     And click en el boton guardar
-    And validar alerta "¿Está seguro de realizar esta acción?"
-    And click en el boton si
-    And validar aviso "Se actualizaron los datos."
+    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
+    And validar mensaje "Se actualizaron los datos."
 
   Scenario: CPF102 - Gestion de molinete/Activar estado de gestion de molinete
     Given abre la ruta del aplicativo web
