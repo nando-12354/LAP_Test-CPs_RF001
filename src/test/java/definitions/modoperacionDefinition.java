@@ -707,4 +707,19 @@ public class modoperacionDefinition {
     public void seleccionarRangoDeTickets() {
         operacion.clickTasaCambioProgramada();
     }
+
+    @And("validar mensaje de confirmacion {string}")
+    public void validarMensajeDeConfirmacion(String alerta) {
+        alertas.validarAlerta(alerta);
+    }
+
+    @And("validar mensaje de eliminacion")
+    public void validarMensajeDeEliminacion() {
+        alertas.validarMensajeEliminacion();
+    }
+
+    @And("validar el mensaje de eliminacion")
+    public void validarElMensajeDeEliminacion() {
+        alertas.validarMensajeEliminacionB();
+    }
 }

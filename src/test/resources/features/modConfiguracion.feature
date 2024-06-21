@@ -1,5 +1,6 @@
 Feature: Funcionalidad del modulo Configuracion General
 
+  ### Solucionado
   Scenario: CPF019 - Visualizar modulo configuracion general
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -38,6 +39,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And validar configuracion de "SERVICIOS GENERALES"
     And validar configuracion de "ARCHIVO VENTAS"
 
+
   Scenario: CPF021 - Parametros generales/Visualizar configuracion atributos generales
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -59,6 +61,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Serie Número Ticket Fin"
     And visualizar el concepto "Serie Número Ticket Inicio"
 
+
   Scenario: CPF022 - Parametros generales/Visualizar configuracion caja tuua
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -74,6 +77,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el limte maximo
     And visualizar el limte minimo
 
+
   Scenario: CPF023 - Parametros generales/Visualizar configuracion comprobante seae
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -84,6 +88,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton ver configuracion comprobante seae
     And visualizar la "CONFIGURACION COMPROBANTE SEAE"
     And visualizar el concepto "Configuración Ruta Generación de Comprobante SEAE"
+
 
   Scenario: CPF024 - Parametros generales/Visualizar configuracion alarmas
     Given abre la ruta del aplicativo web
@@ -97,6 +102,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Configuración de Correo Electrónico"
     And visualizar el concepto "Rango de Tiempo en Horas para Monitorear Alarmas"
 
+
   Scenario: CPF025 - Parametros generales/Visualizar configuracion archivamiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -109,6 +115,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Configuracion de Conexion Ambiente Archivamiento"
     And visualizar el concepto "Delay de Meses de Archivamiento"
 
+
   Scenario: CPF026 - Parametros generales/Visualizar configuracion impresion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -120,6 +127,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar la "CONFIGURACION IMPRESIÓN"
     And visualizar el concepto "Cantidad de Tickets procesados"
     And visualizar el concepto "Parametros de Impresion"
+
 
   Scenario: CPF027 - Parametros generales/Visualizar configuracion modulo web administrativo
     Given abre la ruta del aplicativo web
@@ -134,6 +142,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Limite de Rango de Fechas en Reportes"
     And visualizar el concepto "Tamaño Fila Grilla"
     And visualizar el concepto "Tiempo Máximo en Segundos de Inactividad en la Web"
+
 
   Scenario: CPF028 - Parametros generales/Visualizar configuracion rehabilitacion
     Given abre la ruta del aplicativo web
@@ -151,6 +160,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Limite Rehabilitaciones de BCBP"
     And visualizar el concepto "Limite Rehabilitaciones de TICKET"
     And visualizar el concepto "Máximo Rehabilitaciones"
+
 
   Scenario: CPF029 - Parametros generales/Visualizar configuracion seguridad
     Given abre la ruta del aplicativo web
@@ -170,6 +180,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Número Intentos de Logeo"
     And visualizar el concepto "Umbral de Días para Aviso de Vencimiento de Clave de Usuario"
 
+
   Scenario: CPF030 - Parametros generales/Visualizar configuracion tuua
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -188,6 +199,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Máximo Grilla"
     And visualizar el concepto "Número de Vuelo Default"
 
+
   Scenario: CPF031 - Parametros generales/Visualizar configuracion estadistico
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -198,6 +210,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton ver configuracion de estadistico
     And visualizar la configuracion "ESTADISTICO"
     And visualizar el concepto "Limite de dias para procesar datos"
+
 
   Scenario: CPF032 - Parametros generales/Visualizar configuracion servicio compania
     Given abre la ruta del aplicativo web
@@ -213,6 +226,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Nombre Servicio WS Compañia"
     And visualizar el concepto "Protocolo Soap WS Compania"
     And visualizar el concepto "Ruta WS Compañia"
+
 
   Scenario: CPF033 - Parametros generales/Visualizar configuracion tasa de cambio
     Given abre la ruta del aplicativo web
@@ -231,6 +245,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Protocolo Soap WS Tasa Cambio"
     And visualizar el concepto "Ruta WS Tasa Cambio"
 
+
   Scenario: CPF034 - Parametros generales/Visualizar configuracion servicio vencimiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -242,6 +257,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar la configuracion "SERVICIO VENCIMIENTO"
     And visualizar el concepto "Frecuencia de Ejecución de Servicio Vencimiento Ticket"
     And visualizar el concepto "Frecuencia de Ejecucion del Servicio Vencimiento Boarding Rehabilitado"
+
 
   Scenario: CPF035 - Parametros generales/Visualizar configuracion servicio vuelo programado
     Given abre la ruta del aplicativo web
@@ -258,6 +274,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Protocolo Soap WS Vuelo Programado"
     And visualizar el concepto "Ruta WS Vuelo Programado"
 
+
   Scenario: CPF036 - Parametros generales/Visualizar configuracion servicio vuelo temporada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -272,6 +289,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Nombre Servicio WS Vuelo Temporada"
     And visualizar el concepto "Protocolo Soap WS Vuelo Temporada"
     And visualizar el concepto "Ruta WS Vuelo Temporada"
+
 
   Scenario: CPF037 - Parametros generales/Visualizar configuracion servicio generales
     Given abre la ruta del aplicativo web
@@ -288,6 +306,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Fecha Inicio de Consulta de SEAE"
     And visualizar el concepto "Número de Meses a Mantener"
     And visualizar el concepto "Periodo de vigencia de consulta de SEAE"
+
 
   Scenario: CPF038 - Parametros generales/Visualizar configuracion archivo ventas
     Given abre la ruta del aplicativo web
@@ -313,6 +332,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And visualizar el concepto "Tipo Documento"
     And visualizar el concepto "Status de Documento"
     And visualizar el concepto "Cliente Pago"
+
 
   Scenario: CPF039 - Parametros generales/Grabar configuracion de parametros generales
     Given abre la ruta del aplicativo web
@@ -374,6 +394,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And validar columna "Usuario modificación"
     And validar columna "Acciones"
 
+
   Scenario: CPF041 - Lista de campos/Registrar nuevo campo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -382,12 +403,13 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton nuevo
-    And ingresar nombre del campo "Test101"
-    And ingresar codigo del campo asociado "998"
-    And ingresar codigo "112"
-    And ingresar descripcion "Test101"
+    And ingresar nombre del campo "Test102"
+    And ingresar codigo del campo asociado "997"
+    And ingresar codigo "119"
+    And ingresar descripcion "Test102"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
+
 
   Scenario: CPF042 - Lista de campos/Ver detalle de lista de campo
     Given abre la ruta del aplicativo web
@@ -401,6 +423,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And validar codigo del campo "101"
     And validar codigo del campo asociado "100"
 
+
   Scenario: CPF043 - Lista de campos/Editar lista de campo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -413,6 +436,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
 
+  ### Falta el botón eliminar
   Scenario: CPF044 - Lista de campos/Eliminar lista de campo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

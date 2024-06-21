@@ -17,6 +17,7 @@ public class botonPage extends util {
     @FindBy(xpath = "(//button[contains(.,'Guardar')])[2]") protected WebElement btnGuardarB;
     @FindBy(xpath = "(//p-button/button[@type='button'])[3]") protected WebElement btnGuardarC;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[10]") protected WebElement btnEliminarJ;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarB;
     @FindBy(xpath = "//button[contains(.,'Buscar')]") protected WebElement btnBuscar;
     @FindBy(xpath = "//button[contains(.,'Generar')]") protected WebElement btnGenerar;
@@ -89,6 +90,10 @@ public class botonPage extends util {
     public void clickBotonEliminar(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminar));
         btnEliminar.click();
+    }
+    public void clickBotonEliminarJ(){
+        wait.until(ExpectedConditions.visibilityOf(btnEliminarJ));
+        btnEliminarJ.click();
     }
     public void clickBotonEliminarB(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminarB));

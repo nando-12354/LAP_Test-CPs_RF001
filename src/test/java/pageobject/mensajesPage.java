@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
@@ -43,20 +42,19 @@ public class mensajesPage extends util {
         }
         Assert.assertTrue("El mensaje ingresado " + notificacion + " no es igual al del TUUA.", notificacionValido);
     }
-    public void validarMensajeRojo(String mensajerojo) {
-        boolean mensajerojoValido = false;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form//span[@class='error' and text()='" + mensajerojo + "']")));
-        String xpath = "//form//span[@class='error' and text()='" + mensajerojo + "']";
+    public void validarMensajeRojo(String mensajeEsperado) {
+        boolean mensajeValido = false;
+        String xpath = "//div//span[@class='error' and normalize-space(text())='" + mensajeEsperado.trim() + "']";
 
         try {
-            WebElement mensajerojoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            if (mensajerojoElemento.isDisplayed() && mensajerojoElemento.getText().equals(mensajerojo)) {
-                mensajerojoValido = true;
+            WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (mensajeElemento.isDisplayed() && mensajeElemento.getText().trim().equals(mensajeEsperado.trim())) {
+                mensajeValido = true;
             }
         } catch (TimeoutException | NoSuchElementException e) {
             // El mensaje no fue encontrado en el tiempo especificado
         }
-        Assert.assertTrue("El mensaje ingresado " + mensajerojo + " no es igual al del TUUA.", mensajerojoValido);
+        Assert.assertTrue("No se reconoce al mensaje: " + mensajeEsperado + ". Validarlo!", mensajeValido);
     }
 
 }

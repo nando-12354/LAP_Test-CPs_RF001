@@ -17,7 +17,7 @@ public class menuPage extends util {
     @FindBy(xpath = "//div/div/ul/li[8]") protected WebElement modAlarmas;
     @FindBy(xpath = "//div/div/ul/li[9]") protected WebElement modAyuda;
     public menuPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
     public void validarModSeguridad(){
         wait.until(ExpectedConditions.visibilityOf(modSeguridad));

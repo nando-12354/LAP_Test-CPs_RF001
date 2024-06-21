@@ -1,5 +1,6 @@
 Feature: Funcionalidad del modulo Mantenimiento
 
+
   Scenario: CPF045 - Visualizar modulo mantenimiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -31,6 +32,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Estado"
     And validar columna "Acciones"
 
+
   Scenario: CPF047 - Estacion de punto de venta/Registrar estacion de punto de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -44,6 +46,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
+  ### Solucionado
   Scenario: CPF048 - Estacion de punto de venta/Registrar con ip fuera de rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -52,13 +55,12 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
-    And ingresar descripcion "CAJA IDE"
+    And ingresar descripcion "CAJA TEST"
     And ingresar ip "600.500.400.300"
     And click en el boton guardar
-    And validar alerta "IP Fuera de rango"
-    And validar aviso "Debe ingresar un ip entre 1 y 255"
-    And click en el boton aceptar
+    And validar mensaje error "Debe ingresar un IP entre 1 y 255"
 
+  ### No muestra el mensaje de error
   Scenario: CPF049 - Estacion de punto de venta/Registrar con ip ya registrada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -68,10 +70,9 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
     And ingresar descripcion "CAJA IDE1"
-    And ingresar ip "91.44.66.44"
+    And ingresar ip "225.225.100.100"
     And click en el boton guardar
-    And validar alerta "Titulo Informativo"
-    And validar aviso "La dirección IP ya se encuentra registrada"
+    And validar mensaje error "La dirección IP ya se encuentra registrada"
 
   Scenario: CPF050 - Estacion de punto de venta/Deshabilitar estacion de punto de venta
     Given abre la ruta del aplicativo web
@@ -118,6 +119,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Usuario modificación"
     And validar columna "Acciones"
 
+  ### No permite registrar las monedas que tienen tilde, ñ, y otros carácteres especiales
   Scenario: CPF053 - Moneda/Registrar tipo de moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -130,6 +132,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
+  ### No permite deshabilitar las monedas que tienen tilde, ñ, y otros carácteres especiales
   Scenario: CPF054 - Moneda/Deshabilitar una moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -138,12 +141,13 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion moneda
     And click en el boton editar
-    And seleccionar estado "Vigente"
+    And seleccionar estado "Deshabilitado"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
 
 ######## COMPAÑIA ########
 
+  ### Solucionado
   Scenario: CPF055 - Compania/Visualizar lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -172,6 +176,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar datos de "Venta Masiva Contado"
     And validar datos de "Venta Masiva Crédito"
     And visualizar el campo "Acciones"
+
 
   Scenario: CPF056 - Compania/Registrar una compania
     Given abre la ruta del aplicativo web
@@ -392,6 +397,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar alerta de confirmacion "No se puede crear la modalidad del tipo escogido, ya se encuentra registrado"
     And click en el boton aceptar
 
+  ### Solucionado
   Scenario: CPF063 - Modalidad de venta/Deshabilitar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -399,7 +405,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton iniciar sesion
     And ingresar al modulo mantenimiento
     And ingresar a la opcion modalidad de venta
-    And click en el boton editar
+    And click en el boton editar modalidad
     And seleccionar estado "Deshabilitado"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
@@ -423,6 +429,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Usuario modificación"
     And validar columna "Acciones"
 
+  ### Solucionado
   Scenario: CPF065 - Tipo de ticket/Registrar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -438,6 +445,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
+
   Scenario: CPF066 - Tipo de ticket/Modificar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -449,6 +457,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar nombre de tipo ticket "Selenium editado"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
+
 
   Scenario: CPF067 - Tipo de ticket/Deshabilitar un tipo de Ticket
     Given abre la ruta del aplicativo web

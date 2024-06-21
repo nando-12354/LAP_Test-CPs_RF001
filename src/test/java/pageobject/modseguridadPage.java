@@ -46,7 +46,7 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[12]") protected WebElement checkPefilL;
 
     public modseguridadPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
     public void ingresarOpcionRoles(){
         wait.until(ExpectedConditions.visibilityOf(opRoles));

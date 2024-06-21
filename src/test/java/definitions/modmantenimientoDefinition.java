@@ -432,4 +432,9 @@ public class modmantenimientoDefinition {
         combobox.abrirComboboxTipoTransbordoTipoTicket();
         combobox.seleccionarOpcion(tipotransbordo);
     }
+
+    @And("click en el boton editar modalidad")
+    public void clickEnElBotonEditarModalidad() {
+        boton.clickBotonEditarE();
+    }
 }

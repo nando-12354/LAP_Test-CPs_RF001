@@ -57,6 +57,40 @@ public class alertasPage extends util {
         }
         Assert.assertTrue("El alerta de confirmacion " + confirmacion + " no coincide.", confirmacionValido);
     }
+    public void validarMensajeEliminacion() {
+        boolean mensajeValido = false;
+        String regex = "Se elimino el tipo de cambio J[0-9]{9} satisfactoriamente...";
+        String xpath = "//div[contains(text(),'Se elimino el tipo de cambio')]";
+
+        try {
+            WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            String mensajeTexto = mensajeElemento.getText();
+            System.out.println("Mensaje: " + mensajeTexto);
+            if (mensajeElemento.isDisplayed() && mensajeTexto.matches(regex)) {
+                mensajeValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            System.out.println("No se encontró el elemento con el xpath.");
+        }
+        Assert.assertTrue("El mensaje no es igual al de la alerta.", mensajeValido);
+    }
+    public void validarMensajeEliminacionB() {
+        boolean msjValido = false;
+        String regex = "Se eliminó el precio L[0-9]{9} satisfactoriamente...";
+        String xpath = "//div[contains(text(),'Se elimino el precio')]";
+
+        try {
+            WebElement msjElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            String msjTexto = msjElemento.getText();
+            System.out.println("Mensaje: " + msjTexto);
+            if (msjElemento.isDisplayed() && msjTexto.matches(regex)) {
+                msjValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            System.out.println("No se encontró el elemento con el xpath.");
+        }
+        Assert.assertTrue("El mensaje no es igual al de la alerta.", msjValido);
+    }
 }
 
 

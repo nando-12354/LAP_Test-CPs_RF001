@@ -64,7 +64,7 @@ public class modmantenimientoPage extends util {
 
 
     public modmantenimientoPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
     public void ingresarOpcionEstacionPuntoVenta(){
         wait.until(ExpectedConditions.visibilityOf(opEstacionPuntoVenta));

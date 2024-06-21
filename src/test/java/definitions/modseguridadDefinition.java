@@ -75,10 +75,6 @@ public class modseguridadDefinition {
         boton.clickBotonEditarB();
     }
 
-    @And("validar mensaje de confirmacion {string}")
-    public void validarMensajeDeConfirmacion(String arg0) {
-    }
-
     @And("ingresa a la opcion usuarios")
     public void ingresaALaOpcionUsuarios() {
         seguridad.ingresarOpcionUsuarios();
@@ -247,5 +243,10 @@ public class modseguridadDefinition {
     @And("click en guardar")
     public void clickEnGuardar() {
         boton.clickBotonGuardarC();
+    }
+
+    @And("click en el boton eliminar rol")
+    public void clickEnElBotonEliminarRol() {
+        boton.clickBotonEliminarJ();
     }
 }

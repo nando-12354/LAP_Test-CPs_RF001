@@ -55,6 +55,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Fin de vigencia"
     And validar columna "Usuario modificación"
 
+  ### Solucionado
   Scenario: CPF070 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -65,14 +66,16 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton nuevo
     And seleccionar fecha actual
     And seleccionar tasas de cambio compra "si"
-    And ingresar tasa de cambio compra "2.5/3.5/4.4/5.5/6.5"
+    And ingresar tasa de cambio compra "2.3/3.7/2.4/6.5/3.5"
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    And validar alerta de confirmacion "Está seguro de registrar la Tasa de Cambio"
-    And click en el boton si
-    And click en ok
+    And validar alerta de confirmacion "¿Está seguro de registrar la Tasa de Cambio?"
+    And click en el boton aceptar
+    And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
+    And click en el boton aceptar
 
+  ### Solucionado
   Scenario: CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -89,9 +92,10 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    And validar alerta de confirmacion "Está seguro de registrar la Tasa de Cambio"
-    And click en el boton si
-    And click en ok
+    And validar alerta de confirmacion "¿Está seguro de registrar la Tasa de Cambio?"
+    And click en el boton aceptar
+    And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
+    And click en el boton aceptar
 
   Scenario: CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
     Given abre la ruta del aplicativo web
@@ -103,8 +107,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasa de cambio programada
     And eliminar tasa de cambio programada
     And validar alerta de confirmacion "¿Está seguro de eliminar la Tasa de Cambio Programada?"
-    And click en el boton si
-    And validar mensaje "copiar le mensaje aqui"
+    And click en el boton aceptar
+    And validar mensaje de eliminacion
+    And click en el boton aceptar
 
   Scenario: CPF073 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
     Given abre la ruta del aplicativo web
@@ -170,8 +175,9 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está seguro de registrar los precios de Ticket?"
-    And click en el boton si
-    And click en ok
+    And click en el boton aceptar
+    And validar mensaje de confirmacion "Creación de Precio de Ticket"
+    And click en el boton aceptar
 
   Scenario: CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
@@ -189,9 +195,10 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
-    And validar alerta de confirmacion "Está seguro de registrar los precios de Ticket"
-    And click en el boton si
-    And click en ok
+    And validar alerta de confirmacion "¿Está seguro de registrar los precios de Ticket?"
+    And click en el boton aceptar
+    And validar mensaje de confirmacion "Creación de Precio de Ticket"
+    And click en el boton aceptar
 
   Scenario: CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
@@ -202,9 +209,10 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion gestion precio ticket
     And seleccionar precio tickets programada
     And eliminar precio tickets programada
-    And validar alerta de confirmacion "¿Está seguro de eliminar el Precio de Ticket Programado?"
-    And click en el boton si
-    And validar mensaje "Poner le mensaje aqui"
+    And validar alerta de confirmacion "¿Está seguro de eliminar este registro?"
+    And click en el boton aceptar
+    And validar el mensaje de eliminacion
+    And click en el boton aceptar
 
   Scenario: CPF078 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
     Given abre la ruta del aplicativo web
@@ -234,6 +242,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar precio ticket
     And visualizar cantidad
 
+  ### Solucionado
   Scenario: CPF080 - Pre-emision tickets contingencia/Generar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -249,7 +258,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar cantidad "5"
     And click en el boton generar
     And validar alerta "¿Está seguro de realizar esta acción?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 ######## REGISTRO TICKET CONTINGENCIA ########
@@ -266,6 +275,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar "Filtro consulta"
     And visualizar "Datos de venta"
 
+  ### Solucionado
   Scenario: CPF082 - Registro tickets contingencia/Registro tickets contingencia con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -277,15 +287,16 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar usuario "Carmen Vera"
     And filtrar tipo de ticket "Internacional"
     And filtrar tipo de pasajero "Adulto"
-    And ingresar ticket desde "9000600312684438"
-    And ingresar ticket hasta "9000600312684530"
+    And ingresar ticket desde "9000600312484834"
+    And ingresar ticket hasta "9000600312484836"
     And click en el boton buscar
     And seleccionar tickets requeridos "si"
     And seleccionar cierre de turno "si"
     And click en el boton guardar
     And validar alerta "¿Esta seguro de realizar esta operación con cierre de turno?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje "Registro realizado correctamente"
+
 
   Scenario: CPF083 - Registro tickets contingencia/Registro tickets contingencia sin cierre de turno
     Given abre la ruta del aplicativo web
@@ -305,7 +316,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar cierre de turno "no"
     And click en el boton guardar
     And validar alerta "¿Esta seguro de realizar esta operación sin cierre de turno?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje "Registro realizado correctamente"
 
 ######## EXTORNO OPERACIONES ########

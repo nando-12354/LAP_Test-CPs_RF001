@@ -41,7 +41,7 @@ public class modconfiguracionPage extends util {
     @FindBy(xpath = "(//div//div/ul[@role='tablist']/li[@role='presentation']/a)[2]") protected WebElement pesLimiteMinimo;
 
     public modconfiguracionPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
     public void ingresarOpcionParametros(){
         wait.until(ExpectedConditions.visibilityOf(opParametros));

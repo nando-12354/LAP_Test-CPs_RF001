@@ -11,10 +11,10 @@ import support.util;
 public class comboboxPage extends util {
     @FindBy(xpath = "//div/app-input-select[@id='selectRolPadre']/span/p-dropdown//div[@role='button']") protected WebElement cmbRolPadre;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='rol']//div[@role='button']") protected WebElement cmbRolPadreUsuario;
-    @FindBy(xpath = "//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button']") protected WebElement cmbEstadoUsuario;
-    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button']") protected WebElement cmbPrivilegioUsuario;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbEstadoUsuarioEditar;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[2]") protected WebElement cmbPrivilegioUsuarioEditar;
+    @FindBy(xpath = "//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbEstadoUsuario;
+    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbPrivilegioUsuario;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[1]") protected WebElement cmbEstadoUsuarioEditar;
+    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[2]") protected WebElement cmbPrivilegioUsuarioEditar;
     @FindBy(xpath = "//div/div/span/p-dropdown//div[@role='button']") protected WebElement cmbMotivoTicketMasivo;
     @FindBy(xpath = "//app-input-select-2[@name='selectedTipoTasa']//p-dropdown//div[@role='button']") protected WebElement cmbTipoOperacionTC;
     @FindBy(xpath = "//app-representante-compania//p-dropdown//div[@role='button']") protected WebElement cmbRepresentanteCompania;

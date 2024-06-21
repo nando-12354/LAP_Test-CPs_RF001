@@ -3,9 +3,7 @@ package pageobject;
 import io.cucumber.java.de.Wenn;
 import io.cucumber.java.ro.Si;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -159,7 +157,7 @@ public class modoperacionPage extends util {
     WebElement lblFiltroConsulta;
     @FindBy(xpath = "//h3[contains(.,'Datos de venta')]")
     WebElement lblDatosVenta;
-    @FindBy(xpath = "//form/div/div/app-input-select-2[@optionlabel='sUsuario']//div[@role='button']") protected WebElement cmbFiltroUsuario;
+    @FindBy(xpath = "//form/div/div/app-input-select-2[@optionlabel='usuario']//div[@role='button']") protected WebElement cmbFiltroUsuario;
     @FindBy(xpath = "//form/div//app-input-text-2[@formcontrolname='fNumIni']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//form/div//app-input-text-2[@formcontrolname='fNumFin']//input") protected WebElement inputTicketHasta;
     @FindBy(xpath = "(//table//tbody/tr/td/p-tablecheckbox)[1]") protected WebElement checkTicketContigenciaA;
@@ -214,7 +212,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fCodTicket']/span/input") WebElement inputTicketAnulacion;
 
     public modoperacionPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
 
     public void ingresarOpcionTasaCambio() {
@@ -300,11 +298,13 @@ public class modoperacionPage extends util {
 
     public void ingresarOpcionCerrarTurno() {
         wait.until(ExpectedConditions.visibilityOf(opcerrarTurno));
+        scrollVertical(opcerrarTurno);
         opcerrarTurno.click();
     }
 
     public void ingresarOpcionGeneracionArchivoSeae() {
         wait.until(ExpectedConditions.visibilityOf(opgeneracionSeae));
+        scrollVertical(opgeneracionSeae);
         opgeneracionSeae.click();
     }
 
@@ -544,18 +544,42 @@ public class modoperacionPage extends util {
     }
 
     public void seleccionarMonedaA(String monedaa) {
-        wait.until(ExpectedConditions.visibilityOf(checkMonedaA));
-        if (monedaa.toLowerCase().equals("si")) {
-            wait.until(ExpectedConditions.visibilityOf(checkMonedaA));
-            if (!checkMonedaA.isSelected()) {
-                checkMonedaA.click();
+        int retryCount = 3;  // Número de reintentos en caso de StaleElementReferenceException
+        boolean success = false;
+
+        for (int i = 0; i < retryCount; i++) {
+            try {
+                // Esperar hasta que el checkbox sea visible
+                wait.until(ExpectedConditions.visibilityOf(checkMonedaA));
+
+                // Manejar la selección según el valor de 'monedaa'
+                if (monedaa.toLowerCase().equals("si")) {
+                    if (!checkMonedaA.isSelected()) {
+                        checkMonedaA.click();
+                    }
+                    Assert.assertTrue("El checkbox debería estar seleccionado.", checkMonedaA.isSelected());
+                } else if (monedaa.toLowerCase().equals("no")) {
+                    if (checkMonedaA.isSelected()) {
+                        checkMonedaA.click();
+                    }
+                    Assert.assertFalse("El checkbox no debería estar seleccionado.", checkMonedaA.isSelected());
+                }
+
+                success = true; // Si no hay excepción, marcar como éxito
+                break; // Salir del bucle si la operación es exitosa
+            } catch (StaleElementReferenceException e) {
+                // Log para retry
+                System.out.println("Intento de nuevo debido a StaleElementReferenceException. Intento " + (i + 1));
+                // Volver a localizar el elemento
+                checkMonedaA = driver.findElement(By.xpath("(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]"));
+            } catch (TimeoutException | NoSuchElementException e) {
+                // Manejo de excepciones en caso de que el elemento no sea encontrado
+                System.out.println("El elemento no fue encontrado en el tiempo especificado.");
+                break;
             }
-        } else if (monedaa.toLowerCase().equals("no")) {
-            if (checkMonedaA.isSelected()) {
-                checkMonedaA.click();
-            }
-            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkMonedaA.isSelected());
         }
+
+        Assert.assertTrue("No se pudo interactuar con el checkbox después de varios intentos.", success);
     }
 
     public void seleccionarMonedaB(String monedab) {
