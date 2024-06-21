@@ -16,9 +16,11 @@ public class excelPage extends util {
         PageFactory.initElements(slowDriver, this);
     }
     public void clickBotonExcel(){
+        wait.until(ExpectedConditions.visibilityOf(btnExcel));
         btnExcel.click();
     }
     public void clickBotonExcelB(){
+        wait.until(ExpectedConditions.visibilityOf(btnExcelB));
         btnExcelB.click();
     }
     public void clickBotonExcelC(){

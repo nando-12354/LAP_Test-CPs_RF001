@@ -17,7 +17,7 @@ public class modoperacionPage extends util {
     protected WebElement optasaCambio;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/precio-ticket']")
     protected WebElement opprecioTicket;
-    @FindBy(xpath = "//span[contains(.,'Gestión Ticket Contingencia')]")
+    @FindBy(xpath = "(//app-sidenav/div/div//div/ul/li/a/span)[12]")
     WebElement opgestionTicketContingencia;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/preemision-ticket-contingencia']")
     protected WebElement opsubpreticketContingencia;
@@ -176,7 +176,7 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//div/app-input-text[@label='Motivo']//input") WebElement inputMotivoExtorno;
     @FindBy(xpath = "//div/div/div/app-input-text-2/span/input") protected WebElement inputTicketRehabilitacion;
     @FindBy(xpath = "(//app-input-text//input)[1]") protected WebElement inputTicketExtension;
-    @FindBy(xpath = "(//app-input-text//input)[2]") protected WebElement inputDiasExtension;
+    @FindBy(xpath = "(//app-input-text//input)[3]") protected WebElement inputDiasExtension;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Del Nro:']/span/input") protected WebElement inputTicketDesdeRehabilitacion;
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Al Nro:']/span/input") protected WebElement inputTicketHastaRehabilitacion;
     @FindBy(xpath = "//app-input-text[@label='Desde Número']//input") protected WebElement inputTicketDesdeExtension;
@@ -202,15 +202,17 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//div//p-dropdown[@inputid='estado']/div/div") WebElement cmbEstadoGestionMolinete;
     @FindBy(xpath = "//textarea[@id='float-input']") WebElement txtDescripcionGestionMolinete;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='formato']//p-dropdown//div[@role='button']") protected WebElement cmbFormatoArchivoVenta;
-    @FindBy(xpath = "(//div/mat-checkbox//input[@type='checkbox'])[3]") protected WebElement checkArchivoVentaA;
-    @FindBy(xpath = "(//div/mat-checkbox//input[@type='checkbox'])[4]") protected WebElement checkArchivoVentaB;
-    @FindBy(xpath = "(//div/mat-checkbox//input[@type='checkbox'])[5]") protected WebElement checkArchivoVentaC;
+    @FindBy(xpath = "(//div/mat-checkbox//div[@class='mdc-checkbox'])[18]") protected WebElement checkArchivoVentaA;
+    @FindBy(xpath = "(//div/mat-checkbox//div[@class='mdc-checkbox'])[19]") protected WebElement checkArchivoVentaB;
+    @FindBy(xpath = "(//div/mat-checkbox//div[@class='mdc-checkbox'])[20]") protected WebElement checkArchivoVentaC;
     @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement txtFechaArchivoSeae;
     @FindBy(xpath = "//p-dropdown[@inputid='selectInput']//div[@role='button']") protected WebElement cmbTipoDocumentoArchivoSeae;
     @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
     @FindBy(xpath = "//p-table//table/tbody/tr/td/input[@type='checkbox']") WebElement checkTicketExtension;
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Desde']/span//input") WebElement inputHoraEmisionDesde;
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Hasta']/span//input") WebElement inputHoraEmisionHasta;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='fCodTicket']/span/input") WebElement inputTicketAnulacion;
+
     public modoperacionPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -226,7 +228,7 @@ public class modoperacionPage extends util {
     }
 
     public void ingresarOpcionGestionTicketContingencia() {
-        wait.until(ExpectedConditions.visibilityOf(opgestionTicketContingencia));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//app-sidenav/div/div//div/ul/li/a/span)[12]")));
         opgestionTicketContingencia.click();
     }
 
@@ -762,6 +764,7 @@ public class modoperacionPage extends util {
     }
     public void seleccionarTicketContingenciaC(String ticketc) {
         wait.until(ExpectedConditions.visibilityOf(checkTicketContigenciaC));
+        scrollVertical(checkTicketContigenciaC);
         if (ticketc.toLowerCase().equals("si")) {
             wait.until(ExpectedConditions.visibilityOf(checkTicketContigenciaC));
             if (!checkTicketContigenciaC.isSelected()) {
@@ -1001,5 +1004,8 @@ public class modoperacionPage extends util {
     }
     public void ingresarHoraEmisionHasta(String horahasta){
         inputHoraEmisionHasta.sendKeys(horahasta);
+    }
+    public void ingresarTicketAnulacion(String ticketanulacion){
+        inputTicketAnulacion.sendKeys(ticketanulacion);
     }
 }

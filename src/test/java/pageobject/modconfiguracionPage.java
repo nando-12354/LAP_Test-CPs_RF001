@@ -44,6 +44,7 @@ public class modconfiguracionPage extends util {
         PageFactory.initElements(slowDriver, this);
     }
     public void ingresarOpcionParametros(){
+        wait.until(ExpectedConditions.visibilityOf(opParametros));
         opParametros.click();
     }
     public void ingresarOpcionListaCampos(){
@@ -123,12 +124,15 @@ public class modconfiguracionPage extends util {
         btnVerConfiguracionR.click();
     }
     public void ingresarNombreCampo(String nombrecampo){
+        wait.until(ExpectedConditions.visibilityOf(inputNombreCampo));
         inputNombreCampo.sendKeys(nombrecampo);
     }
     public void ingresarCodigoAsociado(String codigoasociado){
+        wait.until(ExpectedConditions.visibilityOf(inputCodigoAsociado));
         inputCodigoAsociado.sendKeys(codigoasociado);
     }
     public void ingresarCodigo(String codigo){
+        wait.until(ExpectedConditions.visibilityOf(inputCodigo));
         inputCodigo.sendKeys(codigo);
     }
     public void ingresarDescripcion(String descripcion){

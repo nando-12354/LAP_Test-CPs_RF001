@@ -23,7 +23,7 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='listaTipos']//div[@role='button']") protected WebElement cmbTipoCompania;
     @FindBy(xpath = "//div/app-input-select[@inputid='modalidadVenta']//div[@role='button']") protected WebElement cmbTipoModalidad;
     @FindBy(xpath = "//div/app-input-select[@inputid]//div[@role='button']") protected WebElement cmbTipoTicketModalidad;
-    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button']") protected WebElement cmbMotivos;
+    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbMotivos;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaTicketVuelo;
     @FindBy(xpath = "//app-input-select-2[@optionvalue='sCodCompania']//p-dropdown//div[@role='button']") protected WebElement cmbBpNormalBpMasivo;
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='sDscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
@@ -43,59 +43,79 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteDepuracion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoTabla']//p-dropdown//div[@role='button']") protected WebElement cmbTablaDepuracion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoEstado']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoDepuracion;
-
+    @FindBy(xpath = "(//div/app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[2]") protected WebElement cmbTipoTicketModalidaVenta;
+    @FindBy(xpath = "(//app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[2]") protected WebElement cmbTipoVueloTipoTicket;
+    @FindBy(xpath = "(//app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[3]") protected WebElement cmbTipoTransbordoTipoTicket;
+    @FindBy(xpath = "(//p-table//table/thead/tr/th)[2]") protected WebElement clickInterno;
     public comboboxPage() {
         PageFactory.initElements(slowDriver, this);
     }
     public void abrirComboboxRolPadre(){
+        wait.until(ExpectedConditions.visibilityOf(cmbRolPadre));
         cmbRolPadre.click();
     }
     public void abrirComboboxRolPadreUsuario(){
+        wait.until(ExpectedConditions.visibilityOf(cmbRolPadreUsuario));
         cmbRolPadreUsuario.click();
     }
     public void abrirComboboxEstadoUsuario(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoUsuario));
         cmbEstadoUsuario.click();
     }
     public void abrirComboboxPrivilegioUsuario(){
+        wait.until(ExpectedConditions.visibilityOf(cmbPrivilegioUsuario));
         cmbPrivilegioUsuario.click();
     }
     public void abrirComboboxEstadoUsuarioEditar(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoUsuarioEditar));
         cmbEstadoUsuarioEditar.click();
     }
     public void abrirComboboxPrivilegioUsuarioEditar(){
+        wait.until(ExpectedConditions.visibilityOf(cmbPrivilegioUsuarioEditar));
         cmbPrivilegioUsuarioEditar.click();
     }
     public void abrirComboboxRepresentanteCompania(){
+        wait.until(ExpectedConditions.visibilityOf(cmbRepresentanteCompania));
         cmbRepresentanteCompania.click();
     }
     public void abrirComboboxMotivoTicketMasivo(){
+        wait.until(ExpectedConditions.visibilityOf(cmbMotivoTicketMasivo));
         cmbMotivoTicketMasivo.click();
     }
     public void abrirComboboxMotivos(){
+        wait.until(ExpectedConditions.visibilityOf(cmbMotivos));
         cmbMotivos.click();
     }
     public void abrirComboboxCompaniaTicketVuelo(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaTicketVuelo));
         cmbCompaniaTicketVuelo.click();
     }
     public void abrirComboboxTipoDocumentoRepresentante(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumentoRepresentante));
         cmbTipoDocumentoRepresentante.click();
     }
     public void abrirComboboxCompaniaBpNormalBpMasivo(){
+        wait.until(ExpectedConditions.visibilityOf(cmbBpNormalBpMasivo));
         cmbBpNormalBpMasivo.click();
     }
     public void abrirComboboxCompaniaBpSalidaBpVueloBpFecha(){
+        wait.until(ExpectedConditions.visibilityOf(cmbBpSalidaBpVueloBpFecha));
         cmbBpSalidaBpVueloBpFecha.click();
     }
     public void abrirComboboxVueloTicketVueloBpVuelo(){
+        wait.until(ExpectedConditions.visibilityOf(cmbVueloTicketVueloBpVuelo));
         cmbVueloTicketVueloBpVuelo.click();
     }
     public void abrirComboboxTipoCompania(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoCompania));
         cmbTipoCompania.click();
     }
     public void abrirComboboxTipoModalidad(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoModalidad));
         cmbTipoModalidad.click();
     }
     public void abrirComboboxTipoTicketModalidad(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoTicketModalidad));
         cmbTipoTicketModalidad.click();
     }
     public void abrirComboboxRol(){
@@ -115,15 +135,19 @@ public class comboboxPage extends util {
         cmbCompaniaTicketBpFecha.click();
     }
     public void abrirComboboxTicketBpUsado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumentoTicketBpUsado));
         cmbTipoDocumentoTicketBpUsado.click();
     }
     public void abrirComboboxTipoVueloTicketBpUsado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoVueloTicketBpUsado));
         cmbTipoVueloTicketBpUsado.click();
     }
     public void abrirComboboxCompaniaTicketBpUsado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaTicketBpUsado));
         cmbCompaniaTicketBpUsado.click();
     }
     public void abrirComboboxTipoPasajeroTicketBpUsado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoPasajeroTicketBpUsado));
         cmbTipoPasajeroTicketBpUsado.click();
     }
     public void abrirComboboxMolineteSincronizacion(){
@@ -162,10 +186,30 @@ public class comboboxPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbTipoOperacionTC));
         cmbTipoOperacionTC.click();
     }
+    public void abrirComboboxTicketModalidaVenta(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoTicketModalidaVenta));
+        cmbTipoTicketModalidaVenta.click();
+    }
+    public void abrirComboboxTipoVueloTipoTicket(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoVueloTipoTicket));
+        cmbTipoVueloTipoTicket.click();
+    }
+    public void abrirComboboxTipoTransbordoTipoTicket(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoTransbordoTipoTicket));
+        cmbTipoTransbordoTipoTicket.click();
+    }
     public void seleccionarOpcion(String item) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionItem = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + item + "']"));
         opcionItem.click();
+    }
+    public void seleccionarOpcionVuelo(String itemvuelo) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
+        WebElement itemVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + itemvuelo.trim() + "']"));
+        itemVuelo.click();
+    }
+    public void clickInternoValidar(){
+        clickInterno.click();
     }
 }
 

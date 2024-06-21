@@ -69,7 +69,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And validar alerta de confirmacion "Está seguro de registrar la Tasa de Cambio"
     And click en el boton si
     And click en ok
 
@@ -89,7 +89,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
     And click en el boton guardar
-    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And validar alerta de confirmacion "Está seguro de registrar la Tasa de Cambio"
     And click en el boton si
     And click en ok
 
@@ -102,7 +102,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion ingresar tasa de cambio
     And seleccionar tasa de cambio programada
     And eliminar tasa de cambio programada
-    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And validar alerta de confirmacion "¿Está seguro de eliminar la Tasa de Cambio Programada?"
     And click en el boton si
     And validar mensaje "copiar le mensaje aqui"
 
@@ -169,7 +169,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
-    And validar alerta de confirmacion "¿Esta seguro de realizar esta acción?"
+    And validar alerta de confirmacion "¿Está seguro de registrar los precios de Ticket?"
     And click en el boton si
     And click en ok
 
@@ -184,13 +184,14 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha programada
     And ingresar fecha a programar "01/12/2024"
     And ingresar hora a programar "000000"
+    And seleccionar monedas "si"
     And seleccionar codigo moneda "USD"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton si
-    #And click en ok
+    And validar alerta de confirmacion "Está seguro de registrar los precios de Ticket"
+    And click en el boton si
+    And click en ok
 
   Scenario: CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
@@ -201,8 +202,9 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion gestion precio ticket
     And seleccionar precio tickets programada
     And eliminar precio tickets programada
-    #And click en el boton si
-    #And validar mensaje ""
+    And validar alerta de confirmacion "¿Está seguro de eliminar el Precio de Ticket Programado?"
+    And click en el boton si
+    And validar mensaje "Poner le mensaje aqui"
 
   Scenario: CPF078 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
     Given abre la ruta del aplicativo web
@@ -275,8 +277,8 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar usuario "Carmen Vera"
     And filtrar tipo de ticket "Internacional"
     And filtrar tipo de pasajero "Adulto"
-    And ingresar ticket desde "9000600312684339"
-    And ingresar ticket hasta "9000600312684432"
+    And ingresar ticket desde "9000600312684438"
+    And ingresar ticket hasta "9000600312684530"
     And click en el boton buscar
     And seleccionar tickets requeridos "si"
     And seleccionar cierre de turno "si"
@@ -345,10 +347,10 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
-    And validar alerta de confirmacion ""
+    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton si
+    And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
-    And click en el boton imprimir
-    And validar alerta de confirmacion ""
 
 ######## EXTORNO TICKETS ########
 
@@ -380,18 +382,18 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion extorno
     And ingresar a la opcion extorno tickets
     And filtrar estado turno "CERRADO"
-    And filtrar turno "031966"
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "31/01/2024"
+    And filtrar turno "032205"
+    And seleccionar fecha desde "01/02/2024"
+    And seleccionar fecha hasta "28/02/2024"
     And click en el boton buscar
     And click en el boton detalle de turno
     And seleccionar ticket a extornar "si"
-    And ingresar el motivo de extorno ""
+    And ingresar el motivo de extorno "Solo prueba"
     And click en el boton extornar
-    And validar alerta de confirmacion ""
+    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton si
+    And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
-    And click en el boton imprimir
-    And validar alerta de confirmacion ""
 
 ######## EXTORNO REHABILITACION ########
 
@@ -411,9 +413,10 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar ticket del numero "1111111111111111"
     And filtrar ticket al numero "9999999999999999"
     And click en el boton buscar
-    And validar columna "Turno ticket"
+    And validar columna "Tipo Ticket"
     And validar columna "Compania"
     And validar columna "Num. Vuelo"
+    And validar columna "Fecha Vuelo"
     And validar columna "Num. Ticket"
     And validar columna "Fecha Proceso"
     And validar columna "Estado"
@@ -438,7 +441,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar ticket rehabilitado a extornar "si"
     And click en el boton extornar
-    And validar alerta de confirmacion ""
+    And validar la alerta de confirmacion "Finalizó el proceso de impresión"
     And click en el boton aceptar
 
 ######## ANULACION DE TICKET ########
@@ -452,7 +455,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion anulacion
     And ingresar a la opcion anulacion de ticket
     And filtrar estado de turno "Cerrado"
-    And filtrar ticket "6000600318289951"
+    And filtrar el ticket "6000600318289951"
     And filtrar tipo ticket "Todos"
     And click en el boton buscar
     And seleccionar rango de ticket
@@ -480,15 +483,15 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion anulacion
     And ingresar a la opcion anulacion de ticket
     And filtrar estado de turno "Cerrado"
-    And filtrar ticket "6000600318289951"
+    And filtrar el ticket "6000600318289951"
     And filtrar tipo ticket "Todos"
     And click en el boton buscar
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    And validar alerta de confirmacion ""
+    And validar la alerta de confirmacion "¿Está seguro de Anular los Tickets Seleccionados?"
     And click en el boton aceptar
-    And validar mensaje ""
+    And validar mensaje "El mensaje va aquí"
 
   Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
@@ -507,7 +510,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar el ticket a anular "si"
     And ingresar el motivo de anulacion "Solo pruebas"
     And click en el boton anular
-    And validar alerta de confirmacion "Mensaje va aquí"
+    And validar alerta de confirmacion "¿Está seguro de Anular los Tickets Seleccionados?"
     And click en el boton aceptar
     And validar mensaje "Mensaje va aqui"
 
@@ -523,7 +526,6 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion anulacion bcbp
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "UNITED AIRLINES INC. SUCURSAL PERU"
     And click en el boton buscar
     And visualizar lista de "Anulación BCBP"
     And validar columna "Número"
@@ -533,7 +535,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Número de vuelo"
     And validar columna "Asiento"
     And validar columna "Pasajero"
-    And validar columna "Estado Actual"
+    And validar columna "Estado actual"
 
 
   Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
@@ -544,16 +546,15 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion anulacion
     And ingresar a la opcion anulacion bcbp
-    And ingresar fecha desde "01/01/2024"
-    And ingresar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "UNITED AIRLINES INC. SUCURSAL PERU"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
     And click en el boton buscar
     And seleccionar el bcbp a anular "si"
     And ingresar el motivo de anulacion "Testeo"
     And click en el boton anular
-    And validar alerta de confirmacion "nnnnn"
-    And click en el boton aceptar
-    And validar mensaje "nnnnnn"
+    And validar alerta de confirmacion "¿Está seguro de Anular los BCBPs Seleccionados?"
+    And click en el boton si
+    And validar el mensaje "BCBPs se anularon correctamente"
 
 ######## VENTA MASIVA CREDITO ########
 
@@ -606,11 +607,11 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion extension fecha vigencia tickets
-    And filtrar ticket "5000604355577796"
+    And ingresar ticket "5000604355577796"
     And click en el boton buscar
-    And seleccionar rango de ticket
-    And filtrar ticket del numero "1111111111111111"
-    And filtrar ticket al numero "9999999999999999"
+    And seleccionar rango de tickets
+    And filtrar ticket desde "1111111111111111"
+    And filtrar ticket hasta "9999999999999999"
     And click en el boton buscar
     And visualizar lista de "Extensión fecha vigencia tickets"
     And validar columna "Número"
@@ -634,7 +635,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar ticket a extender "si"
     And ingresar numero de dias a extender "30"
     And click en el boton extender
-    And validar alerta confirmacion "¿Está seguro de realizar esta acción?"
+    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton si
     And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
@@ -646,14 +647,14 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion extension fecha vigencia tickets
-    And seleccionar rango de ticket extension
+    And seleccionar rango de tickets
     And filtrar ticket desde "1111111111111111"
     And filtrar ticket hasta "9999999999999999"
     And click en el boton buscar
     And seleccionar ticket a extender "si"
     And ingresar numero de dias a extender "30"
     And click en el boton extender
-    And validar alerta confirmacion "¿Está seguro de realizar esta acción?"
+    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton si
     And validar el mensaje "Se registró la información correctamente"
     And click en el boton aceptar
@@ -687,7 +688,7 @@ Feature: Funcionalidad del modulo Operacion
     And modificar tipo de documento "Ticket"
     And modificar tipo de vuelo "INTERNACIONAL"
     And modificar tipo de acceso "Normal"
-    And modificar tipo de molinete "CONTINGENCIA"
+    And modificar tipo de molinete "CONTIGENCIA"
     And modificar estado "ACTIVO"
     And modificar descripcion "NACIONAL NORMAL M4"
     And click en el boton guardar
@@ -729,14 +730,11 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion generacion archivo venta
-    And seleccionar fecha desde "01/01/2024"
-    And seleccionar fecha hasta "02/01/2024"
-    And seleccionar formato excel "Excel"
+    And seleccionar fecha desde "01/02/2024"
+    And seleccionar fecha hasta "04/02/2024"
+    And seleccionar formato excel "Texto"
     And seleccionar archivo a generar "si"
     And click en el boton generar
-    And validar alerta de confirmacion "nnnn"
-    And click en el boton aceptar
-    And validar mensaje "nnnnn"
 
 ######## CERRAR TURNO ########
 

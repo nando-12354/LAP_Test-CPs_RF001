@@ -374,4 +374,62 @@ public class modmantenimientoDefinition {
     public void cambiarDescripcion(String descripcion) {
         mantenimiento.ingresarDescripcion(descripcion);
     }
+
+    @And("seleccionar la serie numero ticket inicio {string}")
+    public void seleccionarLaSerieNumeroTicketInicio(String inicio) {
+        mantenimiento.seleccionarSerieNumInicio(inicio);
+    }
+
+    @And("seleccionar la serie numero ticket fin {string}")
+    public void seleccionarLaSerieNumeroTicketFin(String fin) {
+        mantenimiento.seleccionarSerieNumFin(fin);
+    }
+
+    @And("click en el boton editar venta masiva credito")
+    public void clickEnElBotonEditarVentaMasivaCredito() {
+        boton.clickBotonEditarD();
+    }
+
+    @And("click en el boton editar compania")
+    public void clickEnElBotonEditarCompania() {
+        boton.clickBotonEditarB();
+    }
+
+    @And("seleccionar el tipo ticket {string}")
+    public void seleccionarElTipoTicket(String tipoticketmodalidad) {
+        combobox.abrirComboboxTicketModalidaVenta();
+        combobox.seleccionarOpcion(tipoticketmodalidad);
+    }
+
+    @And("seleccionar el activar rehabilitacion {string}")
+    public void seleccionarElActivarRehabilitacion(String activara) {
+        mantenimiento.seleccionarActivarModalidaA(activara);
+    }
+
+    @And("seleccionar el maximo de tickets emitidos por semana al credito {string}")
+    public void seleccionarElMaximoDeTicketsEmitidosPorSemanaAlCredito(String activarb) {
+        mantenimiento.seleccionarActivarModalidaB(activarb);
+    }
+
+    @And("seleccionar el numero maximo tickets para venta {string}")
+    public void seleccionarElNumeroMaximoTicketsParaVenta(String activarc) {
+        mantenimiento.seleccionarActivarModalidaC(activarc);
+    }
+
+    @And("seleccionar el numero minimo tickets para venta {string}")
+    public void seleccionarElNumeroMinimoTicketsParaVenta(String activard) {
+        mantenimiento.seleccionarActivarModalidaD(activard);
+    }
+
+    @And("seleccionar un tipo vuelo {string}")
+    public void seleccionarUnTipoVuelo(String tipovuelo) {
+        combobox.abrirComboboxTipoVueloTipoTicket();
+        combobox.seleccionarOpcion(tipovuelo);
+    }
+
+    @And("seleccionar un tipo transbordo {string}")
+    public void seleccionarUnTipoTransbordo(String tipotransbordo) {
+        combobox.abrirComboboxTipoTransbordoTipoTicket();
+        combobox.seleccionarOpcion(tipotransbordo);
+    }
 }

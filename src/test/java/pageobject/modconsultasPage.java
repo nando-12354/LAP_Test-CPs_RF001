@@ -374,6 +374,7 @@ public class modconsultasPage extends util {
         rdBoarding.click();
     }
     public void ingresarFechaProceso(String fechaproceso){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaProceso));
         txtFechaProceso.sendKeys(fechaproceso);
     }
     public void clickRadioBotonCompra(){
@@ -409,6 +410,7 @@ public class modconsultasPage extends util {
         txtFechaDesde.sendKeys(fechadesde);
     }
     public void ingresarFechaHasta(String fechahasta){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaHasta));
         limpiarCampo(txtFechaHasta);
         txtFechaHasta.sendKeys(fechahasta);
     }
@@ -417,18 +419,22 @@ public class modconsultasPage extends util {
         txtHoraDesdeB.sendKeys(horadesde);
     }
     public void ingresarHoraHastaB(String horahasta){
+        wait.until(ExpectedConditions.visibilityOf(txtHoraHastaB));
         txtHoraHastaB.sendKeys(horahasta);
     }
     public void abrirComboboxTicketBpUsado(String ticketbp){
         cmbTipoDocumentoTicketBpUsado.click();
     }
     public void ingresarNumeroVuelo(String vuelo){
+        wait.until(ExpectedConditions.visibilityOf(txtNumeroVuelo));
         txtNumeroVuelo.sendKeys(vuelo);
     }
     public void ingresarFechaVuelo(String fechavuelo){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
         txtFechaVuelo.sendKeys(fechavuelo);
     }
     public void ingresarFechaVueloLogError(String vuelologerror){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaVueloLogError));
         txtFechaVueloLogError.sendKeys(vuelologerror);
     }
 }

@@ -12,7 +12,7 @@ public class principalDefinition {
 
     @Given("abre la ruta del aplicativo web")
     public void abreLaRutaDelAplicativoWeb() {
-        hooks.driver.get("http://tuuaadministracionwebfrontend.k8sdevcp.lap.com.pe/");
+        hooks.driver.get("http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/");
     }
 
     @And("visualizar la pantalla de acceso {string}")

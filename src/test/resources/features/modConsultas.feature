@@ -258,6 +258,8 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar asiento "016A"
     And ingresar persona "ESCOBEDO FARJE MERCY"
     And click en el boton buscar
+    And click en exportar excel
+    And click en imprimir consulta
 
 ######## TICKET / BP POR FECHA ########
 
@@ -722,7 +724,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en boton ver detalle
 
-  Scenario: CPF190 - Tickets procesados/Ver detalle de tickets de tickets procesados
+  Scenario: CPF189 - Tickets procesados/Ver detalle de tickets de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -738,7 +740,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton ver detalle de ticket
     And click en el boton cerrar
 
-  Scenario: CPF191 - Tickets procesados/Imprimir detalle de turno de tickets procesados
+  Scenario: CPF190 - Tickets procesados/Imprimir detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -752,7 +754,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  Scenario: CPF192 - Tickets procesados/Exportar excel de detalle de turno de tickets procesados
+  Scenario: CPF191 - Tickets procesados/Exportar excel de detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -769,7 +771,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## LOG DE ERRORES MOLINETE ########
 
-  Scenario: CPF193 - Log de errores de molinetes/Buscar tipo de error funcional
+  Scenario: CPF192 - Log de errores de molinetes/Buscar tipo de error funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -805,7 +807,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Pasajero"
     And validar columna "Log Error"
 
-  Scenario: CPF194 - Log de errores de molinetes/Buscar tipo de error no funcional
+  Scenario: CPF193 - Log de errores de molinetes/Buscar tipo de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -829,7 +831,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Log de errores molinete"
 
-  Scenario: CPF195 - Log de errores de molinetes/Exportar excel de error funcional
+  Scenario: CPF194 - Log de errores de molinetes/Exportar excel de error funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -853,7 +855,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en el boton reporte
 
-  Scenario: CPF196 - Log de errores de molinetes/Exportar excel de error no funcional
+  Scenario: CPF195 - Log de errores de molinetes/Exportar excel de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -879,7 +881,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## SINCRONIZACION ########
 
-  Scenario: CPF20x - Sincronizacion/Buscar sincronizacion
+  Scenario: CPF196 - Sincronizacion/Buscar sincronizacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -907,7 +909,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Número de Registro"
     And validar columna "Número de Registro Error"
 
-  Scenario: CPF20x - Sincronizacion/Exportar informe de sincronizacion
+  Scenario: CPF197 - Sincronizacion/Exportar informe de sincronizacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -927,7 +929,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## TRANSACCION CRITICA ########
 
-  Scenario: CPF200 - Transaccion critica/Buscar transaccion critica
+  Scenario: CPF198 - Transaccion critica/Buscar transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -954,7 +956,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Usuario"
     And validar columna "Acciones"
 
-  Scenario: CPF201 - Transaccion critica/Ver detalle de transaccion critica
+  Scenario: CPF199 - Transaccion critica/Ver detalle de transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -974,7 +976,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  Scenario: CPF202 - Transaccion critica/Imprimir transaccion critica
+  Scenario: CPF200 - Transaccion critica/Imprimir transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -995,7 +997,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## DEPURACION ########
 
-  Scenario: CPF204 - Depuracion/Buscar depuracion
+  Scenario: CPF201 - Depuracion/Buscar depuracion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -1021,7 +1023,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Tipo de Depuración"
     And validar columna "Nro Registro"
 
-  Scenario: CPF207 - Depuracion/Exportar informe depuracion
+  Scenario: CPF202 - Depuracion/Exportar informe depuracion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

@@ -220,12 +220,13 @@ public class modrehabilitacionDefinition {
     @And("ingresar fecha de vuelo {string}")
     public void ingresarFechaDeVuelo(String fecha) {
         rehabilitacion.ingresarFechaVuelo(fecha);
+        combobox.clickInternoValidar();
     }
 
     @And("seleccionar vuelo {string}")
     public void seleccionarVuelo(String vuelo) {
         combobox.abrirComboboxVueloTicketVueloBpVuelo();
-        combobox.seleccionarOpcion(vuelo);
+        combobox.seleccionarOpcionVuelo(vuelo);
     }
 
     @And("click en el boton buscar")
@@ -383,5 +384,10 @@ public class modrehabilitacionDefinition {
     @And("click en el boton voucher")
     public void clickEnElBotonVoucher() {
         voucher.clickBotonVoucherB();
+    }
+
+    @And("validar mensaje exitoso {string}")
+    public void validarMensajeExitoso(String mensaje) {
+        alerta.validarAlerta(mensaje);
     }
 }

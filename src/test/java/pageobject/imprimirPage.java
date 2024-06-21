@@ -17,9 +17,11 @@ public class imprimirPage extends util {
         PageFactory.initElements(slowDriver, this);
     }
     public void clickBotonImprimir(){
+        wait.until(ExpectedConditions.visibilityOf(btnImprimir));
         btnImprimir.click();
     }
     public void clickBotonImprimirB(){
+        wait.until(ExpectedConditions.visibilityOf(btnImprimirB));
         btnImprimirB.click();
     }
     public void clickBotonImprimirC(){

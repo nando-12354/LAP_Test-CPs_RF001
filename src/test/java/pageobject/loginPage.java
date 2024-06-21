@@ -23,20 +23,23 @@ public class loginPage extends util {
     @FindBy(xpath = "//form/div/span[text()='Usuario no registrado']") protected WebElement lblMensajeUsuarioNoRegistrado;
 
     public loginPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void ingresarUsuario(String usuario){
         wait.until(ExpectedConditions.visibilityOf(inputUsuario));
         inputUsuario.sendKeys(usuario);
     }
     public void ingresarClave(String clave){
+        wait.until(ExpectedConditions.visibilityOf(inputClave));
         inputClave.sendKeys(clave);
     }
     public void ingresarClaveError(String claveerror){
+        wait.until(ExpectedConditions.visibilityOf(inputClaveError));
         limpiarCampo(inputClaveError);
         inputClaveError.sendKeys(claveerror);
     }
     public void clickBotonLogin(){
+        wait.until(ExpectedConditions.visibilityOf(btnLogin));
         btnLogin.click();
     }
     public void validarTituloTuua(String tuua){
@@ -44,6 +47,7 @@ public class loginPage extends util {
         Assert.assertEquals(tuua, "Sistema de Administración", txtTuua.getText());
     }
     public void ingresarCambioClave(){
+        wait.until(ExpectedConditions.visibilityOf(lblCambioClave));
         lblCambioClave.click();
     }
     public void validarUsuario(String logueado){
@@ -59,13 +63,14 @@ public class loginPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // No se reconoce al usuario logueado
         }
-        Assert.assertTrue("El usuario " + logueado + " no coincide.", usuarioValido);
+        Assert.assertTrue("El usuario logueado " + logueado + " no es correcto.", usuarioValido);
     }
     public void ingresarNuevaClave(String nuevaclave){
         wait.until(ExpectedConditions.visibilityOf(inputNuevaClave));
         inputNuevaClave.sendKeys(nuevaclave);
     }
     public void ingresarNuevaClaveConfirmar(String claveconf){
+        wait.until(ExpectedConditions.visibilityOf(inputNuevaClaveConfimar));
         inputNuevaClaveConfimar.sendKeys(claveconf);
     }
     public void clickBotonCambiarClave(){

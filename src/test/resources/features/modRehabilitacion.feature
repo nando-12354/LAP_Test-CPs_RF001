@@ -59,7 +59,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket normal
-    And ingresar numero de ticket "5000604337477348"
+    And ingresar numero de ticket "5000604359486400"
     And click en el boton agregar ticket
     And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
@@ -73,13 +73,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket normal
-    And ingresar numero de ticket "5000604330876319"
+    And ingresar numero de ticket "5000604375484444"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -122,7 +122,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And ingresar numero de ticket "5000604330876618"
+    And ingresar numero de ticket "1000602341074119"
     And click en el boton agregar ticket
     And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
@@ -136,14 +136,14 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And ingresar numero de ticket "5000604329977616"
+    And ingresar numero de ticket "5000604331978019"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
     And seleccionar un motivo "Mal estado de salud del pasajero prueba"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -194,9 +194,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar ticket "si"
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en boton excel
     And click en boton imprimir
     And click en el boton aceptar
@@ -213,7 +213,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
-    And seleccionar vuelo "4A024     "
+    And seleccionar vuelo "4A024"
     And click en el boton buscar
     And visualizar lista de "Tickets por vuelo"
     And validar columna "Nro"
@@ -243,7 +243,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
-    And seleccionar vuelo "4A024     "
+    And seleccionar vuelo "4A024"
     And click en el boton buscar
     And click en el boton ver detalle
     And visualizar el "Detalle: Ticket"
@@ -256,17 +256,17 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton iniciar sesion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
-    And ingresar a la subopcion ticket masivo
+    And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "04/01/2024"
-    And seleccionar vuelo "4A024     "
+    And seleccionar vuelo "4A024"
     And click en el boton buscar
     And seleccionar ticket "si"
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "Se rehabilitarán todos los tickets seleccionados."
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "Se rehabilitarán todos los tickets seleccionados."
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -331,8 +331,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -608,7 +608,6 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
     And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
-    ### BOTON EXCEL E IMPRIMIR NO FUNCIONAN ###
     And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
@@ -680,7 +679,6 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton si
     And validar el mensaje "Rehabilitación con éxito"
-    ### BOTON IMPRIMIR Y VOUCHER NO FUNCIONAN ###
     And click en el boton imprimir
     And click en el boton voucher
     And click en el boton aceptar

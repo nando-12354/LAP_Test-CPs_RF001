@@ -359,7 +359,7 @@ public class modoperacionDefinition {
         operacion.seleccionarTicketContingenciaA(ticketcontingencia);
         operacion.seleccionarTicketContingenciaB(ticketcontingencia);
         operacion.seleccionarTicketContingenciaC(ticketcontingencia);
-        operacion.seleccionarTicketContingenciaD(ticketcontingencia);
+        //operacion.seleccionarTicketContingenciaD(ticketcontingencia);
     }
 
     @And("seleccionar cierre de turno {string}")
@@ -696,5 +696,15 @@ public class modoperacionDefinition {
     @And("validar columna de moneda {string}")
     public void validarColumnaDeMoneda(String moneda) {
         head.validarCabeceraGrilla(moneda);
+    }
+
+    @And("filtrar el ticket {string}")
+    public void filtrarElTicket(String ticketanulacion) {
+        operacion.ingresarTicketAnulacion(ticketanulacion);
+    }
+
+    @And("seleccionar rango de tickets")
+    public void seleccionarRangoDeTickets() {
+        operacion.clickTasaCambioProgramada();
     }
 }

@@ -382,10 +382,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton nuevo
-    And ingresar nombre del campo "Testing"
-    And ingresar codigo del campo asociado "gg"
-    And ingresar codigo "gg"
-    And ingresar descripcion "SSSSS"
+    And ingresar nombre del campo "Test101"
+    And ingresar codigo del campo asociado "998"
+    And ingresar codigo "112"
+    And ingresar descripcion "Test101"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
@@ -409,7 +409,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton editar
-    And editar descripcion del valor "Selenium IDE"
+    And editar descripcion del valor "Test102"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
 
@@ -420,6 +420,6 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
-    #And click en el boton eliminar
-    #And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    #And validar mensaje "Lista de campo eliminado correctamente"
+    And click en el boton eliminar
+    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And validar mensaje "Lista de campo eliminado correctamente"

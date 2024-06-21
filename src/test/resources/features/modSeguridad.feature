@@ -33,7 +33,7 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
     And click en el boton nuevo
-    #And ingresar nombre del rol "TEST001"
+    And ingresar nombre del rol "VVV555R"
     And seleccionar rol padre "ADMIN"
     And configurar perfil "si"
     And click en el boton guardar
@@ -109,7 +109,6 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar apellidos "Jimenez"
     And ingresar nombres "Armando"
     And ingresar nombre de usuario "albez321"
-    And ingresar fecha vigencia "30/12/2024"
     And ingresar contrasena "321321"
     And confirmar contrasena "321321"
     And ingresar privilegio "TOTAL"

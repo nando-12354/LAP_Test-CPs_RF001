@@ -27,6 +27,6 @@ public class bodyPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // No se ubicó el texto del body
         }
-        Assert.assertTrue("El texto del body '" + cuerpo.trim() + "' no coincide.", cuerpoValido);
+        Assert.assertTrue("Error!. EL campo '" + cuerpo.trim() + "' no es válido.", cuerpoValido);
     }
 }

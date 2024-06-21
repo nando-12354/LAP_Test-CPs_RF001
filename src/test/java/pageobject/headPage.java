@@ -27,7 +27,7 @@ public class headPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // No se ubicó el texto de la cabecera
         }
-        Assert.assertTrue("El texto de la cabecera '" + cabecera.trim() + "' no coincide.", cabeceraValido);
+        Assert.assertTrue("Error!. La columna '" + cabecera.trim() + "' se pudo validar.", cabeceraValido);
     }
     public void validarCabeceraGrillaB(String cabecerab) {
         boolean cabecerabValido = false;
@@ -43,6 +43,6 @@ public class headPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // No se ubicó el texto de la cabecera
         }
-        Assert.assertTrue("El texto de la cabecera '" + cabecerab.trim() + "' no coincide.", cabecerabValido);
+        Assert.assertTrue("Error!. La columna '" + cabecerab.trim() + "' se pudo validar.", cabecerabValido);
     }
 }

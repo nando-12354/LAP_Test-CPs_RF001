@@ -51,9 +51,11 @@ public class modalarmasPage extends util {
         cmbModulo.click();
     }
     public void abrirComboboxTipoAlarma(){
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoAlarma));
         cmbTipoAlarma.click();
     }
     public void abrirComboboxEstado(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstado));
         cmbEstado.click();
     }
     public void abrirComboboxUsuarioA(){
@@ -70,9 +72,11 @@ public class modalarmasPage extends util {
         opcionItem.click();
     }
     public void ingresarFinMensaje(String mensaje){
+        wait.until(ExpectedConditions.visibilityOf(inputFinMensaje));
         inputFinMensaje.sendKeys(mensaje);
     }
     public void ingresarAsuntoCorreo(String asunto){
+        wait.until(ExpectedConditions.visibilityOf(inputAsuntoCorreo));
         inputAsuntoCorreo.sendKeys(asunto);
     }
     public void clickBotonAgregar(){
@@ -88,9 +92,11 @@ public class modalarmasPage extends util {
         btnEliminar.click();
     }
     public void ingresarCorreo(String correo){
+        wait.until(ExpectedConditions.visibilityOf(inputCorreo));
         inputCorreo.sendKeys(correo);
     }
     public void ingresarActualizacionCorreo(String actualizar){
+        wait.until(ExpectedConditions.visibilityOf(inputCorreoAct));
         limpiarCampo(inputCorreoAct);
         inputCorreoAct.sendKeys(actualizar);
     }
@@ -115,9 +121,11 @@ public class modalarmasPage extends util {
         btnEditarE.click();
     }
     public void ingresarHoraDesde(String horadesde){
+        wait.until(ExpectedConditions.visibilityOf(txtHoraDesde));
         txtHoraDesde.sendKeys(horadesde);
     }
     public void ingresarHoraHasta(String horahasta){
+        wait.until(ExpectedConditions.visibilityOf(txtHoraHasta));
         txtHoraHasta.sendKeys(horahasta);
     }
 }

@@ -1,15 +1,18 @@
 package definitions;
 
 import io.cucumber.java.en.And;
+import pageobject.alertasPage;
 import pageobject.loginPage;
 import pageobject.mensajesPage;
 
 public class loginDefinition {
     loginPage login;
     mensajesPage mensajes;
+    alertasPage alertas;
     public loginDefinition() {
         login = new loginPage();
         mensajes = new mensajesPage();
+        alertas = new alertasPage();
     }
 
     @And("ingresa el usuario {string}")
@@ -74,7 +77,7 @@ public class loginDefinition {
 
     @And("ingresar contrasena usada la primera vez {string}")
     public void ingresarContrasenaUsadaLaPrimeraVez(String claveprimeravez) {
-        login.ingresarNuevaClaveConfirmar(claveprimeravez);
+        login.ingresarNuevaClave(claveprimeravez);
     }
 
     @And("validar mensaje error {string}")
@@ -85,5 +88,10 @@ public class loginDefinition {
     @And("ingresa la contrasena otra vez {string}")
     public void ingresaLaContrasenaOtraVez(String claveerror) {
         login.ingresarClaveError(claveerror);
+    }
+
+    @And("validar la alerta de confirmacion {string}")
+    public void validarLaAlertaDeConfirmacion(String confirmacion) {
+        alertas.validarAlertaConfirmacion(confirmacion);
     }
 }

@@ -53,10 +53,12 @@ public class menuPage extends util {
     }
     public void validarModAlarmas(){
         wait.until(ExpectedConditions.visibilityOf(modAlarmas));
+        scrollVertical(modAlarmas);
         modAlarmas.click();
     }
     public void validarModAyuda(){
         wait.until(ExpectedConditions.visibilityOf(modAyuda));
+        scrollVertical(modAyuda);
         modAyuda.click();
     }
 }

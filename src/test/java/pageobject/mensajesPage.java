@@ -26,7 +26,7 @@ public class mensajesPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // El mensaje no fue encontrado en el tiempo especificado
         }
-        Assert.assertTrue("El mensaje " + mensaje + " no coincide.", mensajeValido);
+        Assert.assertTrue("El mensaje ingresado " + mensaje + " no es igual al del TUUA.", mensajeValido);
     }
     public void validarNotificacionExito(String notificacion) {
         boolean notificacionValido = false;
@@ -41,12 +41,12 @@ public class mensajesPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // El mensaje no fue encontrado en el tiempo especificado
         }
-        Assert.assertTrue("El mensaje " + notificacion + " no es válido.", notificacionValido);
+        Assert.assertTrue("El mensaje ingresado " + notificacion + " no es igual al del TUUA.", notificacionValido);
     }
     public void validarMensajeRojo(String mensajerojo) {
         boolean mensajerojoValido = false;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form/div/span[text()='" + mensajerojo + "']")));
-        String xpath = "//form/div/span[text()='" + mensajerojo + "']";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form//span[@class='error' and text()='" + mensajerojo + "']")));
+        String xpath = "//form//span[@class='error' and text()='" + mensajerojo + "']";
 
         try {
             WebElement mensajerojoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
@@ -56,7 +56,7 @@ public class mensajesPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // El mensaje no fue encontrado en el tiempo especificado
         }
-        Assert.assertTrue("El mensaje " + mensajerojo + " no es válido.", mensajerojoValido);
+        Assert.assertTrue("El mensaje ingresado " + mensajerojo + " no es igual al del TUUA.", mensajerojoValido);
     }
 
 }

@@ -55,6 +55,14 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[2]") protected WebElement btnAgregarModalidadTipoTicket;
     @FindBy(xpath = "(//div/app-button-primary/p-button/button)[5]") protected WebElement btnAgregarAtributoTipoTicket;
     @FindBy(xpath = "//textarea[@inputid='textarea']") protected WebElement inputDescripcion;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[2]") protected WebElement checkCompActivarSerieNumFin;
+    @FindBy(xpath = "(//div/app-editar-atributo//table//tbody/tr//p-checkbox)[3]") protected WebElement checkCompActivarSerieNumInicio;
+    @FindBy(xpath = "(//div/app-listado-atributos-tipoticket//table//tbody/tr//p-checkbox)[1]") protected WebElement checkActivarA;
+    @FindBy(xpath = "(//div/app-listado-atributos-tipoticket//table//tbody/tr//p-checkbox)[3]") protected WebElement checkActivarB;
+    @FindBy(xpath = "(//div/app-listado-atributos-tipoticket//table//tbody/tr//p-checkbox)[4]") protected WebElement checkActivarC;
+    @FindBy(xpath = "(//div/app-listado-atributos-tipoticket//table//tbody/tr//p-checkbox)[5]") protected WebElement checkActivarD;
+
+
     public modmantenimientoPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -437,5 +445,89 @@ public class modmantenimientoPage extends util {
         wait.until(ExpectedConditions.visibilityOf(inputDescripcion));
         limpiarCampo(inputDescripcion);
         inputDescripcion.sendKeys(descripcion);
+    }
+    public void seleccionarSerieNumFin(String fin){
+        wait.until(ExpectedConditions.visibilityOf(checkCompActivarSerieNumFin));
+        if (fin.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompActivarSerieNumFin));
+            if (!checkCompActivarSerieNumFin.isSelected()) {
+                checkCompActivarSerieNumFin.click();
+            }
+        } else if (fin.toLowerCase().equals("no")) {
+            if (checkCompActivarSerieNumFin.isSelected()) {
+                checkCompActivarSerieNumFin.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompActivarSerieNumFin.isSelected());
+        }
+    }
+    public void seleccionarSerieNumInicio(String inicio){
+        wait.until(ExpectedConditions.visibilityOf(checkCompActivarSerieNumInicio));
+        if (inicio.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkCompActivarSerieNumInicio));
+            if (!checkCompActivarSerieNumInicio.isSelected()) {
+                checkCompActivarSerieNumInicio.click();
+            }
+        } else if (inicio.toLowerCase().equals("no")) {
+            if (checkCompActivarSerieNumInicio.isSelected()) {
+                checkCompActivarSerieNumInicio.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkCompActivarSerieNumInicio.isSelected());
+        }
+    }
+    public void seleccionarActivarModalidaA(String activara){
+        wait.until(ExpectedConditions.visibilityOf(checkActivarA));
+        if (activara.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkActivarA));
+            if (!checkActivarA.isSelected()) {
+                checkActivarA.click();
+            }
+        } else if (activara.toLowerCase().equals("no")) {
+            if (checkActivarA.isSelected()) {
+                checkActivarA.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkActivarA.isSelected());
+        }
+    }
+    public void seleccionarActivarModalidaB(String activarb){
+        wait.until(ExpectedConditions.visibilityOf(checkActivarB));
+        if (activarb.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkActivarB));
+            if (!checkActivarB.isSelected()) {
+                checkActivarB.click();
+            }
+        } else if (activarb.toLowerCase().equals("no")) {
+            if (checkActivarB.isSelected()) {
+                checkActivarB.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkActivarB.isSelected());
+        }
+    }
+    public void seleccionarActivarModalidaC(String activarc){
+        wait.until(ExpectedConditions.visibilityOf(checkActivarC));
+        if (activarc.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkActivarC));
+            if (!checkActivarC.isSelected()) {
+                checkActivarC.click();
+            }
+        } else if (activarc.toLowerCase().equals("no")) {
+            if (checkActivarC.isSelected()) {
+                checkActivarC.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkActivarC.isSelected());
+        }
+    }
+    public void seleccionarActivarModalidaD(String activard){
+        wait.until(ExpectedConditions.visibilityOf(checkActivarD));
+        if (activard.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.visibilityOf(checkActivarD));
+            if (!checkActivarD.isSelected()) {
+                checkActivarD.click();
+            }
+        } else if (activard.toLowerCase().equals("no")) {
+            if (checkActivarD.isSelected()) {
+                checkActivarD.click();
+            }
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkActivarD.isSelected());
+        }
     }
 }

@@ -1,6 +1,6 @@
 Feature: Funcionalidad del modulo Alarmas
 
-  Scenario: CPF29x - Visualizar modulo alarmas
+  Scenario: CPF295 - Visualizar modulo alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -12,7 +12,7 @@ Feature: Funcionalidad del modulo Alarmas
 
 ######## CONFIGURAR ALARMAS ########
 
-  Scenario: CPF291 - Configurar alarma/Visualizar pantalla de configuracion alarmas
+  Scenario: CPF296 - Configurar alarma/Visualizar pantalla de configuracion alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -21,7 +21,7 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion configurar alarmas
     And visualizar informacion de "Configuración Alarmas"
 
-  Scenario: CPF292 - Configurar alarma/Configurar nueva alarma
+  Scenario: CPF297 - Configurar alarma/Configurar nueva alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -37,11 +37,11 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar al usuario "fvanessa"
     And ingresar correo electronico "fvanessa@gys.com"
     And click en el boton guardar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And validar mensaje ""
 
-  Scenario: CPF293 - Configurar alarma/Editar configuracion de alarma
+  Scenario: CPF298 - Configurar alarma/Editar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -55,11 +55,11 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar otro usuario "kfranco"
     And ingresar correo electronico "selenium@gys.com"
     And click en el boton actualizar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And validar mensaje ""
 
-  Scenario: CPF294 - Configurar alarma/Eliminar configuracion de alarma
+  Scenario: CPF299 - Configurar alarma/Eliminar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -68,11 +68,11 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion configurar alarmas
     And click en el codigo
     And click en boton eliminar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And validar mensaje ""
 
-  Scenario: CPF295 - Configurar alarma/Actualizar configuracion de alarma
+  Scenario: CPF300 - Configurar alarma/Actualizar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -85,13 +85,13 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar al usuario "MBENITES"
     And ingresar otro correo electronico "selenium@gys.com"
     And click en el boton actualizar
-    #And validar alerta de confirmacion ""
-    #And click en el boton aceptar
-    #And validar mensaje ""
+    And validar alerta de confirmacion ""
+    And click en el boton aceptar
+    And validar mensaje ""
 
 ######## MONITOREAR ALARMAS ########
 
-  Scenario: CPF296 - Monitorear alarmas/Visualizar pantalla de monitorear alarmas
+  Scenario: CPF301 - Monitorear alarmas/Visualizar pantalla de monitorear alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -102,7 +102,7 @@ Feature: Funcionalidad del modulo Alarmas
 
 ######## ALARMAS GENERADAS ########
 
-  Scenario: CPF298 - Alarmas generadas/Visualizar pantalla de alarmas generadas
+  Scenario: CPF302 - Alarmas generadas/Visualizar pantalla de alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -111,7 +111,7 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion alarmas generadas
     And visualizar informacion de "Alarmas Generadas"
 
-  Scenario: CPF299 - Alarmas generadas/Consultar alarmas generadas
+  Scenario: CPF303 - Alarmas generadas/Consultar alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -127,7 +127,7 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar tipo de alarma "Error en conexión al Web Service de Tasa Cambio del Banco"
     And click en el boton buscar
 
-  Scenario: CPF300 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
+  Scenario: CPF304 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
