@@ -94,4 +94,14 @@ public class loginDefinition {
     public void validarLaAlertaDeConfirmacion(String confirmacion) {
         alertas.validarAlertaConfirmacion(confirmacion);
     }
+
+    @And("validar mensaje de error {string}")
+    public void validarMensajeDeError(String msjerror) {
+        mensajes.validarMensajeErrorLogin(msjerror);
+    }
+
+    @And("validar el mensaje error {string}")
+    public void validarElMensajeError(String msjerropass) {
+        mensajes.validarMensajeErrorLoginCambioPass(msjerropass);
+    }
 }

@@ -6,17 +6,24 @@ Feature: Funcionalidad del modulo Operacion
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
-    And visualizar la opcion ingresar tasa de cambio
-    And visualizar la opcion gestion precio ticket
+    And visualizar la opcion "Ingresar Tasa de Cambio"
+    And visualizar la opcion "Gestión Precio Tickets"
     And visualizar la opcion gestion tickets contingencia
+    And visualizar la subopcion "Pre-Emisión Tickets Contingencia"
+    And visualizar la subopcion "Registro Tickets Contingencia"
     And visualizar la opcion extorno
+    And visualizar la subopcion "Extorno Operaciones"
+    And visualizar la subopcion "Extorno Tickets"
+    And visualizar la subopcion "Extorno de Rehabilitación"
     And visualizar la opcion anulacion
-    And visualizar la opcion venta masiva credito
-    And visualizar la opcion extension fecha vigencia tickets
-    And visualizar la opcion gestion molinete
-    And visualizar la opcion generacion archivo venta
-    And visualizar la opcion cerrar turno
-    And visualizar la opcion generacion archivo seae
+    And visualizar la subopcion "Anulación de Ticket"
+    And visualizar la subopcion "Anulación de BCBP"
+    And visualizar la opcion "Venta Masiva Credito"
+    And visualizar la opcion "Extensión Fecha Vigencia Tickets"
+    And visualizar la opcion "Gestión de molinete"
+    And visualizar la opcion "Generación Archivo Venta"
+    And visualizar la opcion "Cerrar Turno"
+    And visualizar la opcion "Generación Comprobante SEAE"
 
 ######## INGRESAR TASA DE CAMBIO ########
 
@@ -66,9 +73,9 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton nuevo
     And seleccionar fecha actual
     And seleccionar tasas de cambio compra "si"
-    And ingresar tasa de cambio compra "2.3/3.7/2.4/6.5/3.5"
+    And ingresar tasa de cambio compra "3.1/3.9/2.5/6.2/3.3"
     And seleccionar tasas de cambio venta "si"
-    And ingresar tasa de cambio venta "1.5/2.5/3.4/1.5/8.5"
+    And ingresar tasa de cambio venta "1.2/2.2/3.2/1.3/2.5"
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está seguro de registrar la Tasa de Cambio?"
     And click en el boton aceptar
@@ -355,12 +362,12 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha hasta "31/01/2020"
     And click en el boton buscar
     And click en el boton detalle de turno
-    And seleccionar tipo operacion "Venta Moneda"
+    And seleccionar tipo operacion "Compra Moneda"
     And click en el boton buscar
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -720,12 +727,11 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar al modulo operacion
     And ingresar a la opcion gestion de molinete
     And click en el boton editar
-    And modificar estado "ANULADO"
+    And modificar estado "ACTIVO"
     And click en el boton guardar
     And validar alerta "¿Está seguro de realizar esta acción?"
-    And click en el boton si
-    And validar aviso "Se actualizaron los datos."
     And click en el boton aceptar
+    And validar mensaje "Se actualizaron los datos."
 
 ######## GENERACION ARCHIVO VENTA ########
 
@@ -736,7 +742,10 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion generacion archivo venta
-    And visualizar lista de "Generación archivo venta"
+    And visualizar pantalla de "Generación archivo venta"
+    And se muestra rango de fechas de tickets o bp
+    And se muestra formatos de salida excel y texto
+    And se muestra los "Archivo a Generar"
 
   Scenario: CPF104 - Generacion archivo venta/Generar archivo venta
     Given abre la ruta del aplicativo web
@@ -750,6 +759,9 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar formato excel "Texto"
     And seleccionar archivo a generar "si"
     And click en el boton generar
+    And validar alerta de confirmacion "¿Está seguro de realizar esta operacion?"
+    And click en el boton aceptar
+    And validar mensaje "Registro generado correctamente"
 
 ######## CERRAR TURNO ########
 
@@ -770,6 +782,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna de moneda "SOL"
     And validar columna de moneda "DOL"
 
+
   Scenario: CPF106 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -780,9 +793,8 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar turno a cerrar "si"
     And click en el boton cerrar turno
     And validar alerta "¿Está seguro de registrar esta acción?"
-    And click en el boton si
-    And validar aviso "Operación realizada correctamente"
     And click en el boton aceptar
+    And validar mensaje "Operación realizada correctamente"
 
     ######## GENERACION COMPROBANTE SEAE ########
 
@@ -793,7 +805,11 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion generacion archivo seae
-    And visualizar lista de "Generacion Comprobante SEAE"
+    And visualizar pantalla de "Generacion Comprobante SEAE"
+    And se muestra fecha de generacion
+    And se muestra tipo documento ticket y boarding
+    And se muestra los "Archivo a Generar"
+
 
   Scenario: CPF108 - Generacion archivo seae/Generar archivo seae
     Given abre la ruta del aplicativo web

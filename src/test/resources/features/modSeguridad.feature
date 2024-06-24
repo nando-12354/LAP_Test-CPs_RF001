@@ -7,8 +7,8 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
-    And visualizar la opcion roles
-    And visualizar la opcion usuarios
+    And visualizar la opcion "Roles"
+    And visualizar la opcion "Usuarios"
 
 ######## ROLES ########
 
@@ -18,7 +18,8 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
-    And visualizar la opcion roles
+    And ingresar a la opcion roles
+    And visualizar lista de "Roles"
     And validar columna "Código"
     And validar columna "Nombre de rol"
     And validar columna "Rol padre"
@@ -26,7 +27,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar columna "Usuario creación"
     And validar columna "Acciones"
 
-  ### No pasa por que se elimina la configuración de perfil al agregar un nombre de rol
+  ### No pasa porque se elimina la configuración de perfil al agregar un nombre de rol
   Scenario: CPF011 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -73,7 +74,8 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
-    And visualizar la opcion usuarios
+    And ingresa a la opcion usuarios
+    And visualizar lista de "Usuarios"
     And validar columna "Código"
     And validar columna "Apellidos y nombres"
     And validar columna "Cuenta"
@@ -111,11 +113,11 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresa a la opcion usuarios
     And click en el boton nuevo
-    And ingresar apellidos "Barrios2"
-    And ingresar nombres "Willy2"
-    And ingresar nombre de usuario "wbarrios2"
-    And ingresar contrasena "wbarrios2"
-    And confirmar contrasena "wbarrios2"
+    And ingresar apellidos "Barrios3"
+    And ingresar nombres "Willy3"
+    And ingresar nombre de usuario "wbarrios3"
+    And ingresar contrasena "wbarrios3"
+    And confirmar contrasena "wbarrios3"
     And ingresar privilegio "TOTAL"
     And ingresar rol disponible "si"
     And click en guardar
@@ -131,13 +133,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa a la opcion usuarios
     And click en el boton editar
     And modificar el estado a "VIGENTE"
-    And modificar apellidos "Miranda3"
-    And modificar nombres "Joel3"
-    And modificar nombre de usuario "jmiranda3"
+    And modificar apellidos "Miranda6"
+    And modificar nombres "Joel6"
+    And modificar nombre de usuario "jmiranda6"
     And modificar fecha vigencia "30/12/2025"
     And seleccionar habilitar campos "si"
-    And ingresar contrasena "jmiranda3"
-    And confirmar contrasena "jmiranda3"
+    And ingresar contrasena "jmiranda6"
+    And confirmar contrasena "jmiranda6"
     And ingresar rol disponible "no"
     And click en el boton guardar
     And validar mensaje exito "Registro actualizado correctamente"

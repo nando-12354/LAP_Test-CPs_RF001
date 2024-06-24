@@ -27,7 +27,7 @@ public class headPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // No se ubicó el texto de la cabecera
         }
-        Assert.assertTrue("Error!. La columna '" + cabecera.trim() + "' se pudo validar.", cabeceraValido);
+        Assert.assertTrue("Error!. La columna '" + cabecera.trim() + "' no se pudo validar.", cabeceraValido);
     }
     public void validarCabeceraGrillaB(String cabecerab) {
         boolean cabecerabValido = false;
@@ -44,5 +44,21 @@ public class headPage extends util {
             // No se ubicó el texto de la cabecera
         }
         Assert.assertTrue("Error!. La columna '" + cabecerab.trim() + "' se pudo validar.", cabecerabValido);
+    }
+    public void validarCabeceraGrillaC(String cabecerac) {
+        boolean cabeceracValido = false;
+        String xpath = "//p-table//table/thead//th/p-checkbox//label[normalize-space(text())='" + cabecerac.trim() + "']";
+
+        try {
+            WebElement cabeceracElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            String textoReal = cabeceracElemento.getText().trim();
+            System.out.println("Campo: '" + textoReal + "'");
+            if (cabeceracElemento.isDisplayed() && textoReal.equals(cabecerac.trim())) {
+                cabeceracValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se ubicó el texto de la cabecera
+        }
+        Assert.assertTrue("Error!. La columna '" + cabecerac.trim() + "' se pudo validar.", cabeceracValido);
     }
 }

@@ -2,6 +2,7 @@ package pageobject;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,14 +35,14 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/app-input-date[@label='Hora Hasta']/span//input") protected WebElement inputHoraHasta;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='indicadorFecha']//p-dropdown/div/div") protected WebElement cmbIndicadorFecha;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='estado']//p-dropdown/div/div") protected WebElement cmbEstado;
-    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='sCodTipoTicket']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
+    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codTipoTicket']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketInicio']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketFin']//input") protected WebElement inputTicketHasta;
     @FindBy(xpath = "//button[contains(.,'Resumen')]") WebElement btnResumen;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement txtfechaAl;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[3]") protected WebElement txtfechaVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[2]") protected WebElement txtNumeroBoarding;
-    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='sCodCompania']/span/p-dropdown//div[@role='button']") protected WebElement cmbCompania;
+    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codCompania']/span/p-dropdown//div[@role='button']") protected WebElement cmbCompania;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='tipoPago']//p-dropdown/div/div") protected WebElement cmbTipoPago;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='tipoRango']//p-dropdown/div/div") protected WebElement cmbTipoRango;
     @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='destino']//input[@id]") protected WebElement inputDestino;
@@ -200,15 +201,18 @@ public class modreportesPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtfechaAl));
         limpiarCampo(txtfechaAl);
         txtfechaAl.sendKeys(fechaal);
+        txtfechaAl.sendKeys(Keys.TAB);
     }
     public void seleccionarFechaVuelo(String fechavuelo){
         wait.until(ExpectedConditions.visibilityOf(txtfechaVuelo));
         txtfechaVuelo.sendKeys(fechavuelo);
+        txtfechaVuelo.sendKeys(Keys.TAB);
     }
     public void ingresarNumeroBoarding(String numeroboarding){
         txtNumeroBoarding.sendKeys(numeroboarding);
     }
     public void abriComboboxCompania(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompania));
         cmbCompania.click();
     }
     public void abriComboboxTipoPago(){
@@ -258,6 +262,7 @@ public class modreportesPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtAnio));
         limpiarCampo(txtAnio);
         txtAnio.sendKeys(anio);
+        txtAnio.sendKeys(Keys.TAB);
     }
     public void abrirComboboxTipoVuelo(){
         cmbTipoVuelo.click();

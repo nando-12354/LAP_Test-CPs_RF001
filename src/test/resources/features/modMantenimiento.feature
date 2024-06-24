@@ -7,11 +7,11 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo mantenimiento
-    And visualizar la opcion estacion de punto de venta
-    And visualizar la opcion moneda
-    And visualizar la opcion compania
-    And visualizar la opcion modalidad de venta
-    And visualizar la opcion tipo de ticket
+    And visualizar la opcion "Estación de punto de venta"
+    And visualizar la opcion "Moneda"
+    And visualizar la opcion "Compañía"
+    And visualizar la opcion "Modalidad de venta"
+    And visualizar la opcion "Tipo de ticket"
 
 ######## ESTACION DE PUNTO DE VENTA ########
 
@@ -41,8 +41,8 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
-    And ingresar descripcion "CAJA TEST1"
-    And ingresar ip "192.168.1.100"
+    And ingresar descripcion "CAJA TEST001"
+    And ingresar ip "192.168.1.150"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
@@ -70,9 +70,10 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
     And ingresar descripcion "CAJA IDE1"
-    And ingresar ip "225.225.100.100"
+    And ingresar ip "112.113.114.115"
     And click en el boton guardar
     And validar mensaje error "La dirección IP ya se encuentra registrada"
+
 
   Scenario: CPF050 - Estacion de punto de venta/Deshabilitar estacion de punto de venta
     Given abre la ruta del aplicativo web
@@ -86,6 +87,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro actualizado correctamente"
 
+
   Scenario: CPF051 - Estacion de punto de venta/Modificar estacion de punto de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -95,7 +97,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton editar
     And ingresar descripcion "CAJA edit"
-    And ingresar ip "112.113.114.115"
+    And ingresar ip "113.114.115.116"
     And seleccionar estado "Vigente"
     And click en el boton guardar
     And validar mensaje "Registro actualizado correctamente"
@@ -234,7 +236,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar atributo serie numero ticket inicio "si"
     And click en boton guardar
     And click en el boton guardar
-    And validar mensaje "La compañía se registró correctamente"
+    And validar el mensaje "La compañía se registró correctamente"
 
   Scenario: CPF057 - Compania/Modificar una compania
     Given abre la ruta del aplicativo web
@@ -292,7 +294,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And seleccionar atributo serie numero ticket inicio "si"
     And click en boton guardar
     And click en el boton guardar
-    And validar mensaje "La compañía se actualizó correctamente"
+    And validar el mensaje "La compañía se actualizó correctamente"
 
   Scenario: CPF058 - Compania/Deshabilitar una compania
     Given abre la ruta del aplicativo web
@@ -304,7 +306,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton editar
     And seleccionar estado "DESHABILITADO"
     And click en el boton guardar
-    And validar mensaje "La compañía se actualizó correctamente"
+    And validar el mensaje "La compañía se actualizó correctamente"
 
 ######## MODALIDAD DE VENTA ########
 

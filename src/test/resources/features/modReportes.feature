@@ -6,24 +6,25 @@ Feature: Funcionalidad del modulo Reportes
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
-    And visualizar la opcion liquidacion stickers
-    And visualizar la opcion resumen diario
-    And visualizar la opcion movimiento tickets contingencia
-    And visualizar la opcion stock tickets contingencia
-    And visualizar la opcion detalle por linea de vuelo
-    And visualizar la opcion bp leidos en el molinete
-    And visualizar la opcion tickets vendidos a credito o al contado
-    And visualizar la opcion detalle compania
-    And visualizar la opcion ticket bp usados por media hora hora dia o mes
-    And visualizar la opcion tickets bp usados por dia mes
-    And visualizar la opcion liquidacion venta
-    And visualizar la opcion tickets vencidos
-    And visualizar la opcion cuadre stickers vendidos bp usados
-    And visualizar la opcion ticket bp rehabilitados
-    And visualizar la opcion bp rehabilitados
-    And visualizar la opcion resumen diario por turno
-    And visualizar la opcion extranet bp diarios usados rehabilitados
-    And visualizar la opcion extranet bp mensual usados rehabilitados
+    And visualizar la opcion "Liquidación Stickers"
+    And visualizar la opcion "Resumen Diario"
+    And visualizar la opcion "Movimiento Tickets Contingencia"
+    And visualizar la opcion "Stock Tickets Contingencia"
+    And visualizar la opcion "Detalle por Línea de Vuelo"
+    And visualizar la opcion "BP leidos en el molinete"
+    And visualizar la opcion "Tickets Vendidos a Crédito o al Contado"
+    And visualizar la opcion "Detalle Compañía"
+    And visualizar la opcion "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
+    And visualizar la opcion "Tickets / BP Usados por Día - Mes"
+    And visualizar la opcion "Recaudación mensual"
+    And visualizar la opcion "Liquidación Venta"
+    And visualizar la opcion "Tickets Vencidos"
+    And visualizar la opcion "Cuadre Stickers vendidos / BP usados"
+    And visualizar la opcion "Ticket / BP Rehabilitados"
+    And visualizar la opcion "BP Rehabilitados"
+    And visualizar la opcion "Resumen Diario por Turno"
+    And visualizar la opcion "Extranet BP Diarios (Usados/Rehabilitados)"
+    And visualizar la opcion "Extranet BP Mensual (Usados/Rehabilitados)"
 
 ######## Liquidacion Stickers ########
 
@@ -358,7 +359,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar aerolinea "AEROVIAS DE MEXICO SUCURSAL PERU C.V. S.A."
     And click en el boton buscar
     And click en el boton resumen
-    And visualizar resumen "Detalle por Linea de Vuelo"
+    And visualizar resumen "Resumen: Detalle por Linea de Vuelo"
     And click en el boton cerrar
     And click en el boton excel
 
@@ -374,7 +375,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar aerolinea "AEROVIAS DE MEXICO SUCURSAL PERU C.V. S.A."
     And click en el boton buscar
     And click en el boton resumen
-    And visualizar resumen "Detalle por Linea de Vuelo"
+    And visualizar resumen "Resumen: Detalle por Linea de Vuelo"
     And click en el boton cerrar
     And click en el boton imprimir
 
@@ -390,7 +391,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar aerolinea "AEROVIAS DE MEXICO SUCURSAL PERU C.V. S.A."
     And click en el boton buscar
     And click en el boton resumen
-    And visualizar resumen "Detalle por Linea de Vuelo"
+    And visualizar resumen "Resumen: Detalle por Linea de Vuelo"
     And click en el boton cerrar
     And click en el boton imprimir resumen
 
@@ -772,7 +773,6 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion tickets bp usados por dia mes
-    And seleccionar fecha de uso
     And seleccionar fecha desde "02/08/2020"
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
@@ -805,7 +805,6 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion tickets bp usados por dia mes
-    And seleccionar fecha de uso
     And seleccionar fecha desde "02/08/2020"
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
@@ -839,7 +838,6 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion tickets bp usados por dia mes
-    And seleccionar fecha de uso
     And seleccionar fecha desde "02/08/2020"
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
@@ -873,7 +871,6 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion tickets bp usados por dia mes
-    And seleccionar fecha de uso
     And seleccionar fecha desde "02/08/2020"
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
@@ -1314,6 +1311,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
+  ### Solucionado
   Scenario: CPF282 - BP rehabilitados/Exportar excel de reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1333,6 +1331,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
+  ### Solucionado
   Scenario: CPF283 - BP rehabilitados/Imprimir reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1363,6 +1362,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion resumen diario por turno
     And visualizar pantalla de "Resumen Diario por Turno"
 
+
   Scenario: CPF285 - Resumen diario por turno/Consultar reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1377,6 +1377,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar codigo de turno desde "032200"
     And ingresar codigo de turno hasta "032230"
     And click en el boton buscar
+
 
   Scenario: CPF286 - Resumen diario por turno/Exportar pdf de reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
@@ -1397,6 +1398,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
+
   Scenario: CPF287 - Resumen diario por turno/Exportar excel de reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1416,6 +1418,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
+  ### Solucionado
   Scenario: CPF288 - Resumen diario por turno/Imprimir reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1446,6 +1449,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
     And visualizar pantalla de "Extranet BP Diarios (Usados/Rehabilitados)"
 
+  ### Solucionado
   Scenario: CPF290 - Extranet BP diarios usados-rehabilitados/Consultar reporte de extranet bp diarios usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1453,15 +1457,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "INTERNACIONAL"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "01/11/2023"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "02/11/2023"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "03/11/2023"
+    And seleccionar tipo transbordo "NORMAL"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo vuelo "INTERNACIONAL"
+    And ingresar aerolinea "SKY AIRLINE PERU"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1471,6 +1475,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar boarding pass anulados
     And visualizar resumen boarding neto
 
+  ### Solucionado
   Scenario: CPF291 - Extranet BP diarios usados-rehabilitados/Exportar excel reporte de extranet bp diarios usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1478,15 +1483,15 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "INTERNACIONAL"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "01/11/2023"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "02/11/2023"
     And ingresar hora hasta "230000"
     And seleccionar fecha de vuelo "03/11/2023"
+    And seleccionar tipo transbordo "NORMAL"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo vuelo "INTERNACIONAL"
+    And ingresar aerolinea "SKY AIRLINE PERU"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1508,6 +1513,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
     And visualizar pantalla de "Extranet BP Mensual (Usados/Rehabilitados)"
 
+  ### Solucionado
   Scenario: CPF293 - Extranet BP mensual usados-rehabilitados/Consultar reporte de extranet bp mensual usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1515,14 +1521,14 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "Todos"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "08/04/2022"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
+    And seleccionar tipo transbordo "NORMAL"
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo vuelo "Todos"
     And seleccionar fecha de vuelo "11/04/2022"
     And ingresar numero de vuelo ""
     And click en el boton buscar
@@ -1531,6 +1537,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar boarding pass anulados
     And visualizar resumen boarding neto
 
+  ### Solucionado
   Scenario: CPF294 - Extranet BP mensual usados-rehabilitados/Exportar excel reporte de extranet bp mensual usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1538,14 +1545,14 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
-    And ingresar aerolinea "SKY AIRLINE PERU"
-    And seleccionar tipo vuelo "Todos"
-    And seleccionar tipo persona "ADULTO"
-    And seleccionar tipo transbordo "NORMAL"
     And seleccionar fecha desde "08/04/2022"
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
+    And seleccionar tipo transbordo "NORMAL"
+    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar tipo persona "ADULTO"
+    And seleccionar tipo vuelo "Todos"
     And seleccionar fecha de vuelo "11/04/2022"
     And ingresar numero de vuelo ""
     And click en el boton buscar

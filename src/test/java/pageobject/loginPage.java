@@ -17,8 +17,8 @@ public class loginPage extends util {
     @FindBy(xpath = "//button[@type='submit']") protected WebElement btnLogin;
     @FindBy(xpath = "//h1[text()='Sistema de Administración']") protected WebElement txtTuua;
     @FindBy(xpath = "//a[contains(.,'Cambiar mi contraseña')]") protected WebElement lblCambioClave;
-    @FindBy(xpath = "//p-password[@formcontrolname='new_password']//input") protected WebElement inputNuevaClave;
-    @FindBy(xpath = "//p-password[@formcontrolname='repeat_password']//input") protected WebElement inputNuevaClaveConfimar;
+    @FindBy(xpath = "//p-password[@formcontrolname='NewPassword']//input") protected WebElement inputNuevaClave;
+    @FindBy(xpath = "//p-password[@formcontrolname='RepeatPassword']//input") protected WebElement inputNuevaClaveConfimar;
     @FindBy(xpath = "//p-button[@label='Cambiar Contraseña']/button") protected WebElement btnCambiarClave;
     @FindBy(xpath = "//form/div/span[text()='Usuario no registrado']") protected WebElement lblMensajeUsuarioNoRegistrado;
 

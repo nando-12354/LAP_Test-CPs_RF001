@@ -6,21 +6,22 @@ Feature: Funcionalidad del modulo Consultas
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
-    And visualizar la opcion usuario
-    And visualizar la opcion companias
-    And visualizar la option turnos
-    And visualizar la opcion detalle de ticket bp
-    And visualizar la opcion tickets bp por fecha
-    And visualizar la opcion cuadre de stickers emitidos o bp usados
-    And visualizar la opcion operacion compra venta
-    And visualizar la opcion tickets bp usados
-    And visualizar la opcion tickets bp anulados
-    And visualizar la opcion auditoria
-    And visualizar la opcion tickets procesados
-    And visualizar la opcion log de errores de molinetes
-    And visualizar la opcion sincronizacion
-    And visualizar la opcion transaccion critica
-    And visualizar la opcion depuracion
+    And visualizar la opcion usuarios
+    And visualizar la opcion "Compañías"
+    And visualizar la opcion "Turnos"
+    And visualizar la opcion "Detalle de Ticket / BP"
+    And visualizar la opcion "Tickets / BP Por Fecha"
+    And visualizar la opcion "Cuadre de Stickers Emitidos o BP usados"
+    And visualizar la opcion "Operación Compra / Venta"
+    And visualizar la opcion "Ticket / BP usados"
+    And visualizar la opcion "Tickets / BP Anulados"
+    And visualizar la opcion "Auditoría"
+    And visualizar la opcion "Tickets Procesados"
+    And visualizar la opcion "Log de Errores de Molinetes"
+    And visualizar la opcion "Sincronización"
+    And visualizar la opcion "Transacción Crítica"
+    And visualizar la opcion "Depuración"
+    And visualizar la opcion "Busqueda pasajeros fiscalia"
 
 ######## USUARIOS ########
 
@@ -76,7 +77,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Código"
     And validar columna "Cuenta"
     And validar columna "Nombre"
-    And validar columna "Fecha Creación"
+    And validar columna "Fecha creación"
     And validar columna "Grupo"
     And validar columna "Roles asociados"
     And validar columna "Estado"
@@ -121,7 +122,8 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna de moneda inicio "SOL"
     And validar columna de moneda inicio "DOL"
     And validar columna de moneda fin "SOL"
-    And validar columna de moneda fin "OOL"
+    And validar columna de moneda fin "DOL"
+    And validar el campo "Acciones"
 
 
   Scenario: CPF158 - Turnos/Ver detalle de turno
@@ -282,7 +284,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar cajero "Tamara Olaechea"
+    And seleccionar al cajero "Tamara Olaechea"
     And click en el boton buscar
     And validar columna "Número ticket"
     And validar columna "Secuencial"
@@ -297,7 +299,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Estado Turno"
     And validar columna "Cajero Emisión"
     And validar columna "Estado actual"
-    And validar columna "Acciones"
+    And validar el campo "Acciones"
 
 
   Scenario: CPF167 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
@@ -319,7 +321,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar cajero "Tamara Olaechea"
+    And seleccionar al cajero "Tamara Olaechea"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
@@ -857,7 +859,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    And click en el boton reporte
+    And click en el boton excel
 
 ### Solucionado
   Scenario: CPF195 - Log de errores de molinetes/Exportar excel de error no funcional
@@ -882,7 +884,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    And click en el boton reporte
+    And click en el boton excel
 
 ######## SINCRONIZACION ########
 
@@ -908,11 +910,11 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Código de Molinete"
     And validar columna "Tipo de Estado"
     And validar columna "Descripción del Estado"
-    And validar columna "Fecha inicio"
-    And validar columna "Fecha fin"
+    And validar columna "Fecha Inicio"
+    And validar columna "Fecha Fin"
     And validar columna "Tipo de Sincronización"
     And validar columna "Número de Registro"
-    And validar columna "Número de Registro Error"
+    And validar columna "Número Registro Error"
 
   Scenario: CPF197 - Sincronizacion/Exportar informe de sincronizacion
     Given abre la ruta del aplicativo web

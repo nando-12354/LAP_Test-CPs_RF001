@@ -2,6 +2,7 @@ package definitions;
 
 import io.cucumber.java.en.And;
 import pageobject.*;
+import support.util;
 
 public class modoperacionDefinition {
     menuPage menu;
@@ -11,6 +12,7 @@ public class modoperacionDefinition {
     headPage head;
     botonPage boton;
     modoperacionPage operacion;
+
     public modoperacionDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
@@ -39,23 +41,16 @@ public class modoperacionDefinition {
     @And("visualizar la opcion gestion tickets contingencia")
     public void visualizarLaOpcionGestionTicketsContingencia() {
         operacion.ingresarOpcionGestionTicketContingencia();
-        operacion.ingresarSubOpcionPreTicketContingencia();
-        operacion.ingresarSubOpcionTicketContingencia();
     }
 
     @And("visualizar la opcion extorno")
     public void visualizarLaOpcionExtorno() {
         operacion.ingresarOpcionExtorno();
-        operacion.ingresarSubOpcionExtornoOperacion();
-        operacion.ingresarSubOpcionExtornoTicket();
-        operacion.ingresarSubOpcionExtornoRehabilitacion();
     }
 
     @And("visualizar la opcion anulacion")
     public void visualizarLaOpcionAnulacion() {
         operacion.ingresarOpcionAnulacion();
-        operacion.ingresarSubOpcionAnulacionTicket();
-        operacion.ingresarSubOpcionAnulacionBcbp();
     }
 
     @And("visualizar la opcion venta masiva credito")
@@ -721,5 +716,38 @@ public class modoperacionDefinition {
     @And("validar el mensaje de eliminacion")
     public void validarElMensajeDeEliminacion() {
         alertas.validarMensajeEliminacionB();
+    }
+
+    @And("se muestra rango de fechas de tickets o bp")
+    public void seMuestraRangoDeFechasDeTicketsOBp() {
+        operacion.clickFechadesde();
+        operacion.clickFechahasta();
+    }
+
+    @And("se muestra los {string}")
+    public void seMuestraLos(String archivo) {
+        operacion.validarTituloArchivo(archivo);
+    }
+
+    @And("se muestra formatos de salida excel y texto")
+    public void seMuestraFormatosDeSalidaExcelYTexto() {
+        operacion.clickFormatoArchivoVenta();
+    }
+
+    @And("se muestra fecha de generacion")
+    public void seMuestraFechaDeGeneracion() {
+        operacion.clickFechaArchivoSeae();
+    }
+
+    @And("se muestra tipo documento ticket y boarding")
+    public void seMuestraTipoDocumentoTicketYBoarding() {
+        operacion.abrirComboboxTipoDocumentoArchivoSeae();
+    }
+
+    @And("click en boton aceptar")
+    public void clickEnBotonAceptar() {
+        boton.clickBotonAceptar();
+        boton.ventanaActiva();
+        boton.ventanaInicial();
     }
 }

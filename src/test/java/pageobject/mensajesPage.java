@@ -42,19 +42,46 @@ public class mensajesPage extends util {
         }
         Assert.assertTrue("El mensaje ingresado " + notificacion + " no es igual al del TUUA.", notificacionValido);
     }
-    public void validarMensajeRojo(String mensajeEsperado) {
-        boolean mensajeValido = false;
-        String xpath = "//div//span[@class='error' and normalize-space(text())='" + mensajeEsperado.trim() + "']";
+    public void validarMensajeErrorLogin(String mensajeErrorLogin) {
+        boolean msjerrorValido = false;
+        String xpath = "//div//span[@class='tuua-mensaje ng-star-inserted' and normalize-space(text())='" + mensajeErrorLogin.trim() + "']";
 
         try {
             WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            if (mensajeElemento.isDisplayed() && mensajeElemento.getText().trim().equals(mensajeEsperado.trim())) {
+            if (mensajeElemento.isDisplayed() && mensajeElemento.getText().trim().equals(mensajeErrorLogin.trim())) {
+                msjerrorValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // El mensaje no fue encontrado
+        }
+        Assert.assertTrue("No se reconoce al mensaje: " + mensajeErrorLogin + ". Validarlo!", msjerrorValido);
+    }
+    public void validarMensajeErrorLoginCambioPass(String mensajeErrorLoginPass) {
+        boolean msjerrorpassValido = false;
+        String xpath = "//div[@class and normalize-space(text())='" + mensajeErrorLoginPass.trim() + "']";
+
+        try {
+            WebElement mensajepassElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (mensajepassElemento.isDisplayed() && mensajepassElemento.getText().trim().equals(mensajeErrorLoginPass.trim())) {
+                msjerrorpassValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // El mensaje no fue encontrado
+        }
+        Assert.assertTrue("No se reconoce al mensaje: " + mensajeErrorLoginPass + ". Validarlo!", msjerrorpassValido);
+    }
+    public void validarMensajeRojo(String mensajeError) {
+        boolean mensajeValido = false;
+        String xpath = "//div//span[@class='error' and normalize-space(text())='" + mensajeError.trim() + "']";
+
+        try {
+            WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (mensajeElemento.isDisplayed() && mensajeElemento.getText().trim().equals(mensajeError.trim())) {
                 mensajeValido = true;
             }
         } catch (TimeoutException | NoSuchElementException e) {
-            // El mensaje no fue encontrado en el tiempo especificado
+            // El mensaje no fue encontrado
         }
-        Assert.assertTrue("No se reconoce al mensaje: " + mensajeEsperado + ". Validarlo!", mensajeValido);
+        Assert.assertTrue("No se reconoce al mensaje: " + mensajeError + ". Validarlo!", mensajeValido);
     }
-
 }

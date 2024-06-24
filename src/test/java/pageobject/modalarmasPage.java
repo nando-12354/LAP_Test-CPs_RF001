@@ -13,7 +13,7 @@ public class modalarmasPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/alarmas/consulta-alarmas']") protected WebElement opAlarmasGeneradas;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codigoModulo']/span/p-dropdown//div[@role='button']") protected WebElement cmbModulo;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codigoAlarma']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoAlarma;
-    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='sCodCampo']/span/p-dropdown//div[@role='button']") protected WebElement cmbEstado;
+    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codCampo']/span/p-dropdown//div[@role='button']") protected WebElement cmbEstado;
     @FindBy(xpath = "//div//app-input-select-2[@optionvalue='codUsuario']/span/p-dropdown//div[@role='button']") protected WebElement cmbUsuarioA;
     @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='sDscFinMensaje']/span/input") protected WebElement inputFinMensaje;
     @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='sDscAsunto']/span/input") protected WebElement inputAsuntoCorreo;

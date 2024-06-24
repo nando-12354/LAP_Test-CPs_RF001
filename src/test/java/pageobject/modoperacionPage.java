@@ -210,6 +210,13 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Desde']/span//input") WebElement inputHoraEmisionDesde;
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Hasta']/span//input") WebElement inputHoraEmisionHasta;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fCodTicket']/span/input") WebElement inputTicketAnulacion;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]")
+    protected WebElement inputFechadesde;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]")
+    protected WebElement inputFechahasta;
+    @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='formato']//p-dropdown//div[@role='button']") protected WebElement clickFormato;
+    @FindBy(xpath = "//h3[text()='Archivo a Generar']") protected WebElement lblArchivo;
+    @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement clickFechaArchivoSeae;
 
     public modoperacionPage() {
         PageFactory.initElements(slowDriver, this);
@@ -505,6 +512,7 @@ public class modoperacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(inputFechaProgramada));
         limpiarCampo(inputFechaProgramada);
         inputFechaProgramada.sendKeys(fechaprogramada);
+        inputFechaProgramada.sendKeys(Keys.TAB);
     }
 
     public void ingresarHoraPagramada(String horaprogramada) {
@@ -535,12 +543,14 @@ public class modoperacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtFechaDesdeTC));
         limpiarCampo(txtFechaDesdeTC);
         txtFechaDesdeTC.sendKeys(fechadesde);
+        txtFechaDesdeTC.sendKeys(Keys.TAB);
     }
 
     public void seleccionarFechaHasta(String fechahasta) {
         wait.until(ExpectedConditions.visibilityOf(txtFechaHastaTC));
         limpiarCampo(txtFechaHastaTC);
         txtFechaHastaTC.sendKeys(fechahasta);
+        txtFechaHastaTC.sendKeys(Keys.TAB);
     }
 
     public void seleccionarMonedaA(String monedaa) {
@@ -990,10 +1000,10 @@ public class modoperacionPage extends util {
     }
     public void abrirComboboxTipoDocumentoArchivoSeae(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumentoArchivoSeae));
-        limpiarCampo(cmbTipoDocumentoArchivoSeae);
         cmbTipoDocumentoArchivoSeae.click();
     }
     public void clickBotonCerrarTurno(){
+        wait.until(ExpectedConditions.visibilityOf(btnCerrarTurno));
         btnCerrarTurno.click();
     }
     public void ingresarTicketExtension(String ticketextension){
@@ -1035,5 +1045,22 @@ public class modoperacionPage extends util {
     }
     public void ingresarTicketAnulacion(String ticketanulacion){
         inputTicketAnulacion.sendKeys(ticketanulacion);
+    }
+    public void clickFechadesde(){
+        inputFechadesde.click();
+    }
+    public void clickFechahasta(){
+        inputFechahasta.click();
+    }
+    public void clickFormatoArchivoVenta(){
+        clickFormato.click();
+    }
+    public void validarTituloArchivo(String archivo){
+        wait.until(ExpectedConditions.visibilityOf(lblArchivo));
+        Assert.assertEquals(archivo, "Archivo a Generar", lblArchivo.getText());
+    }
+    public void clickFechaArchivoSeae(){
+        wait.until(ExpectedConditions.visibilityOf(clickFechaArchivoSeae));
+        clickFechaArchivoSeae.click();
     }
 }

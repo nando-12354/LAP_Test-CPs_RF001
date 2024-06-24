@@ -5,6 +5,7 @@ import pageobject.*;
 
 public class modrehabilitacionDefinition {
     menuPage menu;
+    headPage head;
     titulosPage titulos;
     comboboxPage combobox;
     botonPage boton;
@@ -17,6 +18,7 @@ public class modrehabilitacionDefinition {
     modrehabilitacionPage rehabilitacion;
     public modrehabilitacionDefinition() {
         menu = new menuPage();
+        head = new headPage();
         titulos = new titulosPage();
         combobox = new comboboxPage();
         boton = new botonPage();
@@ -388,5 +390,21 @@ public class modrehabilitacionDefinition {
     @And("validar mensaje exitoso {string}")
     public void validarMensajeExitoso(String mensaje) {
         alerta.validarAlerta(mensaje);
+    }
+
+    @And("visualizar la subopcion {string}")
+    public void visualizarLaSubopcion(String opcion) {
+        rehabilitacion.validarOpcionesRehabilitacion(opcion);
+    }
+
+    @And("validar columna checkbox {string}")
+    public void validarColumnaCheckbox(String cabecerac) {
+        head.validarCabeceraGrillaC(cabecerac);
+    }
+
+    @And("ingresar la fecha de vuelo {string}")
+    public void ingresarLaFechaDeVuelo(String fecha) {
+        rehabilitacion.ingresarLaFechaVuelo(fecha);
+        rehabilitacion.darClickCalendario();
     }
 }

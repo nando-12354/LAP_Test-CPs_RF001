@@ -30,8 +30,8 @@ public class modconsultasDefinition {
         menu.validarModConsultas();
     }
 
-    @And("visualizar la opcion usuario")
-    public void visualizarLaOpcionUsuario() {
+    @And("visualizar la opcion usuarios")
+    public void visualizarLaOpcionUsuarios() {
         consultas.ingresarOpcionUsuarios();
     }
 
@@ -538,5 +538,16 @@ public class modconsultasDefinition {
     public void seleccionarUnModulo(String modulo) {
         combobox.abrirComboboxModuloTransaccionCritica();
         combobox.seleccionarOpcion(modulo);
+    }
+
+    @And("validar el campo {string}")
+    public void validarElCampo(String validar) {
+        head.validarCabeceraGrilla(validar);
+    }
+
+    @And("seleccionar al cajero {string}")
+    public void seleccionarAlCajero(String cajero) {
+        consultas.abrirComboCajero();
+        combobox.seleccionarOpcion(cajero);
     }
 }

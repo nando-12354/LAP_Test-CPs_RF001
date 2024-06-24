@@ -26,13 +26,13 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbMotivos;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaTicketVuelo;
     @FindBy(xpath = "//app-input-select-2[@optionvalue='codCompania']//p-dropdown//div[@role='button']") protected WebElement cmbBpNormalBpMasivo;
-    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='sDscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
+    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@optionvalue]//div[@role='button'])[3]") protected WebElement cmbVueloTicketVueloBpVuelo;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button'])[2]") protected WebElement cmbTipoDocumentoRepresentante;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbRol;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[2]") protected WebElement cmbEstado;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[3]") protected WebElement cmbGrupo;
-    @FindBy(xpath = "//p-dropdown[@optionvalue='sCodCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpFecha;
+    @FindBy(xpath = "//p-dropdown[@optionvalue='codCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpFecha;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[3]") protected WebElement cmbTipoPasajeroTicketBpUsado;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[4]") protected WebElement cmbTipoVueloTicketBpUsado;
@@ -50,7 +50,7 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//p-dropdown[@formcontrolname='fModulo']//div[@role='button']") protected WebElement cmbModuloTransaccionCritica;
 
     public comboboxPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
     }
     public void abrirComboboxRolPadre(){
         wait.until(ExpectedConditions.visibilityOf(cmbRolPadre));
@@ -211,7 +211,7 @@ public class comboboxPage extends util {
     }
     public void seleccionarOpcionVuelo(String itemvuelo) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement itemVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + itemvuelo.trim() + "']"));
+        WebElement itemVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[contains(text(), '" + itemvuelo.trim() + "')]"));
         itemVuelo.click();
     }
     public void clickInternoValidar(){

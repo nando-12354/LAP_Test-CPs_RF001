@@ -6,9 +6,9 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo alarmas
-    And visualizar la opcion configurar alarmas
-    And visualizar la opcion monitorear alarmas
-    And visualizar la opcion alarmas generadas
+    And visualizar la opcion "Configurar Alarmas "
+    And visualizar la opcion "Monitorear Alarmas "
+    And visualizar la opcion "Alarmas Generadas"
 
 ######## CONFIGURAR ALARMAS ########
 
@@ -111,6 +111,7 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion alarmas generadas
     And visualizar informacion de "Alarmas Generadas"
 
+  ### Solucionado
   Scenario: CPF303 - Alarmas generadas/Consultar alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -127,6 +128,7 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar tipo de alarma "Error en conexión al Web Service de Tasa Cambio del Banco"
     And click en el boton buscar
 
+  ### Solucionado
   Scenario: CPF304 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

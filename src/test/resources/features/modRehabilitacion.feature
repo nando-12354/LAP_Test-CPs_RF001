@@ -7,18 +7,18 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton iniciar sesion
     And ingresar al modulo rehabilitacion
     And visualizar la opcion ticket
-    And visualizar la subopcion ticket normal
-    And visualizar la subopcion ticket masivo
-    And visualizar la subopcion ticket por salida
-    And visualizar la subopcion ticket por vuelo
-    And visualizar la subopcion ticket por rango
-    And visualizar la subopcion ticket por fecha
+    And visualizar la subopcion "Ticket Normal"
+    And visualizar la subopcion "Tickets Masivo"
+    And visualizar la subopcion "Tickets Por Salida"
+    And visualizar la subopcion "Tickets Por Vuelo"
+    And visualizar la subopcion "Tickets Por Rango"
+    And visualizar la subopcion "Tickets Por Fecha"
     And visualizar la opcion boarding pass
-    And visualizar la subopcion boarding pass normal
-    And visualizar la subopcion boarding pass masivo
-    And visualizar la subopcion boarding pass por salida
-    And visualizar la subopcion boarding pass por vuelo
-    And visualizar la subopcion boarding pass por fecha
+    And visualizar la subopcion "Boarding Pass Normal"
+    And visualizar la subopcion "Boarding Pass Masivo"
+    And visualizar la subopcion "Boarding Pass Por Salida"
+    And visualizar la subopcion "Boarding Pass Por Vuelo"
+    And visualizar la subopcion "Boarding Pass Por Fecha"
 
 ######## TICKET NORMAL ########
 
@@ -396,9 +396,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar ticket "si"
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
-    And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
-    And validar el mensaje "La Rehabilitación concluyó satisfactoriamente"
+    And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
+    And click en el boton aceptar
+    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton imprimir
     And click en el boton aceptar
 
@@ -413,7 +413,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass normal
     And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "01/01/2024"
+    And ingresar fecha de vuelo "05/01/2024"
     And ingresar numero de vuelo "4A4041"
     And ingresar asiento "010C"
     And ingresar persona "CHAMORRO SILVA DORIS"
@@ -425,8 +425,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Motivo"
     And validar columna "Asociar"
     And validar columna "BCBP Asociado"
-    And validar columna "Bloquear"
-    And validar columna "Seleccionar"
+    And validar columna checkbox "Bloquear"
+    And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
   Scenario: CPF134 - Boarding pass normal/Consultar representante de boarding pass normal
@@ -489,19 +489,18 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion boarding pass masivo
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "31/01/2024"
-    And ingresar numero de vuelo "4A4041"
-    And ingresar asiento "010C"
-    And ingresar persona "CHAMORRO SILVA DORIS"
+    And ingresar numero de vuelo "4A4091"
+    And ingresar asiento "018A"
+    And ingresar persona "BERNUY JARAMILLO WOL"
     And click en el boton agregar bp
     And visualizar lista de "Boarding pass masivo"
     And validar columna "Número"
     And validar columna "Descripción BCBP"
     And validar columna "Observaciones"
-    And validar columna "Motivo"
     And validar columna "Asociar"
     And validar columna "BCBP Asociado"
-    And validar columna "Bloquear"
-    And validar columna "Seleccionar"
+    And validar columna checkbox "Bloquear"
+    And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
   Scenario: CPF138 - Boarding pass masivo/Consultar representante de boarding pass masivo
@@ -546,7 +545,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar motivo "Alertas de bomba en el AIJCh"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
@@ -606,7 +605,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
@@ -623,15 +622,15 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
     And seleccionar la compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "31/01/2024"
+    And ingresar la fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And visualizar lista de "Boarding Pass por Vuelo"
     And validar columna "Nro."
-    And validar columna "Descripción BCBP"
+    And validar columna "Descripcion BCBP"
     And validar columna "Observaciones"
-    And validar columna "Bloquear"
-    And validar columna "Seleccionar"
+    And validar columna checkbox "Bloquear"
+    And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
   Scenario: CPF145 - Boarding pass por vuelo/Consultar representante de boarding pass por vuelo
@@ -655,7 +654,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
     And seleccionar la compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "31/01/2024"
+    And ingresar la fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And click en boton ver detalle
@@ -671,13 +670,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
     And seleccionar la compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "01/01/2024"
+    And ingresar la fecha de vuelo "01/01/2024"
     And click en el boton buscar
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje exitoso "Rehabilitación con éxito"
     And click en el boton imprimir
     And click en el boton voucher
@@ -701,8 +700,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Número"
     And validar columna "Descripción BCBP"
     And validar columna "Observaciones"
-    And validar columna "Bloquear"
-    And validar columna "Seleccionar"
+    And validar columna checkbox "Bloquear"
+    And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
   Scenario: CPF149 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
@@ -749,7 +748,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
-    And click en el boton si
+    And click en el boton aceptar
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton pdf
     And click en el boton imprimir

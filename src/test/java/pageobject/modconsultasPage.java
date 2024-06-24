@@ -1,6 +1,7 @@
 package pageobject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -73,7 +74,6 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "//app-input-date[@formcontrolname='fchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
-
     public modconsultasPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -378,6 +378,7 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtFechaProceso));
         limpiarCampo(txtFechaProceso);
         txtFechaProceso.sendKeys(fechaproceso);
+        txtFechaProceso.sendKeys(Keys.TAB);
     }
     public void clickRadioBotonCompra(){
         wait.until(ExpectedConditions.visibilityOf(rdCompra));
@@ -413,19 +414,23 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtFechaDesde));
         limpiarCampo(txtFechaDesde);
         txtFechaDesde.sendKeys(fechadesde);
+        txtFechaDesde.sendKeys(Keys.TAB);
     }
     public void ingresarFechaHasta(String fechahasta){
         wait.until(ExpectedConditions.visibilityOf(txtFechaHasta));
         limpiarCampo(txtFechaHasta);
         txtFechaHasta.sendKeys(fechahasta);
+        txtFechaHasta.sendKeys(Keys.TAB);
     }
     public void ingresarHoraDesdeB(String horadesde){
         wait.until(ExpectedConditions.visibilityOf(txtHoraDesdeB));
         txtHoraDesdeB.sendKeys(horadesde);
+        txtHoraDesdeB.sendKeys(Keys.TAB);
     }
     public void ingresarHoraHastaB(String horahasta){
         wait.until(ExpectedConditions.visibilityOf(txtHoraHastaB));
         txtHoraHastaB.sendKeys(horahasta);
+        txtHoraHastaB.sendKeys(Keys.TAB);
     }
     public void abrirComboboxTicketBpUsado(String ticketbp){
         cmbTipoDocumentoTicketBpUsado.click();

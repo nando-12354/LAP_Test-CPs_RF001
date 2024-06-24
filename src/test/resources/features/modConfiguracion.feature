@@ -7,8 +7,8 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo configuracion general
-    And visualizar la opcion parametros generales
-    And visualizar la opcion lista de campos
+    And visualizar la opcion "Parámetros Generales"
+    And visualizar la opcion "Lista de Campos"
 
 ######## PARAMETROS GENERALES ########
 
@@ -403,10 +403,10 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton nuevo
-    And ingresar nombre del campo "Test102"
-    And ingresar codigo del campo asociado "997"
-    And ingresar codigo "119"
-    And ingresar descripcion "Test102"
+    And ingresar nombre del campo "Test103"
+    And ingresar codigo del campo asociado "996"
+    And ingresar codigo "118"
+    And ingresar descripcion "Test103"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
@@ -432,11 +432,11 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton editar
-    And editar descripcion del valor "Test102"
+    And editar descripcion del valor "Test109"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
 
-  ### Falta el botón eliminar
+
   Scenario: CPF044 - Lista de campos/Eliminar lista de campo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -445,5 +445,6 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton eliminar
-    And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And validar mensaje "Lista de campo eliminado correctamente"
+    And validar alerta de confirmacion "¿Está seguro de eliminar este registro?"
+    And click en el boton aceptar
+    And validar mensaje "Registro eliminado correctamente"

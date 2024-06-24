@@ -19,76 +19,83 @@ Feature: Funcionalidad del login
     And click en el boton iniciar sesion
     And ingresa la contrasena otra vez "pleon"
     And click en el boton iniciar sesion
-    And validar mensaje error "El Usuario se encuentra en situacion Bloqueado"
+    And validar mensaje de error "El Usuario se encuentra en situacion Bloqueado"
 
     ########### CASO DE PRUEBAS ADICIONALES ##########
+
   Scenario: CPFadicional1 - Ingreso al aplicativo web con usuario no registrado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "nouser"
     And ingresa la contrasena "nopass"
     And click en el boton iniciar sesion
-    And validar mensaje error "Usuario no registrado"
+    And validar mensaje de error "Usuario no registrado"
 
 
   Scenario: CPFadicional2 - Ingreso al aplicativo web con contrasena erronea
     Given abre la ruta del aplicativo web
-    And ingresa el usuario "jmiranda2"
+    And ingresa el usuario "nmarcelo"
     And ingresa la contrasena "passerror"
     And click en el boton iniciar sesion
-    And validar mensaje error "La credenciales no son válidas"
+    And validar mensaje de error "La credenciales no son válidas"
 
 
   Scenario: CPFadicional3 - Ingreso al aplicativo web con contrasena erronea e intentar cambiar contrasena
     Given abre la ruta del aplicativo web
-    And ingresa el usuario "FPURIN"
+    And ingresa el usuario "wselenium"
     And ingresa la contrasena "passerror"
     And click en cambiar mi contrasena
-    And validar mensaje error "La credenciales no son válidas"
+    And validar mensaje de error "La credenciales no son válidas"
     #################################################
 
 ### Falta validación del aviso
+
   Scenario: CPF005 - Ingreso al aplicativo web y cambiar contraseña
     Given abre la ruta del aplicativo web
     And ingresa el usuario "aflores"
-    And ingresa la contrasena "aflores14"
+    And ingresa la contrasena "aflores21"
     And click en cambiar mi contrasena
-    And ingresar nueva contrasena "aflores15"
-    And confirmar contraseña "aflores15"
+    And ingresar nueva contrasena "aflores22"
+    And confirmar contraseña "aflores22"
     And click en el boton cambiar contrasena
     And validar la alerta de confirmacion "Confirmar el cambio de contraseña"
     And click en el boton aceptar
     And validar aviso "Contraseña actualizada correctamente"
+    And click en el boton aceptar
 
 ### Solucionado
+
   Scenario: CPF006 - Ingreso al aplicativo web y cambiar contraseña ya usada
     Given abre la ruta del aplicativo web
-    And ingresa el usuario "aflores"
-    And ingresa la contrasena "aflores15"
+    And ingresa el usuario "mvictor"
+    And ingresa la contrasena "mvictor2"
     And click en cambiar mi contrasena
-    And ingresar contrasena ya usada "aflores14"
-    And confirmar contrasena ya usada "aflores14"
+    And ingresar contrasena ya usada "mvictor1"
+    And confirmar contrasena ya usada "mvictor1"
     And click en el boton cambiar contrasena
     And validar la alerta de confirmacion "Confirmar el cambio de contraseña"
     And click en el boton aceptar
-    And validar mensaje error "La contraseña se encuentra registrada dentro de los ultimos 4 ingresos de Clave"
+    And validar el mensaje error "La contraseña se encuentra registrada dentro de los ultimos 4 ingresos de Clave"
+
 
 ### Solucionado
+
   Scenario: CPF007 - Ingreso al aplicativo web y cambiar contraseña usada la 1ra vez
     Given abre la ruta del aplicativo web
-    And ingresa el usuario "aflores"
-    And ingresa la contrasena "aflores15"
-    And click en cambiar mi contrasena
-    And ingresar contrasena usada la primera vez "aflores12"
-    And confirmar contrasena usada la primera vez "aflores12"
+    And ingresa el usuario "mprado"
+    And ingresa la contrasena "mprado1"
+    And click en el boton iniciar sesion
+    And ingresar nueva contrasena "mprado2"
+    And confirmar contraseña "mprado2"
     And click en el boton cambiar contrasena
     And validar la alerta de confirmacion "Confirmar el cambio de contraseña"
     And click en el boton aceptar
-    And validar mensaje error "La contraseña se encuentra registrada dentro de los ultimos 4 ingresos de Clave"
+    And validar aviso "Contraseña actualizada correctamente"
+    And click en el boton aceptar
 
 
   Scenario: CPF008 - Ingreso al aplicativo web, contraseña incorrecta
     Given abre la ruta del aplicativo web
-    And ingresa el usuario "hvallejo"
+    And ingresa el usuario "wseleniu2"
     And ingresa la contrasena "passerror"
     And click en el boton iniciar sesion
-    And validar mensaje error "La credenciales no son válidas"
+    And validar mensaje de error "La credenciales no son válidas"

@@ -26,16 +26,6 @@ public class modseguridadDefinition {
         menu.validarModSeguridad();
     }
 
-    @And("visualizar la opcion roles")
-    public void visualizarLaOpcionRoles() {
-        seguridad.ingresarOpcionRoles();
-    }
-
-    @And("visualizar la opcion usuarios")
-    public void visualizarLaOpcionUsuarios() {
-        seguridad.ingresarOpcionUsuarios();
-    }
-
     @And("ingresar a la opcion roles")
     public void ingresarALaOpcionRoles() {
         seguridad.ingresarOpcionRoles();
@@ -248,5 +238,10 @@ public class modseguridadDefinition {
     @And("click en el boton eliminar rol")
     public void clickEnElBotonEliminarRol() {
         boton.clickBotonEliminarJ();
+    }
+
+    @And("visualizar la opcion {string}")
+    public void visualizarLaOpcion(String opciones) {
+        seguridad.validarOpcionesSeguridad(opciones);
     }
 }

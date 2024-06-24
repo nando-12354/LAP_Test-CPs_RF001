@@ -77,7 +77,7 @@ public class alertasPage extends util {
     public void validarMensajeEliminacionB() {
         boolean msjValido = false;
         String regex = "Se eliminó el precio L[0-9]{9} satisfactoriamente...";
-        String xpath = "//div[contains(text(),'Se elimino el precio')]";
+        String xpath = "//div[contains(text(),'Se elimino el tipo de cambio')]";
 
         try {
             WebElement msjElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));

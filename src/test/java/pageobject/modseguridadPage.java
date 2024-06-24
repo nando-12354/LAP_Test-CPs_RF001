@@ -1,8 +1,7 @@
 package pageobject;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +10,6 @@ import support.util;
 public class modseguridadPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/seguridad/roles']") protected WebElement opRoles;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/seguridad/usuarios']") protected WebElement opUsuarios;
-    @FindBy(xpath = "//div/app-button-primary/p-button/button[@type='button']") protected WebElement btnnuevoRol;
     @FindBy(xpath = "//input[@id='input']") protected WebElement inputRol;
     @FindBy(xpath = "//input[@inputid='user']") protected WebElement inputUsuario;
     @FindBy(xpath = "//input[@inputid='nombre']") protected WebElement inputNombre;
@@ -28,7 +26,6 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "//input[@inputid='usuario']") protected WebElement inputUsuarioEditar;
     @FindBy(xpath = "//input[@id='clave']") protected WebElement inputClave;
     @FindBy(xpath = "//input[@id='confirmar']") protected WebElement inputClaveConfirmar;
-    @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//section/span/div/p-checkbox)[1]") protected WebElement checkRolDisponible;
     @FindBy(xpath = "//input[@id='vigencia']") protected WebElement inputFechaVigencia;
     @FindBy(xpath = "//div/div/p-checkbox[@label='Habilitar campos']/div") protected WebElement checkHabilitarCampos;
@@ -46,7 +43,22 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[12]") protected WebElement checkPefilL;
 
     public modseguridadPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(slowDriver, this);
+    }
+    public void validarOpcionesSeguridad(String seguridad){
+        boolean opcionValida = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[text()='" + seguridad + "']")));
+        String xpath = "//div/ul/li/a/span[normalize-space(text())='" + seguridad.trim() + "']";
+
+        try {
+            WebElement seguridadOpciones = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (seguridadOpciones.isDisplayed() && seguridadOpciones.getText().equals(seguridad.trim())) {
+                opcionValida = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se ubicó la opción
+        }
+        Assert.assertTrue("Opción" + seguridad + " no reconocida. Validarlo!", opcionValida);
     }
     public void ingresarOpcionRoles(){
         wait.until(ExpectedConditions.visibilityOf(opRoles));
@@ -55,10 +67,6 @@ public class modseguridadPage extends util {
     public void ingresarOpcionUsuarios(){
         wait.until(ExpectedConditions.visibilityOf(opUsuarios));
         opUsuarios.click();
-    }
-    public void botonNuevoRol(){
-        wait.until(ExpectedConditions.visibilityOf(btnnuevoRol));
-        btnnuevoRol.click();
     }
     public void ingresarRol(String rol){
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='input']")));
@@ -82,10 +90,6 @@ public class modseguridadPage extends util {
     public void clickBotonNuenoUsuario(){
         wait.until(ExpectedConditions.visibilityOf(btnNuevoUsuario));
         btnNuevoUsuario.click();
-    }
-    public void clickbotonGuardar(){
-        wait.until(ExpectedConditions.visibilityOf(btnGuardar));
-        btnGuardar.click();
     }
     public void ingresarSegUsuario(String usuario){
         wait.until(ExpectedConditions.visibilityOf(inputUsuario));
@@ -134,6 +138,7 @@ public class modseguridadPage extends util {
     public void ingresarFechaVigencia(String fecha) {
         limpiarCampo(inputFechaVigencia);
         inputFechaVigencia.sendKeys(fecha);
+        inputFechaVigencia.sendKeys(Keys.TAB);
     }
     public void ingresarApellidosEditar(String apellidos){
         limpiarCampo(inputApellidosEditar);

@@ -1,9 +1,7 @@
 package pageobject;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,15 +31,31 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "(//div//input[@id='textInput'])[3]") protected WebElement txtPersona;
     @FindBy(xpath = "//input[@inputid='nroTicketDesde']") protected WebElement txtTicketDesde;
     @FindBy(xpath = "//input[@inputid='nroTicketHasta']") protected WebElement txtTicketHasta;
-    @FindBy(xpath = "//div//p-calendar[@formcontrolname='sTicketDesde']//input") protected WebElement txtFechaDesde;
-    @FindBy(xpath = "//div//p-calendar[@formcontrolname='sTicketHasta']//input") protected WebElement txtFechaHasta;
+    @FindBy(xpath = "//div//p-calendar[@formcontrolname='ticketDesde']//input") protected WebElement txtFechaDesde;
+    @FindBy(xpath = "//div//p-calendar[@formcontrolname='ticketHasta']//input") protected WebElement txtFechaHasta;
     @FindBy(xpath = "//div//p-calendar[@id='fechaDesde']//input") protected WebElement txtFechaDesdeBpFecha;
     @FindBy(xpath = "//div//p-calendar[@id='fechaHasta']//input") protected WebElement txtFechaHastaBpFecha;
     @FindBy(xpath = "//table/tbody/tr/td/p-checkbox[1]") protected WebElement checkTicket;
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[2]") protected WebElement checkBoarding;
+    @FindBy(xpath = "//table/tbody/tr/td/span[text()='31']") protected WebElement clickDiaCalendario;
 
     public modrehabilitacionPage() {
         PageFactory.initElements(slowDriver, this);
+    }
+    public void validarOpcionesRehabilitacion(String rehabilitacion){
+        boolean opcionValida = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[text()='" + rehabilitacion + "']")));
+        String xpath = "//div/ul/li/a/span[text()='" + rehabilitacion + "']";
+
+        try {
+            WebElement seguridadOpciones = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (seguridadOpciones.isDisplayed() && seguridadOpciones.getText().equals(rehabilitacion)) {
+                opcionValida = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se ubicó la opción
+        }
+        Assert.assertTrue("Opción" + rehabilitacion + " no reconocida. Validarlo!", opcionValida);
     }
     public void ingresarOpcionTicket(){
         wait.until(ExpectedConditions.visibilityOf(opTicket));
@@ -116,6 +130,11 @@ public class modrehabilitacionPage extends util {
     public void ingresarFechaVuelo(String fecha){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
         txtFechaVuelo.sendKeys(fecha);
+        txtFechaVuelo.sendKeys(Keys.TAB);
+    }
+    public void ingresarLaFechaVuelo(String fecha){
+        wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
+        txtFechaVuelo.sendKeys(fecha);
     }
     public void ingresarTicketDesde(String ticketdesde){
         wait.until(ExpectedConditions.visibilityOf(txtTicketDesde));
@@ -128,18 +147,22 @@ public class modrehabilitacionPage extends util {
     public void ingresarFechaDesde(String fechadesde){
         wait.until(ExpectedConditions.visibilityOf(txtFechaDesde));
         txtFechaDesde.sendKeys(fechadesde);
+        txtFechaDesde.sendKeys(Keys.TAB);
     }
     public void ingresarFechaHasta(String fechahasta){
         wait.until(ExpectedConditions.visibilityOf(txtFechaHasta));
         txtFechaHasta.sendKeys(fechahasta);
+        txtFechaHasta.sendKeys(Keys.TAB);
     }
     public void ingresarFechaDesdeBpFecha(String fechadesde){
         wait.until(ExpectedConditions.visibilityOf(txtFechaDesdeBpFecha));
         txtFechaDesdeBpFecha.sendKeys(fechadesde);
+        txtFechaDesdeBpFecha.sendKeys(Keys.TAB);
     }
     public void ingresarFechaHastaBpFecha(String fechahasta){
         wait.until(ExpectedConditions.visibilityOf(txtFechaHastaBpFecha));
         txtFechaHastaBpFecha.sendKeys(fechahasta);
+        txtFechaHastaBpFecha.sendKeys(Keys.TAB);
     }
     public void ingresarAsiento(String asiento){
         txtAsiento.sendKeys(asiento);
@@ -180,5 +203,7 @@ public class modrehabilitacionPage extends util {
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoarding.isSelected());
         }
     }
-
+    public void darClickCalendario(){
+        clickDiaCalendario.click();
+    }
 }
