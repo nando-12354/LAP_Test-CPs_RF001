@@ -74,6 +74,7 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "//app-input-date[@formcontrolname='fchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
+    @FindBy(xpath = "//div//div//p-radiobutton[@name='rango']") protected WebElement rdResumenTicketBpAnulado;
     public modconsultasPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -446,5 +447,9 @@ public class modconsultasPage extends util {
     public void ingresarFechaVueloLogError(String vuelologerror){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVueloLogError));
         txtFechaVueloLogError.sendKeys(vuelologerror);
+    }
+    public void seleccionarResumenTicketBpAnulados(){
+        wait.until(ExpectedConditions.visibilityOf(rdResumenTicketBpAnulado));
+        rdResumenTicketBpAnulado.click();
     }
 }

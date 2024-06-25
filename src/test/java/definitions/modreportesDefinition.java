@@ -427,4 +427,9 @@ public class modreportesDefinition {
     public void clickEnElBotonImprimirResumen() {
         imprimir.clickBotonImprimirResumen();
     }
+
+    @And("validar el {string}")
+    public void validarEl(String registros) {
+        reportes.validarTotalRegistrosLabel(registros);
+    }
 }

@@ -73,4 +73,19 @@ public class titulosPage extends util {
         }
         Assert.assertTrue("El " + detalle + " no coincide.", representanteValido);
     }
+    public void validarTituloInformacionProcesada(String infoprocesada){
+        boolean informacionValido = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()='" + infoprocesada + "']")));
+        String xpath = "//h5[text()='" + infoprocesada + "']";
+
+        try {
+            WebElement informacionElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (informacionElemento.isDisplayed() && informacionElemento.getText().equals(infoprocesada)) {
+                informacionValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // No se pudo validar
+        }
+        Assert.assertTrue("La " + infoprocesada + " no se pudo validar.", informacionValido);
+    }
 }

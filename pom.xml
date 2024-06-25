@@ -70,7 +70,7 @@
                     <generatedHtmlReportDirectory>${project.build.directory}/generated-report/${buildNumber}</generatedHtmlReportDirectory>
                     <customParameters>
                         <Custom_Parameter>Reporte de Ejecucion</Custom_Parameter>
-                        <Custom_URL>http://tuuaadministracionwebfrontend.k8sdevcp.lap.com.pe/</Custom_URL>
+                        <Custom_URL>http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/</Custom_URL>
                         <_Text>Automatización web - Casos de Pruebas</_Text>
                     </customParameters>
                     <expandBeforeAfterHooks>true</expandBeforeAfterHooks>

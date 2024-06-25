@@ -407,4 +407,64 @@ public class modrehabilitacionDefinition {
         rehabilitacion.ingresarLaFechaVuelo(fecha);
         rehabilitacion.darClickCalendario();
     }
+
+    @And("validar el ticket no rehabilitado {string}")
+    public void validarElTicketNoRehabilitado(String norehab) {
+        mensajes.validarMensajeTicketNoRehabilitado(norehab);
+    }
+
+    @And("click en el boton eliminar ticket")
+    public void clickEnElBotonEliminarTicket() {
+        boton.clickBotonEliminarTicket();
+    }
+
+    @And("validar el reseteo de la grilla y campos de {string}")
+    public void validarElReseteoDeLaGrillaYCamposDe(String reseteo) {
+        titulos.validarTitulo(reseteo);
+    }
+
+    @And("validar que los datos de la grilla {string} no se borren")
+    public void validarQueLosDatosDeLaGrillaNoSeBorren(String grilla) {
+        titulos.validarTitulo(grilla);
+    }
+
+    @And("seleccionar los boarding disponibles {string}")
+    public void seleccionarLosBoardingDisponibles(String bpdisponibles) {
+        rehabilitacion.seleccionarBoarding(bpdisponibles);
+        rehabilitacion.seleccionarBoardingB(bpdisponibles);
+        rehabilitacion.seleccionarBoardingC(bpdisponibles);
+        rehabilitacion.seleccionarBoardingD(bpdisponibles);
+        rehabilitacion.seleccionarBoardingE(bpdisponibles);
+        rehabilitacion.seleccionarBoardingF(bpdisponibles);
+        rehabilitacion.seleccionarBoardingG(bpdisponibles);
+        rehabilitacion.seleccionarBoardingH(bpdisponibles);
+        rehabilitacion.seleccionarBoardingI(bpdisponibles);
+        rehabilitacion.seleccionarBoardingJ(bpdisponibles);
+
+    }
+
+    @And("validar que el botón eliminar sea color rojo")
+    public void validarQueElBotónEliminarSeaColorRojo() {
+        boton.clickBotonEliminar();
+    }
+
+    @And("Validar que el botón buscar sea color azul")
+    public void validarQueElBotónBuscarSeaColorAzul() {
+        boton.clickBotonBuscar();
+    }
+
+    @And("validar la estandarizacion del popup {string}")
+    public void validarLaEstandarizacionDelPopup(String repre) {
+        titulos.validarTituloRepresentante(repre);
+    }
+
+    @And("visualizar el popup {string}")
+    public void visualizarElPopup(String popup) {
+        titulos.validarTituloDetalle(popup);
+    }
+
+    @And("click en la cabecera de la grilla ver detalle o eliminar")
+    public void clickEnLaCabeceraDeLaGrillaVerDetalleOEliminar() {
+        rehabilitacion.clickCabeceraDeLaGrilla();
+    }
 }

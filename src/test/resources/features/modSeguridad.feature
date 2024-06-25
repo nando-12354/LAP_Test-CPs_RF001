@@ -1,6 +1,6 @@
 Feature: Funcionalidad del modulo Seguridad
 
-  ### Solucionado
+
   Scenario: CPF009 - Visualizar modulo seguridad
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -27,7 +27,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar columna "Usuario creación"
     And validar columna "Acciones"
 
-  ### No pasa porque se elimina la configuración de perfil al agregar un nombre de rol
+
   Scenario: CPF011 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -42,6 +42,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
+
   Scenario: CPF012 - Roles/Modificar informacion de rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -53,7 +54,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje exito "Registro modificado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF013 - Roles/Eliminar rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -90,7 +91,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar datos de "Roles asociados"
     And validar columna "Acciones"
 
-  ### Solucionado
+
   Scenario: CPF015 - Usuarios/Filtrar lista de usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -104,7 +105,7 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar estado "VIGENTE"
     And click en el boton buscar
 
-  ### Solucionado
+
   Scenario: CPF016 - Usuarios/Crear nuevo usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -123,7 +124,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en guardar
     And validar mensaje exito "Usuario registrado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF017 - Usuarios/Modificar informacion de usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -144,7 +145,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje exito "Registro actualizado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF018 - Usuarios/Desbloquear cuenta de usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

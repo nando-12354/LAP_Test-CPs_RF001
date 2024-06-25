@@ -256,4 +256,9 @@ public class modconfiguracionDefiniton {
     public void visualizarElLimteMinimo() {
         configuracion.clickPestanaLimiteMinimo();
     }
+
+    @And("click en el boton cancelar")
+    public void clickEnElBotonCancelar() {
+        boton.clickBotonCancelar();
+    }
 }

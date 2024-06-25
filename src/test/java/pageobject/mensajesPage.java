@@ -84,4 +84,32 @@ public class mensajesPage extends util {
         }
         Assert.assertTrue("No se reconoce al mensaje: " + mensajeError + ". Validarlo!", mensajeValido);
     }
+    public void validarMensajeErrorTi(String msjerrorti) {
+        boolean mensajetiValido = false;
+        String xpath = "//div[@class='mensaje-error' and normalize-space(text())='" + msjerrorti.trim() + "']";
+
+        try {
+            WebElement mensajetiElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (mensajetiElemento.isDisplayed() && mensajetiElemento.getText().trim().equals(msjerrorti.trim())) {
+                mensajetiValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // El mensaje no fue encontrado
+        }
+        Assert.assertTrue("No se reconoce al mensaje: " + msjerrorti + ". Validarlo!", mensajetiValido);
+    }
+    public void validarMensajeTicketNoRehabilitado(String norehabilitado) {
+        boolean norehahValido = false;
+        String xpath = "//ul/li[normalize-space(text())='" + norehabilitado + "']";
+
+        try {
+            WebElement norehabElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (norehabElemento.isDisplayed() && norehabElemento.getText().trim().equals(norehabilitado.trim())) {
+                norehahValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+            // El mensaje no fue encontrado
+        }
+        Assert.assertTrue("No se reconoce al mensaje: " + norehabilitado + ". Validarlo!", norehahValido);
+    }
 }

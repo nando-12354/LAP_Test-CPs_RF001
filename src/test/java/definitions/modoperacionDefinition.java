@@ -9,6 +9,7 @@ public class modoperacionDefinition {
     titulosPage titulos;
     comboboxPage combobox;
     alertasPage alertas;
+    mensajesPage mensajes;
     headPage head;
     botonPage boton;
     modoperacionPage operacion;
@@ -18,6 +19,7 @@ public class modoperacionDefinition {
         titulos = new titulosPage();
         combobox = new comboboxPage();
         alertas = new alertasPage();
+        mensajes = new mensajesPage();
         head = new headPage();
         boton = new botonPage();
         operacion = new modoperacionPage();
@@ -749,5 +751,39 @@ public class modoperacionDefinition {
         boton.clickBotonAceptar();
         boton.ventanaActiva();
         boton.ventanaInicial();
+    }
+
+    @And("ingresar precio de venta en negativo {string}")
+    public void ingresarPrecioDeVentaEnNegativo(String precionegativo) {
+        operacion.ingresarPrecioVenta(precionegativo);
+    }
+
+    @And("validar mensaje rojo {string}")
+    public void validarMensajeRojo(String mensajeerror) {
+
+    }
+
+    @And("click en el boton cerrar turno sin seleccionar un turno previamente")
+    public void clickEnElBotonCerrarTurnoSinSeleccionarUnTurnoPreviamente() {
+        boton.clickBotonCerrarTurno();
+    }
+
+    @And("validar el mensaje de error {string}")
+    public void validarElMensajeDeError(String msjti) {
+        mensajes.validarMensajeErrorTi(msjti);
+    }
+
+    @And("click en colapsar las opciones de los checkbox")
+    public void clickEnColapsarLasOpcionesDeLosCheckbox() {
+        operacion.colapsarCheckboxOpcionA();
+        operacion.colapsarCheckboxOpcionA();
+        operacion.colapsarCheckboxOpcionA();
+        operacion.colapsarCheckboxOpcionA();
+        operacion.colapsarCheckboxOpcionA();
+        operacion.colapsarCheckboxOpcionAA();
+        operacion.colapsarCheckboxOpcionAA();
+        operacion.colapsarCheckboxOpcionAA();
+        operacion.colapsarCheckboxOpcionAA();
+        operacion.colapsarCheckboxOpcionAA();
     }
 }

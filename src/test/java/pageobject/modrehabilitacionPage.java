@@ -38,6 +38,16 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "//table/tbody/tr/td/p-checkbox[1]") protected WebElement checkTicket;
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[2]") protected WebElement checkBoarding;
     @FindBy(xpath = "//table/tbody/tr/td/span[text()='31']") protected WebElement clickDiaCalendario;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[4]") protected WebElement checkBoardingB;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[6]") protected WebElement checkBoardingC;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[8]") protected WebElement checkBoardingD;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[10]") protected WebElement checkBoardingE;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[12]") protected WebElement checkBoardingF;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[14]") protected WebElement checkBoardingG;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[16]") protected WebElement checkBoardingH;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[18]") protected WebElement checkBoardingI;
+    @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[20]") protected WebElement checkBoardingJ;
+    @FindBy(xpath = "//th[contains(.,'Fecha Creación')]") protected WebElement clickCabeceraGrilla;
 
     public modrehabilitacionPage() {
         PageFactory.initElements(slowDriver, this);
@@ -205,5 +215,143 @@ public class modrehabilitacionPage extends util {
     }
     public void darClickCalendario(){
         clickDiaCalendario.click();
+    }
+    public void seleccionarBoardingB(String selectb){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingB));
+        if (selectb.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingB));
+            if (!checkBoardingB.isSelected()) {
+                checkBoardingB.click();
+            }
+        } else if (selectb.toLowerCase().equals("no")) {
+            if (checkBoardingB.isSelected()) {
+                checkBoardingB.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingB)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingB.isSelected());
+        }
+    }
+    public void seleccionarBoardingC(String selectc){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingC));
+        if (selectc.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingC));
+            if (!checkBoardingC.isSelected()) {
+                checkBoardingC.click();
+            }
+        } else if (selectc.toLowerCase().equals("no")) {
+            if (checkBoardingC.isSelected()) {
+                checkBoardingC.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingC)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingC.isSelected());
+        }
+    }
+    public void seleccionarBoardingD(String selectd){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingD));
+        if (selectd.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingD));
+            if (!checkBoardingD.isSelected()) {
+                checkBoardingD.click();
+            }
+        } else if (selectd.toLowerCase().equals("no")) {
+            if (checkBoardingD.isSelected()) {
+                checkBoardingD.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingD)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingD.isSelected());
+        }
+    }
+    public void seleccionarBoardingE(String selecte){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingE));
+        if (selecte.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingE));
+            if (!checkBoardingE.isSelected()) {
+                checkBoardingE.click();
+            }
+        } else if (selecte.toLowerCase().equals("no")) {
+            if (checkBoardingE.isSelected()) {
+                checkBoardingE.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingE)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingE.isSelected());
+        }
+    }
+    public void seleccionarBoardingF(String selectf){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingF));
+        if (selectf.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingF));
+            if (!checkBoardingF.isSelected()) {
+                checkBoardingF.click();
+            }
+        } else if (selectf.toLowerCase().equals("no")) {
+            if (checkBoardingF.isSelected()) {
+                checkBoardingF.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingF)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingF.isSelected());
+        }
+    }
+    public void seleccionarBoardingG(String selectg){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingG));
+        if (selectg.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingG));
+            if (!checkBoardingG.isSelected()) {
+                checkBoardingG.click();
+            }
+        } else if (selectg.toLowerCase().equals("no")) {
+            if (checkBoardingG.isSelected()) {
+                checkBoardingG.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingG)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingG.isSelected());
+        }
+    }
+    public void seleccionarBoardingH(String selecth){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingH));
+        if (selecth.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingH));
+            if (!checkBoardingH.isSelected()) {
+                checkBoardingH.click();
+            }
+        } else if (selecth.toLowerCase().equals("no")) {
+            if (checkBoardingH.isSelected()) {
+                checkBoardingH.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingH)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingH.isSelected());
+        }
+    }
+    public void seleccionarBoardingI(String selecti){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingI));
+        if (selecti.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingI));
+            if (!checkBoardingI.isSelected()) {
+                checkBoardingI.click();
+            }
+        } else if (selecti.toLowerCase().equals("no")) {
+            if (checkBoardingI.isSelected()) {
+                checkBoardingI.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingI)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingI.isSelected());
+        }
+    }
+    public void seleccionarBoardingJ(String selectj){
+        wait.until(ExpectedConditions.visibilityOf(checkBoardingJ));
+        if (selectj.toLowerCase().equals("si")) {
+            wait.until(ExpectedConditions.elementToBeClickable(checkBoardingJ));
+            if (!checkBoardingJ.isSelected()) {
+                checkBoardingJ.click();
+            }
+        } else if (selectj.toLowerCase().equals("no")) {
+            if (checkBoardingJ.isSelected()) {
+                checkBoardingJ.click();
+            }
+            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkBoardingJ)));
+            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkBoardingJ.isSelected());
+        }
+    }
+    public void clickCabeceraDeLaGrilla(){
+        clickCabeceraGrilla.click();
     }
 }

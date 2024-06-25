@@ -375,6 +375,98 @@ Feature: Funcionalidad del modulo Configuracion General
     And click en editar serie numero ticket inicio
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
+    And click en el boton cancelar
+    And click en el boton ver configuracion de caja tuua
+    And click en editar flag cierre de turno con descuadre
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar frecuencia de visualizacion tasa cambio en ventas
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar tiempo maximo de inactividad en segundos
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar compra moneda
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar cierre de turno
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar egreso caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar ingreso caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar inicio de turno
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar margen caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar maximo descruadre
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar venta moneda
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And visualizar el limte minimo
+    And click en editar compra moneda
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar cierre de turno
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar egreso caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar ingreso caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar inicio de turno
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar margen caja
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en editar venta moneda
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en el boton cancelar
+    And click en el boton ver configuracion comprobante seae
+    And click en editar configuracion ruta generacion de comprobante seae
+    And click en el boton guardar
+    And validar mensaje "Registro modificado correctamente"
+    And click en el boton cancelar
+    And click en el boton ver configuracion de alarmas
+
+    And click en el boton ver configuracion de archivamiento
+
+    And click en el boton ver configuracion de impresion
+
+    And click en el boton ver configuracion de modulo web administrativo
+
+    And click en el boton ver configuracion de rehabilitacion
+
+    And click en el boton ver configuracion de seguridad
+
+    And click en el boton ver configuracion de tuua
+
+    And click en el boton ver configuracion de estadistico
+
+    And click en el boton ver configuracion de servicio compania
+
+    And click en el boton ver configuracion de servicio tasa cambio
+
+    And click en el boton ver configuracion de servicio vencimiento
+
+    And click en el boton ver configuracion de servicio vuelo programado
+
+    And click en el boton ver configuracion de servicio vuelo temporada
+
+    And click en el boton ver configuracion de servicios generales
+
+    And click en el boton ver configuracion de archivo ventas
 
 ######## LISTA DE CAMPOS ########
 

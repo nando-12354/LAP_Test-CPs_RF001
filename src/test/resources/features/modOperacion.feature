@@ -167,6 +167,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha de fin de vigencia"
     And validar columna "Usuario modificación"
 
+
   Scenario: CPF075 - Gestion precio ticket/Registrar precio ticket con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -185,6 +186,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje de confirmacion "Creación de Precio de Ticket"
     And click en el boton aceptar
+
 
   Scenario: CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
@@ -207,6 +209,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creación de Precio de Ticket"
     And click en el boton aceptar
 
+
   Scenario: CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -220,6 +223,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar el mensaje de eliminacion
     And click en el boton aceptar
+
 
   Scenario: CPF078 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
     Given abre la ruta del aplicativo web
@@ -347,7 +351,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
-  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
+
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -367,7 +371,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en boton aceptar
+    And click en el boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -440,7 +444,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Proceso"
     And validar columna "Estado"
 
-  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
+
   Scenario: CPF089 - Extorno rehabilitacion/Extonar rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -461,6 +465,8 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar ticket rehabilitado a extornar "si"
     And click en el boton extornar
+    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
+    And click en el boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión"
     And click en el boton aceptar
 
@@ -747,6 +753,7 @@ Feature: Funcionalidad del modulo Operacion
     And se muestra formatos de salida excel y texto
     And se muestra los "Archivo a Generar"
 
+
   Scenario: CPF104 - Generacion archivo venta/Generar archivo venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -820,4 +827,5 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion generacion archivo seae
     And ingresar fecha "Enero-2024"
     And seleccionar tipo documento "Boarding"
+    And seleccionar archivo a generar "si"
     And click en el boton generar

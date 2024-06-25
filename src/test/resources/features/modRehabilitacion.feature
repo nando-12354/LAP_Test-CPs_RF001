@@ -39,6 +39,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Motivo"
     And validar columna "Acciones"
 
+
   Scenario: CPF111 - Ticket normal/Consultar representante de ticket normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -50,6 +51,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton representante
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
+
 
   Scenario: CPF112 - Ticket normal/Ver detalle de ticket normal
     Given abre la ruta del aplicativo web

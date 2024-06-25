@@ -65,6 +65,7 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/app-input-text-2[@label='Nro. Vuelo']//input[@id]") protected WebElement inputNumeroVueloB;
     @FindBy(xpath = "//div/app-input-text-2[@label='Destino']//input[@id]") protected WebElement inputDestinoB;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement txtMesUso;
+    @FindBy(xpath = "") protected WebElement lblTotalRegistro;
     public modreportesPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -310,5 +311,9 @@ public class modreportesPage extends util {
     public void ingresarMesUso(String mes){
         wait.until(ExpectedConditions.visibilityOf(txtMesUso));
         txtMesUso.sendKeys(mes);
+    }
+    public void validarTotalRegistrosLabel(String registros){
+        wait.until(ExpectedConditions.visibilityOf(lblTotalRegistro));
+        Assert.assertEquals(registros, "Total de Boarding Pass Usados:", lblTotalRegistro.getText());
     }
 }

@@ -217,7 +217,8 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='formato']//p-dropdown//div[@role='button']") protected WebElement clickFormato;
     @FindBy(xpath = "//h3[text()='Archivo a Generar']") protected WebElement lblArchivo;
     @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement clickFechaArchivoSeae;
-
+    @FindBy(xpath = "(//div/span[@class='pi pi-angle-down'])[1]") protected WebElement colapsarCheckboxA;
+    @FindBy(xpath = "(//div/span[@class='pi pi-angle-down rotated'])[1]") protected WebElement colapsarCheckboxAA;
     public modoperacionPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -1062,5 +1063,13 @@ public class modoperacionPage extends util {
     public void clickFechaArchivoSeae(){
         wait.until(ExpectedConditions.visibilityOf(clickFechaArchivoSeae));
         clickFechaArchivoSeae.click();
+    }
+    public void colapsarCheckboxOpcionA(){
+        wait.until(ExpectedConditions.visibilityOf(colapsarCheckboxA));
+        colapsarCheckboxA.click();
+    }
+    public void colapsarCheckboxOpcionAA(){
+        wait.until(ExpectedConditions.visibilityOf(colapsarCheckboxAA));
+        colapsarCheckboxAA.click();
     }
 }

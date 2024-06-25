@@ -27,7 +27,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ##################### MODULO SEGURIDAD #####################
 
-  Scenario: USUARIO(LAP)/CPF009 - Visualizar modulo seguridad
+  Scenario: USUARIO(LAP)/CPF004 - Visualizar modulo seguridad
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -38,7 +38,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Roles ########
 
-  Scenario: USUARIO(LAP)/CPF010 - Roles/Visualizar lista de roles registrados
+  Scenario: USUARIO(LAP)/CPF005 - Roles/Visualizar lista de roles registrados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -54,7 +54,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF011 - Roles/Crear nuevo rol
+  Scenario: USUARIO(LAP)/CPF006 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -69,7 +69,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF012 - Roles/Modificar informacion de rol
+  Scenario: USUARIO(LAP)/CPF007 - Roles/Modificar informacion de rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -81,7 +81,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje exito "Registro modificado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF013 - Roles/Eliminar rol
+  Scenario: USUARIO(LAP)/CPF008 - Roles/Eliminar rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -94,7 +94,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro eliminado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF052 - Moneda/Visualizar lista de monedas
+  Scenario: USUARIO(LAP)/CPF009 - Moneda/Visualizar lista de monedas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -112,7 +112,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF053 - Moneda/Registrar tipo de moneda
+  Scenario: USUARIO(LAP)/CPF010 - Moneda/Registrar tipo de moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -125,7 +125,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF054 - Moneda/Deshabilitar una moneda
+  Scenario: USUARIO(LAP)/CPF011 - Moneda/Deshabilitar una moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -139,7 +139,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Compañias ########
 
-  Scenario: USUARIO(LAP)/CPF055 - Compania/Visualizar lista de companias
+  Scenario: USUARIO(LAP)/CPF012 - Compania/Visualizar lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -169,7 +169,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And visualizar el campo "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF056 - Compania/Registrar una compania
+  Scenario: USUARIO(LAP)/CPF013 - Compania/Registrar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -228,7 +228,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar el mensaje "La compañía se registró correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF057 - Compania/Modificar una compania
+  Scenario: USUARIO(LAP)/CPF014 - Compania/Modificar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -287,7 +287,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar el mensaje "La compañía se actualizó correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF058 - Compania/Deshabilitar una compania
+  Scenario: USUARIO(LAP)/CPF015 - Compania/Deshabilitar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -301,7 +301,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Modalidad de Venta ########
 
-  Scenario: USUARIO(LAP)/CPF059 - Modalidad de venta/Visualizar lista de modalidad de venta
+  Scenario: USUARIO(LAP)/CPF016 - Modalidad de venta/Visualizar lista de modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -319,7 +319,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF060 - Modalidad de venta/Registrar una modalidad de venta
+  Scenario: USUARIO(LAP)/CPF017 - Modalidad de venta/Registrar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -349,7 +349,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF061 - Modalidad de venta/Modificar una modalidad de venta
+  Scenario: USUARIO(LAP)/CPF018 - Modalidad de venta/Modificar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -363,7 +363,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF062 - Modalidad de venta/Modalidad de venta registrado
+  Scenario: USUARIO(LAP)/CPF019 - Modalidad de venta/Modalidad de venta registrado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -394,7 +394,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF063 - Modalidad de venta/Deshabilitar una modalidad de venta
+  Scenario: USUARIO(LAP)/CPF020 - Modalidad de venta/Deshabilitar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -408,7 +408,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Tipo de Ticket ########
 
-  Scenario: USUARIO(LAP)/CPF064 - Tipo de ticket/Visualizar lista de tipo de ticket
+  Scenario: USUARIO(LAP)/CPF021 - Tipo de ticket/Visualizar lista de tipo de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -426,7 +426,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF065 - Tipo de ticket/Registrar un tipo de Ticket
+  Scenario: USUARIO(LAP)/CPF022 - Tipo de ticket/Registrar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -442,7 +442,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF066 - Tipo de ticket/Modificar un tipo de Ticket
+  Scenario: USUARIO(LAP)/CPF023 - Tipo de ticket/Modificar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -455,7 +455,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro modificado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF067 - Tipo de ticket/Deshabilitar un tipo de Ticket
+  Scenario: USUARIO(LAP)/CPF024 - Tipo de ticket/Deshabilitar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -470,7 +470,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ##################### MODULO OPERACION #####################
 
-  Scenario: USUARIO(LAP)/CPF068 - Visualizar modulo operacion
+  Scenario: USUARIO(LAP)/CPF025 - Visualizar modulo operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -494,7 +494,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ######## Ingresar Tasa de Cambio ########
 
-  Scenario: USUARIO(LAP)/CPF069 - Ingresar tasa de cambio/Visualizar lista de tasa de cambio
+  Scenario: USUARIO(LAP)/CPF026 - Ingresar tasa de cambio/Visualizar lista de tasa de cambio
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -530,7 +530,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Usuario modificación"
 
 
-  Scenario: USUARIO(LAP)/CPF070 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
+  Scenario: USUARIO(LAP)/CPF027 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -550,7 +550,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
+  Scenario: USUARIO(LAP)/CPF028 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -572,7 +572,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
+  Scenario: USUARIO(LAP)/CPF029 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -587,7 +587,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF073 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
+  Scenario: USUARIO(LAP)/CPF030 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -602,7 +602,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Gestion Precio Ticket ########
 
-  Scenario: USUARIO(LAP)/CPF074 - Gestion precio ticket/Visualizar lista de precio de tickets
+  Scenario: USUARIO(LAP)/CPF031 - Gestion precio ticket/Visualizar lista de precio de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -637,7 +637,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Usuario modificación"
 
 
-  Scenario: USUARIO(LAP)/CPF075 - Gestion precio ticket/Registrar precio ticket con fecha actual
+  Scenario: USUARIO(LAP)/CPF032 - Gestion precio ticket/Registrar precio ticket con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -657,7 +657,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
+  Scenario: USUARIO(LAP)/CPF033 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -679,7 +679,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
+  Scenario: USUARIO(LAP)/CPF034 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -694,7 +694,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton aceptar
 
 
-  Scenario: USUARIO(LAP)/CPF078 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
+  Scenario: USUARIO(LAP)/CPF035 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -708,7 +708,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Pre-emision Ticket Contingencia ########
 
-  Scenario: USUARIO(LAP)/CPF079 - Pre-emision tickets contingencia/Visualizar pre-emisión tickets contingencia
+  Scenario: USUARIO(LAP)/CPF036 - Pre-emision tickets contingencia/Visualizar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -723,7 +723,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And visualizar cantidad
 
 
-  Scenario: USUARIO(LAP)/CPF080 - Pre-emision tickets contingencia/Generar pre-emisión tickets contingencia
+  Scenario: USUARIO(LAP)/CPF037 - Pre-emision tickets contingencia/Generar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -743,7 +743,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Registro Ticket Contingencia ########
 
-  Scenario: USUARIO(LAP)/CPF081 - Registro tickets contingencia/Visualizar registro tickets contingencia
+  Scenario: USUARIO(LAP)/CPF038 - Registro tickets contingencia/Visualizar registro tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -756,7 +756,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And visualizar "Datos de venta"
 
 
-  Scenario: USUARIO(LAP)/CPF082 - Registro tickets contingencia/Registro tickets contingencia con cierre de turno
+  Scenario: USUARIO(LAP)/CPF039 - Registro tickets contingencia/Registro tickets contingencia con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -778,7 +778,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro realizado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF083 - Registro tickets contingencia/Registro tickets contingencia sin cierre de turno
+  Scenario: USUARIO(LAP)/CPF040 - Registro tickets contingencia/Registro tickets contingencia sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -801,7 +801,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Extorno Operaciones ########
 
-  Scenario: USUARIO(LAP)/CPF084 - Extorno operaciones/Visualizar lista de extorno operaciones
+  Scenario: USUARIO(LAP)/CPF041 - Extorno operaciones/Visualizar lista de extorno operaciones
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -821,7 +821,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF085 - Extorno operaciones/Extornar operacion
+  Scenario: USUARIO(LAP)/CPF042 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -846,7 +846,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Extorno Tickets ########
 
-  Scenario: USUARIO(LAP)/CPF086 - Extorno tickets/Visualizar lista de extorno tickets
+  Scenario: USUARIO(LAP)/CPF043 - Extorno tickets/Visualizar lista de extorno tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -866,7 +866,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF087 - Extorno tickets/Extornar tickets
+  Scenario: USUARIO(LAP)/CPF044 - Extorno tickets/Extornar tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -891,7 +891,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ######## Anulación de Tickets ########
 
-  Scenario: USUARIO(LAP)/CPF090 - Anulacion de ticket/Visualizar lista de anulacion de ticket
+  Scenario: USUARIO(LAP)/CPF045 - Anulacion de ticket/Visualizar lista de anulacion de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -920,7 +920,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF091 - Anulacion de ticket/Anular numero de ticket
+  Scenario: USUARIO(LAP)/CPF046 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -940,7 +940,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro anulado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF092 - Anulacion de ticket/Anular rango de tickets
+  Scenario: USUARIO(LAP)/CPF047 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -964,7 +964,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ######## Venta Masiva Credito ########
 
-  Scenario: USUARIO(LAP)/CPF095 - Venta masiva credito/Registrar venta masiva credito con cierre de turno
+  Scenario: USUARIO(LAP)/CPF048 - Venta masiva credito/Registrar venta masiva credito con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -985,7 +985,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF096 - Venta masiva credito/Registrar venta masiva credito sin cierre de turno
+  Scenario: USUARIO(LAP)/CPF049 - Venta masiva credito/Registrar venta masiva credito sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1007,7 +1007,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Extension Fecha de Vigencia Tickets ########
 
-  Scenario: USUARIO(LAP)/CPF097 - Extension fecha vigencia tickets/Visualizar lista extensión fecha vigencia tickets
+  Scenario: USUARIO(LAP)/CPF050 - Extension fecha vigencia tickets/Visualizar lista extensión fecha vigencia tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1031,7 +1031,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Estado"
 
 
-  Scenario: USUARIO(LAP)/CPF098 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
+  Scenario: USUARIO(LAP)/CPF051 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1048,7 +1048,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar el mensaje "Registro agregado correctamente"
 
 
-  Scenario: USUARIO(LAP)/CPF099 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
+  Scenario: USUARIO(LAP)/CPF052 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1068,7 +1068,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Gestion de Molinete ########
 
-  Scenario: USUARIO(LAP)/CPF100 - Gestion de molinete/Visualizar lista de gestion de molinete
+  Scenario: USUARIO(LAP)/CPF053 - Gestion de molinete/Visualizar lista de gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1085,7 +1085,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acción"
 
 
-  Scenario: USUARIO(LAP)/CPF101 - Gestion de molinete/Modificar gestion de molinete
+  Scenario: USUARIO(LAP)/CPF054 - Gestion de molinete/Modificar gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1105,7 +1105,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar mensaje "Se actualizaron los datos."
 
 
-  Scenario: USUARIO(LAP)/CPF102 - Gestion de molinete/Activar estado de gestion de molinete
+  Scenario: USUARIO(LAP)/CPF055 - Gestion de molinete/Activar estado de gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -1121,7 +1121,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Generacion Archivo Venta ########
 
-  Scenario: USUARIO(LAP)/CPF103 - Generacion archivo venta/Visualizar pantalla de generacion archivo venta
+  Scenario: USUARIO(LAP)/CPF056 - Generacion archivo venta/Visualizar pantalla de generacion archivo venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1133,7 +1133,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And se muestra formatos de salida excel y texto
     And se muestra los "Archivo a Generar"
 
-  Scenario: USUARIO(LAP)/CPF104 - Generacion archivo venta/Generar archivo venta
+  Scenario: USUARIO(LAP)/CPF057 - Generacion archivo venta/Generar archivo venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1151,7 +1151,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Cerrar Turno ########
 
-  Scenario: USUARIO(LAP)/CPF105 - Cerrar turno/Visualizar lista de turnos abiertos o activos
+  Scenario: USUARIO(LAP)/CPF058 - Cerrar turno/Visualizar lista de turnos abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1169,7 +1169,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna de moneda "DOL"
 
 
-  Scenario: USUARIO(LAP)/CPF106 - Cerrar turno/Cerrar turno abiertos o activos
+  Scenario: USUARIO(LAP)/CPF059 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1184,7 +1184,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ##################### MODULO CONSULTAS #####################
 
-  Scenario: USUARIO(LAP)/CPF152 - Visualizar modulo consultas
+  Scenario: USUARIO(LAP)/CPF060 - Visualizar modulo consultas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1206,7 +1206,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
     ######## Usuarios ########
 
-  Scenario: USUARIO(LAP)/CPF153 - Usuarios/Buscar usuarios
+  Scenario: USUARIO(LAP)/CPF061 - Usuarios/Buscar usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1228,7 +1228,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Días por vencer cuenta usuario"
     And validar columna "Días por vencer clave"
 
-  Scenario: USUARIO(LAP)/CPF154 - Usuarios/Imprimir lista de usuarios
+  Scenario: USUARIO(LAP)/CPF062 - Usuarios/Imprimir lista de usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1243,7 +1243,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Compañias ########
 
-  Scenario: USUARIO(LAP)/CPF155 - Companias/Buscar companias
+  Scenario: USUARIO(LAP)/CPF063 - Companias/Buscar companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1265,7 +1265,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Días por vencer cuenta usuario"
     And validar columna "Días por vencer clave"
 
-  Scenario: USUARIO(LAP)/CPF156 - Companias/Imprimir lista de companias
+  Scenario: USUARIO(LAP)/CPF064 - Companias/Imprimir lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1280,7 +1280,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Turnos ########
 
-  Scenario: USUARIO(LAP)/CPF157 - Turnos/Buscar turnos
+  Scenario: USUARIO(LAP)/CPF065 - Turnos/Buscar turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1307,7 +1307,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar el campo "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF158 - Turnos/Ver detalle de turno
+  Scenario: USUARIO(LAP)/CPF066 - Turnos/Ver detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1326,7 +1326,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton cerrar
 
 
-  Scenario: USUARIO(LAP)/CPF159 - Turnos/Imprimir detalle de turno
+  Scenario: USUARIO(LAP)/CPF067 - Turnos/Imprimir detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1346,7 +1346,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir
 
 
-  Scenario: USUARIO(LAP)/CPF160 - Turnos/Imprimir consulta de turnos
+  Scenario: USUARIO(LAP)/CPF068 - Turnos/Imprimir consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1363,7 +1363,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF161 - Turnos/Exportar excel consulta de turnos
+  Scenario: USUARIO(LAP)/CPF069 - Turnos/Exportar excel consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1381,7 +1381,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Detalle Ticket / BP ########
 
-  Scenario: USUARIO(LAP)/CPF162 - Detalle de ticket-bp/Buscar detalle de ticket-bp
+  Scenario: USUARIO(LAP)/CPF070 - Detalle de ticket-bp/Buscar detalle de ticket-bp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1404,7 +1404,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton buscar
 
 
-  Scenario: USUARIO(LAP)/CPF163 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
+  Scenario: USUARIO(LAP)/CPF071 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1418,7 +1418,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF164 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
+  Scenario: USUARIO(LAP)/CPF072 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1433,7 +1433,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF165 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
+  Scenario: USUARIO(LAP)/CPF073 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1452,7 +1452,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## TICKET / BP POR FECHA ########
 
-  Scenario: USUARIO(LAP)/CPF166 - Tickets-bp por fecha/Buscar tickets-bp por fecha
+  Scenario: USUARIO(LAP)/CPF074 - Tickets-bp por fecha/Buscar tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1489,7 +1489,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar el campo "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF167 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
+  Scenario: USUARIO(LAP)/CPF075 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1514,7 +1514,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton cerrar
 
 
-  Scenario: USUARIO(LAP)/CPF168 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
+  Scenario: USUARIO(LAP)/CPF076 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1538,7 +1538,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF169 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
+  Scenario: USUARIO(LAP)/CPF077 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1563,7 +1563,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Cuadre de Stickers Emitidos o BP Usados ########
 
-  Scenario: USUARIO(LAP)/CPF170 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
+  Scenario: USUARIO(LAP)/CPF078 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1576,7 +1576,8 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  Scenario: USUARIO(LAP)/CPF171 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
+
+  Scenario: USUARIO(LAP)/CPF079 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1590,7 +1591,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And visualizar informacion de "Cuadre de tickets emitidos"
 
 
-  Scenario: USUARIO(LAP)/CPF172 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
+  Scenario: USUARIO(LAP)/CPF080 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1604,7 +1605,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF173 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
+  Scenario: USUARIO(LAP)/CPF081 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1618,7 +1619,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF174 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
+  Scenario: USUARIO(LAP)/CPF082 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1632,7 +1633,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en exportar excel
 
 
-  Scenario: USUARIO(LAP)/CPF175 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
+  Scenario: USUARIO(LAP)/CPF083 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1647,7 +1648,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
 
 ######## Operacion Compra / Venta ########
 
-  Scenario: USUARIO(LAP)/CPF176 - Operacion compra-venta/Buscar operacion compra-venta
+  Scenario: USUARIO(LAP)/CPF084 - Operacion compra-venta/Buscar operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1667,7 +1668,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Usuario"
 
 
-  Scenario: USUARIO(LAP)/CPF177 - Operacion compra-venta/Imprimir operacion compra-venta
+  Scenario: USUARIO(LAP)/CPF085 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1679,11 +1680,9 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton buscar
     And click en imprimir
 
-
     ######## Tickets / BP Usados ########
 
-
-  Scenario: USUARIO(LAP)/CPF178 - Tickets-bp usados/Buscar tickets-bp usados
+  Scenario: USUARIO(LAP)/CPF086 - Tickets-bp usados/Buscar tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1723,7 +1722,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF179 - Tickets-bp usados/Ver detalle de tickets-bp usados
+  Scenario: USUARIO(LAP)/CPF087 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1746,7 +1745,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton cerrar
 
 
-  Scenario: USUARIO(LAP)/CPF180 - Tickets-bp usados/Imprimir tickets-bp usados
+  Scenario: USUARIO(LAP)/CPF088 - Tickets-bp usados/Imprimir tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1768,7 +1767,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en imprimir consulta
 
 
-  Scenario: USUARIO(LAP)/CPF181 - Tickets-bp usados/Exportar excel de tickets-bp usados
+  Scenario: USUARIO(LAP)/CPF089 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1789,10 +1788,90 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton buscar
     And click en exportar excel
 
+     ######## Tickets / BP Anulados ########
+
+  Scenario: USUARIO(LAP)/CPF090 - Tickets-bp anulados/Buscar tickets-bp anulados
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion tickets bp anulados
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And click en el boton buscar
+    And visualizar lista de "Tickets anulados"
+    And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
+    And validar columna de tabla "Fecha anulación"
+    And validar columna de tabla "Modalidad"
+    And validar columna de tabla "Usuario"
+    And validar columna de tabla "Motivo"
+    And validar columna de tabla "Adulto internacional normal"
+    And validar columna de tabla "Adulto nacional normal"
+
+
+  Scenario: USUARIO(LAP)/CPF091 - Tickets-bp anulados/Ver resumen de tickets-bp anulados
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion tickets bp anulados
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And click en el boton buscar
+    And seleccionar resumen
+    And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
+    And validar columna de tabla "Tipo Documento"
+    And validar columna de tabla "Tipo Vuelo"
+    And validar columna de tabla "Tipo Pasajero"
+    And validar columna de tabla "Tipo Trasbordo"
+    And validar columna de tabla "Cantidad"
+
+
+  Scenario: USUARIO(LAP)/CPF092 - Tickets-bp anulados/Exportar excel de consulta de tickets-bp anulados
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion tickets bp anulados
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And click en el boton buscar
+    And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
+    And click en el boton excel
+
+
+  Scenario: USUARIO(LAP)/CPF093 - Tickets-bp anulados/Exportar pdf de consulta de tickets-bp anulados
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion tickets bp anulados
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And click en el boton buscar
+    And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
+    And click en el boton pdf
+
+  Scenario: USUARIO(LAP)/CPF094 - Tickets-bp anulados/Imprimir consulta de tickets-bp anulados
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo consultas
+    And ingresar a la opcion tickets bp anulados
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And click en el boton buscar
+    And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
+    And click en el boton imprimir
+
 ######## Auditoria ########
 
-
-  Scenario: USUARIO(LAP)/CPF182 - Auditoria/Buscar auditoria
+  Scenario: USUARIO(LAP)/CPF095 - Auditoria/Buscar auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"
@@ -1820,7 +1899,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And validar columna "Acciones"
 
 
-  Scenario: USUARIO(LAP)/CPF183 - Auditoria/Ver detalle de auditoria
+  Scenario: USUARIO(LAP)/CPF096 - Auditoria/Ver detalle de auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "lapadmin"
     And ingresa la contrasena "lapadmin1"

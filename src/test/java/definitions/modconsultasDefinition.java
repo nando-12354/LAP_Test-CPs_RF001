@@ -550,4 +550,29 @@ public class modconsultasDefinition {
         consultas.abrirComboCajero();
         combobox.seleccionarOpcion(cajero);
     }
+
+    @And("ingresar a la opcion tickets bp anulados")
+    public void ingresarALaOpcionTicketsBpAnulados() {
+        consultas.ingresarOpcionTicketBpAnulados();
+    }
+
+    @And("validar columna de tabla {string}")
+    public void validarColumnaDeTabla(String tabla) {
+        head.validarCabeceraGrillaD(tabla);
+    }
+
+    @And("validar la {string}")
+    public void validarLa(String infoprocesada) {
+        titulos.validarTituloInformacionProcesada(infoprocesada);
+    }
+
+    @And("seleccionar resumen")
+    public void seleccionarResumen() {
+        consultas.seleccionarResumenTicketBpAnulados();
+    }
+
+    @And("click en el boton atras")
+    public void clickEnElBotonAtras() {
+        boton.clickBotonAtras();
+    }
 }

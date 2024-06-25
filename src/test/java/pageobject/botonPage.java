@@ -17,7 +17,9 @@ public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//button[contains(.,'Guardar')])[2]") protected WebElement btnGuardarB;
     @FindBy(xpath = "(//p-button/button[@type='button'])[3]") protected WebElement btnGuardarC;
+    @FindBy(xpath = "//button[contains(.,'Cancelar')]") protected WebElement btnCancelar;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarTicket;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[10]") protected WebElement btnEliminarJ;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarB;
     @FindBy(xpath = "//button[contains(.,'Buscar')]") protected WebElement btnBuscar;
@@ -28,6 +30,7 @@ public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Anular')]") protected WebElement btnAnular;
     @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
     @FindBy(xpath = "//button[contains(.,'Si')]") WebElement btnSi;
+    @FindBy(xpath = "//button[contains(.,'Atrás')]") WebElement btnAtras;
     @FindBy(xpath = "//button[contains(.,'Representante')]") protected WebElement btnRepresentante;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td/span/i)[1]") protected WebElement btnVerDetalleC;
     @FindBy(xpath = "(//table//tbody/tr/td/div/p-button[@icon='pi pi-eye']/button)[1]") protected WebElement btnVerDetalleB;
@@ -92,6 +95,10 @@ public class botonPage extends util {
         wait.until(ExpectedConditions.visibilityOf(btnEliminar));
         btnEliminar.click();
     }
+    public void clickBotonEliminarTicket(){
+        wait.until(ExpectedConditions.visibilityOf(btnEliminarTicket));
+        btnEliminarTicket.click();
+    }
     public void clickBotonEliminarJ(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminarJ));
         btnEliminarJ.click();
@@ -103,6 +110,10 @@ public class botonPage extends util {
     public void clickBotonBuscar(){
         wait.until(ExpectedConditions.visibilityOf(btnBuscar));
         btnBuscar.click();
+    }
+    public void clickBotonCancelar(){
+        wait.until(ExpectedConditions.visibilityOf(btnCancelar));
+        btnCancelar.click();
     }
     public void clickBotonGenerar(){
         wait.until(ExpectedConditions.visibilityOf(btnGenerar));
@@ -131,6 +142,10 @@ public class botonPage extends util {
     public void clickBotonSi(){
         wait.until(ExpectedConditions.visibilityOf(btnSi));
         btnSi.click();
+    }
+    public void clickBotonAtras(){
+        wait.until(ExpectedConditions.visibilityOf(btnAtras));
+        btnAtras.click();
     }
     public void clickBotonRepresentante(){
         wait.until(ExpectedConditions.visibilityOf(btnRepresentante));
