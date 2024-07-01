@@ -82,7 +82,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
     And click en el boton aceptar
 
-  ### Solucionado
+
   Scenario: CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -117,6 +117,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje de eliminacion
     And click en el boton aceptar
+
 
   Scenario: CPF073 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
     Given abre la ruta del aplicativo web
@@ -253,7 +254,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar precio ticket
     And visualizar cantidad
 
-  ### Solucionado
+
   Scenario: CPF080 - Pre-emision tickets contingencia/Generar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -286,7 +287,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar "Filtro consulta"
     And visualizar "Datos de venta"
 
-  ### Solucionado
+
   Scenario: CPF082 - Registro tickets contingencia/Registro tickets contingencia con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -361,17 +362,17 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion extorno
     And ingresar a la opcion extorno operaciones
     And filtrar estado turno "CERRADO"
-    And filtrar turno "026635"
+    And filtrar turno "026614"
     And seleccionar fecha desde "01/01/2020"
     And seleccionar fecha hasta "31/01/2020"
     And click en el boton buscar
     And click en el boton detalle de turno
-    And seleccionar tipo operacion "Compra Moneda"
+    And seleccionar tipo operacion "Venta Moneda"
     And click en el boton buscar
     And seleccionar operacion a extornar "si"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -396,6 +397,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
+
   Scenario: CPF087 - Extorno tickets/Extornar tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -405,16 +407,16 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion extorno
     And ingresar a la opcion extorno tickets
     And filtrar estado turno "CERRADO"
-    And filtrar turno "032205"
-    And seleccionar fecha desde "01/02/2024"
-    And seleccionar fecha hasta "28/02/2024"
+    And filtrar turno "029872"
+    And seleccionar fecha desde "01/09/2022"
+    And seleccionar fecha hasta "30/09/2022"
     And click en el boton buscar
     And click en el boton detalle de turno
     And seleccionar ticket a extornar "si"
     And ingresar el motivo de extorno "Solo prueba"
     And click en el boton extornar
     And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión."
     And click en el boton aceptar
 
@@ -465,8 +467,8 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
     And seleccionar ticket rehabilitado a extornar "si"
     And click en el boton extornar
-    And validar la alerta de confirmacion "¿Está seguro de realizar esta acción?"
-    And click en el boton aceptar
+    And validar alerta de confirmacion "¿Está seguro de registrar esta acción?"
+    And click en boton aceptar
     And validar la alerta de confirmacion "Finalizó el proceso de impresión"
     And click en el boton aceptar
 
@@ -500,7 +502,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Estado Actual"
     And validar columna "Acciones"
 
-  ### Solucionado
+
   Scenario: CPF091 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -520,7 +522,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje "Registro anulado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -565,7 +567,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Pasajero"
     And validar columna "Estado actual"
 
-  ### Solucionado
+
   Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -586,7 +588,7 @@ Feature: Funcionalidad del modulo Operacion
 
 ######## VENTA MASIVA CREDITO ########
 
-  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
+
   Scenario: CPF095 - Venta masiva credito/Registrar venta masiva credito con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -607,7 +609,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
-  ### Solucionado - Se agregará un método que permita redirigir a la pantalla principal
+
   Scenario: CPF096 - Venta masiva credito/Registrar venta masiva credito sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -653,6 +655,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Número de días"
     And validar columna "Estado"
 
+
   Scenario: CPF098 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -669,7 +672,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar el mensaje "Registro agregado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF099 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -706,6 +709,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Estado"
     And validar columna "Acción"
 
+
   Scenario: CPF101 - Gestion de molinete/Modificar gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -724,6 +728,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
     And validar mensaje "Se actualizaron los datos."
+
 
   Scenario: CPF102 - Gestion de molinete/Activar estado de gestion de molinete
     Given abre la ruta del aplicativo web

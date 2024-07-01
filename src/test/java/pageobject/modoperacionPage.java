@@ -557,12 +557,10 @@ public class modoperacionPage extends util {
     public void seleccionarMonedaA(String monedaa) {
         int retryCount = 3;  // Número de reintentos en caso de StaleElementReferenceException
         boolean success = false;
-
         for (int i = 0; i < retryCount; i++) {
             try {
                 // Esperar hasta que el checkbox sea visible
                 wait.until(ExpectedConditions.visibilityOf(checkMonedaA));
-
                 // Manejar la selección según el valor de 'monedaa'
                 if (monedaa.toLowerCase().equals("si")) {
                     if (!checkMonedaA.isSelected()) {
@@ -575,7 +573,6 @@ public class modoperacionPage extends util {
                     }
                     Assert.assertFalse("El checkbox no debería estar seleccionado.", checkMonedaA.isSelected());
                 }
-
                 success = true; // Si no hay excepción, marcar como éxito
                 break; // Salir del bucle si la operación es exitosa
             } catch (StaleElementReferenceException e) {
@@ -589,7 +586,6 @@ public class modoperacionPage extends util {
                 break;
             }
         }
-
         Assert.assertTrue("No se pudo interactuar con el checkbox después de varios intentos.", success);
     }
 

@@ -21,33 +21,6 @@ Feature: Funcionalidad del login
     And click en el boton iniciar sesion
     And validar mensaje de error "El Usuario se encuentra en situacion Bloqueado"
 
-    ########### CASO DE PRUEBAS ADICIONALES ##########
-
-  Scenario: CPFadicional1 - Ingreso al aplicativo web con usuario no registrado
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "nouser"
-    And ingresa la contrasena "nopass"
-    And click en el boton iniciar sesion
-    And validar mensaje de error "Usuario no registrado"
-
-
-  Scenario: CPFadicional2 - Ingreso al aplicativo web con contrasena erronea
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "nmarcelo"
-    And ingresa la contrasena "passerror"
-    And click en el boton iniciar sesion
-    And validar mensaje de error "La credenciales no son válidas"
-
-
-  Scenario: CPFadicional3 - Ingreso al aplicativo web con contrasena erronea e intentar cambiar contrasena
-    Given abre la ruta del aplicativo web
-    And ingresa el usuario "wselenium"
-    And ingresa la contrasena "passerror"
-    And click en cambiar mi contrasena
-    And validar mensaje de error "La credenciales no son válidas"
-    #################################################
-
-### Falta validación del aviso
 
   Scenario: CPF005 - Ingreso al aplicativo web y cambiar contraseña
     Given abre la ruta del aplicativo web
@@ -62,7 +35,6 @@ Feature: Funcionalidad del login
     And validar aviso "Contraseña actualizada correctamente"
     And click en el boton aceptar
 
-### Solucionado
 
   Scenario: CPF006 - Ingreso al aplicativo web y cambiar contraseña ya usada
     Given abre la ruta del aplicativo web
@@ -76,8 +48,6 @@ Feature: Funcionalidad del login
     And click en el boton aceptar
     And validar el mensaje error "La contraseña se encuentra registrada dentro de los ultimos 4 ingresos de Clave"
 
-
-### Solucionado
 
   Scenario: CPF007 - Ingreso al aplicativo web y cambiar contraseña usada la 1ra vez
     Given abre la ruta del aplicativo web

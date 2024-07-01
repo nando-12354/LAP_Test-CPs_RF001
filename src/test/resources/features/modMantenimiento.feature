@@ -46,7 +46,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
-  ### Solucionado
+
   Scenario: CPF048 - Estacion de punto de venta/Registrar con ip fuera de rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -60,7 +60,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje error "Debe ingresar un IP entre 1 y 255"
 
-  ### No muestra el mensaje de error
+
   Scenario: CPF049 - Estacion de punto de venta/Registrar con ip ya registrada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -121,7 +121,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Usuario modificación"
     And validar columna "Acciones"
 
-  ### No permite registrar las monedas que tienen tilde, ñ, y otros carácteres especiales
+
   Scenario: CPF053 - Moneda/Registrar tipo de moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -134,7 +134,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
-  ### No permite deshabilitar las monedas que tienen tilde, ñ, y otros carácteres especiales
+
   Scenario: CPF054 - Moneda/Deshabilitar una moneda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -149,7 +149,6 @@ Feature: Funcionalidad del modulo Mantenimiento
 
 ######## COMPAÑIA ########
 
-  ### Solucionado
   Scenario: CPF055 - Compania/Visualizar lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -238,6 +237,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar el mensaje "La compañía se registró correctamente"
 
+
   Scenario: CPF057 - Compania/Modificar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -296,6 +296,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar el mensaje "La compañía se actualizó correctamente"
 
+
   Scenario: CPF058 - Compania/Deshabilitar una compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -327,6 +328,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Usuario de Modificación"
     And validar columna "Acciones"
 
+
   Scenario: CPF060 - Modalidad de venta/Registrar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -356,6 +358,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
+
   Scenario: CPF061 - Modalidad de venta/Modificar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -368,6 +371,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And cambiar descripcion "Pruebas"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
+
 
   Scenario: CPF062 - Modalidad de venta/Modalidad de venta registrado
     Given abre la ruta del aplicativo web
@@ -399,7 +403,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar alerta de confirmacion "No se puede crear la modalidad del tipo escogido, ya se encuentra registrado"
     And click en el boton aceptar
 
-  ### Solucionado
+
   Scenario: CPF063 - Modalidad de venta/Deshabilitar una modalidad de venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -431,7 +435,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And validar columna "Usuario modificación"
     And validar columna "Acciones"
 
-  ### Solucionado
+
   Scenario: CPF065 - Tipo de ticket/Registrar un tipo de Ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

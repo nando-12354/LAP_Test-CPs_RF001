@@ -1,6 +1,5 @@
 Feature: Funcionalidad del modulo Configuracion General
 
-  ### Solucionado
   Scenario: CPF019 - Visualizar modulo configuracion general
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

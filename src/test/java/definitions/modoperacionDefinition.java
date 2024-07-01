@@ -13,6 +13,7 @@ public class modoperacionDefinition {
     headPage head;
     botonPage boton;
     modoperacionPage operacion;
+    util ventana;
 
     public modoperacionDefinition() {
         menu = new menuPage();
@@ -23,6 +24,7 @@ public class modoperacionDefinition {
         head = new headPage();
         boton = new botonPage();
         operacion = new modoperacionPage();
+        ventana = new util();
     }
 
     @And("ingresar al modulo operacion")
@@ -749,8 +751,7 @@ public class modoperacionDefinition {
     @And("click en boton aceptar")
     public void clickEnBotonAceptar() {
         boton.clickBotonAceptar();
-        boton.ventanaActiva();
-        boton.ventanaInicial();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("ingresar precio de venta en negativo {string}")

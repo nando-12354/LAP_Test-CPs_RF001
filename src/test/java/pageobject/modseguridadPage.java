@@ -47,7 +47,7 @@ public class modseguridadPage extends util {
     }
     public void validarOpcionesSeguridad(String seguridad){
         boolean opcionValida = false;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[text()='" + seguridad + "']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[normalize-space(text())='" + seguridad + "']")));
         String xpath = "//div/ul/li/a/span[normalize-space(text())='" + seguridad.trim() + "']";
 
         try {

@@ -4,6 +4,7 @@ import definitions.hooks;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -34,6 +35,31 @@ public class util extends hooks {
         driver.close();
         driver.switchTo().window("");
     }
+    public void manejarNuevaPestana(long segundosEspera) {
+        String ventanaPrincipal = driver.getWindowHandle();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+
+        Set<String> todasLasVentanas = driver.getWindowHandles();
+
+        for (String ventana : todasLasVentanas) {
+            if (!ventana.equals(ventanaPrincipal)) {
+                driver.switchTo().window(ventana);
+
+                try {
+                    Thread.sleep(segundosEspera * 1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                driver.close();
+                break;
+            }
+        }
+        driver.switchTo().window(ventanaPrincipal);
+    }
+
+
     public void scrollVertical(WebElement scroll){
         js.executeScript("arguments[0].scrollIntoView(true);", scroll);
     }
@@ -60,4 +86,6 @@ public class util extends hooks {
             File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(file, new File(path+nombre));
     }
+
+
 }

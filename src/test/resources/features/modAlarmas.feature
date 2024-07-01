@@ -1,18 +1,18 @@
 Feature: Funcionalidad del modulo Alarmas
 
-  Scenario: CPF295 - Visualizar modulo alarmas
+  Scenario: CPF300 - Visualizar modulo alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo alarmas
-    And visualizar la opcion "Configurar Alarmas "
-    And visualizar la opcion "Monitorear Alarmas "
+    And visualizar la opcion "Configurar Alarmas"
+    And visualizar la opcion "Monitorear Alarmas"
     And visualizar la opcion "Alarmas Generadas"
 
 ######## CONFIGURAR ALARMAS ########
 
-  Scenario: CPF296 - Configurar alarma/Visualizar pantalla de configuracion alarmas
+  Scenario: CPF301 - Configurar alarma/Visualizar pantalla de configuracion alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -21,7 +21,8 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion configurar alarmas
     And visualizar informacion de "Configuración Alarmas"
 
-  Scenario: CPF297 - Configurar alarma/Configurar nueva alarma
+
+  Scenario: CPF302 - Configurar alarma/Configurar nueva alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -41,7 +42,8 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje ""
 
-  Scenario: CPF298 - Configurar alarma/Editar configuracion de alarma
+
+  Scenario: CPF303 - Configurar alarma/Editar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -59,7 +61,8 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje ""
 
-  Scenario: CPF299 - Configurar alarma/Eliminar configuracion de alarma
+
+  Scenario: CPF304 - Configurar alarma/Eliminar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -72,7 +75,8 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje ""
 
-  Scenario: CPF300 - Configurar alarma/Actualizar configuracion de alarma
+
+  Scenario: CPF305 - Configurar alarma/Actualizar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -91,7 +95,7 @@ Feature: Funcionalidad del modulo Alarmas
 
 ######## MONITOREAR ALARMAS ########
 
-  Scenario: CPF301 - Monitorear alarmas/Visualizar pantalla de monitorear alarmas
+  Scenario: CPF306 - Monitorear alarmas/Visualizar pantalla de monitorear alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -102,7 +106,7 @@ Feature: Funcionalidad del modulo Alarmas
 
 ######## ALARMAS GENERADAS ########
 
-  Scenario: CPF302 - Alarmas generadas/Visualizar pantalla de alarmas generadas
+  Scenario: CPF307 - Alarmas generadas/Visualizar pantalla de alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -111,8 +115,8 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion alarmas generadas
     And visualizar informacion de "Alarmas Generadas"
 
-  ### Solucionado
-  Scenario: CPF303 - Alarmas generadas/Consultar alarmas generadas
+
+  Scenario: CPF308 - Alarmas generadas/Consultar alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -128,8 +132,8 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar tipo de alarma "Error en conexión al Web Service de Tasa Cambio del Banco"
     And click en el boton buscar
 
-  ### Solucionado
-  Scenario: CPF304 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
+
+  Scenario: CPF309 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

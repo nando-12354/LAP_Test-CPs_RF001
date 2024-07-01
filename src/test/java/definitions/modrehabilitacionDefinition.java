@@ -2,6 +2,7 @@ package definitions;
 
 import io.cucumber.java.en.And;
 import pageobject.*;
+import support.util;
 
 public class modrehabilitacionDefinition {
     menuPage menu;
@@ -16,6 +17,7 @@ public class modrehabilitacionDefinition {
     mensajesPage mensajes;
     alertasPage alerta;
     modrehabilitacionPage rehabilitacion;
+    util ventana;
     public modrehabilitacionDefinition() {
         menu = new menuPage();
         head = new headPage();
@@ -29,6 +31,7 @@ public class modrehabilitacionDefinition {
         mensajes = new mensajesPage();
         alerta = new alertasPage();
         rehabilitacion = new modrehabilitacionPage();
+        ventana = new util();
     }
 
     @And("ingresar al modulo rehabilitacion")
@@ -190,6 +193,7 @@ public class modrehabilitacionDefinition {
     @And("click en el boton imprimir")
     public void clickEnElBotonImprimir() {
         imprimir.clickBotonImprimir();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("click en el boton aceptar")

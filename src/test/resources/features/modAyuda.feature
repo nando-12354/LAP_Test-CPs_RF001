@@ -1,6 +1,6 @@
 Feature: Funcionalidad del modulo Ayuda
 
-  Scenario: CPF305 - Visualizar documento de ayuda
+  Scenario: CPF310 - Visualizar documento de ayuda
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"

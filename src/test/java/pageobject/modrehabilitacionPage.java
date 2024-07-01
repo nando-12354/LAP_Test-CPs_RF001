@@ -21,7 +21,7 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-salida']") protected WebElement subopBoardingSalida;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-vuelo']") protected WebElement subopBoardingVuelo;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-fecha']") protected WebElement subopBoardingFecha;
-    @FindBy(xpath = "//form/div/div/span/input[@formcontrolname='numeroTicket']") protected WebElement txtTicket;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='numeroTicket']//input") protected WebElement txtTicket;
     @FindBy(xpath = "//table//tbody/tr/td[3]") protected WebElement txtTicketAgregado;
     @FindBy(xpath = "//div//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaBoarding;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaVuelo;

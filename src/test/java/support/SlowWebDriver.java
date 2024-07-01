@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class SlowWebDriver extends RemoteWebDriver {
     private final WebDriver driver;
-    private long delay = 400;
+    private long delay = 600;
 
     public SlowWebDriver(WebDriver driver) {
         this.driver = driver;
