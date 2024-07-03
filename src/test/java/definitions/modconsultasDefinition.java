@@ -2,6 +2,7 @@ package definitions;
 
 import io.cucumber.java.en.And;
 import pageobject.*;
+import support.util;
 
 public class modconsultasDefinition {
     menuPage menu;
@@ -13,6 +14,7 @@ public class modconsultasDefinition {
     botonPage boton;
     excelPage excel;
     modconsultasPage consultas;
+    util ventana;
     public modconsultasDefinition() {
         menu = new menuPage();
         titulos = new titulosPage();
@@ -23,6 +25,7 @@ public class modconsultasDefinition {
         boton = new botonPage();
         excel = new excelPage();
         consultas = new modconsultasPage();
+        ventana = new util();
     }
 
     @And("ingresar al modulo consultas")
@@ -366,6 +369,7 @@ public class modconsultasDefinition {
     @And("click en imprimir")
     public void clickEnImprimir() {
         imprimir.clickBotonImprimirC();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("escribir hora desde {string}")
@@ -386,6 +390,7 @@ public class modconsultasDefinition {
     @And("click en imprimir consulta")
     public void clickEnImprimirConsulta() {
         imprimir.clickBotonImprimirD();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("ingresar numero ticket {string}")

@@ -15,10 +15,10 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/mantenimiento/compania']") protected WebElement opCompania;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/mantenimiento/modalidad-venta']") protected WebElement opModalidadVenta;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/mantenimiento/tipo-tickets']") protected WebElement opTipoTickets;
-    @FindBy(xpath = "(//input[@type='number'])[1]") protected WebElement inputIpA;
-    @FindBy(xpath = "(//input[@type='number'])[2]") protected WebElement inputIpB;
-    @FindBy(xpath = "(//input[@type='number'])[3]") protected WebElement inputIpC;
-    @FindBy(xpath = "(//input[@type='number'])[4]") protected WebElement inputIpD;
+    @FindBy(xpath = "//input[@formcontrolname='numIpEquipo1']") protected WebElement inputIpA;
+    @FindBy(xpath = "//input[@formcontrolname='numIpEquipo2']") protected WebElement inputIpB;
+    @FindBy(xpath = "//input[@formcontrolname='numIpEquipo3']") protected WebElement inputIpC;
+    @FindBy(xpath = "//input[@formcontrolname='numIpEquipo4']") protected WebElement inputIpD;
     @FindBy(xpath = "//input[@inputid='nombre']") protected WebElement inputNombreCompania;
     @FindBy(xpath = "//input[@inputid='ruc']") protected WebElement inputRuc;
     @FindBy(xpath = "//input[contains(@inputid,'codigo')]") protected WebElement inputCodigoAerolinea;
@@ -50,7 +50,7 @@ public class modmantenimientoPage extends util {
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[6]") protected WebElement checkSerieNumeroFin;
     @FindBy(xpath = "(//div/app-listado-atributos//table//tbody/tr//p-checkbox)[7]") protected WebElement checkSerieNumeroInicio;
     @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[1]") protected WebElement btnAgregarAtributos;
-    @FindBy(xpath = "//input[@id='input']") protected WebElement inputNombreTipoTicket;
+    @FindBy(xpath = "//input[@inputid='dscTipo']") protected WebElement inputNombreTipoTicket;
     @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[1]") protected WebElement btnAgregarModalidadVenta;
     @FindBy(xpath = "(//div/app-button-primary[@icon='pi pi-plus']/p-button/button)[2]") protected WebElement btnAgregarModalidadTipoTicket;
     @FindBy(xpath = "(//div/app-button-primary/p-button/button)[5]") protected WebElement btnAgregarAtributoTipoTicket;

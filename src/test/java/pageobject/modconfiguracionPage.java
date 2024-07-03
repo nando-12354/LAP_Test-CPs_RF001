@@ -29,9 +29,9 @@ public class modconfiguracionPage extends util {
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[16]") protected WebElement btnVerConfiguracionP;
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[17]") protected WebElement btnVerConfiguracionQ;
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-eye'])[18]") protected WebElement btnVerConfiguracionR;
-    @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[1]") protected WebElement inputNombreCampo;
-    @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[2]") protected WebElement inputCodigoAsociado;
-    @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[3]") protected WebElement inputCodigo;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='nomCampo']//input") protected WebElement inputNombreCampo;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='codRelativo']//input") protected WebElement inputCodigoAsociado;
+    @FindBy(xpath = "(//div/app-lista-campo/form//app-input-text//input[@id='input'])[1]") protected WebElement inputCodigo;
     @FindBy(xpath = "//textarea[@inputid='textarea']") protected WebElement inputDescripcion;
     @FindBy(xpath = "//textarea[@inputid='textarea']") protected WebElement inputEditarDescripcion;
     @FindBy(xpath = "(//app-editar-lista-campo/form//span[@class='tituloValor'])[1]") protected WebElement lblNombreCampo;

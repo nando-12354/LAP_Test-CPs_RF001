@@ -17,6 +17,6 @@ public class hooks {
     @After
     public static void tearDown(){
         driver.manage().deleteAllCookies();
-        driver.close();
+        //driver.close();
     }
 }

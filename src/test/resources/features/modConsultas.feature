@@ -139,7 +139,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar fecha hasta "31/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar usuario "Tamara Olaechea"
+    And seleccionar usuario "Carmen Vera"
     And ingresar numero de caja "V00015"
     And click en el boton buscar
     And click en boton ver detalle
@@ -158,7 +158,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar fecha hasta "31/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar usuario "Tamara Olaechea"
+    And seleccionar usuario "Carmen Vera"
     And ingresar numero de caja "V00015"
     And click en el boton buscar
     And click en boton ver detalle
@@ -178,7 +178,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar fecha hasta "31/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar usuario "Tamara Olaechea"
+    And seleccionar usuario "Carmen Vera"
     And ingresar numero de caja "V00015"
     And click en el boton buscar
     And click en imprimir consulta
@@ -280,10 +280,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -317,10 +317,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -342,10 +342,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -366,10 +366,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "TODOS"
     And seleccionar estado "ANULADO"

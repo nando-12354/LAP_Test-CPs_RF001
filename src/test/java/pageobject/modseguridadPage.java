@@ -18,9 +18,9 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//table//tbody/tr//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditarRol;
     @FindBy(xpath = "(//table//tbody/tr//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminarRol;
     @FindBy(xpath = "//button[contains(.,'Nuevo usuario')]") protected WebElement btnNuevoUsuario;
-    @FindBy(xpath = "//input[@inputid='apellidos']") protected WebElement inputApellidos;
-    @FindBy(xpath = "//input[@inputid='nombres']") protected WebElement inputNombres;
-    @FindBy(xpath = "//input[@inputid='usuario']") protected WebElement inputUsuarioCrear;
+    @FindBy(xpath = "//app-input-text-2[@inputid='apellidos']//input") protected WebElement inputApellidos;
+    @FindBy(xpath = "//app-input-text-2[@inputid='nombres']//input") protected WebElement inputNombres;
+    @FindBy(xpath = "//app-input-text-2[@inputid='usuario']//input") protected WebElement inputUsuarioCrear;
     @FindBy(xpath = "//input[@inputid='apellidos']") protected WebElement inputApellidosEditar;
     @FindBy(xpath = "//input[@inputid='nombres']") protected WebElement inputNombresEditar;
     @FindBy(xpath = "//input[@inputid='usuario']") protected WebElement inputUsuarioEditar;
@@ -29,18 +29,28 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//section/span/div/p-checkbox)[1]") protected WebElement checkRolDisponible;
     @FindBy(xpath = "//input[@id='vigencia']") protected WebElement inputFechaVigencia;
     @FindBy(xpath = "//div/div/p-checkbox[@label='Habilitar campos']/div") protected WebElement checkHabilitarCampos;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[1]") protected WebElement checkPefilA;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[2]") protected WebElement checkPefilB;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[3]") protected WebElement checkPefilC;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[4]") protected WebElement checkPefilD;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[5]") protected WebElement checkPefilE;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[6]") protected WebElement checkPefilF;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[7]") protected WebElement checkPefilG;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[8]") protected WebElement checkPefilH;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[9]") protected WebElement checkPefilI;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[10]") protected WebElement checkPefilJ;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[11]") protected WebElement checkPefilK;
-    @FindBy(xpath = "(//section//ul/li//mat-checkbox//div[@class='mdc-checkbox'])[12]") protected WebElement checkPefilL;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[1]") protected WebElement checkPefilA;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[4]") protected WebElement checkPefilB;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[7]") protected WebElement checkPefilC;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[13]") protected WebElement checkPefilD;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[24]") protected WebElement checkPefilE;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[27]") protected WebElement checkPefilF;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[40]") protected WebElement checkPefilG;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[57]") protected WebElement checkPefilH;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[61]") protected WebElement checkPefilI;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[67]") protected WebElement checkPefilJ;
+    @FindBy(xpath = "(//section//ul/li//span[@class='filaPadre']/p-checkbox//div[@data-pc-name='checkbox'])[71]") protected WebElement checkPefilK;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[1]") protected WebElement clickDesplegarA;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[4]") protected WebElement clickDesplegarB;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[6]") protected WebElement clickDesplegarC;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[12]") protected WebElement clickDesplegarD;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[18]") protected WebElement clickDesplegarE;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[21]") protected WebElement clickDesplegarF;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[22]") protected WebElement clickDesplegarG;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[23]") protected WebElement clickDesplegarH;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[25]") protected WebElement clickDesplegarI;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[26]") protected WebElement clickDesplegarJ;
+    @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[27]") protected WebElement clickDesplegarK;
 
     public modseguridadPage() {
         PageFactory.initElements(slowDriver, this);
@@ -332,19 +342,37 @@ public class modseguridadPage extends util {
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilK.isSelected());
         }
     }
-    public void seleccionarCheckPerfilL(String perfill){
-        wait.until(ExpectedConditions.visibilityOf(checkPefilA));
-        if (perfill.toLowerCase().equals("si")) {
-            wait.until(ExpectedConditions.elementToBeClickable(checkPefilL));
-            if (!checkPefilL.isSelected()) {
-                checkPefilL.click();
-            }
-        } else if (perfill.toLowerCase().equals("no")) {
-            if (checkPefilL.isSelected()) {
-                checkPefilL.click();
-            }
-            wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeSelected(checkPefilL)));
-            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkPefilL.isSelected());
-        }
+    public void clickDesplegarPerfilA(){
+        clickDesplegarA.click();
+    }
+    public void clickDesplegarPerfilB(){
+        clickDesplegarB.click();
+    }
+    public void clickDesplegarPerfilC(){
+        clickDesplegarC.click();
+    }
+    public void clickDesplegarPerfilD(){
+        clickDesplegarD.click();
+    }
+    public void clickDesplegarPerfilE(){
+        clickDesplegarE.click();
+    }
+    public void clickDesplegarPerfilF(){
+        clickDesplegarF.click();
+    }
+    public void clickDesplegarPerfilG(){
+        clickDesplegarG.click();
+    }
+    public void clickDesplegarPerfilH(){
+        clickDesplegarH.click();
+    }
+    public void clickDesplegarPerfilI(){
+        clickDesplegarI.click();
+    }
+    public void clickDesplegarPerfilJ(){
+        clickDesplegarJ.click();
+    }
+    public void clickDesplegarPerfilK(){
+        clickDesplegarK.click();
     }
 }

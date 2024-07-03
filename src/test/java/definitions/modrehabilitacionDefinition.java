@@ -379,16 +379,19 @@ public class modrehabilitacionDefinition {
     @And("click en boton imprimir")
     public void clickEnBotonImprimir() {
         imprimir.clickBotonImprimirB();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("click en el boton imprimir voucher")
     public void clickEnElBotonImprimirVoucher() {
         voucher.clickBotonVoucher();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("click en el boton voucher")
     public void clickEnElBotonVoucher() {
         voucher.clickBotonVoucherB();
+        ventana.manejarNuevaPestana(5);
     }
 
     @And("validar mensaje exitoso {string}")
@@ -470,5 +473,16 @@ public class modrehabilitacionDefinition {
     @And("click en la cabecera de la grilla ver detalle o eliminar")
     public void clickEnLaCabeceraDeLaGrillaVerDetalleOEliminar() {
         rehabilitacion.clickCabeceraDeLaGrilla();
+    }
+
+    @And("ingresar un numero de vuelo {string}")
+    public void ingresarUnNumeroDeVuelo(String vuelo) {
+        rehabilitacion.ingresarNumeroVueloBpSalida(vuelo);
+    }
+
+    @And("ingresar una fecha de vuelo {string}")
+    public void ingresarUnaFechaDeVuelo(String fechavuelo) {
+        rehabilitacion.ingresarFechaVuelo(fechavuelo);
+        rehabilitacion.darClickCalendarioBpSalida();
     }
 }

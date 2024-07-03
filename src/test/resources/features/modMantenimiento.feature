@@ -41,8 +41,8 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
-    And ingresar descripcion "CAJA TEST001"
-    And ingresar ip "192.168.1.150"
+    And ingresar descripcion "CAJA TEST002"
+    And ingresar ip "192.168.1.152"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
@@ -56,7 +56,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton nuevo
     And ingresar descripcion "CAJA TEST"
-    And ingresar ip "600.500.400.300"
+    And ingresar ip "300.168.1.1"
     And click en el boton guardar
     And validar mensaje error "Debe ingresar un IP entre 1 y 255"
 
@@ -72,7 +72,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar descripcion "CAJA IDE1"
     And ingresar ip "112.113.114.115"
     And click en el boton guardar
-    And validar mensaje error "La dirección IP ya se encuentra registrada"
+    And validar el mensaje de error "La dirección IP ya se encuentra registrada"
 
 
   Scenario: CPF050 - Estacion de punto de venta/Deshabilitar estacion de punto de venta
@@ -96,8 +96,8 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion estacion de punto de venta
     And click en el boton editar
-    And ingresar descripcion "CAJA edit"
-    And ingresar ip "113.114.115.116"
+    And cambiar descripcion "CAJA 01"
+    And ingresar ip "192.168.1.1"
     And seleccionar estado "Vigente"
     And click en el boton guardar
     And validar mensaje "Registro actualizado correctamente"
@@ -187,19 +187,19 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion compania
     And click en el boton nuevo
-    And ingresar nombre "zCompGen10"
+    And ingresar nombre "ZAAABBBCCC"
     And seleccionar tipo de compania "AEROLINEA"
-    And ingresar ruc "2078965485"
-    And ingresar codigo aerolinea "bbb"
-    And ingresar codigo iata "ccc"
-    And ingresar codigo sap "222"
-    And ingresar codigo oaci "eee"
-    And ingresar codigo interno "fff"
+    And ingresar ruc "20589631563"
+    And ingresar codigo aerolinea "DAC"
+    And ingresar codigo iata "RTE"
+    And ingresar codigo sap "5435342343"
+    And ingresar codigo oaci "HJU"
+    And ingresar codigo interno "592"
     And click en el boton agregar representante
-    And ingresar nombre de representante "Testing"
-    And ingresar apellido de representante "IDE"
+    And ingresar nombre de representante "Roberto"
+    And ingresar apellido de representante "Peralta"
     And ingresar tipo de documento "DNI"
-    And ingresar numero de documento "72179974"
+    And ingresar numero de documento "74185299"
     And ingresar cargo "Analista"
     And seleccionar permisos "si"
     And click en boton guardar
@@ -246,7 +246,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion compania
     And click en el boton editar compania
-    And modificar nombre "zCompGen01"
+    And modificar nombre "ZZFREFFFFR"
     And seleccionar tipo de compania "AEROLINEA"
     And modificar ruc "2078965485"
     And modificar codigo aerolinea "aaa"
@@ -255,10 +255,10 @@ Feature: Funcionalidad del modulo Mantenimiento
     And modificar codigo oaci "ddd"
     And modificar codigo interno "eee"
     And click en el boton editar representante
-    And modificar nombre de representante "Testing"
-    And modificar apellido de representante "IDE"
+    And modificar nombre de representante "ModRoberto"
+    And modificar apellido de representante "ModPeralta"
     And ingresar tipo de documento "DNI"
-    And modificar numero de documento "72178888"
+    And modificar numero de documento "72174569"
     And modificar cargo "QAAA"
     And seleccionar permisos "no"
     And click en boton guardar
@@ -338,7 +338,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion modalidad de venta
     And click en el boton nuevo
     And seleccionar tipo de modalidad "Tipo Venta Masiva Credito"
-    And ingresar descripcion "Testing"
+    And ingresar descripcion "Venta Test"
     And click en el boton agregar modalidad de venta
     And seleccionar activar rehabilitacion "si"
     And seleccionar maximo de tickets emitidos por semana al credito "si"
@@ -427,12 +427,15 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar a la opcion tipo de ticket
     And visualizar lista de "Lista de Tipos de Ticket"
     And validar columna "Codigo"
-    And validar columna "Tipo"
     And validar columna "Precio"
     And validar columna "Moneda"
     And validar columna "Estado"
     And validar columna "Fecha modificación"
     And validar columna "Usuario modificación"
+    And click en ver mas campos
+    And validar datos de "Tipo de Vuelo"
+    And validar datos de "Tipo de Pasajero"
+    And validar datos de "Tipo de transbordo"
     And validar columna "Acciones"
 
 
@@ -460,7 +463,7 @@ Feature: Funcionalidad del modulo Mantenimiento
     And ingresar al modulo mantenimiento
     And ingresar a la opcion tipo de ticket
     And click en el boton editar
-    And ingresar nombre de tipo ticket "Selenium editado"
+    And ingresar nombre de tipo ticket "Adulto Internacional Normal"
     And click en el boton guardar
     And validar mensaje "Registro modificado correctamente"
 

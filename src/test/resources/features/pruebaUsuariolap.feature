@@ -646,8 +646,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And ingresar a la opcion gestion precio ticket
     And click en el boton nuevo
     And seleccionar fecha actual
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
@@ -668,8 +667,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And seleccionar fecha programada
     And ingresar fecha a programar "01/12/2024"
     And ingresar hora a programar "000000"
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
@@ -981,7 +979,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación con cierre de turno?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 
@@ -1002,7 +1000,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación sin cierre de turno?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 ######## Extension Fecha de Vigencia Tickets ########
@@ -1102,7 +1100,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
-    And validar mensaje "Se actualizaron los datos."
+    And validar el mensaje "Registro actualizado correctamente"
 
 
   Scenario: USUARIO(LAP)/CPF055 - Gestion de molinete/Activar estado de gestion de molinete
@@ -1117,7 +1115,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton guardar
     And validar alerta "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
-    And validar mensaje "Se actualizaron los datos."
+    And validar el mensaje "Registro actualizado correctamente"
 
 ######## Generacion Archivo Venta ########
 
@@ -1145,7 +1143,7 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And seleccionar formato excel "Texto"
     And seleccionar archivo a generar "si"
     And click en el boton generar
-    And validar alerta de confirmacion "¿Está seguro de realizar esta operacion?"
+    And validar alerta de confirmacion "¿Está seguro de realizar esta operación?"
     And click en el boton aceptar
     And validar mensaje "Registro generado correctamente"
 
@@ -1459,10 +1457,10 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -1496,10 +1494,10 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -1521,10 +1519,10 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"
@@ -1545,10 +1543,10 @@ Feature: Funcionalidad del TUUA [Rol: Administrador Principal]
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "TODOS"
     And seleccionar estado "ANULADO"

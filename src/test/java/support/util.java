@@ -58,8 +58,6 @@ public class util extends hooks {
         }
         driver.switchTo().window(ventanaPrincipal);
     }
-
-
     public void scrollVertical(WebElement scroll){
         js.executeScript("arguments[0].scrollIntoView(true);", scroll);
     }
@@ -80,12 +78,10 @@ public class util extends hooks {
     public static void evidencias() throws IOException {
         Date fecha = new Date();
             SimpleDateFormat formato = new SimpleDateFormat("ddMMyyy_HHmmssSSS");
-            String path = "C:\\Users\\Nando\\IdeaProjects\\LAP_AutoTest-RF001\\target\\evidencias\\";
+            String path = "C:\\Users\\Nando\\Desktop\\LAPTest_RF001-CPs\\target\\evidencias\\";
             String nombre = formato.format(fecha)+"_evidencia.jpg";
 
             File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(file, new File(path+nombre));
     }
-
-
 }

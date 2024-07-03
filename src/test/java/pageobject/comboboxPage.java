@@ -15,19 +15,19 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbPrivilegioUsuario;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[1]") protected WebElement cmbEstadoUsuarioEditar;
     @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[2]") protected WebElement cmbPrivilegioUsuarioEditar;
-    @FindBy(xpath = "//div/div/span/p-dropdown//div[@role='button']") protected WebElement cmbMotivoTicketMasivo;
+    @FindBy(xpath = "//app-input-select-2[@formcontrolname='fMotivo']//div[@role='button']") protected WebElement cmbMotivoTicketMasivo;
     @FindBy(xpath = "//app-input-select-2[@name='selectedTipoTasa']//p-dropdown//div[@role='button']") protected WebElement cmbTipoOperacionTC;
     @FindBy(xpath = "//app-representante-compania//p-dropdown//div[@role='button']") protected WebElement cmbRepresentanteCompania;
     @FindBy(xpath = "//div/div//span/p-dropdown//div[@role='button']") protected WebElement cmbMoneda;
-    @FindBy(xpath = "(//div/app-input-select//p-dropdown//div[@role='button'])[1]") protected WebElement cmbTipoPasajeroTipoTicket;
+    @FindBy(xpath = "//p-dropdown[@inputid='tipoPasajero']//div[@role='button']") protected WebElement cmbTipoPasajeroTipoTicket;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='listaTipos']//div[@role='button']") protected WebElement cmbTipoCompania;
     @FindBy(xpath = "//div/app-input-select[@inputid='modalidadVenta']//div[@role='button']") protected WebElement cmbTipoModalidad;
     @FindBy(xpath = "//div/app-input-select[@inputid]//div[@role='button']") protected WebElement cmbTipoTicketModalidad;
-    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCampo']//div[@role='button']") protected WebElement cmbMotivos;
+    @FindBy(xpath = "//app-input-select-2[@optionlabel='dscCampo']//p-dropdown//div[@role='button']") protected WebElement cmbMotivos;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaTicketVuelo;
     @FindBy(xpath = "//app-input-select-2[@optionvalue='codCompania']//p-dropdown//div[@role='button']") protected WebElement cmbBpNormalBpMasivo;
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
-    @FindBy(xpath = "(//div/div/span/p-dropdown[@optionvalue]//div[@role='button'])[3]") protected WebElement cmbVueloTicketVueloBpVuelo;
+    @FindBy(xpath = "//app-input-select-2[@label='Vuelo *']//p-dropdown//div[@role='button']") protected WebElement cmbVueloTicketVueloBpVuelo;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button'])[2]") protected WebElement cmbTipoDocumentoRepresentante;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbRol;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[2]") protected WebElement cmbEstado;
@@ -43,9 +43,9 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteDepuracion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoTabla']//p-dropdown//div[@role='button']") protected WebElement cmbTablaDepuracion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codigoEstado']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoDepuracion;
-    @FindBy(xpath = "(//div/app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[2]") protected WebElement cmbTipoTicketModalidaVenta;
-    @FindBy(xpath = "(//app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[2]") protected WebElement cmbTipoVueloTipoTicket;
-    @FindBy(xpath = "(//app-input-select//p-dropdown[@inputid='dropdown']//div[@role='button'])[3]") protected WebElement cmbTipoTransbordoTipoTicket;
+    @FindBy(xpath = "//p-dropdown[@inputid='tipo']//div[@role='button']") protected WebElement cmbTipoTicketModalidaVenta;
+    @FindBy(xpath = "//p-dropdown[@inputid='tipoVuelo']//div[@role='button']") protected WebElement cmbTipoVueloTipoTicket;
+    @FindBy(xpath = "//p-dropdown[@inputid='tipoTrasb']//div[@role='button']") protected WebElement cmbTipoTransbordoTipoTicket;
     @FindBy(xpath = "(//p-table//table/thead/tr/th)[2]") protected WebElement clickInterno;
     @FindBy(xpath = "//p-dropdown[@formcontrolname='fModulo']//div[@role='button']") protected WebElement cmbModuloTransaccionCritica;
 

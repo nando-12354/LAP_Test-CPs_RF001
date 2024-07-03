@@ -37,7 +37,7 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar a la opcion roles
     And click en el boton nuevo
     And ingresar nombre del rol "HHHTEST"
-    And seleccionar rol padre "ADMIN"
+    And seleccionar rol padre "JEFE CAJA"
     And configurar perfil "si"
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
@@ -114,11 +114,11 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresa a la opcion usuarios
     And click en el boton nuevo
-    And ingresar apellidos "Barrios3"
-    And ingresar nombres "Willy3"
-    And ingresar nombre de usuario "wbarrios3"
-    And ingresar contrasena "wbarrios3"
-    And confirmar contrasena "wbarrios3"
+    And ingresar apellidos "EXAMENB"
+    And ingresar nombres "EXAMENB"
+    And ingresar nombre de usuario "examb"
+    And ingresar contrasena "examb"
+    And confirmar contrasena "examb"
     And ingresar privilegio "TOTAL"
     And ingresar rol disponible "si"
     And click en guardar
@@ -134,13 +134,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa a la opcion usuarios
     And click en el boton editar
     And modificar el estado a "VIGENTE"
-    And modificar apellidos "Miranda6"
-    And modificar nombres "Joel6"
-    And modificar nombre de usuario "jmiranda6"
+    And modificar apellidos "Miranda"
+    And modificar nombres "Joel"
+    And modificar nombre de usuario "jmiranda8"
     And modificar fecha vigencia "30/12/2025"
     And seleccionar habilitar campos "si"
-    And ingresar contrasena "jmiranda6"
-    And confirmar contrasena "jmiranda6"
+    And ingresar contrasena "jmiranda8"
+    And confirmar contrasena "jmiranda8"
     And ingresar rol disponible "no"
     And click en el boton guardar
     And validar mensaje exito "Registro actualizado correctamente"

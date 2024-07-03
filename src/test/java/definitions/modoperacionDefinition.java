@@ -228,9 +228,12 @@ public class modoperacionDefinition {
 
     @And("seleccionar codigo moneda {string}")
     public void seleccionarCodigoMoneda(String codigomoneda) {
-        operacion.seleccionarCodigoMonedaA(codigomoneda);
-        operacion.seleccionarCodigoMonedaB(codigomoneda);
-        operacion.seleccionarCodigoMonedaC(codigomoneda);
+        operacion.abrirCodigoMonedaA();
+        operacion.seleccionarOpcion(codigomoneda);
+        operacion.abrirCodigoMonedaB();
+        operacion.seleccionarOpcion(codigomoneda);
+        operacion.abrirCodigoMonedaC();
+        operacion.seleccionarOpcion(codigomoneda);
     }
 
     @And("seleccionar precio tickets programada")
@@ -629,7 +632,7 @@ public class modoperacionDefinition {
 
     @And("seleccionar turno a cerrar {string}")
     public void seleccionarTurnoACerrar(String cerrarturno) {
-        operacion.seleccionarTicketContingenciaA(cerrarturno);
+        operacion.seleccionarTurnoActivoA(cerrarturno);
     }
 
     @And("click en el boton cerrar turno")
@@ -786,5 +789,10 @@ public class modoperacionDefinition {
         operacion.colapsarCheckboxOpcionAA();
         operacion.colapsarCheckboxOpcionAA();
         operacion.colapsarCheckboxOpcionAA();
+    }
+
+    @And("ingresar motivo de anulacion {string}")
+    public void ingresarMotivoDeAnulacion(String motivobcbp) {
+        operacion.ingresarMotivoAnulacionBcbp(motivobcbp);
     }
 }

@@ -62,7 +62,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Fin de vigencia"
     And validar columna "Usuario modificación"
 
-  ### Solucionado
+
   Scenario: CPF070 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -103,6 +103,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
     And click en el boton aceptar
+
 
   Scenario: CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
     Given abre la ruta del aplicativo web
@@ -178,8 +179,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion gestion precio ticket
     And click en el boton nuevo
     And seleccionar fecha actual
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
@@ -200,8 +200,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha programada
     And ingresar fecha a programar "01/12/2024"
     And ingresar hora a programar "000000"
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "3/4/5"
     And click en el boton guardar
@@ -512,7 +511,7 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion anulacion
     And ingresar a la opcion anulacion de ticket
     And filtrar estado de turno "Cerrado"
-    And filtrar el ticket "6000600318381058"
+    And filtrar el ticket "6000600318381657"
     And filtrar tipo ticket "Todos"
     And click en el boton buscar
     And seleccionar el ticket a anular "si"
@@ -580,7 +579,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar fecha hasta "02/01/2024"
     And click en el boton buscar
     And seleccionar el bcbp a anular "si"
-    And ingresar el motivo de anulacion "Testeo"
+    And ingresar motivo de anulacion "Testeo"
     And click en el boton anular
     And validar alerta de confirmacion "¿Está seguro de Anular los BCBPs Seleccionados?"
     And click en el boton aceptar
@@ -606,7 +605,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación con cierre de turno?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 
@@ -627,7 +626,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar representante "Octavio Villafana"
     And click en el boton guardar
     And validar aviso "¿Esta seguro de realizar esta operación sin cierre de turno?"
-    And click en el boton aceptar
+    And click en boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
 ######## EXTENSION FECHA VIGENCIA TICKETS ########
@@ -727,7 +726,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
-    And validar mensaje "Se actualizaron los datos."
+    And validar el mensaje "Registro actualizado correctamente"
 
 
   Scenario: CPF102 - Gestion de molinete/Activar estado de gestion de molinete
@@ -742,7 +741,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton guardar
     And validar alerta "¿Está seguro de realizar esta acción?"
     And click en el boton aceptar
-    And validar mensaje "Se actualizaron los datos."
+    And validar el mensaje "Registro actualizado correctamente"
 
 ######## GENERACION ARCHIVO VENTA ########
 
@@ -771,7 +770,7 @@ Feature: Funcionalidad del modulo Operacion
     And seleccionar formato excel "Texto"
     And seleccionar archivo a generar "si"
     And click en el boton generar
-    And validar alerta de confirmacion "¿Está seguro de realizar esta operacion?"
+    And validar alerta de confirmacion "¿Está seguro de realizar esta operación?"
     And click en el boton aceptar
     And validar mensaje "Registro generado correctamente"
 
@@ -830,7 +829,10 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton iniciar sesion
     And ingresar al modulo operacion
     And ingresar a la opcion generacion archivo seae
-    And ingresar fecha "Enero-2024"
+    And ingresar fecha "Diciembre-2023"
     And seleccionar tipo documento "Boarding"
     And seleccionar archivo a generar "si"
     And click en el boton generar
+    And validar alerta de confirmacion "¿Está seguro de realizar esta operación?"
+    And click en el boton aceptar
+    And validar mensaje "Registro generado correctamente"

@@ -11,8 +11,7 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And seleccionar fecha programada
     And ingresar fecha a programar "01/12/2024"
     And ingresar hora a programar "000000"
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta en negativo "-3/-4/-5"
 
@@ -28,8 +27,7 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And seleccionar fecha programada
     And ingresar fecha a programar "01/12/2024"
     And ingresar hora a programar "000000"
-    And seleccionar monedas "si"
-    And seleccionar codigo moneda "USD"
+    And seleccionar codigo moneda "Dólar Estadounidense"
     And seleccionar precio de venta "si"
     And ingresar precio de venta "5/3/2"
     And click en el boton guardar
@@ -398,7 +396,7 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha desde "01/01/2024"
     And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
@@ -441,7 +439,7 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha desde "01/01/2024"
     And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
@@ -457,7 +455,7 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por fecha
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha desde "01/01/2024"
     And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
@@ -505,17 +503,17 @@ Feature: Funcionalidad del TUUA [Rol: TI Admin]
     And validar el mensaje de error "La búsqueda no retorna resultado"
 
 
-  Scenario: TI(LAP)/CPF030 - Tickets-bp por fecha/Buscar tickets/BP por fecha
+  Scenario: TI(LAP)/CPF030 - Tickets-bp por fecha/Buscar tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp por fecha
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "00:00:00"
+    And escribir hora hasta "23:00:00"
     And seleccionar tipo de documento "Ticket"
     And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
     And seleccionar estado "ANULADO"

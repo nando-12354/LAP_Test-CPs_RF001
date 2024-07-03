@@ -25,7 +25,7 @@ public class mensajesPage extends util {
         } catch (TimeoutException | NoSuchElementException e) {
             // El mensaje no fue encontrado en el tiempo especificado
         }
-        Assert.assertTrue("El mensaje ingresado " + mensaje + " no es igual al del TUUA.", mensajeValido);
+        Assert.assertTrue("El mensaje " + mensaje + " no es igual o no se encontró.", mensajeValido);
     }
     public void validarNotificacionExito(String notificacion) {
         boolean notificacionValido = false;
@@ -72,7 +72,7 @@ public class mensajesPage extends util {
     }
     public void validarMensajeRojo(String mensajeError) {
         boolean mensajeValido = false;
-        String xpath = "//div//span[@class='error' and normalize-space(text())='" + mensajeError.trim() + "']";
+        String xpath = "//small[@class='mensaje-error-flotante']/span[normalize-space(text())='" + mensajeError.trim() + "']";
 
         try {
             WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));

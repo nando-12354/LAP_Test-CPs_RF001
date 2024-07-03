@@ -494,7 +494,7 @@ Feature: Funcionalidad del modulo Configuracion General
     And ingresar al modulo configuracion general
     And ingresar a la opcion lista de campos
     And click en el boton nuevo
-    And ingresar nombre del campo "Test103"
+    And ingresar nombre del campo "Test106"
     And ingresar codigo del campo asociado "996"
     And ingresar codigo "118"
     And ingresar descripcion "Test103"

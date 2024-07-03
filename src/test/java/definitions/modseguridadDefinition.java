@@ -211,6 +211,17 @@ public class modseguridadDefinition {
 
     @And("configurar perfil {string}")
     public void configurarPerfil(String perfil) {
+        seguridad.clickDesplegarPerfilA();
+        seguridad.clickDesplegarPerfilB();
+        seguridad.clickDesplegarPerfilC();
+        seguridad.clickDesplegarPerfilD();
+        seguridad.clickDesplegarPerfilE();
+        seguridad.clickDesplegarPerfilF();
+        seguridad.clickDesplegarPerfilG();
+        seguridad.clickDesplegarPerfilH();
+        seguridad.clickDesplegarPerfilI();
+        seguridad.clickDesplegarPerfilJ();
+        seguridad.clickDesplegarPerfilK();
         seguridad.seleccionarCheckPerfilA(perfil);
         seguridad.seleccionarCheckPerfilB(perfil);
         seguridad.seleccionarCheckPerfilC(perfil);
@@ -222,7 +233,6 @@ public class modseguridadDefinition {
         seguridad.seleccionarCheckPerfilI(perfil);
         seguridad.seleccionarCheckPerfilJ(perfil);
         seguridad.seleccionarCheckPerfilK(perfil);
-        seguridad.seleccionarCheckPerfilL(perfil);
     }
 
     @And("validar notificacion exito {string}")

@@ -29,12 +29,13 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "(//div//input[@id='textInput'])[1]") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[2]") protected WebElement txtAsiento;
     @FindBy(xpath = "(//div//input[@id='textInput'])[3]") protected WebElement txtPersona;
-    @FindBy(xpath = "//input[@inputid='nroTicketDesde']") protected WebElement txtTicketDesde;
-    @FindBy(xpath = "//input[@inputid='nroTicketHasta']") protected WebElement txtTicketHasta;
-    @FindBy(xpath = "//div//p-calendar[@formcontrolname='ticketDesde']//input") protected WebElement txtFechaDesde;
-    @FindBy(xpath = "//div//p-calendar[@formcontrolname='ticketHasta']//input") protected WebElement txtFechaHasta;
-    @FindBy(xpath = "//div//p-calendar[@id='fechaDesde']//input") protected WebElement txtFechaDesdeBpFecha;
-    @FindBy(xpath = "//div//p-calendar[@id='fechaHasta']//input") protected WebElement txtFechaHastaBpFecha;
+    @FindBy(xpath = "//div//input[@inputid='vuelo']") protected WebElement inputVueloBpSalida;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='NroTicketDesde']//input") protected WebElement txtTicketDesde;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='NroTicketHasta']//input") protected WebElement txtTicketHasta;
+    @FindBy(xpath = "//app-input-date[@formcontrolname='ticketDesde']//p-calendar//input") protected WebElement txtFechaDesde;
+    @FindBy(xpath = "//app-input-date[@formcontrolname='ticketHasta']//p-calendar//input") protected WebElement txtFechaHasta;
+    @FindBy(xpath = "//app-input-date[@formcontrolname='fechaDesde']//p-calendar//input") protected WebElement txtFechaDesdeBpFecha;
+    @FindBy(xpath = "//app-input-date[@formcontrolname='fechaHasta']//p-calendar//input") protected WebElement txtFechaHastaBpFecha;
     @FindBy(xpath = "//table/tbody/tr/td/p-checkbox[1]") protected WebElement checkTicket;
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[2]") protected WebElement checkBoarding;
     @FindBy(xpath = "//table/tbody/tr/td/span[text()='31']") protected WebElement clickDiaCalendario;
@@ -48,6 +49,7 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[18]") protected WebElement checkBoardingI;
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[20]") protected WebElement checkBoardingJ;
     @FindBy(xpath = "//th[contains(.,'Fecha Creación')]") protected WebElement clickCabeceraGrilla;
+    @FindBy(xpath = "//table/tbody/tr/td/span[text()='18']") protected WebElement clickDiaCalendarioBpSalida;
 
     public modrehabilitacionPage() {
         PageFactory.initElements(slowDriver, this);
@@ -140,7 +142,6 @@ public class modrehabilitacionPage extends util {
     public void ingresarFechaVuelo(String fecha){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
         txtFechaVuelo.sendKeys(fecha);
-        txtFechaVuelo.sendKeys(Keys.TAB);
     }
     public void ingresarLaFechaVuelo(String fecha){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));
@@ -183,6 +184,9 @@ public class modrehabilitacionPage extends util {
     public void ingresarNumeroVuelo(String vuelo){
         txtNumeroVuelo.sendKeys(vuelo);
     }
+    public void ingresarNumeroVueloBpSalida(String vuelosalida){
+        inputVueloBpSalida.sendKeys(vuelosalida);
+    }
     public void seleccionarTicket(String selecticket){
         wait.until(ExpectedConditions.visibilityOf(checkTicket));
         if (selecticket.toLowerCase().equals("si")) {
@@ -215,6 +219,9 @@ public class modrehabilitacionPage extends util {
     }
     public void darClickCalendario(){
         clickDiaCalendario.click();
+    }
+    public void darClickCalendarioBpSalida(){
+        clickDiaCalendarioBpSalida.click();
     }
     public void seleccionarBoardingB(String selectb){
         wait.until(ExpectedConditions.visibilityOf(checkBoardingB));
