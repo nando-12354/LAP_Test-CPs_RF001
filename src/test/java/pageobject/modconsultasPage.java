@@ -1,8 +1,7 @@
 package pageobject;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.junit.Assert;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,9 +29,9 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/p-radiobutton[@value='NumeroTicket']") protected WebElement rdNumeroTicket;
     @FindBy(xpath = "//div/p-radiobutton[@value='RangoTicket']") protected WebElement rdRangoTicket;
     @FindBy(xpath = "//div/p-radiobutton[@value='Boarding']") protected WebElement rdBoarding;
-    @FindBy(xpath = "//app-input-text-2[@label='Número de Ticket']//input") protected WebElement inputNumeroTicket;
-    @FindBy(xpath = "//app-input-text-2[@label='Desde']//input") protected WebElement inputNumeroTicketDesde;
-    @FindBy(xpath = "//app-input-text-2[@label='Hasta']//input") protected WebElement inputNumeroTicketHasta;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='fNumTicket']//input") protected WebElement inputNumeroTicket;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='fRangoDesde']//input") protected WebElement inputNumeroTicketDesde;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='fRangoHasta']//input") protected WebElement inputNumeroTicketHasta;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button']") protected WebElement cmbTipoDocumento;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='company']//div[@role='button']") protected WebElement cmbCompania;
     @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='ticket']//div[@role='button']") protected WebElement cmbTipoTicket;
@@ -45,7 +44,7 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div//p-calendar[@inputid='calendar']//input") protected WebElement txtFechaProceso;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form1']") protected WebElement rdCompra;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form2']") protected WebElement rdVenta;
-    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[6]") protected WebElement cmbTipoTransbordo;
+    @FindBy(xpath = "(//div//app-input-select-2[@optionlabel='descripcionCampo']//div[@role='button'])[5]") protected WebElement cmbTipoTransbordo;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fOperacion']//p-dropdown//div[@role='button']") protected WebElement cmbOperacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTabla']//p-dropdown//div[@role='button']") protected WebElement cmbTabla;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fModulo']//p-dropdown//div[@role='button']") protected WebElement cmbModulo;
@@ -75,6 +74,7 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "//app-input-date[@formcontrolname='fchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
     @FindBy(xpath = "//div//div//p-radiobutton[@name='rango']") protected WebElement rdResumenTicketBpAnulado;
+    @FindBy(xpath = "(//span[contains(.,'Usuarios')])[2]") protected WebElement opUsuarioConsultas;
     public modconsultasPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -451,5 +451,10 @@ public class modconsultasPage extends util {
     public void seleccionarResumenTicketBpAnulados(){
         wait.until(ExpectedConditions.visibilityOf(rdResumenTicketBpAnulado));
         rdResumenTicketBpAnulado.click();
+    }
+    public void validarOpcionUsuario(String opusuario){
+        wait.until(ExpectedConditions.visibilityOf(opUsuarioConsultas));
+        String valor = opUsuarioConsultas.getText();
+        Assert.assertEquals(opusuario, valor);
     }
 }

@@ -580,4 +580,9 @@ public class modconsultasDefinition {
     public void clickEnElBotonAtras() {
         boton.clickBotonAtras();
     }
+
+    @And("visualizar opcion {string}")
+    public void visualizarOpcion(String usuarios) {
+        consultas.validarOpcionUsuario(usuarios);
+    }
 }

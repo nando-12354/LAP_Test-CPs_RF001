@@ -73,7 +73,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton nuevo
     And seleccionar fecha actual
     And seleccionar tasas de cambio compra "si"
-    And ingresar tasa de cambio compra "3.1/3.9/2.5/6.2/3.3"
+    And ingresar tasa de cambio compra "3.6/3.10/2.8/6.9/3.1"
     And seleccionar tasas de cambio venta "si"
     And ingresar tasa de cambio venta "1.2/2.2/3.2/1.3/2.5"
     And click en el boton guardar

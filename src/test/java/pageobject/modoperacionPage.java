@@ -1,118 +1,61 @@
 package pageobject;
 
-import io.cucumber.java.de.Wenn;
-import io.cucumber.java.ro.Si;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import support.util;
 
 public class modoperacionPage extends util {
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/tasa-cambio']")
-    protected WebElement optasaCambio;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/precio-ticket']")
-    protected WebElement opprecioTicket;
-    @FindBy(xpath = "(//app-sidenav/div/div//div/ul/li/a/span)[12]")
-    WebElement opgestionTicketContingencia;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/preemision-ticket-contingencia']")
-    protected WebElement opsubpreticketContingencia;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/registro-ticket-contingencia']")
-    protected WebElement opsubticketContingencia;
-    @FindBy(xpath = "(//span[contains(.,'Extorno')])[1]")
-    WebElement opExtorno;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-operaciones']")
-    protected WebElement opsubextornoOperacion;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-tickets']")
-    protected WebElement opsubextornoTicket;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-rehabilitacion']")
-    protected WebElement opsubextornoRehabilitacion;
-    @FindBy(xpath = "(//span[contains(.,'Anulación')])[1]")
-    WebElement opAnulacion;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/anulacion-ticket']")
-    protected WebElement opsubanulacionTicket;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/anulacion-bcbp']")
-    protected WebElement opsubanulacionBcbp;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/venta-masiva-credito']")
-    protected WebElement opventaMasiva;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extension-fecha-vigencia-ticket']")
-    protected WebElement opextensionFecha;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/gestion-molinete']")
-    protected WebElement opgestionMolinete;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/generacion-archivo-venta']")
-    protected WebElement opgeneracionArchivo;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/cierre-turno']")
-    protected WebElement opcerrarTurno;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/generacion-comprobante-seae']")
-    protected WebElement opgeneracionSeae;
-    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton1']")
-    protected WebElement rdTCactual;
-    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton2']")
-    protected WebElement rdTCprogramada;
-    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton3']")
-    protected WebElement rdTChistorica;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[1]")
-    protected WebElement checkCompraA;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[2]")
-    protected WebElement checkVentaA;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[3]")
-    protected WebElement checkCompraB;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[4]")
-    protected WebElement checkVentaB;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[5]")
-    protected WebElement checkCompraC;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[6]")
-    protected WebElement checkVentaC;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[7]")
-    protected WebElement checkCompraD;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[8]")
-    protected WebElement checkVentaD;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[9]")
-    protected WebElement checkCompraE;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[10]")
-    protected WebElement checkVentaE;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[1]")
-    protected WebElement inputValorA;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[2]")
-    protected WebElement inputValorB;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[3]")
-    protected WebElement inputValorC;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[4]")
-    protected WebElement inputValorD;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[5]")
-    protected WebElement inputValorE;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[6]")
-    protected WebElement inputValorF;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[7]")
-    protected WebElement inputValorG;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[8]")
-    protected WebElement inputValorH;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[9]")
-    protected WebElement inputValorI;
-    @FindBy(xpath = "(//table//tbody/tr/td/input)[10]")
-    protected WebElement inputValorJ;
-    @FindBy(xpath = "//div/app-input-date[@label='Fecha Programada']//p-calendar//input")
-    protected WebElement inputFechaProgramada;
-    @FindBy(xpath = "//div/app-input-date[@label='Hora Programada']/span//input")
-    protected WebElement inputHoraProgramada;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[1]")
-    protected WebElement btnEliminarTCprogramadaA;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[2]")
-    protected WebElement btnEliminarTCprogramadaB;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[3]")
-    protected WebElement btnEliminarTCprogramadaC;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[4]")
-    protected WebElement btnEliminarTCprogramadaD;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[5]")
-    protected WebElement btnEliminarTCprogramadaE;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]")
-    protected WebElement txtFechaDesdeTC;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]")
-    protected WebElement txtFechaHastaTC;
-    @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]")
-    protected WebElement checkMonedaA;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/tasa-cambio']") protected WebElement optasaCambio;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/precio-ticket']") protected WebElement opprecioTicket;
+    @FindBy(xpath = "(//app-sidenav/div/div//div/ul/li/a/span)[12]") protected WebElement opgestionTicketContingencia;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/preemision-ticket-contingencia']") protected WebElement opsubpreticketContingencia;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/registro-ticket-contingencia']") protected WebElement opsubticketContingencia;
+    @FindBy(xpath = "(//span[contains(.,'Extorno')])[1]") protected WebElement opExtorno;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-operaciones']") protected WebElement opsubextornoOperacion;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-tickets']") protected WebElement opsubextornoTicket;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extorno-rehabilitacion']") protected WebElement opsubextornoRehabilitacion;
+    @FindBy(xpath = "(//span[contains(.,'Anulación')])[1]") protected WebElement opAnulacion;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/anulacion-ticket']") protected WebElement opsubanulacionTicket;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/anulacion-bcbp']") protected WebElement opsubanulacionBcbp;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/venta-masiva-credito']") protected WebElement opventaMasiva;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/extension-fecha-vigencia-ticket']") protected WebElement opextensionFecha;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/gestion-molinete']") protected WebElement opgestionMolinete;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/generacion-archivo-venta']") protected WebElement opgeneracionArchivo;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/cierre-turno']") protected WebElement opcerrarTurno;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/operacion/generacion-comprobante-seae']") protected WebElement opgeneracionSeae;
+    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton1']") protected WebElement rdTCactual;
+    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton2']") protected WebElement rdTCprogramada;
+    @FindBy(xpath = "//div//div//p-radiobutton[@inputid='tasaCambioRadioButton3']") protected WebElement rdTChistorica;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[1]") protected WebElement checkCompraA;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[2]") protected WebElement checkVentaA;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[3]") protected WebElement checkCompraB;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[4]") protected WebElement checkVentaB;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[5]") protected WebElement checkCompraC;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[6]") protected WebElement checkVentaC;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[7]") protected WebElement checkCompraD;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[8]") protected WebElement checkVentaD;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[9]") protected WebElement checkCompraE;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[10]") protected WebElement checkVentaE;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[1]") protected WebElement inputValorA;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[2]") protected WebElement inputValorB;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[3]") protected WebElement inputValorC;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[4]") protected WebElement inputValorD;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[5]") protected WebElement inputValorE;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[6]") protected WebElement inputValorF;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[7]") protected WebElement inputValorG;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[8]") protected WebElement inputValorH;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[9]") protected WebElement inputValorI;
+    @FindBy(xpath = "(//table//tbody/tr/td/input)[10]") protected WebElement inputValorJ;
+    @FindBy(xpath = "//div/app-input-date[@label='Hora Programada']/span//input") protected WebElement inputHoraProgramada;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarTCprogramadaA;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[2]") protected WebElement btnEliminarTCprogramadaB;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[3]") protected WebElement btnEliminarTCprogramadaC;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[4]") protected WebElement btnEliminarTCprogramadaD;
+    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[5]") protected WebElement btnEliminarTCprogramadaE;
+    @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]") protected WebElement checkMonedaA;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]") protected WebElement checkMonedaVentaA;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[3]") protected WebElement checkMonedaB;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[2]") protected WebElement checkMonedaVentaB;
@@ -124,27 +67,17 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[1]") protected WebElement cmbCodigoMonedaA;
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[2]") protected WebElement cmbCodigoMonedaB;
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[3]") protected WebElement cmbCodigoMonedaC;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]")
-    protected WebElement btnEliminarPTProgramadaA;
-    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[1]")
-    protected WebElement cmbTipoVuelo;
-    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[2]")
-    protected WebElement cmbTipoTransbordo;
-    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[3]")
-    protected WebElement cmbTipoPasajero;
-    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[4]")
-    protected WebElement cmbPrecioTicket;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminarPTProgramadaA;
+    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[1]") protected WebElement cmbTipoVuelo;
+    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[2]") protected WebElement cmbTipoTransbordo;
+    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[3]") protected WebElement cmbTipoPasajero;
+    @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[4]") protected WebElement cmbPrecioTicket;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='representante']") protected WebElement cmbRepresentanteVentaMasiva;
-    @FindBy(xpath = "//button[contains(.,'Generar')]")
-    WebElement btnGenerar;
-    @FindBy(xpath = "//input[@id='cantidad']")
-    WebElement inputCantidad;
-    @FindBy(xpath = "//h3[contains(.,'Datos de Turno')]")
-    WebElement lblDatosTurno;
-    @FindBy(xpath = "//h3[contains(.,'Filtro consulta')]")
-    WebElement lblFiltroConsulta;
-    @FindBy(xpath = "//h3[contains(.,'Datos de venta')]")
-    WebElement lblDatosVenta;
+    @FindBy(xpath = "//button[contains(.,'Generar')]") protected WebElement btnGenerar;
+    @FindBy(xpath = "//input[@id='cantidad']") protected WebElement inputCantidad;
+    @FindBy(xpath = "//h3[contains(.,'Datos de Turno')]") protected WebElement lblDatosTurno;
+    @FindBy(xpath = "//h3[contains(.,'Filtro consulta')]") protected WebElement lblFiltroConsulta;
+    @FindBy(xpath = "//h3[contains(.,'Datos de venta')]") protected WebElement lblDatosVenta;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@optionlabel='usuario']//div[@role='button']") protected WebElement cmbFiltroUsuario;
     @FindBy(xpath = "//form/div//app-input-text-2[@formcontrolname='fNumIni']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//form/div//app-input-text-2[@formcontrolname='fNumFin']//input") protected WebElement inputTicketHasta;
@@ -192,22 +125,19 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "(//li[@role='treeitem']/div/div/div[@role='checkbox'])[18]") protected WebElement checkArchivoVentaA;
     @FindBy(xpath = "(//li[@role='treeitem']/div/div/div[@role='checkbox'])[19]") protected WebElement checkArchivoVentaB;
     @FindBy(xpath = "(//li[@role='treeitem']/div/div/div[@role='checkbox'])[20]") protected WebElement checkArchivoVentaC;
-    @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement txtFechaArchivoSeae;
     @FindBy(xpath = "//p-dropdown[@inputid='selectInput']//div[@role='button']") protected WebElement cmbTipoDocumentoArchivoSeae;
-    @FindBy(xpath = "//button[contains(.,'Cerrar turno')]") WebElement btnCerrarTurno;
     @FindBy(xpath = "(//p-table//table/tbody/tr/td/p-checkbox//div[@class='p-checkbox-box'])[1]") WebElement checkTicketExtension;
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Desde']/span//input") WebElement inputHoraEmisionDesde;
     @FindBy(xpath = "//div/app-input-date[@placeholderlabel='Hora Emisión Hasta']/span//input") WebElement inputHoraEmisionHasta;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fCodTicket']/span/input") WebElement inputTicketAnulacion;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]")
-    protected WebElement inputFechadesde;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]")
-    protected WebElement inputFechahasta;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement inputFechadesde;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]") protected WebElement inputFechahasta;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='formato']//p-dropdown//div[@role='button']") protected WebElement clickFormato;
     @FindBy(xpath = "//h3[text()='Archivo a Generar']") protected WebElement lblArchivo;
     @FindBy(xpath = "//form//app-input-date[@formcontrolname='anioMes']//p-calendar//input") protected WebElement clickFechaArchivoSeae;
     @FindBy(xpath = "(//div/span[@class='pi pi-angle-down'])[1]") protected WebElement colapsarCheckboxA;
     @FindBy(xpath = "(//div/span[@class='pi pi-angle-down rotated'])[1]") protected WebElement colapsarCheckboxAA;
+
     public modoperacionPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -498,13 +428,6 @@ public class modoperacionPage extends util {
         inputValorJ.sendKeys(tasasSegments[4]);
     }
 
-    public void ingresarFechaProgramada(String fechaprogramada) {
-        wait.until(ExpectedConditions.visibilityOf(inputFechaProgramada));
-        limpiarCampo(inputFechaProgramada);
-        inputFechaProgramada.sendKeys(fechaprogramada);
-        inputFechaProgramada.sendKeys(Keys.TAB);
-    }
-
     public void ingresarHoraPagramada(String horaprogramada) {
         inputHoraProgramada.sendKeys(horaprogramada);
     }
@@ -527,20 +450,6 @@ public class modoperacionPage extends util {
 
     public void clickBotonEliminarTCprogramadaE() {
         btnEliminarTCprogramadaE.click();
-    }
-
-    public void seleccionarFechaDesde(String fechadesde) {
-        wait.until(ExpectedConditions.visibilityOf(txtFechaDesdeTC));
-        limpiarCampo(txtFechaDesdeTC);
-        txtFechaDesdeTC.sendKeys(fechadesde);
-        txtFechaDesdeTC.sendKeys(Keys.TAB);
-    }
-
-    public void seleccionarFechaHasta(String fechahasta) {
-        wait.until(ExpectedConditions.visibilityOf(txtFechaHastaTC));
-        limpiarCampo(txtFechaHastaTC);
-        txtFechaHastaTC.sendKeys(fechahasta);
-        txtFechaHastaTC.sendKeys(Keys.TAB);
     }
 
     public void seleccionarMonedaA(String monedaa) {
@@ -999,18 +908,9 @@ public class modoperacionPage extends util {
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkArchivoVentaC.isSelected());
         }
     }
-    public void ingresarFechaArchivoSeae(String fecha){
-        wait.until(ExpectedConditions.visibilityOf(txtFechaArchivoSeae));
-        limpiarCampo(txtFechaArchivoSeae);
-       txtFechaArchivoSeae.sendKeys(fecha);
-    }
     public void abrirComboboxTipoDocumentoArchivoSeae(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumentoArchivoSeae));
         cmbTipoDocumentoArchivoSeae.click();
-    }
-    public void clickBotonCerrarTurno(){
-        wait.until(ExpectedConditions.visibilityOf(btnCerrarTurno));
-        btnCerrarTurno.click();
     }
     public void ingresarTicketExtension(String ticketextension){
         wait.until(ExpectedConditions.visibilityOf(inputTicketExtension));

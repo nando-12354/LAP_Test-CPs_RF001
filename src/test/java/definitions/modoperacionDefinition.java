@@ -14,6 +14,7 @@ public class modoperacionDefinition {
     botonPage boton;
     modoperacionPage operacion;
     util ventana;
+    calendarioPage calendario;
 
     public modoperacionDefinition() {
         menu = new menuPage();
@@ -25,6 +26,7 @@ public class modoperacionDefinition {
         boton = new botonPage();
         operacion = new modoperacionPage();
         ventana = new util();
+        calendario = new calendarioPage();
     }
 
     @And("ingresar al modulo operacion")
@@ -147,8 +149,7 @@ public class modoperacionDefinition {
 
     @And("ingresar fecha a programar {string}")
     public void ingresarFechaAProgramar(String fechaprogramada) {
-        operacion.ingresarFechaProgramada(fechaprogramada);
-
+        calendario.seleccionarFechaDesde(fechaprogramada);
     }
 
     @And("ingresar hora a programar {string}")
@@ -178,13 +179,13 @@ public class modoperacionDefinition {
     }
 
     @And("seleccionar fecha desde {string}")
-    public void seleccionarFechaDesde(String fechadesde) {
-        operacion.seleccionarFechaDesde(fechadesde);
+    public void seleccionarFechaDesde(String desde) {
+        calendario.seleccionarFechaDesde(desde);
     }
 
     @And("seleccionar fecha hasta {string}")
-    public void seleccionarFechaHasta(String fechahasta) {
-        operacion.seleccionarFechaHasta(fechahasta);
+    public void seleccionarFechaHasta(String hasta) {
+        calendario.seleccionarFechaHasta(hasta);
     }
 
     @And("ingresar a la opcion gestion precio ticket")
@@ -616,7 +617,7 @@ public class modoperacionDefinition {
 
     @And("ingresar fecha {string}")
     public void ingresarFecha(String fecha) {
-        operacion.ingresarFechaArchivoSeae(fecha);
+        calendario.seleccionarFechaDesde(fecha);
     }
 
     @And("seleccionar tipo documento {string}")
@@ -760,11 +761,6 @@ public class modoperacionDefinition {
     @And("ingresar precio de venta en negativo {string}")
     public void ingresarPrecioDeVentaEnNegativo(String precionegativo) {
         operacion.ingresarPrecioVenta(precionegativo);
-    }
-
-    @And("validar mensaje rojo {string}")
-    public void validarMensajeRojo(String mensajeerror) {
-
     }
 
     @And("click en el boton cerrar turno sin seleccionar un turno previamente")

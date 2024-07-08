@@ -6,7 +6,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
-    And visualizar la opcion usuarios
+    And visualizar opcion "Usuarios"
     And visualizar la opcion "Compañías"
     And visualizar la opcion "Turnos"
     And visualizar la opcion "Detalle de Ticket / BP"
@@ -217,7 +217,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar el numero de ticket hasta "1000602350183999"
     And click en el boton buscar
     And seleccionar por boarding
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar aerolinea "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "4A4001"
     And ingresar asiento "016A"
@@ -262,7 +262,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar al modulo consultas
     And ingresar a la opcion detalle de ticket bp
     And seleccionar por boarding
-    And seleccionar compania "AERO TRANSPORTE  S. A."
+    And seleccionar aerolinea "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "4A4001"
     And ingresar asiento "016A"
@@ -510,10 +510,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/05/2020"
-    And seleccionar la fecha hasta "31/05/2020"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar el tipo de documento "Ticket"
     And seleccionar el tipo vuelo "<Todos>"
     And seleccionar estado "<Todos>"
@@ -550,10 +550,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/05/2020"
-    And seleccionar la fecha hasta "31/05/2020"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar el tipo de documento "Ticket"
     And seleccionar el tipo vuelo "<Todos>"
     And seleccionar estado "<Todos>"
@@ -573,10 +573,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/05/2020"
-    And seleccionar la fecha hasta "31/05/2020"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/05/2020"
+    And seleccionar fecha hasta "31/05/2020"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar el tipo de documento "Ticket"
     And seleccionar el tipo vuelo "<Todos>"
     And seleccionar estado "<Todos>"
@@ -595,10 +595,10 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion tickets bp usados
-    And seleccionar la fecha desde "01/01/2024"
-    And seleccionar la fecha hasta "02/01/2024"
-    And escribir la hora desde "00:00:00"
-    And escribir la hora hasta "23:00:00"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
+    And escribir hora desde "000000"
+    And escribir hora hasta "230000"
     And seleccionar el tipo de documento "<Todos>"
     And seleccionar el tipo vuelo "<Todos>"
     And seleccionar estado "USADO"

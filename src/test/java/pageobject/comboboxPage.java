@@ -33,10 +33,10 @@ public class comboboxPage extends util {
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[2]") protected WebElement cmbEstado;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[3]") protected WebElement cmbGrupo;
     @FindBy(xpath = "//p-dropdown[@optionvalue='codCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpFecha;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[3]") protected WebElement cmbTipoPasajeroTicketBpUsado;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='dscCampo']//div[@role='button'])[4]") protected WebElement cmbTipoVueloTicketBpUsado;
-    @FindBy(xpath = "//p-dropdown[@optionlabel='dscCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpUsado;
+    @FindBy(xpath = "(//app-input-select-2[@optionlabel='descripcionCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
+    @FindBy(xpath = "(//div//app-input-select-2[@optionlabel='descripcionCampo']//div[@role='button'])[3]") protected WebElement cmbTipoPasajeroTicketBpUsado;
+    @FindBy(xpath = "(//app-input-select-2[@optionlabel='descripcionCampo']//div[@role='button'])[4]") protected WebElement cmbTipoVueloTicketBpUsado;
+    @FindBy(xpath = "//app-input-select-2[@optionlabel='descripcionCompania']//div[@role='button']") protected WebElement cmbCompaniaTicketBpUsado;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fEstadoSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoSincronizacion;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fUsuario']//p-dropdown//div[@role='button']") protected WebElement cmbAuditoriaUsuario;
