@@ -14,14 +14,23 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.Set;
 
+/**
+ * Clase util que contiene metodos de utilidad para el manejo de elementos web
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 2024-07-12
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestión y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 public class util extends hooks {
     public static WebDriverWait wait;
     public static JavascriptExecutor js;
-    public static SlowWebDriver slowDriver;
+    public static velocidad slowDriver;
     private Alert dialogo;
 
     public util() {
-        slowDriver = new SlowWebDriver(driver);
+        slowDriver = new velocidad(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         js = (JavascriptExecutor) driver;
     }

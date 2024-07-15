@@ -5,21 +5,37 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.List;
 import java.util.Set;
 
-public class SlowWebDriver extends RemoteWebDriver {
+/**
+ * Clase que permite reducir la velocidad de ejecución de las pruebas
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 12-07-2024
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestión y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
+public class velocidad extends RemoteWebDriver {
     private final WebDriver driver;
-    private long delay = 400;
+    private long demora = 400;
 
-    public SlowWebDriver(WebDriver driver) {
+    public velocidad(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void setDelay(long delay) {
-        this.delay = delay;
+    /**
+     * Método que establece la demora
+     * @param demora Tiempo de demora
+     */
+    public void establecerDemora(long demora) {
+        this.demora = demora;
     }
 
-    private void slowDown() {
+    /**
+     * Método que reduce la velocidad
+     */
+    private void reducirVelocidad() {
         try {
-            Thread.sleep(delay);
+            Thread.sleep(demora);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -27,7 +43,7 @@ public class SlowWebDriver extends RemoteWebDriver {
 
     @Override
     public void get(String url) {
-        slowDown();
+        reducirVelocidad();
         driver.get(url);
     }
 
@@ -43,13 +59,13 @@ public class SlowWebDriver extends RemoteWebDriver {
 
     @Override
     public List<WebElement> findElements(By by) {
-        slowDown();
+        reducirVelocidad();
         return driver.findElements(by);
     }
 
     @Override
     public WebElement findElement(By by) {
-        slowDown();
+        reducirVelocidad();
         return driver.findElement(by);
     }
 

@@ -4,6 +4,15 @@ import io.cucumber.java.en.And;
 import pageobject.*;
 import support.util;
 
+/**
+ * Clase que contiene los pasos de Cucumber para el modulo de operacion
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 2024-07-12
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestion y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 public class modoperacionDefinition {
     menuPage menu;
     titulosPage titulos;

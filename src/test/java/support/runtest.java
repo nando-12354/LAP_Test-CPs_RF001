@@ -6,24 +6,24 @@ import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-
+/**
+ * Clase para ejecutar los tests de Cucumber
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 12-07-2024
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestión y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
         glue = "definitions",
         tags = "@reporte",
-        plugin = {"html:target/cucumber-report/index.html","json:target/cucumber-report/cucumber.json"})
+        plugin = {"html:target/reporte-cucumber/index.html","json:target/reporte-cucumber/cucumber.json"})
 public class runtest {
     @AfterClass
-    public static void generateExcelReport() throws IOException {
-        reporteExcel report = new reporteExcel();
-        report.generateReport();
-
-        // Agregar un enlace al reporte Excel en el reporte HTML de Cucumber
-        addLinkToCucumberReport();
-    }
-
-    private static void addLinkToCucumberReport() {
-        String excelReportLink = "<a href=\"../excel-reporte/CPs_LAP.xlsx\" target=\"_blank\">Ver Reporte Excel</a>";
-        System.out.println(excelReportLink);
+    public static void generaReporteExcel() throws IOException {
+        reporteExcel reporte = new reporteExcel();
+        reporte.generarReporte();
     }
 }

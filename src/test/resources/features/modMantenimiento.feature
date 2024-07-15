@@ -1,6 +1,5 @@
 Feature: Funcionalidad del modulo Mantenimiento
 
-
   Scenario: CPF045 - Visualizar modulo mantenimiento
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

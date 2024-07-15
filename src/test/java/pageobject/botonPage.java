@@ -1,12 +1,20 @@
 package pageobject;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
+/**
+ * Clase que contiene los metodos para validar los botones de la pagina
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 2024-07-12
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestion y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Nuevo')]") protected WebElement btnNuevo;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditar;
@@ -55,22 +63,42 @@ public class botonPage extends util {
     public botonPage() {
         PageFactory.initElements(slowDriver, this);
     }
+
+    /**
+     * Metodo que realiza click en el boton Nuevo
+     */
     public void clickBotonNuevo(){
         wait.until(ExpectedConditions.visibilityOf(btnNuevo));
         btnNuevo.click();
     }
+
+    /**
+     * Metodo que realiza click en el boton Editar
+     */
     public void clickBotonEditar(){
         wait.until(ExpectedConditions.visibilityOf(btnEditar));
         btnEditar.click();
     }
+
+    /**
+     * Metodo que realiza click en el segundo boton Guardar
+     */
     public void clickBotonEditarB(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarB));
         btnEditarB.click();
     }
+
+    /**
+     * Metodo que realiza click en el tercer boton Editar
+     */
     public void clickBotonEditarC(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarC));
         btnEditarC.click();
     }
+
+    /**
+     * Metodo que realiza click en el cuarto boton Editar
+     */
     public void clickBotonEditarD(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarD));
         btnEditarD.click();

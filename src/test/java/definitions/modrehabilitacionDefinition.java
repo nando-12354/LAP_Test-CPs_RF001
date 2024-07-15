@@ -4,6 +4,15 @@ import io.cucumber.java.en.And;
 import pageobject.*;
 import support.util;
 
+/**
+ * Clase para definir los pasos de los escenarios de la funcionalidad de rehabilitacion
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 2024-07-12
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestion y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 public class modrehabilitacionDefinition {
     menuPage menu;
     headPage head;
@@ -451,12 +460,12 @@ public class modrehabilitacionDefinition {
     }
 
     @And("validar que el botón eliminar sea color rojo")
-    public void validarQueElBotónEliminarSeaColorRojo() {
+    public void validarQueElBotonEliminarSeaColorRojo() {
         boton.clickBotonEliminar();
     }
 
     @And("Validar que el botón buscar sea color azul")
-    public void validarQueElBotónBuscarSeaColorAzul() {
+    public void validarQueElBotonBuscarSeaColorAzul() {
         boton.clickBotonBuscar();
     }
 

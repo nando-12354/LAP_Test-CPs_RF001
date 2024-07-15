@@ -4,6 +4,15 @@ import io.cucumber.java.en.And;
 import pageobject.menuPage;
 import pageobject.modalarmasPage;
 
+/**
+ * Clase modalarmasDefinition que contiene los metodos de los pasos a seguir en el archivo modalarmasfeature
+ * @author : Fernando Luyo Villafana
+ * @version : 1.0
+ * @since : 2024-07-12
+ * @see <a href="http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/">Lima Airport Partners</a>
+ * @see <a href="https://gestionysistemas.com/">GyS gestion y sistemas</a>
+ * @see <a href="https://www.linkedin.com/in/fernando-luyo-a671062a7/">LinkedIn</a>
+ */
 public class modalarmasDefinition {
     menuPage menu;
     modalarmasPage alarmas;

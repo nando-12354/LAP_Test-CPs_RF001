@@ -48,7 +48,8 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//p-dropdown[@inputid='tipoTrasb']//div[@role='button']") protected WebElement cmbTipoTransbordoTipoTicket;
     @FindBy(xpath = "(//p-table//table/thead/tr/th)[2]") protected WebElement clickInterno;
     @FindBy(xpath = "//p-dropdown[@formcontrolname='fModulo']//div[@role='button']") protected WebElement cmbModuloTransaccionCritica;
-
+    @FindBy(xpath = "//app-input-select-2[@formcontrolname='estadoTurno']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbEstadoTurno;
+    @FindBy(xpath = "//app-input-select-2[@formcontrolname='compania']//p-dropdown[@inputid]//div[@role='button']") protected  WebElement cmbCompania;
     public comboboxPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -216,6 +217,14 @@ public class comboboxPage extends util {
     }
     public void clickInternoValidar(){
         clickInterno.click();
+    }
+    public void abrirComboboxEstadoTurno(){
+        wait.until(ExpectedConditions.visibilityOf(cmbEstadoTurno));
+        cmbEstadoTurno.click();
+    }
+    public void abrirComboboxCompania(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompania));
+        cmbCompania.click();
     }
 }
 

@@ -12,8 +12,9 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.build.timestamp.format>yyMMdd_HHmm</maven.build.timestamp.format>
+        <maven.build.timestamp.format>ddMMyyyy_HHmmss</maven.build.timestamp.format>
         <buildNumber>${maven.build.timestamp}</buildNumber>
+        <user.timezone>America/Lima</user.timezone>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -21,6 +22,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.3</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -102,8 +110,8 @@
                 </executions>
                 <configuration>
                     <customPageTitle>Reporte de pruebas web</customPageTitle>
-                    <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
-                    <generatedHtmlReportDirectory>${project.build.directory}/generated-report/${buildNumber}</generatedHtmlReportDirectory>
+                    <sourceJsonReportDirectory>${project.build.directory}/reporte-cucumber</sourceJsonReportDirectory>
+                    <generatedHtmlReportDirectory>${project.build.directory}/reporte-html/${buildNumber}</generatedHtmlReportDirectory>
                     <customParameters>
                         <Custom_Parameter>Reporte de Ejecución</Custom_Parameter>
                         <Custom_URL>http://tuua-administracionweb-prd.k8sdevcp.lap.com.pe/</Custom_URL>
