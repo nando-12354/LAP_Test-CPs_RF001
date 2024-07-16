@@ -964,7 +964,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    And click en el boton excel
+    And click en exportar excel
 
 
   Scenario: CPF200 - Log de errores de molinetes/Exportar excel de error no funcional
@@ -989,7 +989,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
-    And click en el boton excel
+    And click en exportar excel
 
 ######## SINCRONIZACION ########
 
@@ -1038,6 +1038,17 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tabla de sincronizacion "Boarding"
     And seleccionar tipo de sincronizacion "<Todos>"
     And click en el boton buscar
+    And visualizar informacion de "Sincronización"
+    And validar columna "Código"
+    And validar columna "Tabla de Sincronización"
+    And validar columna "Código de Molinete"
+    And validar columna "Tipo de Estado"
+    And validar columna "Descripción del Estado"
+    And validar columna "Fecha Inicio"
+    And validar columna "Fecha Fin"
+    And validar columna "Tipo de Sincronización"
+    And validar columna "Número de Registro"
+    And validar columna "Número Registro Error"
     And click en exportar excel
 
 ######## TRANSACCION CRITICA ########
