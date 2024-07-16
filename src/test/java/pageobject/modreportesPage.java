@@ -34,7 +34,6 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/app-input-date[@label='Hora Desde']/span//input") protected WebElement inputHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora Hasta']/span//input") protected WebElement inputHoraHasta;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='indicadorFecha']//p-dropdown/div/div") protected WebElement cmbIndicadorFecha;
-    @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='estado']//p-dropdown/div/div") protected WebElement cmbEstado;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codTipoTicket']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketInicio']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketFin']//input") protected WebElement inputTicketHasta;
@@ -174,10 +173,6 @@ public class modreportesPage extends util {
     public void abrirComboboxIndicadorFecha(){
         wait.until(ExpectedConditions.visibilityOf(cmbIndicadorFecha));
         cmbIndicadorFecha.click();
-    }
-    public void abrirComboboxEstado(){
-        wait.until(ExpectedConditions.visibilityOf(cmbEstado));
-        cmbEstado.click();
     }
     public void abrirComboboxTipoTicket(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoTicket));

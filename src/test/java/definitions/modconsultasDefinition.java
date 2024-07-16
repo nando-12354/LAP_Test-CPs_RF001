@@ -600,4 +600,9 @@ public class modconsultasDefinition {
         combobox.abrirComboboxCompania();
         combobox.seleccionarOpcion(compania);
     }
+
+    @And("ingresar pasajero {string}")
+    public void ingresarPasajero(String pasajero) {
+        consultas.ingresarPasajero(pasajero);
+    }
 }

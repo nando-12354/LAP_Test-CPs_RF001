@@ -17,7 +17,6 @@ public class resumenPage extends util {
         boolean resumenValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/div/span[text()='" + resumen + "']")));
         String xpath = "//div/div/span[text()='" + resumen + "']";
-
         try {
             WebElement resumenElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (resumenElemento.isDisplayed() && resumenElemento.getText().equals(resumen)) {

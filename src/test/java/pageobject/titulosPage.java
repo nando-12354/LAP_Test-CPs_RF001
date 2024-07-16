@@ -17,7 +17,6 @@ public class titulosPage extends util {
         boolean tituloValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='" + titulo + "']")));
         String xpath = "//h1[text()='" + titulo + "']";
-
         try {
             WebElement titutloElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (titutloElemento.isDisplayed() && titutloElemento.getText().equals(titulo)) {
@@ -32,7 +31,6 @@ public class titulosPage extends util {
         boolean subtituloValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2/span[text()='" + subtitulo + "']")));
         String xpath = "//h2/span[text()='" + subtitulo + "']";
-
         try {
             WebElement subtitutloElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (subtitutloElemento.isDisplayed() && subtitutloElemento.getText().equals(subtitulo)) {
@@ -47,7 +45,6 @@ public class titulosPage extends util {
         boolean representanteValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()='" + representante + "']")));
         String xpath = "//h5[text()='" + representante + "']";
-
         try {
             WebElement representanteElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (representanteElemento.isDisplayed() && representanteElemento.getText().equals(representante)) {
@@ -62,7 +59,6 @@ public class titulosPage extends util {
         boolean representanteValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@role='dialog']//span[text()='" + detalle + "'])[1]")));
         String xpath = "(//div[@role='dialog']//span[text()='" + detalle + "'])[1]";
-
         try {
             WebElement representanteElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (representanteElemento.isDisplayed() && representanteElemento.getText().equals(detalle)) {
@@ -77,7 +73,6 @@ public class titulosPage extends util {
         boolean informacionValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[text()='" + infoprocesada + "']")));
         String xpath = "//h5[text()='" + infoprocesada + "']";
-
         try {
             WebElement informacionElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (informacionElemento.isDisplayed() && informacionElemento.getText().equals(infoprocesada)) {

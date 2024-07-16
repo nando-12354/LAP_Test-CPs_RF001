@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
 /**
- * Clase que contiene los métodos para validar el cuerpo de las grillaa o tablas de la pagina
+ * Clase que contiene los metodos para validar el cuerpo de las grilla o tablas de la pagina
  * @author : Fernando Luyo Villafana
  * @version : 1.0
  * @since : 2024-07-12
@@ -30,7 +30,6 @@ public class bodyPage extends util {
     public void validarCuerpoGrilla(String cuerpo) {
         boolean cuerpoValido = false;
         String xpath = "//p-table//table/tbody/tr/td[normalize-space(text())='" + cuerpo.trim() + "']";
-
         try {
             WebElement cuerpoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String textoReal = cuerpoElemento.getText().trim();
@@ -51,7 +50,6 @@ public class bodyPage extends util {
     public void validarCuerpoGrillaB(String cuerpob) {
         boolean cuerpobValido = false;
         String xpath = "//p-table//table/tbody/tr/td//strong[normalize-space(text())='" + cuerpob.trim() + "']";
-
         try {
             WebElement cuerpobElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String textoReal = cuerpobElemento.getText().trim();

@@ -20,7 +20,6 @@ public class loginPage extends util {
     @FindBy(xpath = "//p-password[@formcontrolname='NewPassword']//input") protected WebElement inputNuevaClave;
     @FindBy(xpath = "//p-password[@formcontrolname='RepeatPassword']//input") protected WebElement inputNuevaClaveConfimar;
     @FindBy(xpath = "//p-button[@label='Cambiar Contraseña']/button") protected WebElement btnCambiarClave;
-    @FindBy(xpath = "//form/div/span[text()='Usuario no registrado']") protected WebElement lblMensajeUsuarioNoRegistrado;
 
     public loginPage() {
         PageFactory.initElements(slowDriver, this);
@@ -54,7 +53,6 @@ public class loginPage extends util {
         boolean usuarioValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button/span[text()='" + logueado + "']")));
         String xpath = "//button/span[text()='" + logueado + "']";
-
         try {
             WebElement usuarioElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (usuarioElemento.isDisplayed() && usuarioElemento.getText().equals(logueado)) {
@@ -77,10 +75,4 @@ public class loginPage extends util {
         wait.until(ExpectedConditions.visibilityOf(btnCambiarClave));
         btnCambiarClave.click();
     }
-    /*
-    public void validarMensajeUsuarioNoRegistrado(String usuario){
-        wait.until(ExpectedConditions.visibilityOf(lblMensajeUsuarioNoRegistrado));
-        Assert.assertEquals(usuario, "Usuario no registrado", lblMensajeUsuarioNoRegistrado.getText());
-    }
-     */
 }

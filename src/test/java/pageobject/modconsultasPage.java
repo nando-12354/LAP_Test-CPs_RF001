@@ -8,22 +8,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
 public class modconsultasPage extends util {
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/usuarios']") protected WebElement opUsuarios;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/companias']") protected WebElement opCompanias;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/turnos']") protected WebElement opTurnos;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/detalle-ticket-bp']") protected WebElement opDetalleTicketBp;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/ticket-bp-fecha']") protected WebElement opTicketBpFecha;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/cuadre-sticker-bp']") protected WebElement opCuadreTicketBp;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/operacion-compra-venta']") protected WebElement opCompraVenta;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/ticket-bp-usado']") protected WebElement opTicketBpUsados;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/ticket-bp-anulado']") protected WebElement opTicketBpAnulados;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/auditoria']") protected WebElement opAuditoria;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/tickets-procesados']") protected WebElement opTicketsProcesados;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/log-errores-molinete']") protected WebElement opLogErrores;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/sincronizacion']") protected WebElement opSincronizacion;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/transaccion-critica']") protected WebElement opTransaccionCritica;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/depuracion']") protected WebElement opDepuracion;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consulta/busqueda-pasajeros-fiscalia']") protected WebElement opFiscalia;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/usuarios']") protected WebElement opUsuarios;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/companias']") protected WebElement opCompanias;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/turnos']") protected WebElement opTurnos;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/detalle-ticket-bp']") protected WebElement opDetalleTicketBp;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/ticket-bp-fecha']") protected WebElement opTicketBpFecha;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/cuadre-sticker-bp']") protected WebElement opCuadreTicketBp;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/operacion-compra-venta']") protected WebElement opCompraVenta;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/ticket-bp-usado']") protected WebElement opTicketBpUsados;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/ticket-bp-anulado']") protected WebElement opTicketBpAnulados;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/auditoria']") protected WebElement opAuditoria;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/tickets-procesados']") protected WebElement opTicketsProcesados;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/log-errores-molinete']") protected WebElement opLogErrores;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/sincronizacion']") protected WebElement opSincronizacion;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/transaccion-critica']") protected WebElement opTransaccionCritica;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/consultas/depuracion']") protected WebElement opDepuracion;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbUsuario;
     @FindBy(xpath = "(//td[contains(.,'Cobro tasa internacional')])[2]") protected WebElement btnTablas;
     @FindBy(xpath = "//div/p-radiobutton[@value='NumeroTicket']") protected WebElement rdNumeroTicket;
@@ -33,14 +32,12 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fRangoDesde']//input") protected WebElement inputNumeroTicketDesde;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fRangoHasta']//input") protected WebElement inputNumeroTicketHasta;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoDocumento']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoDocumento;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='company']//div[@role='button']") protected WebElement cmbCompania;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoTicket']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoTicket;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='indicadorCobro']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbIndicadorCobro;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoPersona']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoPersona;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoVuelo']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoVuelo;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoVuelo']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbEstadoTurno;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='cajero']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbCajero;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@inputid='anulacion']//div[@role='button']") protected WebElement cmbMedioAnulacion;
     @FindBy(xpath = "//div//p-calendar[@inputid='calendar']//input") protected WebElement txtFechaProceso;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form1']") protected WebElement rdCompra;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form2']") protected WebElement rdVenta;
@@ -53,7 +50,6 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='iDError']//p-dropdown//div[@role='button']") protected WebElement cmbTipoError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipoError']//p-dropdown//div[@role='button']") protected WebElement cmbError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipoBoarding']//p-dropdown//div[@role='button']") protected WebElement cmbTipoBp;
-    @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='sCompania']//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='codMolinete']//p-dropdown//div[@role='button']") protected WebElement cmbMolineteError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='tipIngreso']//p-dropdown//div[@role='button']") protected WebElement cmbTipoIngresoError;
     @FindBy(xpath = "//div/app-input-select-2[@formcontrolname='fTablaSincronizacion']//p-dropdown//div[@role='button']") protected WebElement cmbTablaSincronizacion;
@@ -61,20 +57,16 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//div/app-input-date[@label='Hora desde']/span//input") protected WebElement inputHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora hasta']/span//input") protected WebElement inputHoraHasta;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fNumeroCaja']//input") protected WebElement inputNumeroCaja;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]")
-    protected WebElement txtFechaDesde;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[3]")
-    protected WebElement txtFechaHasta;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]")
-    protected WebElement txtHoraDesdeB;
-    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[4]")
-    protected WebElement txtHoraHastaB;
-    @FindBy(xpath = "(//div//p-dropdown[@optionlabel='sDscCampo']//div[@role='button'])[1]") protected WebElement cmbTipoDocumentoTicketBpUsado;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement txtFechaDesde;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[3]") protected WebElement txtFechaHasta;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[2]") protected WebElement txtHoraDesdeB;
+    @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[4]") protected WebElement txtHoraHastaB;
     @FindBy(xpath = "//div//input[@inputid='input']") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//p-calendar[@id='fechaDesde'])[2]") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "//app-input-date[@formcontrolname='fchVuelo']//p-calendar//input") protected WebElement txtFechaVueloLogError;
     @FindBy(xpath = "//div//div//p-radiobutton[@name='rango']") protected WebElement rdResumenTicketBpAnulado;
     @FindBy(xpath = "(//span[contains(.,'Usuarios')])[2]") protected WebElement opUsuarioConsultas;
+    @FindBy(xpath = "//input[@formcontrolname='nomPasajero']") protected WebElement inputPasajero;
     public modconsultasPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -145,11 +137,6 @@ public class modconsultasPage extends util {
         scrollVertical(opDepuracion);
         opDepuracion.click();
     }
-    public void ingresarOpcionFiscalia(){
-        wait.until(ExpectedConditions.visibilityOf(opFiscalia));
-        scrollVertical(opFiscalia);
-        opFiscalia.click();
-    }
     public void abrirComboUsuario(){
         wait.until(ExpectedConditions.visibilityOf(cmbUsuario));
         cmbUsuario.click();
@@ -167,15 +154,6 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionDocumento = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + documento + "']"));
         opcionDocumento.click();
-    }
-    public void abrirComboCompania(){
-        wait.until(ExpectedConditions.visibilityOf(cmbCompania));
-        cmbCompania.click();
-    }
-    public void SeleccionarCompania(String compania){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionCompania = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + compania + "']"));
-        opcionCompania.click();
     }
     public void abrirComboTipoTicket(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoTicket));
@@ -213,11 +191,6 @@ public class modconsultasPage extends util {
         WebElement opcionTipoVuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + tipovuelo + "']"));
         opcionTipoVuelo.click();
     }
-    public void seleccionarEstadoTurno(String estadoturno){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionEstadoTurno = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + estadoturno + "']"));
-        opcionEstadoTurno.click();
-    }
     public void abrirComboCajero(){
         wait.until(ExpectedConditions.visibilityOf(cmbCajero));
         cmbCajero.click();
@@ -226,15 +199,6 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionCajero = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + cajero + "']"));
         opcionCajero.click();
-    }
-    public void abrirComboMedioAnulacion(){
-        wait.until(ExpectedConditions.visibilityOf(cmbMedioAnulacion));
-        cmbMedioAnulacion.click();
-    }
-    public void seleccionarMedioAnulacion(String medioanulacion){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionMedioAnulacion = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + medioanulacion + "']"));
-        opcionMedioAnulacion.click();
     }
     public void abrirComboTipoTransbordo(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoTransbordo));
@@ -281,12 +245,6 @@ public class modconsultasPage extends util {
         WebElement opcionSubModulo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + submodulo + "']"));
         opcionSubModulo.click();
     }
-
-    public void seleccionarAuditoriaUsuario(String auditoriausuario){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionAuditoriaUsuario = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + auditoriausuario + "']"));
-        opcionAuditoriaUsuario.click();
-    }
     public void abrirComboTipoError(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoError));
         cmbTipoError.click();
@@ -313,15 +271,6 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
         WebElement opcionTipoBp = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + tipobp + "']"));
         opcionTipoBp.click();
-    }
-    public void abrirComboCompaniaError(){
-        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaError));
-        cmbCompaniaError.click();
-    }
-    public void seleccionarCompaniaError(String compania){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionCompaniaError = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + compania + "']"));
-        opcionCompaniaError.click();
     }
     public void abrirComboMolineteError(){
         wait.until(ExpectedConditions.visibilityOf(cmbMolineteError));
@@ -433,9 +382,6 @@ public class modconsultasPage extends util {
         txtHoraHastaB.sendKeys(horahasta);
         txtHoraHastaB.sendKeys(Keys.TAB);
     }
-    public void abrirComboboxTicketBpUsado(String ticketbp){
-        cmbTipoDocumentoTicketBpUsado.click();
-    }
     public void ingresarNumeroVuelo(String vuelo){
         wait.until(ExpectedConditions.visibilityOf(txtNumeroVuelo));
         txtNumeroVuelo.sendKeys(vuelo);
@@ -456,5 +402,9 @@ public class modconsultasPage extends util {
         wait.until(ExpectedConditions.visibilityOf(opUsuarioConsultas));
         String valor = opUsuarioConsultas.getText();
         Assert.assertEquals(opusuario, valor);
+    }
+    public void ingresarPasajero(String pasajero){
+        wait.until(ExpectedConditions.visibilityOf(inputPasajero));
+        inputPasajero.sendKeys(pasajero);
     }
 }

@@ -15,8 +15,6 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "//input[@inputid='nombre']") protected WebElement inputNombre;
     @FindBy(xpath = "//p-dropdown/div/div[@role='button']") protected WebElement cmbrolPadre;
     @FindBy(xpath = "//p-overlay/div/div//div/ul/p-dropdownitem[1]") protected WebElement itemrolPadre;
-    @FindBy(xpath = "(//table//tbody/tr//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditarRol;
-    @FindBy(xpath = "(//table//tbody/tr//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminarRol;
     @FindBy(xpath = "//button[contains(.,'Nuevo usuario')]") protected WebElement btnNuevoUsuario;
     @FindBy(xpath = "//app-input-text-2[@inputid='apellidos']//input") protected WebElement inputApellidos;
     @FindBy(xpath = "//app-input-text-2[@inputid='nombres']//input") protected WebElement inputNombres;
@@ -59,7 +57,6 @@ public class modseguridadPage extends util {
         boolean opcionValida = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[normalize-space(text())='" + seguridad + "']")));
         String xpath = "//div/ul/li/a/span[normalize-space(text())='" + seguridad.trim() + "']";
-
         try {
             WebElement seguridadOpciones = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (seguridadOpciones.isDisplayed() && seguridadOpciones.getText().equals(seguridad.trim())) {
@@ -88,14 +85,6 @@ public class modseguridadPage extends util {
     public void ingresarRolPadre(){
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//p-overlay/div/div//div/ul/p-dropdownitem[1]")));
         itemrolPadre.click();
-    }
-    public void clickBotonEditarRol(){
-        wait.until(ExpectedConditions.visibilityOf(btnEditarRol));
-        btnEditarRol.click();
-    }
-    public void clickBotonEliminarRol(){
-        wait.until(ExpectedConditions.visibilityOf(btnEliminarRol));
-        btnEliminarRol.click();
     }
     public void clickBotonNuenoUsuario(){
         wait.until(ExpectedConditions.visibilityOf(btnNuevoUsuario));

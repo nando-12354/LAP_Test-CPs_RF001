@@ -103,18 +103,34 @@ public class botonPage extends util {
         wait.until(ExpectedConditions.visibilityOf(btnEditarD));
         btnEditarD.click();
     }
+
+    /**
+     * Metodo que realiza click en el quinto boton Editar
+     */
     public void clickBotonEditarE(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarE));
         btnEditarE.click();
     }
+
+    /**
+     * Metodo que realiza click en el boton Guardar.
+     */
     public void clickBotonGuardar(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardar));
         btnGuardar.click();
     }
+
+    /**
+     * Metodo que realiza click en el segundo boton Guardar.
+     */
     public void clickBotonGuardarB(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardarB));
         btnGuardarB.click();
     }
+
+    /**
+     * Metodo que realiza click en el tercer boton Guardar.
+     */
     public void clickBotonGuardarC(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardarC));
         btnGuardarC.click();

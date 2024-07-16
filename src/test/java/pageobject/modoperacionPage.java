@@ -50,11 +50,6 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "(//table//tbody/tr/td/input)[9]") protected WebElement inputValorI;
     @FindBy(xpath = "(//table//tbody/tr/td/input)[10]") protected WebElement inputValorJ;
     @FindBy(xpath = "//div/app-input-date[@label='Hora Programada']/span//input") protected WebElement inputHoraProgramada;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarTCprogramadaA;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[2]") protected WebElement btnEliminarTCprogramadaB;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[3]") protected WebElement btnEliminarTCprogramadaC;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[4]") protected WebElement btnEliminarTCprogramadaD;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-button[@icon='pi pi-trash']/button)[5]") protected WebElement btnEliminarTCprogramadaE;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]") protected WebElement checkMonedaA;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]") protected WebElement checkMonedaVentaA;
     @FindBy(xpath = "(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[3]") protected WebElement checkMonedaB;
@@ -67,13 +62,11 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[1]") protected WebElement cmbCodigoMonedaA;
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[2]") protected WebElement cmbCodigoMonedaB;
     @FindBy(xpath = "(//p-dropdown[@inputid='moneda']//div[@role='button'])[3]") protected WebElement cmbCodigoMonedaC;
-    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminarPTProgramadaA;
     @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[1]") protected WebElement cmbTipoVuelo;
     @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[2]") protected WebElement cmbTipoTransbordo;
     @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[3]") protected WebElement cmbTipoPasajero;
     @FindBy(xpath = "(//div/div/span/p-dropdown//div[@role='button'])[4]") protected WebElement cmbPrecioTicket;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='representante']") protected WebElement cmbRepresentanteVentaMasiva;
-    @FindBy(xpath = "//button[contains(.,'Generar')]") protected WebElement btnGenerar;
     @FindBy(xpath = "//input[@id='cantidad']") protected WebElement inputCantidad;
     @FindBy(xpath = "//h3[contains(.,'Datos de Turno')]") protected WebElement lblDatosTurno;
     @FindBy(xpath = "//h3[contains(.,'Filtro consulta')]") protected WebElement lblFiltroConsulta;
@@ -84,14 +77,12 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[1]") protected WebElement checkTicketContigenciaA;
     @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[2]") protected WebElement checkTicketContigenciaB;
     @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[3]") protected WebElement checkTicketContigenciaC;
-    @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[4]") protected WebElement checkTicketContigenciaD;
     @FindBy(xpath = "(//table//tbody/tr/td//div[@class='p-checkbox-box p-component'])[1]") protected WebElement checkCerrarTurnoA;
     @FindBy(xpath = "//div//div/div[@class='sub-cierre']/p-checkbox") protected WebElement checkCierreTurno;
     @FindBy(xpath = "//form/div/div//p-dropdown[@inputid='ddlesttur']//div[@role='button']") protected WebElement cmbEstadoturno;
     @FindBy(xpath = "//form/div/div/app-input-text[@placeholderlabel='Turno']//input") protected WebElement inputTurno;
     @FindBy(xpath = "(//table//tbody/tr/td/button[@icon='pi pi-eye'])[1]") protected WebElement btnVerDetalleTurno;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='tipo_operacion']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoOperacion;
-    @FindBy(xpath = "//button[contains(.,'Extornar')]") WebElement btnExtornar;
     @FindBy(xpath = "//div/app-input-text[@label='Motivo']//input") WebElement inputMotivoExtorno;
     @FindBy(xpath = "//div/div/div/app-input-text-2/span/input") protected WebElement inputTicketRehabilitacion;
     @FindBy(xpath = "(//app-input-text//input)[1]") protected WebElement inputTicketExtension;
@@ -100,7 +91,6 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Al Nro:']/span/input") protected WebElement inputTicketHastaRehabilitacion;
     @FindBy(xpath = "//app-input-text[@label='Desde Número']//input") protected WebElement inputTicketDesdeExtension;
     @FindBy(xpath = "//app-input-text[@label='Hasta Número']//input") protected WebElement inputTicketHastaExtension;
-    @FindBy(xpath = "//div/div/div/app-input-text-2[@placeholderlabel='Número Vuelo']/span/input") protected WebElement inputNumVueloRehabilitacion;
     @FindBy(xpath = "//div//div//p-radiobutton[@inputid='filters']") protected WebElement rdFiltroConsulta;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='fEstadoTurno']//p-dropdown//div[@role='button']") protected WebElement cmbEstadoTurnoAnulacion;
     @FindBy(xpath = "//form/div/div/app-input-select-2[@formcontrolname='fTipoTicket']//p-dropdown//div[@role='button']") protected WebElement cmbTipoTicketAnulacion;
@@ -110,7 +100,6 @@ public class modoperacionPage extends util {
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fHastaNumero']/span/input") protected WebElement inputTicketHastaAnulacion;
     @FindBy(xpath = "//div/app-input-text-2[@label='Motivo de Anulación']//input") protected WebElement inputMotivoAnulacion;
     @FindBy(xpath = "//div/app-input-text[@label='Motivo de Anulación']//input") protected WebElement inputMotivoAnulacionBcbp;
-    @FindBy(xpath = "//button[contains(.,'Anular')]") WebElement btnAnular;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionlabel]/span/p-dropdown//div[@role='button']") WebElement cmbCompaniaAnulacionBcbp;
     @FindBy(xpath = "(//table//tbody/tr/td/p-checkbox)[1]") WebElement checkAnulacionBcbp;
     @FindBy(xpath = "//div/app-input-text-2[@label='Cantidad']//input") WebElement inputCantidadVentaMasiva;
@@ -427,39 +416,15 @@ public class modoperacionPage extends util {
         limpiarCampo(inputValorJ);
         inputValorJ.sendKeys(tasasSegments[4]);
     }
-
     public void ingresarHoraPagramada(String horaprogramada) {
         inputHoraProgramada.sendKeys(horaprogramada);
     }
-
-    public void clickBotonEliminarTCprogramadaA() {
-        btnEliminarTCprogramadaA.click();
-    }
-
-    public void clickBotonEliminarTCprogramadaB() {
-        btnEliminarTCprogramadaB.click();
-    }
-
-    public void clickBotonEliminarTCprogramadaC() {
-        btnEliminarTCprogramadaC.click();
-    }
-
-    public void clickBotonEliminarTCprogramadaD() {
-        btnEliminarTCprogramadaD.click();
-    }
-
-    public void clickBotonEliminarTCprogramadaE() {
-        btnEliminarTCprogramadaE.click();
-    }
-
     public void seleccionarMonedaA(String monedaa) {
         int retryCount = 3;  // Número de reintentos en caso de StaleElementReferenceException
         boolean success = false;
         for (int i = 0; i < retryCount; i++) {
             try {
-                // Esperar hasta que el checkbox sea visible
                 wait.until(ExpectedConditions.visibilityOf(checkMonedaA));
-                // Manejar la selección según el valor de 'monedaa'
                 if (monedaa.toLowerCase().equals("si")) {
                     if (!checkMonedaA.isSelected()) {
                         checkMonedaA.click();
@@ -471,15 +436,12 @@ public class modoperacionPage extends util {
                     }
                     Assert.assertFalse("El checkbox no debería estar seleccionado.", checkMonedaA.isSelected());
                 }
-                success = true; // Si no hay excepción, marcar como éxito
-                break; // Salir del bucle si la operación es exitosa
+                success = true;
+                break;
             } catch (StaleElementReferenceException e) {
-                // Log para retry
                 System.out.println("Intento de nuevo debido a StaleElementReferenceException. Intento " + (i + 1));
-                // Volver a localizar el elemento
                 checkMonedaA = driver.findElement(By.xpath("(//p-table/div/div/table//tbody/tr/td/input[@type='checkbox'])[1]"));
             } catch (TimeoutException | NoSuchElementException e) {
-                // Manejo de excepciones en caso de que el elemento no sea encontrado
                 System.out.println("El elemento no fue encontrado en el tiempo especificado.");
                 break;
             }
@@ -587,10 +549,6 @@ public class modoperacionPage extends util {
         cmbCodigoMonedaC.click();
     }
 
-    public void clickBotonEliminarPTprogramadaA() {
-        btnEliminarPTProgramadaA.click();
-    }
-
     public void abrirComboboxTipoVuelo() {
         wait.until(ExpectedConditions.visibilityOf(cmbTipoVuelo));
         cmbTipoVuelo.click();
@@ -614,10 +572,6 @@ public class modoperacionPage extends util {
         opcionItem.click();
     }
 
-    public void clickBotonGenerar() {
-        btnGenerar.click();
-    }
-
     public void ingresarCantidad(String cantidad) {
         limpiarCampo(inputCantidad);
         inputCantidad.sendKeys(cantidad);
@@ -631,7 +585,6 @@ public class modoperacionPage extends util {
                 tituloValido = true;
             }
         } catch (NoSuchElementException e) {
-            //El titulo se agrega desde los Casos de Pruebas
         }
         if (!tituloValido) {
             try {
@@ -706,20 +659,7 @@ public class modoperacionPage extends util {
             Assert.assertFalse("El checkbox no debería estar seleccionado.", checkTicketContigenciaC.isSelected());
         }
     }
-    public void seleccionarTicketContingenciaD(String ticketd) {
-        wait.until(ExpectedConditions.visibilityOf(checkTicketContigenciaD));
-        if (ticketd.toLowerCase().equals("si")) {
-            wait.until(ExpectedConditions.visibilityOf(checkTicketContigenciaD));
-            if (!checkTicketContigenciaD.isSelected()) {
-                checkTicketContigenciaD.click();
-            }
-        } else if (ticketd.toLowerCase().equals("no")) {
-            if (checkTicketContigenciaD.isSelected()) {
-                checkTicketContigenciaD.click();
-            }
-            Assert.assertFalse("El checkbox no debería estar seleccionado.", checkTicketContigenciaD.isSelected());
-        }
-    }
+
     public void seleccionarTurnoActivoA(String turnoactivo) {
         wait.until(ExpectedConditions.visibilityOf(checkCerrarTurnoA));
         if (turnoactivo.toLowerCase().equals("si")) {
@@ -778,10 +718,7 @@ public class modoperacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbTipoOperacion));
         cmbTipoOperacion.click();
     }
-    public void clickBotonExtornar(){
-        wait.until(ExpectedConditions.visibilityOf(btnExtornar));
-        btnExtornar.click();
-    }
+
     public void ingresarMotivoExtorno(String motivo){
         inputMotivoExtorno.sendKeys(motivo);
     }
@@ -794,9 +731,6 @@ public class modoperacionPage extends util {
     }
     public void ingresarTicketHastaRehabilitacion(String tickethasta){
         inputTicketHastaRehabilitacion.sendKeys(tickethasta);
-    }
-    public void ingresarNumeroVueloRehabilitacion(String numerovuelo){
-        inputNumVueloRehabilitacion.sendKeys(numerovuelo);
     }
     public void seleccionarFiltroConsulta(){
         rdFiltroConsulta.click();
@@ -826,9 +760,6 @@ public class modoperacionPage extends util {
     public void ingresarMotivoAnulacionBcbp(String motivoanulacion){
         wait.until(ExpectedConditions.visibilityOf(inputMotivoAnulacionBcbp));
         inputMotivoAnulacionBcbp.sendKeys(motivoanulacion);
-    }
-    public void clickBontonAnular(){
-        btnAnular.click();
     }
     public void abrirComboboxAerolineaBcbp(){
         wait.until(ExpectedConditions.visibilityOf(cmbCompaniaAnulacionBcbp));

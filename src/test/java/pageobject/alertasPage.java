@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
 /**
- * Clase que permite interactuar con las alertas, avisos y mensajes de TUUA
+ * Clase que permite interactuar con las alertas avisos y mensajes de TUUA
  * @author : Fernando Luyo Villafana
  * @version : 1.0
  * @since : 2024-07-12
@@ -31,7 +31,6 @@ public class alertasPage extends util {
         boolean alertaValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(.,'" + alerta + "')]")));
         String xpath = "//h1[contains(.,'" + alerta + "')]";
-
         try {
             WebElement alertaElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (alertaElemento.isDisplayed() && alertaElemento.getText().equals(alerta)) {
@@ -50,7 +49,6 @@ public class alertasPage extends util {
     public void validarAviso(String aviso) {
         boolean avisoValido = false;
         String xpath = "(//div[contains(.,'" + aviso + "')])[5]";
-
         try {
             WebElement avisoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (avisoElemento.isDisplayed() && avisoElemento.getText().equals(aviso)) {
@@ -70,7 +68,6 @@ public class alertasPage extends util {
         boolean confirmacionValido = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[contains(.,'" + confirmacion + "')])[5]")));
         String xpath = "(//div[contains(.,'" + confirmacion + "')])[5]";
-
         try {
             WebElement confirmacionElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (confirmacionElemento.isDisplayed() && confirmacionElemento.getText().equals(confirmacion)) {
@@ -90,7 +87,6 @@ public class alertasPage extends util {
         boolean mensajeValido = false;
         String regex = "Se elimino el tipo de cambio J[0-9]{9} satisfactoriamente...";
         String xpath = "//div[contains(text(),'Se elimino el tipo de cambio')]";
-
         try {
             WebElement mensajeElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String mensajeTexto = mensajeElemento.getText();
@@ -112,7 +108,6 @@ public class alertasPage extends util {
         boolean msjValido = false;
         String regex = "Se eliminó el precio L[0-9]{9} satisfactoriamente...";
         String xpath = "//div[contains(text(),'Se elimino el tipo de cambio')]";
-
         try {
             WebElement msjElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String msjTexto = msjElemento.getText();

@@ -23,8 +23,6 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/rehabilitacion/boarding-fecha']") protected WebElement subopBoardingFecha;
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='numeroTicket']//input") protected WebElement txtTicket;
     @FindBy(xpath = "//table//tbody/tr/td[3]") protected WebElement txtTicketAgregado;
-    @FindBy(xpath = "//div//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaBoarding;
-    @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaVuelo;
     @FindBy(xpath = "//div//p-calendar//input") protected WebElement txtFechaVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[1]") protected WebElement txtNumeroVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[2]") protected WebElement txtAsiento;
@@ -58,7 +56,6 @@ public class modrehabilitacionPage extends util {
         boolean opcionValida = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul/li/a/span[text()='" + rehabilitacion + "']")));
         String xpath = "//div/ul/li/a/span[text()='" + rehabilitacion + "']";
-
         try {
             WebElement seguridadOpciones = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             if (seguridadOpciones.isDisplayed() && seguridadOpciones.getText().equals(rehabilitacion)) {
@@ -129,15 +126,6 @@ public class modrehabilitacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtTicketAgregado));
         String valor = txtTicketAgregado.getText();
         Assert.assertEquals(ticketagregado, valor);
-    }
-    public void abrirCompaniaVuelo(){
-        wait.until(ExpectedConditions.elementToBeClickable(cmbCompaniaVuelo));
-        cmbCompaniaVuelo.click();
-    }
-    public void seleccionarCompaniaVuelo(String companiavuelo){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));
-        WebElement opcionCompaniavuelo = driver.findElement(By.xpath("//p-dropdownitem/li/span[text()='" + companiavuelo + "']"));
-        opcionCompaniavuelo.click();
     }
     public void ingresarFechaVuelo(String fecha){
         wait.until(ExpectedConditions.visibilityOf(txtFechaVuelo));

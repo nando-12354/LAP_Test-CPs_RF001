@@ -1,13 +1,11 @@
 package pageobject;
 
-import io.cucumber.java.ro.Si;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
-
 
 public class modmantenimientoPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/mantenimiento/estacion-punto-venta']") protected WebElement opEstacionPuntoVenta;
