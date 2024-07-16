@@ -112,7 +112,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar fecha hasta "31/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
-    And seleccionar usuario "fer"
+    And seleccionar usuario "Carmen Vera"
     And ingresar numero de caja ""
     And click en el boton buscar
     And visualizar lista de "Turnos"
@@ -959,8 +959,8 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar molinete "Todos"
     And ingresar fecha vuelo "03/12/2023"
     And ingresar numero de vuelo ""
-    And ingresar pasajero "016C"
-    And ingresar persona "CARRASCO"
+    And ingresar asiento "016C"
+    And ingresar pasajero "CARRASCO"
     And seleccionar tipo bp "2D"
     And seleccionar tipo ingreso "Todos"
     And click en el boton buscar
