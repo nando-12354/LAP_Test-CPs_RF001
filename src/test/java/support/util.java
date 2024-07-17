@@ -34,16 +34,30 @@ public class util extends hooks {
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         js = (JavascriptExecutor) driver;
     }
+
+    /**
+     * Metodo antiguo que permite mantener la ventana activa cuando se abre una nueva ventana
+     * @deprecated No usar este metodo se recomienda usar {@link #manejarNuevaPestana}
+     */
     public void ventanaActiva(){
         Set<String> identificadores = driver.getWindowHandles();
         for (String identificador:identificadores){
             driver.switchTo().window(identificador);
         }
     }
+    /**
+     * Metodo antiguo que permite cerrar la ventana actual y volver a la ventana principal
+     * @deprecated No usar este metodo se recomienda usar {@link #manejarNuevaPestana}
+     */
     public void ventanaInicial(){
         driver.close();
         driver.switchTo().window("");
     }
+
+    /**
+     * Metodo que permite manejar una nueva pestana o ventana que se abra en el navegador
+     * @param segundosEspera Tiempo de espera en segundos de la nueva ventana activa luego se cierra y se vuelve a la ventana principal
+     */
     public void manejarNuevaPestana(long segundosEspera) {
         String ventanaPrincipal = driver.getWindowHandle();
 
@@ -67,23 +81,51 @@ public class util extends hooks {
         }
         driver.switchTo().window(ventanaPrincipal);
     }
+
+    /**
+     * Metodo que permite hacer scroll vertical en la pagina web
+     * @param scroll Elemento web al que se desea hacer scroll de forma vertical en la pagina web
+     * <b>Este metodo es util para hacer scroll en paginas web que tienen elementos que no se visualizan</b>
+     */
     public void scrollVertical(WebElement scroll){
         js.executeScript("arguments[0].scrollIntoView(true);", scroll);
     }
+
+    /**
+     * Metodo que permite borrar o limpiar un campo de texto
+     * @param limpiar Elemento que se desea limpiar y se tiene llamar al metodo limpiarCampo();
+     * <b>Este metodo es util para limpiar campos de texto en formularios web que contienen textos por defectos y se desea modificar</b>
+     */
     public void limpiarCampo(WebElement limpiar){
         js.executeScript("arguments[0].value = '';", limpiar);
     }
     public void localizadorBoton(WebElement localizador){
         js.executeScript("arguments[0].click();", localizador);
     }
+
+    /**
+     * Metodo que permite aceptar la alerta que se muestra en la pagina web al realizar una accion
+     */
     public void aceptarDialogo() {
         dialogo = driver.switchTo().alert();
         dialogo.accept();
     }
+
+    /**
+     * Metodo que permite obtener el texto de la alerta que se muestra en la pagina web al realizar una accion
+     * @param mensaje Mensaje que se desea obtener de la alerta que se muestra en la pagina web
+     * <b>Este metodo es util para validar mensajes de alertas que se muestran en la pagina web</b>
+     */
     public void obtenerTextoDialogo(String mensaje) {
         dialogo = driver.switchTo().alert();
         Assert.assertEquals(mensaje, dialogo.getText());
     }
+
+    /**
+     * Metodo que permite evidenciar en formato JPG la ejecucion de los casos de pruebas de cucumber
+     * Solo se debe configurar este metodo en cada paso donde requiera que captura la evidencia
+     * @throws IOException Excepcion que se lanza si no se puede guardar la evidencia de la ejecucion de los casos de pruebas
+     */
     public static void evidencias() throws IOException {
         Date fecha = new Date();
             SimpleDateFormat formato = new SimpleDateFormat("ddMMyyy_HHmmssSSS");

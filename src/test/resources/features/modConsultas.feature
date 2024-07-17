@@ -1052,7 +1052,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## TRANSACCION CRITICA ########
-######COMENTARIO DE PRUEBA GIT
+
   Scenario: CPF203 - Transaccion critica/Buscar transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

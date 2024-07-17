@@ -80,11 +80,9 @@ public class reporteExcel {
             JsonNode nodoRaiz = mapeadorObjeto.readTree(archivoJson);
 
             Workbook excel = new XSSFWorkbook();
-            //Hoja reporte pruebas
             Sheet hojaReporte = excel.createSheet("Reporte de Pruebas");
             hojaReporte.setDisplayGridlines(false);
 
-            //Hoja resumen
             Sheet hojaDeResumen = excel.createSheet("Resumen");
             hojaDeResumen.setDisplayGridlines(false);
 
@@ -129,7 +127,7 @@ public class reporteExcel {
         cabeceraEstilo.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         cabeceraEstilo.setAlignment(HorizontalAlignment.CENTER);
         cabeceraEstilo.setVerticalAlignment(VerticalAlignment.CENTER);
-        // Bordes blancos
+
         cabeceraEstilo.setBorderBottom(BorderStyle.MEDIUM);
         cabeceraEstilo.setBottomBorderColor(IndexedColors.WHITE.getIndex());
         cabeceraEstilo.setBorderTop(BorderStyle.MEDIUM);
@@ -351,7 +349,7 @@ public class reporteExcel {
         CellStyle estiloCabeceraEstado = excel.createCellStyle();
         Font fuenteCabeceraEstado = excel.createFont();
         fuenteCabeceraEstado.setBold(true);
-        fuenteCabeceraEstado.setItalic(true);  // Letra cursiva
+        fuenteCabeceraEstado.setItalic(true);
         fuenteCabeceraEstado.setColor(IndexedColors.WHITE.getIndex());
         fuenteCabeceraEstado.setUnderline(Font.U_SINGLE);
         fuenteCabeceraEstado.setFontName("Aptos Narrow");
@@ -404,13 +402,13 @@ public class reporteExcel {
         for (int i = 0; i < 2; i++) {
             Cell cell = filaCabecera.getCell(i);
             if (cell != null) {
-                cell.setCellStyle(estiloCabecera); // Estilo a la cabecera
+                cell.setCellStyle(estiloCabecera);
             }
         }
         for (int i = 2; i < 5; i++) {
             Cell cell = filaCabecera.getCell(i);
             if (cell != null) {
-                cell.setCellStyle(estiloCabeceraEstado); // Estilo a la cabecera de estados
+                cell.setCellStyle(estiloCabeceraEstado);
             }
         }
 
