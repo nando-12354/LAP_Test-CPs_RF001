@@ -33,11 +33,11 @@ public class modconsultasPage extends util {
     @FindBy(xpath = "//app-input-text-2[@formcontrolname='fRangoHasta']//input") protected WebElement inputNumeroTicketHasta;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoDocumento']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoDocumento;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoTicket']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoTicket;
-    @FindBy(xpath = "//app-input-select-2[@formcontrolname='indicadorCobro']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbIndicadorCobro;
+    @FindBy(xpath = "//p-dropdown[@formcontrolname='indicadorCobro']//div[@role='button']") protected WebElement cmbIndicadorCobro;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoPersona']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoPersona;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoVuelo']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbTipoVuelo;
     @FindBy(xpath = "//app-input-select-2[@formcontrolname='tipoVuelo']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbEstadoTurno;
-    @FindBy(xpath = "//app-input-select-2[@formcontrolname='cajero']//p-dropdown[@inputid]//div[@role='button']") protected WebElement cmbCajero;
+    @FindBy(xpath = "//p-dropdown[@formcontrolname='cajero']//div[@role='button']") protected WebElement cmbCajero;
     @FindBy(xpath = "//div//p-calendar[@inputid='calendar']//input") protected WebElement txtFechaProceso;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form1']") protected WebElement rdCompra;
     @FindBy(xpath = "//div/div/p-radiobutton[@inputid='form2']") protected WebElement rdVenta;
