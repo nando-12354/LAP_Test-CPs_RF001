@@ -355,7 +355,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar cajero "Tamara Olaechea"
+    And seleccionar al cajero "Tamara Olaechea"
     And click en el boton buscar
     And click en imprimir consulta
 
@@ -379,7 +379,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar cajero "Tamara Olaechea"
+    And seleccionar al cajero "Tamara Olaechea"
     And click en el boton buscar
     And click en exportar excel
 
