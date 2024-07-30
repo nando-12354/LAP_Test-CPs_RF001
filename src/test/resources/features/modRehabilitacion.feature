@@ -166,7 +166,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion ticket por salida
     And ingresar fecha de vuelo "03/07/2020"
     And click en el boton agregar ticket
-    And visualizar lista de "Tickets por salida"
+    And visualizar lista de "Tickets Por Salida"
     And validar columna "Número de vuelo"
     And validar columna "Código ticket"
     And validar columna "Fecha de creación"
@@ -223,7 +223,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "04/01/2024"
     And seleccionar vuelo "4A024"
     And click en el boton buscar
-    And visualizar lista de "Tickets por vuelo"
+    And visualizar lista de "Tickets Por Vuelo"
     And validar columna "Nro"
     And validar columna "Código de ticket"
     And validar columna "Observaciones"
@@ -294,7 +294,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero ticket desde "5000604373685149"
     And ingresar numero ticket hasta "5000604373685999"
     And click en el boton buscar
-    And visualizar lista de "Tickets por Rango"
+    And visualizar lista de "Tickets Por Rango"
     And validar columna "Número"
     And validar columna "Código de ticket"
     And validar columna "Observaciones"
@@ -363,7 +363,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha desde "01/01/2024"
     And ingresar fecha hasta "03/01/2024"
     And click en el boton buscar
-    And visualizar lista de "Tickets por Fecha"
+    And visualizar lista de "Tickets Por Fecha"
     And validar columna "Número"
     And validar columna "Código de ticket"
     And validar columna "Observaciones"
