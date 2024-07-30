@@ -165,7 +165,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por salida
     And ingresar fecha de vuelo "03/07/2020"
-    And click en el boton agregar bp
+    And click en el boton agregar ticket
     And visualizar lista de "Tickets por salida"
     And validar columna "Número de vuelo"
     And validar columna "Código ticket"
@@ -183,7 +183,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por salida
     And ingresar fecha de vuelo "03/07/2020"
-    And click en el boton agregar bp
+    And click en el boton agregar ticket
     And click en el boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar

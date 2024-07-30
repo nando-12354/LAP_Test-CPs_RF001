@@ -30,7 +30,7 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='listaTipos']//div[@role='button']") protected WebElement cmbTipoCompania;
     @FindBy(xpath = "//div/app-input-select[@inputid='modalidadVenta']//div[@role='button']") protected WebElement cmbTipoModalidad;
     @FindBy(xpath = "//div/app-input-select[@inputid]//div[@role='button']") protected WebElement cmbTipoTicketModalidad;
-    @FindBy(xpath = "//app-input-select-2[@optionlabel='dscCampo']//p-dropdown//div[@role='button']") protected WebElement cmbMotivos;
+    @FindBy(xpath = "(//app-input-select-2//p-dropdown//div[@role='button'])[1]") protected WebElement cmbMotivos;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaTicketVuelo;
     @FindBy(xpath = "//app-input-select-2[@optionvalue='codCompania']//p-dropdown//div[@role='button']") protected WebElement cmbBpNormalBpMasivo;
     @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
