@@ -32,8 +32,7 @@ public class comboboxPage extends util {
     @FindBy(xpath = "//div/app-input-select[@inputid]//div[@role='button']") protected WebElement cmbTipoTicketModalidad;
     @FindBy(xpath = "(//app-input-select-2//p-dropdown//div[@role='button'])[1]") protected WebElement cmbMotivos;
     @FindBy(xpath = "//div/div/span/p-dropdown[@id='cias']//div[@role='button']") protected WebElement cmbCompaniaTicketVuelo;
-    @FindBy(xpath = "//app-input-select-2[@optionvalue='codigoCompania']//p-dropdown//div[@role='button']") protected WebElement cmbBpNormalBpMasivo;
-    @FindBy(xpath = "//div/div//p-dropdown[@optionlabel='dscCompania']//div[@role='button']") protected WebElement cmbBpSalidaBpVueloBpFecha;
+    @FindBy(xpath = "//app-input-select-2[@optionvalue='codigoCompania']//p-dropdown//div[@role='button']") protected WebElement cmbCompaniaBoarding;
     @FindBy(xpath = "//app-input-select-2[@label='Vuelo *']//p-dropdown//div[@role='button']") protected WebElement cmbVueloTicketVueloBpVuelo;
     @FindBy(xpath = "(//div/div/span/p-dropdown[@inputid='tipo']//div[@role='button'])[2]") protected WebElement cmbTipoDocumentoRepresentante;
     @FindBy(xpath = "(//div/div//p-dropdown//div[@role='button'])[1]") protected WebElement cmbRol;
@@ -99,13 +98,9 @@ public class comboboxPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumentoRepresentante));
         cmbTipoDocumentoRepresentante.click();
     }
-    public void abrirComboboxCompaniaBpNormalBpMasivo(){
-        wait.until(ExpectedConditions.visibilityOf(cmbBpNormalBpMasivo));
-        cmbBpNormalBpMasivo.click();
-    }
-    public void abrirComboboxCompaniaBpSalidaBpVueloBpFecha(){
-        wait.until(ExpectedConditions.visibilityOf(cmbBpSalidaBpVueloBpFecha));
-        cmbBpSalidaBpVueloBpFecha.click();
+    public void abrirComboboxCompaniaBoarding(){
+        wait.until(ExpectedConditions.visibilityOf(cmbCompaniaBoarding));
+        cmbCompaniaBoarding.click();
     }
     public void abrirComboboxVueloTicketVueloBpVuelo(){
         wait.until(ExpectedConditions.visibilityOf(cmbVueloTicketVueloBpVuelo));

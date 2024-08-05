@@ -228,7 +228,7 @@ public class modrehabilitacionDefinition {
 
     @And("seleccionar compania {string}")
     public void seleccionarCompania(String compania) {
-        combobox.abrirComboboxCompaniaBpNormalBpMasivo();
+        combobox.abrirComboboxCompaniaBoarding();
         combobox.seleccionarOpcion(compania);
     }
 
@@ -361,12 +361,6 @@ public class modrehabilitacionDefinition {
     @And("seleccionar una compania {string}")
     public void seleccionarUnaCompania(String compania) {
         combobox.abrirComboboxCompaniaTicketVuelo();
-        combobox.seleccionarOpcion(compania);
-    }
-
-    @And("seleccionar la compania {string}")
-    public void seleccionarLaCompania(String compania) {
-        combobox.abrirComboboxCompaniaBpSalidaBpVueloBpFecha();
         combobox.seleccionarOpcion(compania);
     }
 

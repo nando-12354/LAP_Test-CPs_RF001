@@ -585,7 +585,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar una fecha de vuelo "18/01/2024"
     And ingresar un numero de vuelo "4A4001"
     And click en el boton agregar bp
@@ -605,7 +605,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar una fecha de vuelo "18/01/2024"
     And ingresar un numero de vuelo "4A4001"
     And click en el boton agregar bp
@@ -622,7 +622,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar una fecha de vuelo "18/01/2024"
     And ingresar un numero de vuelo "4A4001"
     And click en el boton agregar bp
@@ -646,7 +646,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
@@ -680,7 +680,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha de vuelo "31/01/2024"
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
@@ -697,7 +697,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por vuelo
-    And seleccionar la compania "AERO TRANSPORTE  S. A."
+    And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha de vuelo "01/01/2024"
     And click en el boton buscar
     And seleccionar boarding "si"
