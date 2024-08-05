@@ -397,6 +397,11 @@ public class modrehabilitacionDefinition {
         ventana.manejarNuevaPestana(5);
     }
 
+    @And("click en boton voucher")
+    public void clickEnBotonVoucher() {
+        voucher.clickBotonVoucherB();
+    }
+
     @And("validar mensaje exitoso {string}")
     public void validarMensajeExitoso(String mensaje) {
         alerta.validarAlerta(mensaje);

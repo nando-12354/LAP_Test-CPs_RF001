@@ -702,13 +702,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And seleccionar boarding "si"
-    And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
+    And seleccionar motivo "Demora o Cancelación del vuelo X NOTAM"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
     And validar mensaje exitoso "Rehabilitación con éxito"
     And click en el boton imprimir
-    And click en el boton voucher
+    And click en boton voucher
     And click en el boton aceptar
 
 ######## BOARDING PASS POR FECHA ########
