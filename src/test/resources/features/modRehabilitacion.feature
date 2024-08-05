@@ -699,6 +699,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la subopcion boarding pass por vuelo
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar la fecha de vuelo "01/01/2024"
+    And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And seleccionar boarding "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
