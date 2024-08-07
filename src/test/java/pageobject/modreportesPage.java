@@ -10,34 +10,35 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
 public class modreportesPage extends util {
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/liquidacion-stickers']") WebElement opLiquidacionStickers;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/resumen-diario']") WebElement opResumenDiario;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/movimientos-tickets-contingencia']") WebElement opMovimientoTicket;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/stock-ticket-contingencia']") WebElement opStockTicket;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/detalles-linea-vuelo']") WebElement opDetalleLineaVuelo;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/bp-leidos-molinete']") WebElement opBpLeidosMolinete;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/liquidacion-stickers']") protected WebElement opLiquidacionStickers;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/resumen-diario']") protected WebElement opResumenDiario;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/movimientos-tickets-contingencia']") protected WebElement opMovimientoTicket;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/stock-ticket-contingencia']") protected WebElement opStockTicket;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/detalles-linea-vuelo']") protected WebElement opDetalleLineaVuelo;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/bp-leidos-molinete']") protected WebElement opBpLeidosMolinete;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-vendidos-credito-contado']") WebElement opTicketVendidos;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/detalle-compania']") WebElement opDetalleCompania;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-usados']") WebElement opTicketBpUsadoDiaMesHora;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-usados-dia-mes']") WebElement opTicketBpUsadoDiaMes;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/detalle-compania']") protected WebElement opDetalleCompania;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-usados']") protected WebElement opTicketBpUsadoDiaMesHora;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-usados-dia-mes']") protected WebElement opTicketBpUsadoDiaMes;
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/recaudacion-mensual']") WebElement opRecaudacionMensual;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/liquidacion-venta']") WebElement opLiquidacionVenta;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-vencidos']") WebElement opTicketVencidos;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/cuadre-stickers-vendidos-bp-usados']") WebElement opCuadreStickers;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-rehabilitados']") WebElement opTicketBpRehabilitados;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/bp-rehabilitados']") WebElement opBpRehabilitados;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/resumen-diario-por-turno']") WebElement opResumenDiarioTurno;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/extranet-bp-diarios']") WebElement opExtranetBpDiario;
-    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/extranet-bp-mensual']") WebElement opExtranetBpMensual;
-    @FindBy(xpath = "//div/div/div/p-radiobutton[@inputid='rbFecha']") WebElement rdFechaResumenDiario;
-    @FindBy(xpath = "//div/div/div/p-radiobutton[@inputid='rbRangoFechas']") WebElement rdRangoFechaResumenDiario;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/liquidacion-venta']") protected WebElement opLiquidacionVenta;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-vencidos']") protected WebElement opTicketVencidos;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/cuadre-stickers-vendidos-bp-usados']") protected WebElement opCuadreStickers;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/tickets-bp-rehabilitados']") protected WebElement opTicketBpRehabilitados;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/bp-rehabilitados']") protected WebElement opBpRehabilitados;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/resumen-diario-por-turno']") protected WebElement opResumenDiarioTurno;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/extranet-bp-diarios']") protected WebElement opExtranetBpDiario;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/extranet-bp-mensual']") protected WebElement opExtranetBpMensual;
+    @FindBy(xpath = "//div/ul/li/a[@href='#/principal/reportes/pasajeros-fiscalia']") protected WebElement opPasajeroFiscalia;
+    @FindBy(xpath = "//div/div/div/p-radiobutton[@inputid='rbFecha']") protected WebElement rdFechaResumenDiario;
+    @FindBy(xpath = "//div/div/div/p-radiobutton[@inputid='rbRangoFechas']") protected WebElement rdRangoFechaResumenDiario;
     @FindBy(xpath = "//div/app-input-date[@label='Hora Desde']/span//input") protected WebElement inputHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora Hasta']/span//input") protected WebElement inputHoraHasta;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='indicadorFecha']//p-dropdown/div/div") protected WebElement cmbIndicadorFecha;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codTipoTicket']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketInicio']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketFin']//input") protected WebElement inputTicketHasta;
-    @FindBy(xpath = "//button[contains(.,'Resumen')]") WebElement btnResumen;
+    @FindBy(xpath = "//button[contains(.,'Resumen')]") protected WebElement btnResumen;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[1]") protected WebElement txtfechaAl;
     @FindBy(xpath = "(//div//p-calendar[@inputid]//input[@role='combobox'])[3]") protected WebElement txtfechaVuelo;
     @FindBy(xpath = "(//div//input[@id='textInput'])[2]") protected WebElement txtNumeroBoarding;
@@ -45,7 +46,7 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='tipoPago']//p-dropdown/div/div") protected WebElement cmbTipoPago;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='tipoRango']//p-dropdown/div/div") protected WebElement cmbTipoRango;
     @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='destino']//input[@id]") protected WebElement inputDestino;
-    @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='nroVuelo']//input[@id]") protected WebElement inputNumeroVuelo;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='numeroVuelo']//input[@id]") protected WebElement inputNumeroVuelo;
     @FindBy(xpath = "(//div/p-checkbox/div)[1]") protected WebElement checkBoarding;
     @FindBy(xpath = "(//div/p-checkbox/div)[2]") protected WebElement checkTicket;
     @FindBy(xpath = "//div//app-input-date[@formcontrolname='anio']//p-calendar//input") protected WebElement txtAnio;
@@ -86,14 +87,17 @@ public class modreportesPage extends util {
     }
     public void ingresarOpcionDetalleLineaVuelo(){
         wait.until(ExpectedConditions.visibilityOf(opDetalleLineaVuelo));
+        scrollVertical(opDetalleLineaVuelo);
         opDetalleLineaVuelo.click();
     }
     public void ingresarOpcionBpLeidosMolinete(){
         wait.until(ExpectedConditions.visibilityOf(opBpLeidosMolinete));
+        scrollVertical(opBpLeidosMolinete);
         opBpLeidosMolinete.click();
     }
     public void ingresarOpcionTicketVendidosCreditoContado(){
         wait.until(ExpectedConditions.visibilityOf(opTicketVendidos));
+        scrollVertical(opTicketVendidos);
         opTicketVendidos.click();
     }
     public void ingresarOpcionDetalleCompania(){
@@ -156,6 +160,11 @@ public class modreportesPage extends util {
         scrollVertical(opExtranetBpMensual);
         opExtranetBpMensual.click();
     }
+    public void ingresarOpcionPasajeroFiscalia(){
+        wait.until(ExpectedConditions.visibilityOf(opPasajeroFiscalia));
+        scrollVertical(opPasajeroFiscalia);
+        opPasajeroFiscalia.click();
+    }
     public void seleccionarFechaResumenDiario(){
         wait.until(ExpectedConditions.visibilityOf(rdFechaResumenDiario));
         rdFechaResumenDiario.click();
@@ -190,7 +199,7 @@ public class modreportesPage extends util {
         inputTicketHasta.sendKeys(tickethasta);
     }
     public void clickBotonResumne(){
-        wait.until(ExpectedConditions.visibilityOf(btnResumen));
+        wait.until(ExpectedConditions.elementToBeClickable(btnResumen));
         btnResumen.click();
     }
     public void ingresarFechaAl(String fechaal){
@@ -299,6 +308,10 @@ public class modreportesPage extends util {
     }
     public void ingresarNumeroVueloB(String numerovuelob){
         inputNumeroVueloB.sendKeys(numerovuelob);
+    }
+    public void ingresarNumeroVueloC(String numerovueloc){
+        limpiarCampo(inputNumeroVueloB);
+        inputNumeroVueloB.sendKeys(numerovueloc);
     }
     public void ingresarDestinoB(String destinob){
         inputDestinoB.sendKeys(destinob);

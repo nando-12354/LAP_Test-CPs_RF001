@@ -1,5 +1,7 @@
 package pageobject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,15 +19,32 @@ import support.util;
  */
 public class pdfPage extends util {
     @FindBy(xpath = "//p-button[@icon='pi pi-file-pdf']/button") protected WebElement btnPdf;
+    @FindBy(xpath = "//p-button[@icon='pi pi-print']/button") protected WebElement btnPdfB;
     public pdfPage() {
-        PageFactory.initElements(slowDriver, this);
+        PageFactory.initElements(driver, this);
     }
 
     /**
      * Metodo que hace click en el boton de descarga de pdf
      */
-    public void clickBotonPdf(){
+    public void clickBotonPdf() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(btnPdf));
         btnPdf.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
+    }
+    public void clickBotonPdfB() throws InterruptedException{
+        wait.until(ExpectedConditions.visibilityOf(btnPdfB));
+        btnPdfB.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
     }
 }

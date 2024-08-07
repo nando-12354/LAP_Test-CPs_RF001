@@ -24,20 +24,44 @@ public class excelPage extends util {
     public excelPage() {
         PageFactory.initElements(slowDriver, this);
     }
-    public void clickBotonExcel(){
+    public void clickBotonExcel() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcel));
         btnExcel.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
     }
-    public void clickBotonExcelB(){
+    public void clickBotonExcelB() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcelB));
         btnExcelB.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
     }
-    public void clickBotonExcelC(){
+    public void clickBotonExcelC() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcelC));
         btnExcelC.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
     }
-    public void clickBotonExcelD(){
+    public void clickBotonExcelD() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcelD));
         btnExcelD.click();
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw e;
+        }
     }
 }

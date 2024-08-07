@@ -432,8 +432,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "05/01/2024"
     And ingresar numero de vuelo "4A4041"
-    And ingresar asiento "010C"
-    And ingresar persona "CHAMORRO SILVA DORIS"
+    And ingresar asiento "011D"
+    And ingresar persona "CORDOVA ALIAGA LUCER"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass Normal"
     And validar columna "Número"
@@ -508,10 +508,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass masivo
     And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "31/01/2024"
-    And ingresar numero de vuelo "4A4091"
-    And ingresar asiento "018A"
-    And ingresar persona "BERNUY JARAMILLO WOL"
+    And ingresar fecha de vuelo "05/01/2024"
+    And ingresar numero de vuelo "4A4041"
+    And ingresar asiento "011A"
+    And ingresar persona "FIGUEROA ATENCIA NEL"
     And click en el boton agregar bp
     And visualizar lista de "Boarding pass masivo"
     And validar columna "Número"
@@ -585,9 +585,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar una fecha de vuelo "18/01/2024"
-    And ingresar un numero de vuelo "4A4001"
+    And seleccionar compania "VIVA AIRLINES S.A.C."
+    And ingresar fecha de vuelo "08/12/2018"
+    And ingresar un numero de vuelo "VV400"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass por Salida"
     And validar columna "Número Vuelo"
@@ -605,9 +605,9 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar una fecha de vuelo "18/01/2024"
-    And ingresar un numero de vuelo "4A4001"
+    And seleccionar compania "VIVA AIRLINES S.A.C."
+    And ingresar fecha de vuelo "08/12/2018"
+    And ingresar un numero de vuelo "VV400"
     And click en el boton agregar bp
     And click en boton ver detalle
     And visualizar el "Detalle: Boarding"
@@ -622,18 +622,18 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion boarding
     And ingresar a la subopcion boarding pass por salida
-    And seleccionar compania "AERO TRANSPORTE  S. A."
-    And ingresar una fecha de vuelo "18/01/2024"
-    And ingresar un numero de vuelo "4A4001"
+    And seleccionar compania "VIVA AIRLINES S.A.C."
+    And ingresar fecha de vuelo "08/12/2018"
+    And ingresar un numero de vuelo "VV400"
     And click en el boton agregar bp
-    And seleccionar boarding "si"
+    And seleccionar boardings "si"
     And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
-    And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
+    And validar mensaje exitoso "La rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
-    And click en el boton imprimir
+    And click en boton pdf
     And click en el boton aceptar
 
 ######## BOARDING PASS POR VUELO ########
@@ -732,6 +732,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna checkbox "Bloquear"
     And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
+
 
   Scenario: CPF149 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
     Given abre la ruta del aplicativo web

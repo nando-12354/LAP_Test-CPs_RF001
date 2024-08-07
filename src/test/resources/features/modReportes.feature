@@ -514,7 +514,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar pantalla de "Tickets Vendidos a Credito o al Contado"
 
 
-  Scenario: CPF240 - Tickets vendidos al credito/Consultar reporte de tickets vendidos al credito o al contado
+  Scenario: CPF240 - Tickets vendidos al credito o al contado/Consultar reporte de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -524,7 +524,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
     And click en el boton buscar
@@ -543,7 +543,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
     And click en el boton buscar
@@ -563,7 +563,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
     And click en el boton buscar
@@ -583,7 +583,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
     And click en el boton buscar
@@ -612,9 +612,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar al modulo reportes
     And ingresar a la opcion detalle compania
     And seleccionar fecha desde "01/11/2023"
-    And ingresar hora desde "013000"
+    And ingresar hora desde ""
     And seleccionar fecha hasta "02/11/2023"
-    And ingresar hora hasta "023000"
+    And ingresar hora hasta ""
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Detalle Compañia"
@@ -629,9 +629,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar al modulo reportes
     And ingresar a la opcion detalle compania
     And seleccionar fecha desde "01/11/2023"
-    And ingresar hora desde "013000"
+    And ingresar hora desde ""
     And seleccionar fecha hasta "02/11/2023"
-    And ingresar hora hasta "023000"
+    And ingresar hora hasta ""
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Detalle Compañia"
@@ -647,9 +647,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar al modulo reportes
     And ingresar a la opcion detalle compania
     And seleccionar fecha desde "01/11/2023"
-    And ingresar hora desde "013000"
+    And ingresar hora desde ""
     And seleccionar fecha hasta "02/11/2023"
-    And ingresar hora hasta "023000"
+    And ingresar hora hasta ""
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Detalle Compañia"
@@ -665,9 +665,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar al modulo reportes
     And ingresar a la opcion detalle compania
     And seleccionar fecha desde "01/11/2023"
-    And ingresar hora desde "013000"
+    And ingresar hora desde ""
     And seleccionar fecha hasta "02/11/2023"
-    And ingresar hora hasta "023000"
+    And ingresar hora hasta ""
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Detalle Compañia"
@@ -675,7 +675,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets/BP Usados por Media Hora, Hora, Día o Mes ########
-
+  @reporte
   Scenario: CPF249 - Tickets-BP usados por media hora, hora, dia o mes/Visualizar pantalla de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -685,7 +685,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets bp usados por media hora, hora, dia o mes
     And visualizar pantalla de "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
 
-
+  @reporte
   Scenario: CPF250 - Tickets-BP usados por media hora, hora, dia o mes/Consultar reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -699,17 +699,17 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "100000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "si"
-    And ingresar aerolinea "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
+    And seleccionar compania "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
     And ingresar tipo ticket "Todos"
     And seleccionar tipo rango "Por cada Media Hora"
-    And ingresar destino "IT"
-    And ingreser numero vuelo "LA2188"
+    And ingresar destino ""
+    And ingreser numero vuelo "LA1321"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF251 - Tickets-BP usados por media hora, hora, dia o mes/Exportar pdf de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -723,18 +723,18 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "100000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "si"
-    And ingresar aerolinea "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
+    And seleccionar compania "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
     And ingresar tipo ticket "Todos"
     And seleccionar tipo rango "Por cada Media Hora"
-    And ingresar destino "IT"
-    And ingreser numero vuelo "LA2188"
+    And ingresar destino ""
+    And ingreser numero vuelo "LA1321"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
     And click en el boton cerrar
     And click en el boton pdf
 
-
+  @reporte
   Scenario: CPF252 - Tickets-BP usados por media hora, hora, dia o mes/Exportar excel de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -748,18 +748,18 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "100000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "si"
-    And ingresar aerolinea "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
+    And seleccionar compania "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
     And ingresar tipo ticket "Todos"
     And seleccionar tipo rango "Por cada Media Hora"
-    And ingresar destino "IT"
-    And ingreser numero vuelo "LA2188"
+    And ingresar destino ""
+    And ingreser numero vuelo "LA1321"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
     And click en el boton cerrar
     And click en el boton excel
 
-
+  @reporte
   Scenario: CPF253 - Tickets-BP usados por media hora, hora, dia o mes/Imprimir reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -773,11 +773,11 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "100000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "si"
-    And ingresar aerolinea "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
+    And seleccionar compania "LATAM AIRLINES GROUP S.A SUCURSAL DEL PERU"
     And ingresar tipo ticket "Todos"
     And seleccionar tipo rango "Por cada Media Hora"
-    And ingresar destino "IT"
-    And ingreser numero vuelo "LA2188"
+    And ingresar destino ""
+    And ingreser numero vuelo "LA1321"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
@@ -807,10 +807,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "STAR UP S.A."
+    And seleccionar compania "STAR UP S.A."
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
     And ingresar el destino ""
-    And ingreser numero de vuelo "generico"
+    And ingreser numero de vuelo "2I3131"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -819,10 +819,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar mes de uso "12/2022"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "KLM CIA REAL HOLANDESA DE AVIACION"
+    And seleccionar compania "KLM CIA REAL HOLANDESA DE AVIACION"
     And ingresar tipo ticket "Todos"
     And ingresar el destino ""
-    And ingreser numero de vuelo "KL744"
+    And ingreser el numero de vuelo "KL744"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -840,10 +840,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "STAR UP S.A."
+    And seleccionar compania "STAR UP S.A."
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
     And ingresar el destino ""
-    And ingreser numero de vuelo "generico"
+    And ingreser numero de vuelo "2I3131"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -852,10 +852,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar mes de uso "12/2022"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "KLM CIA REAL HOLANDESA DE AVIACION"
+    And seleccionar compania "KLM CIA REAL HOLANDESA DE AVIACION"
     And ingresar tipo ticket "Todos"
     And ingresar el destino ""
-    And ingreser numero de vuelo "KL744"
+    And ingreser el numero de vuelo "KL744"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -874,10 +874,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "STAR UP S.A."
+    And seleccionar compania "STAR UP S.A."
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
     And ingresar el destino ""
-    And ingreser numero de vuelo "generico"
+    And ingreser numero de vuelo "2I3131"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -886,10 +886,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar mes de uso "12/2022"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "KLM CIA REAL HOLANDESA DE AVIACION"
+    And seleccionar compania "KLM CIA REAL HOLANDESA DE AVIACION"
     And ingresar tipo ticket "Todos"
     And ingresar el destino ""
-    And ingreser numero de vuelo "KL744"
+    And ingreser el numero de vuelo "KL744"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -908,10 +908,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "31/08/2020"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "STAR UP S.A."
+    And seleccionar compania "STAR UP S.A."
     And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
     And ingresar el destino ""
-    And ingreser numero de vuelo "generico"
+    And ingreser numero de vuelo "2I3131"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -920,10 +920,10 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar mes de uso "12/2022"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "KLM CIA REAL HOLANDESA DE AVIACION"
+    And seleccionar compania "KLM CIA REAL HOLANDESA DE AVIACION"
     And ingresar tipo ticket "Todos"
     And ingresar el destino ""
-    And ingreser numero de vuelo "KL744"
+    And ingreser el numero de vuelo "KL744"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
@@ -1235,7 +1235,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "230000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "AEROLINEA GENERICA"
+    And seleccionar compania "AEROLINEA GENERICA"
     And ingresar tipo ticket "Todos"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
     And ingresar numero de vuelo "GENERICO"
@@ -1258,7 +1258,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "230000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "AEROLINEA GENERICA"
+    And seleccionar compania "AEROLINEA GENERICA"
     And ingresar tipo ticket "Todos"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
     And ingresar numero de vuelo "GENERICO"
@@ -1282,7 +1282,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "230000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "AEROLINEA GENERICA"
+    And seleccionar compania "AEROLINEA GENERICA"
     And ingresar tipo ticket "Todos"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
     And ingresar numero de vuelo "GENERICO"
@@ -1306,7 +1306,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "230000"
     And seleccionar tipo de documento boarding "si"
     And seleccionar tipo de documento ticket "no"
-    And ingresar aerolinea "AEROLINEA GENERICA"
+    And seleccionar compania "AEROLINEA GENERICA"
     And ingresar tipo ticket "Todos"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
     And ingresar numero de vuelo "GENERICO"
@@ -1339,9 +1339,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "31/01/2021"
     And ingresar hora hasta "230000"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
-    And seleccionar tipo vuelo "NACIONAL"
+    And seleccionar tipo vuelo "TODOS"
     And seleccionar tipo persona "ADULTO"
     And ingresar numero de vuelo "H25079"
     And click en el boton buscar
@@ -1358,9 +1358,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "31/01/2021"
     And ingresar hora hasta "230000"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
-    And seleccionar tipo vuelo "NACIONAL"
+    And seleccionar tipo vuelo "TODOS"
     And seleccionar tipo persona "ADULTO"
     And ingresar numero de vuelo "H25079"
     And click en el boton buscar
@@ -1378,9 +1378,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "31/01/2021"
     And ingresar hora hasta "230000"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
-    And seleccionar tipo vuelo "NACIONAL"
+    And seleccionar tipo vuelo "TODOS"
     And seleccionar tipo persona "ADULTO"
     And ingresar numero de vuelo "H25079"
     And click en el boton buscar
@@ -1398,9 +1398,9 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora desde "000000"
     And seleccionar fecha hasta "31/01/2021"
     And ingresar hora hasta "230000"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar motivo de rehabilitacion "Demora o Cancelación del vuelo X mal tiempo"
-    And seleccionar tipo vuelo "NACIONAL"
+    And seleccionar tipo vuelo "TODOS"
     And seleccionar tipo persona "ADULTO"
     And ingresar numero de vuelo "H25079"
     And click en el boton buscar
@@ -1520,7 +1520,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar tipo transbordo "NORMAL"
     And seleccionar tipo persona "ADULTO"
     And seleccionar tipo vuelo "INTERNACIONAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1546,7 +1546,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar tipo transbordo "NORMAL"
     And seleccionar tipo persona "ADULTO"
     And seleccionar tipo vuelo "INTERNACIONAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And ingresar numero de vuelo "H25560"
     And ingresar asiento "022B"
     And ingresar persona "LLAMACPONCCA MARINA"
@@ -1581,7 +1581,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
     And seleccionar tipo transbordo "NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo persona "ADULTO"
     And seleccionar tipo vuelo "Todos"
     And seleccionar fecha de vuelo "11/04/2022"
@@ -1605,7 +1605,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar fecha hasta "10/04/2022"
     And ingresar hora hasta "230000"
     And seleccionar tipo transbordo "NORMAL"
-    And ingresar aerolinea "SKY AIRLINE PERU"
+    And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo persona "ADULTO"
     And seleccionar tipo vuelo "Todos"
     And seleccionar fecha de vuelo "11/04/2022"
@@ -1616,3 +1616,13 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar boarding pass anulados
     And visualizar resumen boarding neto
     And click en el boton excel
+
+
+  Scenario: RF009/CPF001 - Busqueda pasajero fiscalia/Visualizar pantalla de Reporte Busqueda de Pasajero
+    Given abre la ruta del aplicativo web
+    And ingresa el usuario "fluyo"
+    And ingresa la contrasena "fluyo987"
+    And click en el boton iniciar sesion
+    And ingresar al modulo reportes
+    And ingresar a la opcion busqueda pasajero fiscalia
+    And visualizar pantalla de "Búsqueda de pasajeros para la fiscalía"

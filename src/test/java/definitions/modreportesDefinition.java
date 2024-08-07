@@ -139,7 +139,7 @@ public class modreportesDefinition {
     }
 
     @And("click en el boton pdf")
-    public void clickEnElBotonPdf() {
+    public void clickEnElBotonPdf() throws InterruptedException {
         pdf.clickBotonPdf();
     }
 
@@ -440,5 +440,15 @@ public class modreportesDefinition {
     @And("validar el {string}")
     public void validarEl(String registros) {
         reportes.validarTotalRegistrosLabel(registros);
+    }
+
+    @And("ingresar a la opcion busqueda pasajero fiscalia")
+    public void ingresarALaOpcionBusquedaPasajeroFiscalia() {
+        reportes.ingresarOpcionPasajeroFiscalia();
+    }
+
+    @And("ingreser el numero de vuelo {string}")
+    public void ingreserElNumeroDeVuelo(String vuelo) {
+        reportes.ingresarNumeroVueloC(vuelo);
     }
 }

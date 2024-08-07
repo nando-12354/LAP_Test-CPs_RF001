@@ -392,7 +392,7 @@ public class modconsultasDefinition {
     }
 
     @And("click en exportar excel")
-    public void clickEnExportarExcel() {
+    public void clickEnExportarExcel() throws InterruptedException{
         excel.clickBotonExcelC();
     }
 
@@ -488,7 +488,7 @@ public class modconsultasDefinition {
     }
 
     @And("click en el boton reporte")
-    public void clickEnElBotonReporte() {
+    public void clickEnElBotonReporte() throws InterruptedException{
         excel.clickBotonExcelD();
     }
 

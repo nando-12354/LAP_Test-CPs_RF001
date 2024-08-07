@@ -195,7 +195,7 @@ public class modrehabilitacionDefinition {
     }
 
     @And("click en el boton excel")
-    public void clickEnElBotonExcel() {
+    public void clickEnElBotonExcel() throws InterruptedException {
         excel.clickBotonExcel();
     }
 
@@ -375,7 +375,7 @@ public class modrehabilitacionDefinition {
     }
 
     @And("click en boton excel")
-    public void clickEnBotonExcel() {
+    public void clickEnBotonExcel() throws InterruptedException {
         excel.clickBotonExcelB();
     }
 
@@ -492,5 +492,15 @@ public class modrehabilitacionDefinition {
     public void ingresarUnaFechaDeVuelo(String fechavuelo) {
         rehabilitacion.ingresarFechaVuelo(fechavuelo);
         rehabilitacion.darClickCalendarioBpSalida();
+    }
+
+    @And("seleccionar boardings {string}")
+    public void seleccionarBoardings(String bp) {
+        rehabilitacion.seleccionarTicket(bp);
+    }
+
+    @And("click en boton pdf")
+    public void clickEnBotonPdf() throws InterruptedException {
+        pdf.clickBotonPdfB();
     }
 }
