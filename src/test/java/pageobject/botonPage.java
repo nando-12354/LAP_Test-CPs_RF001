@@ -22,12 +22,14 @@ public class botonPage extends util {
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[3]") protected WebElement btnEditarC;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[4]") protected WebElement btnEditarD;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[5]") protected WebElement btnEditarE;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[6]") protected WebElement btnEditarF;
     @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//button[contains(.,'Guardar')])[2]") protected WebElement btnGuardarB;
     @FindBy(xpath = "(//p-button/button[@type='button'])[3]") protected WebElement btnGuardarC;
     @FindBy(xpath = "//button[contains(.,'Cancelar')]") protected WebElement btnCancelar;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarTicket;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[7]") protected WebElement btnEliminarG;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-trash'])[10]") protected WebElement btnEliminarJ;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//p-button[@icon='pi pi-trash']/button)[1]") protected WebElement btnEliminarB;
     @FindBy(xpath = "//button[contains(.,'Buscar')]") protected WebElement btnBuscar;
@@ -111,6 +113,13 @@ public class botonPage extends util {
         wait.until(ExpectedConditions.visibilityOf(btnEditarE));
         btnEditarE.click();
     }
+    /**
+     * Metodo que realiza click en el quinto boton Editar
+     */
+    public void clickBotonEditarF(){
+        wait.until(ExpectedConditions.visibilityOf(btnEditarF));
+        btnEditarF.click();
+    }
 
     /**
      * Metodo que realiza click en el boton Guardar.
@@ -142,6 +151,10 @@ public class botonPage extends util {
     public void clickBotonEliminarTicket(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminarTicket));
         btnEliminarTicket.click();
+    }
+    public void clickBotonEliminarG(){
+        wait.until(ExpectedConditions.visibilityOf(btnEliminarG));
+        btnEliminarG.click();
     }
     public void clickBotonEliminarJ(){
         wait.until(ExpectedConditions.visibilityOf(btnEliminarJ));

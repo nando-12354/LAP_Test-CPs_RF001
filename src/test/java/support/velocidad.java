@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class velocidad extends RemoteWebDriver {
     private final WebDriver driver;
-    private long demora = 300;
+    private long demora = 500;
 
     public velocidad(WebDriver driver) {
         this.driver = driver;

@@ -675,7 +675,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets/BP Usados por Media Hora, Hora, Día o Mes ########
-  @reporte
+
   Scenario: CPF249 - Tickets-BP usados por media hora, hora, dia o mes/Visualizar pantalla de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -685,7 +685,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets bp usados por media hora, hora, dia o mes
     And visualizar pantalla de "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
 
-  @reporte
+
   Scenario: CPF250 - Tickets-BP usados por media hora, hora, dia o mes/Consultar reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -709,7 +709,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
     And click en el boton cerrar
 
-  @reporte
+
   Scenario: CPF251 - Tickets-BP usados por media hora, hora, dia o mes/Exportar pdf de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -734,7 +734,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  @reporte
+
   Scenario: CPF252 - Tickets-BP usados por media hora, hora, dia o mes/Exportar excel de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -759,7 +759,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  @reporte
+
   Scenario: CPF253 - Tickets-BP usados por media hora, hora, dia o mes/Imprimir reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

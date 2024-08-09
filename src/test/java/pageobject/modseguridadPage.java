@@ -49,7 +49,7 @@ public class modseguridadPage extends util {
     @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[25]") protected WebElement clickDesplegarI;
     @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[26]") protected WebElement clickDesplegarJ;
     @FindBy(xpath = "(//section//ul/li/span[@class='filaPadre']/span)[27]") protected WebElement clickDesplegarK;
-
+    @FindBy(xpath = "//span/button[@aria-label='Página 2']") protected WebElement paginadoB;
     public modseguridadPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -363,5 +363,8 @@ public class modseguridadPage extends util {
     }
     public void clickDesplegarPerfilK(){
         clickDesplegarK.click();
+    }
+    public void clickPaginadoB(){
+        paginadoB.click();
     }
 }

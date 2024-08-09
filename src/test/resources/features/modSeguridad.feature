@@ -36,7 +36,7 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
     And click en el boton nuevo
-    And ingresar nombre del rol "HHHTEST"
+    And ingresar nombre del rol "Automatiza"
     And seleccionar rol padre "JEFE CAJA"
     And configurar perfil "si"
     And click en el boton guardar
@@ -50,7 +50,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton iniciar sesion
     And ingresar al modulo seguridad
     And ingresar a la opcion roles
-    And click en el boton editar
+    And click en el boton editar rol
     And click en el boton guardar
     And validar mensaje exito "Registro modificado correctamente"
 
@@ -114,11 +114,11 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar al modulo seguridad
     And ingresa a la opcion usuarios
     And click en el boton nuevo
-    And ingresar apellidos "EXAMENB"
-    And ingresar nombres "EXAMENB"
-    And ingresar nombre de usuario "examb"
-    And ingresar contrasena "examb"
-    And confirmar contrasena "examb"
+    And ingresar apellidos "test22"
+    And ingresar nombres "test22"
+    And ingresar nombre de usuario "test22"
+    And ingresar contrasena "test22"
+    And confirmar contrasena "test22"
     And ingresar privilegio "TOTAL"
     And ingresar rol disponible "si"
     And click en guardar
@@ -134,13 +134,13 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresa a la opcion usuarios
     And click en el boton editar
     And modificar el estado a "VIGENTE"
-    And modificar apellidos "Miranda"
-    And modificar nombres "Joel"
-    And modificar nombre de usuario "jmiranda8"
+    And modificar apellidos "test50"
+    And modificar nombres "test50"
+    And modificar nombre de usuario "test50"
     And modificar fecha vigencia "30/12/2025"
     And seleccionar habilitar campos "si"
-    And ingresar contrasena "jmiranda8"
-    And confirmar contrasena "jmiranda8"
+    And ingresar contrasena "test50"
+    And confirmar contrasena "test50"
     And ingresar rol disponible "no"
     And click en el boton guardar
     And validar mensaje exito "Registro actualizado correctamente"

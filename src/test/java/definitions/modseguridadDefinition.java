@@ -248,11 +248,18 @@ public class modseguridadDefinition {
 
     @And("click en el boton eliminar rol")
     public void clickEnElBotonEliminarRol() {
-        boton.clickBotonEliminarJ();
+        seguridad.clickPaginadoB();
+        boton.clickBotonEliminarG();
     }
 
     @And("visualizar la opcion {string}")
     public void visualizarLaOpcion(String opciones) {
         seguridad.validarOpcionesSeguridad(opciones);
+    }
+
+    @And("click en el boton editar rol")
+    public void clickEnElBotonEditarRol() {
+        seguridad.clickPaginadoB();
+        boton.clickBotonEditarF();
     }
 }

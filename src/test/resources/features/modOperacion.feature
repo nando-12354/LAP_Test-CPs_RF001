@@ -263,9 +263,8 @@ Feature: Funcionalidad del modulo Operacion
     And ingresar a la opcion gestion tickets contingencia
     And ingresar a la opcion pre emision tickets contingencia
     And ingresar tipo de vuelo "Internacional"
-    And ingresar tipo de transbordo "Normal"
     And ingresar tipo de pasajero "Adulto"
-    And ingresar precio ticket "$ 34.00 (Actual)"
+    And ingresar precio ticket "$ 30.95 (Actual)"
     And ingresar cantidad "5"
     And click en el boton generar
     And validar alerta "¿Está seguro de realizar esta acción?"
@@ -298,8 +297,8 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar usuario "Carmen Vera"
     And filtrar tipo de ticket "Internacional"
     And filtrar tipo de pasajero "Adulto"
-    And ingresar ticket desde "9000600312484834"
-    And ingresar ticket hasta "9000600312484836"
+    And ingresar ticket desde "9000600312684536"
+    And ingresar ticket hasta "9000600312684538"
     And click en el boton buscar
     And seleccionar tickets requeridos "si"
     And seleccionar cierre de turno "si"
@@ -320,8 +319,8 @@ Feature: Funcionalidad del modulo Operacion
     And filtrar usuario "ADMIN ADMIN"
     And filtrar tipo de ticket "Internacional"
     And filtrar tipo de pasajero "Adulto"
-    And ingresar ticket desde "9000600312884348"
-    And ingresar ticket hasta "9000600312884440"
+    And ingresar ticket desde "9000600312884345"
+    And ingresar ticket hasta "9000600312884347"
     And click en el boton buscar
     And seleccionar tickets requeridos "si"
     And seleccionar cierre de turno "no"
@@ -351,7 +350,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

@@ -413,7 +413,7 @@ public class modoperacionDefinition {
 
     @And("seleccionar operacion a extornar {string}")
     public void seleccionarOperacionAExtornar(String operacionextorno) {
-        operacion.seleccionarTicketContingenciaA(operacionextorno);
+        operacion.seleccionarTicketOperacionA(operacionextorno);
     }
 
     @And("click en el boton extornar")

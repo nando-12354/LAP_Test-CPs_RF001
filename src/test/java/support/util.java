@@ -35,29 +35,18 @@ public class util extends hooks {
         js = (JavascriptExecutor) driver;
     }
 
-    /**
-     * Metodo antiguo que permite mantener la ventana activa cuando se abre una nueva ventana
-     * @deprecated No usar este metodo se recomienda usar {@link #manejarNuevaPestana}
-     */
     public void ventanaActiva(){
         Set<String> identificadores = driver.getWindowHandles();
         for (String identificador:identificadores){
             driver.switchTo().window(identificador);
         }
     }
-    /**
-     * Metodo antiguo que permite cerrar la ventana actual y volver a la ventana principal
-     * @deprecated No usar este metodo se recomienda usar {@link #manejarNuevaPestana}
-     */
+
     public void ventanaInicial(){
         driver.close();
         driver.switchTo().window("");
     }
 
-    /**
-     * Metodo que permite manejar una nueva pestana o ventana que se abra en el navegador
-     * @param segundosEspera Tiempo de espera en segundos de la nueva ventana activa luego se cierra y se vuelve a la ventana principal
-     */
     public void manejarNuevaPestana(long segundosEspera) {
         String ventanaPrincipal = driver.getWindowHandle();
 
