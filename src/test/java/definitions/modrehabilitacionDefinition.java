@@ -503,4 +503,10 @@ public class modrehabilitacionDefinition {
     public void clickEnBotonPdf() throws InterruptedException {
         pdf.clickBotonPdfB();
     }
+
+    @And("ingresar la fecha vuelo {string}")
+    public void ingresarLaFechaVuelo(String fecha) {
+        rehabilitacion.ingresarFechaVuelo(fecha);
+        rehabilitacion.darClickCalendarioTicketVuelo();
+    }
 }

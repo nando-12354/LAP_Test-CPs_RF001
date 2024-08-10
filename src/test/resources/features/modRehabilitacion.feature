@@ -1,5 +1,5 @@
 Feature: Funcionalidad del modulo Rehabilitacion
-
+  @reporte
   Scenario: CPF109 - Visualizar modulo rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -21,7 +21,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar la subopcion "Boarding Pass Por Fecha"
 
 ######## TICKET NORMAL ########
-
+ @reporte
   Scenario: CPF110 - Ticket normal/Agregar ticket normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -39,7 +39,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Motivo"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF111 - Ticket normal/Consultar representante de ticket normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -52,7 +52,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF112 - Ticket normal/Ver detalle de ticket normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -61,13 +61,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket normal
-    And ingresar numero de ticket "5000604359486400"
+    And ingresar numero de ticket "1000602341073618"
     And click en el boton agregar ticket
     And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF113 - Ticket normal/Rehabilitar ticket normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -76,7 +76,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket normal
-    And ingresar numero de ticket "5000604332878316"
+    And ingresar numero de ticket "5000604329977813"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
     And click en el boton rehabilitar
@@ -88,7 +88,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## TICKET MASIVO ########
-
+  @reporte
   Scenario: CPF114 - Ticket masivo/Agregar ticket masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -105,7 +105,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Observaciones"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF115 - Ticket masivo/Consultar representante de ticket masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -118,7 +118,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF116 - Ticket masivo/Ver detalle de ticket masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -127,13 +127,13 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And ingresar numero de ticket "1000602341074119"
+    And ingresar numero de ticket "1000602341073618"
     And click en el boton agregar ticket
     And click en boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF117 - Ticket masivo/Rehabilitar ticket masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -142,7 +142,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And ingresar numero de ticket "5000604332971314"
+    And ingresar numero de ticket "5000604330876414"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
     And seleccionar un motivo "Cierre de aeropuerto de destino"
@@ -155,7 +155,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## TICKET POR SALIDA ########
-
+  @reporte
   Scenario: CPF118 - Ticket por salida/Agregar ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -173,7 +173,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Fecha de registro en tabla temporal"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF119 - Ticket por salida/Ver detalle de ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -188,7 +188,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF120 - Ticket por salida/Rehabilitar ticket por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -206,11 +206,11 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en boton excel
-    And click en boton imprimir
+    And click en el boton imprimir
     And click en el boton aceptar
 
 ######## TICKET POR VUELO ########
-
+  @reporte
   Scenario: CPF121 - Ticket por vuelo/Buscar ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -220,7 +220,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "04/01/2024"
+    And ingresar la fecha vuelo "04/01/2024"
     And seleccionar vuelo "4A024"
     And click en el boton buscar
     And visualizar lista de "Tickets Por Vuelo"
@@ -229,7 +229,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Observaciones"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF122 - Ticket por vuelo/Consultar representante de ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -242,7 +242,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF123 - Ticket por vuelo/Ver detalle de ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -252,14 +252,14 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "04/01/2024"
+    And ingresar la fecha vuelo "04/01/2024"
     And seleccionar vuelo "4A024"
     And click en el boton buscar
     And click en el boton ver detalle
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF124 - Ticket por vuelo/Rehabilitar ticket por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -269,7 +269,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket por vuelo
     And seleccionar una compania "AERO TRANSPORTE  S. A."
-    And ingresar fecha de vuelo "04/01/2024"
+    And ingresar la fecha vuelo "04/01/2024"
     And seleccionar vuelo "4A024"
     And click en el boton buscar
     And seleccionar ticket "si"
@@ -282,7 +282,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## TICKET POR RANGO ########
-
+  @reporte
   Scenario: CPF125 - Ticket por rango/Buscar ticket por rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -300,7 +300,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Observaciones"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF126 - Ticket por rango/Consultar representante de ticket por rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -313,7 +313,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF127 - Ticket por rango/Ver detalle de ticket por rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -329,7 +329,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF128 - Ticket por rango/Rehabilitar ticket por rango
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -351,7 +351,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## TICKET POR FECHA ########
-
+  @reporte
   Scenario: CPF129 - Ticket por fecha/Buscar ticket por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -369,7 +369,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Observaciones"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF130 - Ticket por fecha/Consultar representante de ticket por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -382,7 +382,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF131 - Ticket por fecha/Ver detalle de ticket por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -398,7 +398,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Ticket"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF132 - Ticket por fecha/Rehabilitar ticket por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -420,7 +420,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## BOARDING PASS NORMAL ########
-
+  @reporte
   Scenario: CPF133 - Boarding pass normal/Agregar boarding pass normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -432,8 +432,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "05/01/2024"
     And ingresar numero de vuelo "4A4041"
-    And ingresar asiento "011D"
-    And ingresar persona "CORDOVA ALIAGA LUCER"
+    And ingresar asiento "003A"
+    And ingresar persona "MEZA MALAGA JACQUELI"
     And click en el boton agregar bp
     And visualizar lista de "Boarding Pass Normal"
     And validar columna "Número"
@@ -446,7 +446,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF134 - Boarding pass normal/Consultar representante de boarding pass normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -459,7 +459,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF135 - Boarding pass normal/Ver detalle de boarding pass normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -475,7 +475,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF136 - Boarding pass normal/Rehabilitar boarding pass normal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -498,7 +498,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## BOARDING PASS MASIVO ########
-
+  @reporte
   Scenario: CPF137 - Boarding pass masivo/Agregar boarding pass masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -510,8 +510,8 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar compania "AERO TRANSPORTE  S. A."
     And ingresar fecha de vuelo "05/01/2024"
     And ingresar numero de vuelo "4A4041"
-    And ingresar asiento "011A"
-    And ingresar persona "FIGUEROA ATENCIA NEL"
+    And ingresar asiento "002B"
+    And ingresar persona "VALVERDE HUAMAN DORI"
     And click en el boton agregar bp
     And visualizar lista de "Boarding pass masivo"
     And validar columna "Número"
@@ -523,7 +523,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF138 - Boarding pass masivo/Consultar representante de boarding pass masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -536,7 +536,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF139 - Boarding pass masivo/Ver detalle de boarding pass masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -552,7 +552,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF140 - Boarding pass masivo/Rehabilitar boarding pass masivo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -572,11 +572,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
     And click en el boton excel
     And click en el boton imprimir
-    And click en el boton voucher
     And click en el boton aceptar
 
 ######## BOARDING PASS POR SALIDA ########
-
+  @reporte
   Scenario: CPF141 - Boarding pass por salida/Agregar boarding pass por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -596,7 +595,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna "Fecha de registro en tabla temporal"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF142 - Boarding pass por salida/Ver detalle de boarding pass por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -613,7 +612,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF143 - Boarding pass por salida/Rehabilitar boarding pass por salida
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -637,7 +636,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## BOARDING PASS POR VUELO ########
-
+  @reporte
   Scenario: CPF144 - Boarding pass por vuelo/Buscar boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -658,7 +657,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF145 - Boarding pass por vuelo/Consultar representante de boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -671,7 +670,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF146 - Boarding pass por vuelo/Ver detalle de boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -688,7 +687,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF147 - Boarding pass por vuelo/Rehabilitar boarding pass por vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -712,7 +711,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And click en el boton aceptar
 
 ######## BOARDING PASS POR FECHA ########
-
+  @reporte
   Scenario: CPF148 - Boarding pass por fecha/Buscar boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -733,7 +732,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar columna checkbox "Seleccionar"
     And validar columna "Acciones"
 
-
+  @reporte
   Scenario: CPF149 - Boarding pass por fecha/Consultar representante de boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -746,7 +745,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And elegir compania "AEROLINEA GENERICA"
     And visualizar "Representante" de la compania
 
-
+  @reporte
   Scenario: CPF150 - Boarding pass por fecha/Ver detalle de boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -763,7 +762,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And visualizar el "Detalle: Boarding"
     And click en el boton cerrar
 
-
+  @reporte
   Scenario: CPF151 - Boarding pass por fecha/Rehabilitar boarding pass por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

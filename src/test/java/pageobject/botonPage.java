@@ -1,5 +1,7 @@
 package pageobject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -191,8 +193,27 @@ public class botonPage extends util {
         btnRehabilitar.click();
     }
     public void clickBotonCerrar(){
+        // Esperar a que el spinner desaparezca
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("ngx-spinner-overlay")));
+
+        // Esperar a que el botón "Cerrar" sea visible y clickeable
         wait.until(ExpectedConditions.visibilityOf(btnCerrar));
-        btnCerrar.click();
+
+        // Intentar hacer clic varias veces
+        for (int i = 0; i < 3; i++) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(btnCerrar));
+                btnCerrar.click();
+                break;
+            } catch (ElementClickInterceptedException e) {
+                // Esperar un poco antes de intentar de nuevo
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
     }
     public void clickBotonAceptar(){
         wait.until(ExpectedConditions.visibilityOf(btnAceptar));

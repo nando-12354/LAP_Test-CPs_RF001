@@ -48,6 +48,7 @@ public class modrehabilitacionPage extends util {
     @FindBy(xpath = "(//table/tbody/tr/td/p-checkbox)[20]") protected WebElement checkBoardingJ;
     @FindBy(xpath = "//th[contains(.,'Fecha Creación')]") protected WebElement clickCabeceraGrilla;
     @FindBy(xpath = "//table/tbody/tr/td/span[text()='18']") protected WebElement clickDiaCalendarioBpSalida;
+    @FindBy(xpath = "//table/tbody/tr/td/span[text()='4']") protected WebElement clickDiaCalendarioTicketVuelo;
 
     public modrehabilitacionPage() {
         PageFactory.initElements(slowDriver, this);
@@ -210,6 +211,9 @@ public class modrehabilitacionPage extends util {
     }
     public void darClickCalendarioBpSalida(){
         clickDiaCalendarioBpSalida.click();
+    }
+    public void darClickCalendarioTicketVuelo(){
+        clickDiaCalendarioTicketVuelo.click();
     }
     public void seleccionarBoardingB(String selectb){
         wait.until(ExpectedConditions.visibilityOf(checkBoardingB));

@@ -38,7 +38,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar lista de "Usuario"
     And validar columna "Código"
-    And validar columna "ffff"
+    And validar columna "Cuenta"
     And validar columna "Nombre"
     And validar columna "Fecha Creación"
     And validar columna "Grupo"
