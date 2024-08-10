@@ -205,7 +205,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
     And validar mensaje exitoso "La Rehabilitación concluyó satisfactoriamente"
-    And click en boton excel
+    And click en el boton excel
     And click en el boton imprimir
     And click en el boton aceptar
 
