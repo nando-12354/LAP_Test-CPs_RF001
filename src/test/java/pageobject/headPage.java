@@ -29,7 +29,8 @@ public class headPage extends util {
      */
     public void validarCabeceraGrilla(String cabecera) {
         boolean cabeceraValido = false;
-        String xpath = "//p-table//table/thead/tr/th[normalize-space(text())='" + cabecera.trim() + "']";
+        String xpath = "//table/thead/tr/th[normalize-space(text())='" + cabecera.trim() + "']";
+        /* //p-table//table/thead/tr/th[normalize-space(text())='" + cabecera.trim() + "'] */
         try {
             WebElement cabeceraElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String textoReal = cabeceraElemento.getText().trim();
