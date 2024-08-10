@@ -150,4 +150,9 @@ public class modalarmasDefinition {
     public void ingresarDescripcionDeAtencion(String descripcion) {
         alarmas.ingresarDescripcionAtencion(descripcion);
     }
+
+    @And("ingresar nuevo correo electronico {string}")
+    public void ingresarNuevoCorreoElectronico(String correo) {
+        alarmas.ingresarActualizacionCorreoB(correo);
+    }
 }

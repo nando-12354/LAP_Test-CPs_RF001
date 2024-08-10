@@ -35,8 +35,8 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar asunto de correo "Test"
     And seleccionar tipo de alarma "Proceso de rehabilitación Ticket por Vuelo"
     And click en el boton +agregar
-    And seleccionar al usuario "fvanessa"
-    And ingresar correo electronico "fvanessa@gys.com"
+    And seleccionar al usuario "AHUAQUI"
+    And ingresar correo electronico "ahuaqui@gys.com"
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está Seguro de crear la configuración de la alarma?"
     And click en el boton aceptar
@@ -55,7 +55,7 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar asunto de correo "Edit"
     And click en el boton +agregar
     And seleccionar otro usuario "kfranco"
-    And ingresar correo electronico "selenium@gys.com"
+    And ingresar nuevo correo electronico "selenium@gys.com"
     And click en el boton guardar
     And validar alerta de confirmacion "¿Está Seguro de Actualizar la configuración de la alarma?"
     And click en el boton aceptar
@@ -128,7 +128,7 @@ Feature: Funcionalidad del modulo Alarmas
 
 ######## ALARMAS GENERADAS ########
   @reporte
-  Scenario: CPF307 - Alarmas generadas/Visualizar pantalla de alarmas generadas
+  Scenario: CPF308 - Alarmas generadas/Visualizar pantalla de alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -156,7 +156,7 @@ Feature: Funcionalidad del modulo Alarmas
     And validar columna "Estado"
 
   @reporte
-  Scenario: CPF308 - Alarmas generadas/Consultar alarmas generadas
+  Scenario: CPF309 - Alarmas generadas/Consultar alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
@@ -173,20 +173,20 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton buscar
 
   @reporte
-  Scenario: CPF309 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
+  Scenario: CPF310 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
     And ingresa la contrasena "fluyo987"
     And click en el boton iniciar sesion
     And ingresar al modulo alarmas
     And ingresar a la opcion alarmas generadas
-    And seleccionar fecha desde "01/09/2022"
+    And seleccionar fecha desde "01/08/2024"
     And ingresar la hora desde "000000"
-    And seleccionar fecha hasta "03/09/2022"
-    And ingresar la hora hasta "230000"
-    And seleccionar el modulo "Modulo Servicios"
+    And seleccionar fecha hasta "10/08/2024"
+    And ingresar la hora hasta "235959"
+    And seleccionar el modulo "Todos"
     And seleccionar el estado "Todos"
-    And seleccionar tipo de alarma "Error en conexión al Web Service de Tasa Cambio del Banco"
+    And seleccionar tipo de alarma "Todos"
     And click en el boton buscar
     And click en el boton pdf
     And click en el boton excel

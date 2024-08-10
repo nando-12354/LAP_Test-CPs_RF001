@@ -23,6 +23,7 @@ public class modalarmasPage extends util {
     @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
     @FindBy(xpath = "(//input[@id='textInput'])[3]") protected WebElement inputCorreo;
     @FindBy(xpath = "(//input[@id='textInput'])[3]") protected WebElement inputCorreoAct;
+    @FindBy(xpath = "(//input[@id='textInput'])[4]") protected WebElement inputCorreoActB;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000001/001']") protected WebElement btnEditarA;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000048/S01']") protected WebElement btnEditarB;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000050/S01']") protected WebElement btnEditarC;
@@ -101,6 +102,11 @@ public class modalarmasPage extends util {
         wait.until(ExpectedConditions.visibilityOf(inputCorreoAct));
         limpiarCampo(inputCorreoAct);
         inputCorreoAct.sendKeys(actualizar);
+    }
+    public void ingresarActualizacionCorreoB(String actualizar){
+        wait.until(ExpectedConditions.visibilityOf(inputCorreoActB));
+        limpiarCampo(inputCorreoActB);
+        inputCorreoActB.sendKeys(actualizar);
     }
     public void clickBotonEditarA(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarA));
