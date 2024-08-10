@@ -21,7 +21,7 @@ Feature: Funcionalidad del modulo Consultas
     And visualizar la opcion "Sincronización"
     And visualizar la opcion "Transacción Crítica"
     And visualizar la opcion "Depuración"
-    And visualizar la opcion "Busqueda pasajeros fiscalia"
+    And visualizar la opcion "Manifiesto"
 
 ######## USUARIOS ########
 
