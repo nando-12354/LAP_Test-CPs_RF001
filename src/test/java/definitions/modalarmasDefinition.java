@@ -1,6 +1,7 @@
 package definitions;
 
 import io.cucumber.java.en.And;
+import pageobject.botonPage;
 import pageobject.menuPage;
 import pageobject.modalarmasPage;
 
@@ -16,9 +17,11 @@ import pageobject.modalarmasPage;
 public class modalarmasDefinition {
     menuPage menu;
     modalarmasPage alarmas;
+    botonPage boton;
     public modalarmasDefinition() {
         menu = new menuPage();
         alarmas = new modalarmasPage();
+        boton = new botonPage();
     }
 
     @And("ingresar al modulo alarmas")
@@ -131,5 +134,20 @@ public class modalarmasDefinition {
     public void seleccionarElEstado(String estado) {
         alarmas.abrirComboboxEstado();
         alarmas.seleccionarOpcion(estado);
+    }
+
+    @And("click en el boton configuracion")
+    public void clickEnElBotonConfiguracion() {
+        boton.clickBotonConfiguracion();
+    }
+
+    @And("validar popup {string}")
+    public void validarPopup(String popup) {
+        alarmas.validarPopupMonitoreo(popup);
+    }
+
+    @And("ingresar descripcion de atencion {string}")
+    public void ingresarDescripcionDeAtencion(String descripcion) {
+        alarmas.ingresarDescripcionAtencion(descripcion);
     }
 }

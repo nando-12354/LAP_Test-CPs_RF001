@@ -1,5 +1,6 @@
 package pageobject;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,13 +14,13 @@ public class modalarmasPage extends util {
     @FindBy(xpath = "//div/ul/li/a[@href='#/principal/alarmas/consulta-alarmas']") protected WebElement opAlarmasGeneradas;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codigoModulo']/span/p-dropdown//div[@role='button']") protected WebElement cmbModulo;
     @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codigoAlarma']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoAlarma;
-    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codCampo']/span/p-dropdown//div[@role='button']") protected WebElement cmbEstado;
-    @FindBy(xpath = "//app-input-select-2[@formcontrolname='fUsuario']//p-dropdown//div[@role='button']") protected WebElement cmbUsuarioA;
-    @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='sDscFinMensaje']/span/input") protected WebElement inputFinMensaje;
-    @FindBy(xpath = "//div/app-input-text-2[@formcontrolname='sDscAsunto']/span/input") protected WebElement inputAsuntoCorreo;
+    @FindBy(xpath = "//app-input-select-2[@optionvalue='codigoCampo']//div[@role='button']") protected WebElement cmbEstado;
+    @FindBy(xpath = "//app-input-select-2[@optionvalue='codigoUsuario']//div[@role='button']") protected WebElement cmbUsuarioA;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='finMensaje']//input[@id]") protected WebElement inputFinMensaje;
+    @FindBy(xpath = "//app-input-text-2[@formcontrolname='asunto']//input[@id]") protected WebElement inputAsuntoCorreo;
     @FindBy(xpath = "//span[contains(.,'Agregar')]") protected WebElement btnAgregar;
     @FindBy(xpath = "//span[contains(.,'Actualizar')]") protected WebElement btnActualizar;
-    @FindBy(xpath = "//span[contains(.,'Eliminar')]") protected WebElement btnEliminar;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-trash'])[1]") protected WebElement btnEliminar;
     @FindBy(xpath = "(//input[@id='textInput'])[3]") protected WebElement inputCorreo;
     @FindBy(xpath = "(//input[@id='textInput'])[3]") protected WebElement inputCorreoAct;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000001/001']") protected WebElement btnEditarA;
@@ -27,10 +28,11 @@ public class modalarmasPage extends util {
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000050/S01']") protected WebElement btnEditarC;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000051/S01']") protected WebElement btnEditarD;
     @FindBy(xpath = "//div/table/tbody/tr/td/a[@href='#/principal/alarmas/configuracion-alarmas/W0000086/S03']") protected WebElement btnEditarE;
-    @FindBy(xpath = "(//div//app-input-select-2[@optionvalue='sCodUsuario']/span/p-dropdown//div[@role='button'])[2]") protected WebElement cmbUsuarioB;
+    @FindBy(xpath = "(//app-input-select-2[@optionvalue='codigoUsuario']//div[@role='button'])[2]") protected WebElement cmbUsuarioB;
     @FindBy(xpath = "//div/app-input-date[@label='Hora de inicio']/span//input") protected WebElement txtHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora de fin']/span//input") protected WebElement txtHoraHasta;
-
+    @FindBy(xpath = "//span[contains(.,'Atención de alarma generadas:')]") protected WebElement popupMonitoreo;
+    @FindBy(xpath = "//textarea[contains(@inputid,'textarea')]") protected WebElement descripcionAtencion;
     public modalarmasPage() {
         PageFactory.initElements(slowDriver, this);
     }
@@ -127,5 +129,13 @@ public class modalarmasPage extends util {
     public void ingresarHoraHasta(String horahasta){
         wait.until(ExpectedConditions.visibilityOf(txtHoraHasta));
         txtHoraHasta.sendKeys(horahasta);
+    }
+    public void validarPopupMonitoreo(String popup){
+        wait.until(ExpectedConditions.visibilityOf(popupMonitoreo));
+        Assert.assertEquals(popup, "Atención de alarma generadas:", popupMonitoreo.getText());
+    }
+    public void ingresarDescripcionAtencion(String descripcion){
+        wait.until(ExpectedConditions.visibilityOf(descripcionAtencion));
+        descripcionAtencion.sendKeys(descripcion);
     }
 }

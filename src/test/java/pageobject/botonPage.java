@@ -17,12 +17,13 @@ import support.util;
  */
 public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Nuevo')]") protected WebElement btnNuevo;
-    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditar;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-pencil'])[1]") protected WebElement btnEditar;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[2]") protected WebElement btnEditarB;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[3]") protected WebElement btnEditarC;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[4]") protected WebElement btnEditarD;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[5]") protected WebElement btnEditarE;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-pencil'])[6]") protected WebElement btnEditarF;
+    @FindBy(xpath = "(//table//tbody/tr/td//button[@icon='pi pi-cog'])[1]") protected WebElement btnConfiguracion;
     @FindBy(xpath = "//button[contains(.,'Guardar')]") protected WebElement btnGuardar;
     @FindBy(xpath = "(//button[contains(.,'Guardar')])[2]") protected WebElement btnGuardarB;
     @FindBy(xpath = "(//p-button/button[@type='button'])[3]") protected WebElement btnGuardarC;
@@ -65,81 +66,46 @@ public class botonPage extends util {
     public botonPage() {
         PageFactory.initElements(slowDriver, this);
     }
-
-    /**
-     * Metodo que realiza click en el boton Nuevo
-     */
     public void clickBotonNuevo(){
         wait.until(ExpectedConditions.visibilityOf(btnNuevo));
         btnNuevo.click();
     }
-
-    /**
-     * Metodo que realiza click en el boton Editar
-     */
     public void clickBotonEditar(){
         wait.until(ExpectedConditions.visibilityOf(btnEditar));
         btnEditar.click();
     }
-
-    /**
-     * Metodo que realiza click en el segundo boton Guardar
-     */
     public void clickBotonEditarB(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarB));
         btnEditarB.click();
     }
-
-    /**
-     * Metodo que realiza click en el tercer boton Editar
-     */
     public void clickBotonEditarC(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarC));
         btnEditarC.click();
     }
-
-    /**
-     * Metodo que realiza click en el cuarto boton Editar
-     */
     public void clickBotonEditarD(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarD));
         btnEditarD.click();
     }
-
-    /**
-     * Metodo que realiza click en el quinto boton Editar
-     */
     public void clickBotonEditarE(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarE));
         btnEditarE.click();
     }
-    /**
-     * Metodo que realiza click en el quinto boton Editar
-     */
     public void clickBotonEditarF(){
         wait.until(ExpectedConditions.visibilityOf(btnEditarF));
         btnEditarF.click();
     }
-
-    /**
-     * Metodo que realiza click en el boton Guardar.
-     */
+    public void clickBotonConfiguracion(){
+        wait.until(ExpectedConditions.visibilityOf(btnConfiguracion));
+        btnConfiguracion.click();
+    }
     public void clickBotonGuardar(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardar));
         btnGuardar.click();
     }
-
-    /**
-     * Metodo que realiza click en el segundo boton Guardar.
-     */
     public void clickBotonGuardarB(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardarB));
         btnGuardarB.click();
     }
-
-    /**
-     * Metodo que realiza click en el tercer boton Guardar.
-     */
     public void clickBotonGuardarC(){
         wait.until(ExpectedConditions.visibilityOf(btnGuardarC));
         btnGuardarC.click();

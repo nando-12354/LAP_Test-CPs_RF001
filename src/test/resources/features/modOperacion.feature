@@ -350,7 +350,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
-  @reporte
+
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
