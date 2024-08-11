@@ -1,6 +1,6 @@
 Feature: Funcionalidad del modulo Seguridad
 
-
+  #@reporte
   Scenario: CPF009 - Visualizar modulo seguridad
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -11,7 +11,7 @@ Feature: Funcionalidad del modulo Seguridad
     And visualizar la opcion "Usuarios"
 
 ######## ROLES ########
-
+  #@reporte
   Scenario: CPF010 - Roles/Visualizar lista de roles registrados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -27,7 +27,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar columna "Usuario creación"
     And validar columna "Acciones"
 
-
+  #@reporte
   Scenario: CPF011 - Roles/Crear nuevo rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -42,7 +42,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje "Registro agregado correctamente"
 
-
+  #@reporte
   Scenario: CPF012 - Roles/Modificar informacion de rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -54,7 +54,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje exito "Registro modificado correctamente"
 
-
+  #@reporte
   Scenario: CPF013 - Roles/Eliminar rol
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -68,7 +68,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar mensaje "Registro eliminado correctamente"
 
 ######## USUARIOS ########
-
+  #@reporte
   Scenario: CPF014 - Usuarios/Visualizar lista de usuarios registrados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -91,7 +91,7 @@ Feature: Funcionalidad del modulo Seguridad
     And validar datos de "Roles asociados"
     And validar columna "Acciones"
 
-
+  #@reporte
   Scenario: CPF015 - Usuarios/Filtrar lista de usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -105,7 +105,7 @@ Feature: Funcionalidad del modulo Seguridad
     And ingresar estado "VIGENTE"
     And click en el boton buscar
 
-
+  #@reporte
   Scenario: CPF016 - Usuarios/Crear nuevo usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -124,7 +124,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en guardar
     And validar mensaje exito "Usuario registrado correctamente"
 
-
+  #@reporte
   Scenario: CPF017 - Usuarios/Modificar informacion de usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -145,7 +145,7 @@ Feature: Funcionalidad del modulo Seguridad
     And click en el boton guardar
     And validar mensaje exito "Registro actualizado correctamente"
 
-
+  #@reporte
   Scenario: CPF018 - Usuarios/Desbloquear cuenta de usuario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

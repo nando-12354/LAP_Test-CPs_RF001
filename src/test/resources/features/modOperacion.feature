@@ -1,5 +1,5 @@
 Feature: Funcionalidad del modulo Operacion
-
+  #@reporte
   Scenario: CPF068 - Visualizar modulo operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -26,7 +26,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar la opcion "Generación Comprobante SEAE"
 
 ######## INGRESAR TASA DE CAMBIO ########
-
+  #@reporte
   Scenario: CPF069 - Ingresar tasa de cambio/Visualizar lista de tasa de cambio
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -62,7 +62,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Fin de vigencia"
     And validar columna "Usuario modificación"
 
-
+  #@reporte
   Scenario: CPF070 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -82,7 +82,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF071 - Ingresar tasa de cambio/Registrar tasa de cambio con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -104,7 +104,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creacion de Tasa de Cambio"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF072 - Ingresar tasa de cambio/Eliminar tasa de cambio programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -119,7 +119,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de eliminacion
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF073 - Ingresar tasa de cambio/Visualizar consulta de tasa de cambio historica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -134,7 +134,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
 
 ######## GESTION PRECIO TICKET ########
-
+  #@reporte
   Scenario: CPF074 - Gestion precio ticket/Visualizar lista de precio de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -169,7 +169,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha de fin de vigencia"
     And validar columna "Usuario modificación"
 
-
+  #@reporte
   Scenario: CPF075 - Gestion precio ticket/Registrar precio ticket con fecha actual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -188,7 +188,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creación de Precio de Ticket"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF076 - Gestion precio ticket/Registrar precio ticket con fecha programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -209,7 +209,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje de confirmacion "Creación de Precio de Ticket"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF077 - Gestion precio ticket/Eliminiar precio de ticket programada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -224,7 +224,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar el mensaje de eliminacion
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF078 - Gestion precio ticket/Visualizar consulta de precio de tickets Historica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -238,7 +238,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton buscar
 
 ######## PRE-EMISION TICKET CONTINGENCIA ########
-
+  #@reporte
   Scenario: CPF079 - Pre-emision tickets contingencia/Visualizar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -253,7 +253,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar precio ticket
     And visualizar cantidad
 
-
+  #@reporte
   Scenario: CPF080 - Pre-emision tickets contingencia/Generar pre-emisión tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -272,7 +272,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Registro agregado correctamente"
 
 ######## REGISTRO TICKET CONTINGENCIA ########
-
+  #@reporte
   Scenario: CPF081 - Registro tickets contingencia/Visualizar registro tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -285,7 +285,7 @@ Feature: Funcionalidad del modulo Operacion
     And visualizar "Filtro consulta"
     And visualizar "Datos de venta"
 
-
+  #@reporte
   Scenario: CPF082 - Registro tickets contingencia/Registro tickets contingencia con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -307,7 +307,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje "Registro realizado correctamente"
 
-
+  #@reporte
   Scenario: CPF083 - Registro tickets contingencia/Registro tickets contingencia sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -330,7 +330,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Registro realizado correctamente"
 
 ######## EXTORNO OPERACIONES ########
-
+  #@reporte
   Scenario: CPF084 - Extorno operaciones/Visualizar lista de extorno operaciones
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -350,7 +350,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
-
+  #@reporte
   Scenario: CPF085 - Extorno operaciones/Extornar operacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -375,7 +375,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
 
 ######## EXTORNO TICKETS ########
-
+  #@reporte
   Scenario: CPF086 - Extorno tickets/Visualizar lista de extorno tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -395,7 +395,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha inicio"
     And validar columna "Acciones"
 
-
+  #@reporte
   Scenario: CPF087 - Extorno tickets/Extornar tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -419,7 +419,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
 
 ######## EXTORNO REHABILITACION ########
-
+  #@reporte
   Scenario: CPF088 - Extorno rehabilitacion/Visualizar lista de extorno rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -444,7 +444,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Fecha Proceso"
     And validar columna "Estado"
 
-
+  #@reporte
   Scenario: CPF089 - Extorno rehabilitacion/Extonar rehabilitacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -471,7 +471,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
 
 ######## ANULACION DE TICKET ########
-
+  #@reporte
   Scenario: CPF090 - Anulacion de ticket/Visualizar lista de anulacion de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -500,7 +500,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Estado Actual"
     And validar columna "Acciones"
 
-
+  #@reporte
   Scenario: CPF091 - Anulacion de ticket/Anular numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -520,7 +520,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar mensaje "Registro anulado correctamente"
 
-
+  #@reporte
   Scenario: CPF092 - Anulacion de ticket/Anular rango de tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -543,7 +543,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Registro anulado correctamente"
 
 ######## ANULACION BCBP ########
-
+  #@reporte
   Scenario: CPF093 - Anulacion de bcbp/Visualizar lista de anulacion bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -565,7 +565,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Pasajero"
     And validar columna "Estado actual"
 
-
+  #@reporte
   Scenario: CPF094 - Anulacion de bcbp/Anular numero de bcbp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -586,7 +586,7 @@ Feature: Funcionalidad del modulo Operacion
 
 ######## VENTA MASIVA CREDITO ########
 
-
+  #@reporte
   Scenario: CPF095 - Venta masiva credito/Registrar venta masiva credito con cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -607,7 +607,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
-
+  #@reporte
   Scenario: CPF096 - Venta masiva credito/Registrar venta masiva credito sin cierre de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -629,7 +629,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Registro agregado correctamente"
 
 ######## EXTENSION FECHA VIGENCIA TICKETS ########
-
+  #@reporte
   Scenario: CPF097 - Extension fecha vigencia tickets/Visualizar lista extensión fecha vigencia tickets
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -653,7 +653,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Número de días"
     And validar columna "Estado"
 
-
+  #@reporte
   Scenario: CPF098 - Extension fecha vigencia tickets/Extender fecha vigencia de numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -670,7 +670,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar el mensaje "Registro agregado correctamente"
 
-
+  #@reporte
   Scenario: CPF099 - Extension fecha vigencia tickets/Extender fecha vigencia de rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -690,7 +690,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar el mensaje "Registro agregado correctamente"
 
 ######## GESTION DE MOLINETE ########
-
+  #@reporte
   Scenario: CPF100 - Gestion de molinete/Visualizar lista de gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -707,7 +707,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna "Estado"
     And validar columna "Acción"
 
-
+  #@reporte
   Scenario: CPF101 - Gestion de molinete/Modificar gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -727,7 +727,7 @@ Feature: Funcionalidad del modulo Operacion
     And click en el boton aceptar
     And validar el mensaje "Registro actualizado correctamente"
 
-
+  #@reporte
   Scenario: CPF102 - Gestion de molinete/Activar estado de gestion de molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -743,7 +743,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar el mensaje "Registro actualizado correctamente"
 
 ######## GENERACION ARCHIVO VENTA ########
-
+  #@reporte
   Scenario: CPF103 - Generacion archivo venta/Visualizar pantalla de generacion archivo venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -756,7 +756,7 @@ Feature: Funcionalidad del modulo Operacion
     And se muestra formatos de salida excel y texto
     And se muestra los "Archivo a Generar"
 
-
+  #@reporte
   Scenario: CPF104 - Generacion archivo venta/Generar archivo venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -774,7 +774,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Registro generado correctamente"
 
 ######## CERRAR TURNO ########
-
+  #@reporte
   Scenario: CPF105 - Cerrar turno/Visualizar lista de turnos abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -792,7 +792,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar columna de moneda "SOL"
     And validar columna de moneda "DOL"
 
-
+  #@reporte
   Scenario: CPF106 - Cerrar turno/Cerrar turno abiertos o activos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -807,7 +807,7 @@ Feature: Funcionalidad del modulo Operacion
     And validar mensaje "Operación realizada correctamente"
 
     ######## GENERACION COMPROBANTE SEAE ########
-
+  #@reporte
   Scenario: CPF107 - Generacion comprobante seae/Visualizar pantalla de generacion comprobante seae
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -820,7 +820,7 @@ Feature: Funcionalidad del modulo Operacion
     And se muestra tipo documento ticket y boarding
     And se muestra los "Archivo a Generar"
 
-
+  #@reporte
   Scenario: CPF108 - Generacion archivo seae/Generar archivo seae
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

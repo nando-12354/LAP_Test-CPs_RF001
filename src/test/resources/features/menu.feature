@@ -1,5 +1,5 @@
 Feature: Funcionalidad del menu principal
-
+  #@reporte
   Scenario: CPF003 - Visualización del menu principal
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

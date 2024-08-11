@@ -1,6 +1,6 @@
 Feature: Funcionalidad del login
 
-
+  #@reporte
   Scenario: CPF002 - Ingreso al aplicativo web
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -9,7 +9,7 @@ Feature: Funcionalidad del login
     And visualizar el "Sistema de Administración" tuua
     And visualizar el usuario del sistema "Nando"
 
-
+  #@reporte
   Scenario: CPF004 - Ingreso al aplicativo web con 3 intentos fallidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "pleon1"
@@ -21,7 +21,7 @@ Feature: Funcionalidad del login
     And click en el boton iniciar sesion
     And validar mensaje de error "El Usuario se encuentra en situacion Bloqueado"
 
-
+  #@reporte
   Scenario: CPF005 - Ingreso al aplicativo web y cambiar contraseña
     Given abre la ruta del aplicativo web
     And ingresa el usuario "aflores"
@@ -35,7 +35,7 @@ Feature: Funcionalidad del login
     And validar aviso "Contraseña actualizada correctamente"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF006 - Ingreso al aplicativo web y cambiar contraseña ya usada
     Given abre la ruta del aplicativo web
     And ingresa el usuario "mvictor"
@@ -48,7 +48,7 @@ Feature: Funcionalidad del login
     And click en el boton aceptar
     And validar el mensaje error "La contraseña se encuentra registrada dentro de los ultimos 4 ingresos de Clave"
 
-
+  #@reporte
   Scenario: CPF007 - Ingreso al aplicativo web y cambiar contraseña usada la 1ra vez
     Given abre la ruta del aplicativo web
     And ingresa el usuario "mprado"
@@ -62,7 +62,7 @@ Feature: Funcionalidad del login
     And validar aviso "Contraseña actualizada correctamente"
     And click en el boton aceptar
 
-
+  #@reporte
   Scenario: CPF008 - Ingreso al aplicativo web, contraseña incorrecta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "wseleniu2"
