@@ -285,14 +285,14 @@ Feature: Funcionalidad del modulo Consultas
     And escribir hora desde "000000"
     And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
-    And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
-    And seleccionar estado "ANULADO"
+    And seleccionar tipo de ticket "TODOS"
+    And seleccionar estado "TODOS"
     And seleccionar indicador de cobro "TODOS"
     And ingresar la compania "TODOS"
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar al cajero "Tamara Olaechea"
+    And seleccionar al cajero "TODOS"
     And click en el boton buscar
     And validar columna "Número ticket"
     And validar columna "Tipo ticket"
@@ -323,14 +323,14 @@ Feature: Funcionalidad del modulo Consultas
     And escribir hora desde "000000"
     And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
-    And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
-    And seleccionar estado "ANULADO"
+    And seleccionar tipo de ticket "TODOS"
+    And seleccionar estado "TODOS"
     And seleccionar indicador de cobro "TODOS"
     And ingresar la compania "TODOS"
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar al cajero "Tamara Olaechea"
+    And seleccionar al cajero "TODOS"
     And click en el boton buscar
     And click en boton ver detalle
     And click en el boton cerrar
@@ -348,14 +348,14 @@ Feature: Funcionalidad del modulo Consultas
     And escribir hora desde "000000"
     And escribir hora hasta "230000"
     And seleccionar tipo de documento "Ticket"
-    And seleccionar tipo de ticket "ADULTO INTERNACIONAL NORMAL"
-    And seleccionar estado "ANULADO"
+    And seleccionar tipo de ticket "TODOS"
+    And seleccionar estado "TODOS"
     And seleccionar indicador de cobro "TODOS"
     And ingresar la compania "TODOS"
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar al cajero "Tamara Olaechea"
+    And seleccionar al cajero "TODOS"
     And click en el boton buscar
     And click en imprimir consulta
 
@@ -379,7 +379,7 @@ Feature: Funcionalidad del modulo Consultas
     And seleccionar tipo de persona "ADULTO"
     And seleccionar tipo de vuelo "INTERNACIONAL"
     And seleccionar estado turno "TODOS"
-    And seleccionar al cajero "Tamara Olaechea"
+    And seleccionar al cajero "TODOS"
     And click en el boton buscar
     And click en exportar excel
 

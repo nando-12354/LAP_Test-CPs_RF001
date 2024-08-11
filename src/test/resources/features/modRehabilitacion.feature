@@ -76,7 +76,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket normal
-    And ingresar numero de ticket "5000604329977813"
+    And ingresar numero de ticket "5000604330876316"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
     And click en el boton rehabilitar
@@ -142,10 +142,10 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar al modulo rehabilitacion
     And ingresar a la opcion ticket
     And ingresar a la subopcion ticket masivo
-    And ingresar numero de ticket "5000604330876414"
+    And ingresar numero de ticket "5000604330876613"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
-    And seleccionar un motivo "Cierre de aeropuerto de destino"
+    And seleccionar un motivo "Demora o Cancelación del vuelo X NOTAM"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
@@ -200,7 +200,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "03/07/2020"
     And click en el boton agregar ticket
     And seleccionar ticket "si"
-    And seleccionar motivo "Alertas de bomba en el AIJCh"
+    And seleccionar motivo "Demora o Cancelación de vuelo X daños en la pista AIJCh"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
@@ -273,7 +273,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar vuelo "4A024"
     And click en el boton buscar
     And seleccionar ticket "si"
-    And seleccionar motivo "Alertas de bomba en el AIJCh"
+    And seleccionar motivo "Demora o Cancelación de vuelo X daños en la pista AIJCh"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "Se rehabilitarán todos los tickets seleccionados."
     And click en el boton aceptar
@@ -342,7 +342,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar numero ticket hasta "5000604373685999"
     And click en el boton buscar
     And seleccionar ticket "si"
-    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
+    And seleccionar motivo "Demora o Cancelación de vuelo X daños en la pista AIJCh"
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton aceptar
@@ -411,7 +411,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha hasta "03/01/2024"
     And click en el boton buscar
     And seleccionar ticket "si"
-    And seleccionar motivo "Alertas de bomba en el AIJCh"
+    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar alerta de confirmacion "¿Desea Continuar con la Rehabilitacion?"
     And click en el boton aceptar
@@ -565,7 +565,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar fecha de vuelo "31/01/2024"
     And click en el boton agregar bp
     And seleccionar boarding "si"
-    And seleccionar motivo "Alertas de bomba en el AIJCh"
+    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
@@ -626,7 +626,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar un numero de vuelo "VV400"
     And click en el boton agregar bp
     And seleccionar boardings "si"
-    And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
+    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
@@ -701,7 +701,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And seleccionar vuelo "4A4091"
     And click en el boton buscar
     And seleccionar boarding "si"
-    And seleccionar motivo "Demora o Cancelación del vuelo X NOTAM"
+    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
@@ -776,7 +776,7 @@ Feature: Funcionalidad del modulo Rehabilitacion
     And ingresar la fecha hasta "07/01/2024"
     And click en el boton buscar
     And seleccionar boarding "si"
-    And seleccionar motivo "Demora o Cancelación del vuelo, X Peligro Aviario"
+    And seleccionar motivo "Demora o Cancelación del vuelo X mal tiempo"
     And click en el boton rehabilitar
     And validar la alerta de confirmacion "¿Desea continuar con la Rehabilitación?"
     And click en el boton aceptar
