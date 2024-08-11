@@ -1,5 +1,5 @@
 Feature: Funcionalidad del modulo Reportes
-  #@reporte
+  @reporte
   Scenario: CPF208 - Visualizar modulo reportes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -27,7 +27,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar la opcion "Extranet BP Mensual (Usados/Rehabilitados)"
 
 ######## Liquidacion Stickers ########
-  #@reporte
+  @reporte
   Scenario: CPF209 - Liquidacion stickers/Visualizar pantalla de reporte de liquidacion de Stickers
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -37,7 +37,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion liquidacion stickers
     And visualizar pantalla de "Liquidación de Stickers"
 
-  #@reporte
+  @reporte
   Scenario: CPF210 - Liquidacion stickers/Consultar reporte de liquidacion de Stickers
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -50,7 +50,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And visualizar reporte de "Liquidación de Stickers"
 
-  #@reporte
+  @reporte
   Scenario: CPF211 - Liquidacion stickers/Exportar pdf de reporte liquidacion de Stickers
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -63,7 +63,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF212 - Liquidacion stickers/Exportar excel de reporte de liquidacion de Stickers
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -76,7 +76,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF213 - Liquidacion stickers/Imprimir reporte de liquidacion de Stickers
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -90,7 +90,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Resumen Diario ########
-  #@reporte
+  @reporte
   Scenario: CPF214 - Resumen diario/Visualizar pantalla de reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -100,7 +100,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion resumen diario
     And visualizar pantalla de "Resumen Diario"
 
-  #@reporte
+  @reporte
   Scenario: CPF215 - Resumen diario/Consultar reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -118,7 +118,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar hora hasta "230000"
     And click en el boton buscar
 
-  #@reporte
+  @reporte
   Scenario: CPF216 - Resumen diario/Exportar pdf de reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -134,7 +134,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF217 - Resumen diario/Exportar excel de reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -150,7 +150,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF218 - Resumen diario/Imprimir reporte de resumen diario
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -167,7 +167,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Movimiento Tickets Contingencia ########
-  #@reporte
+  @reporte
   Scenario: CPF219 - Movimiento tickets contingencia/Visualizar pantalla de movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -177,7 +177,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion movimiento tickets contingencia
     And visualizar pantalla de "Movimientos tickets contingencia"
 
-  #@reporte
+  @reporte
   Scenario: CPF220 - Movimiento tickets contingencia/Consultar reporte de movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -197,7 +197,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Movimiento Tickets Contingencia"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF221 - Movimiento tickets contingencia/Exportar pdf de reporte movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -218,7 +218,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF222 - Movimiento tickets contingencia/Exportar excel de reporte movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -239,7 +239,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF223 - Movimiento tickets contingencia/Imprimir reporte movimiento tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -261,7 +261,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Stock Tickets Contingencia ########
-  #@reporte
+  @reporte
   Scenario: CPF224 - Stock Tickets Contingencia/Visualizar pantalla de stock tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -271,7 +271,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion stock tickets contingencia
     And visualizar pantalla de "Stock Tickets Contingencia"
 
-  #@reporte
+  @reporte
   Scenario: CPF225 - Stock Tickets Contingencia/Consultar reporte de stock tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -286,7 +286,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Stock Tickets Contingencia"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF226 - Stock Tickets Contingencia/Exportar pdf de reporte de stock tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -302,7 +302,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF227 - Stock Tickets Contingencia/Exportar excel de reporte de stock tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -318,7 +318,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF228 - Stock Tickets Contingencia/Imprimir reporte de stock tickets contingencia
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -335,7 +335,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Detalle por Linea de Vuelo ########
-  #@reporte
+  @reporte
   Scenario: CPF229 - Detalle por linea de vuelo/Visualizar pantalla de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -345,7 +345,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion detalle por linea de vuelo
     And visualizar pantalla de "Detalle Linea Vuelo"
 
-  #@reporte
+  @reporte
   Scenario: CPF230 - Detalle por linea de vuelo/Consultar reporte de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -361,7 +361,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Resumen: Detalle por Linea de Vuelo"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF231 - Detalle por Linea de Vuelo/Exportar excel de reporte de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -378,7 +378,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF232 - Detalle por Linea de Vuelo/Imprimir reporte de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -395,7 +395,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton imprimir
 
-  #@reporte
+  @reporte
   Scenario: CPF233 - Detalle por Linea de Vuelo/Imprimir resumen de reporte de detalle por linea de vuelo
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -413,7 +413,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir resumen
 
     ######## BP Leidos en el Molinete ########
-  #@reporte
+  @reporte
   Scenario: CPF234 - BP leidos en el molinete/Visualizar pantalla de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -423,7 +423,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion bp leidos en el molinete
     And visualizar pantalla de "BP leidos en el Molinete"
 
-  #@reporte
+  @reporte
   Scenario: CPF235 - BP leidos en el molinete/Consultar reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -431,18 +431,18 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion bp leidos en el molinete
-    And seleccionar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
     And visualizar resumen "BP leidos en el Molinete"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF236 - BP leidos en el molinete/Exportar pdf de reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -450,11 +450,11 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion bp leidos en el molinete
-    And seleccionar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -462,7 +462,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF237 - BP leidos en el molinete/Exportar excel de reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -470,11 +470,11 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion bp leidos en el molinete
-    And seleccionar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -482,7 +482,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF238 - BP leidos en el molinete/Imprimir reporte de bp leidos en el molinete
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -490,11 +490,11 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton iniciar sesion
     And ingresar al modulo reportes
     And ingresar a la opcion bp leidos en el molinete
-    And seleccionar fecha hasta "02/01/2024"
-    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "02/01/2024"
     And seleccionar fecha de vuelo "01/01/2024"
     And ingresar numero de vuelo "B61824"
+    And seleccionar aerolinea "JETBLUE AIRWAYS CORPORATION SUCURSAL DEL PERU"
     And ingresar numero de boarding "7000695335988534"
     And click en el boton buscar
     And click en el boton resumen
@@ -503,7 +503,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets Vendidos al Credito o al Contado ########
-  #@reporte
+  @reporte
   Scenario: CPF239 - Tickets vendidos al credito o al contado/Visualizar pantalla de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -513,7 +513,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vendidos al credito o al contado
     And visualizar pantalla de "Tickets Vendidos a Credito o al Contado"
 
-  #@reporte
+  @reporte
   Scenario: CPF240 - Tickets vendidos al credito o al contado/Consultar reporte de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -523,7 +523,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vendidos al credito o al contado
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
-    And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
+    And ingresar tipo de ticket "ADULTO NACIONAL NORMAL"
     And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
@@ -532,7 +532,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Tickets Vendidos a Credito o al Contado"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF241 - Tickets vendidos al credito o al contado/Exportar pdf de reporte de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -542,7 +542,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vendidos al credito o al contado
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
-    And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
+    And ingresar tipo de ticket "ADULTO NACIONAL NORMAL"
     And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
@@ -552,7 +552,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF242 - Tickets vendidos al credito o al contado/Exportar excel de reporte de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -562,7 +562,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vendidos al credito o al contado
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
-    And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
+    And ingresar tipo de ticket "ADULTO NACIONAL NORMAL"
     And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
@@ -572,7 +572,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF243 - Tickets vendidos al credito o al contado/Imprimir reporte de tickets vendidos al credito o al contado
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -582,7 +582,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vendidos al credito o al contado
     And seleccionar fecha desde "01/01/2024"
     And seleccionar fecha hasta "31/01/2024"
-    And ingresar tipo ticket "ADULTO NACIONAL NORMAL"
+    And ingresar tipo de ticket "ADULTO NACIONAL NORMAL"
     And seleccionar compania "SKY AIRLINE PERU"
     And seleccionar tipo de pago "Todos"
     And ingresar numero de vuelo "H25137"
@@ -593,7 +593,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Detalle Compañia ########
-  #@reporte
+  @reporte
   Scenario: CPF244 - Detalle compania/Visualizar pantalla de detalle compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -603,7 +603,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion detalle compania
     And visualizar pantalla de "Detalle Compañia"
 
-  #@reporte
+  @reporte
   Scenario: CPF245 - Detalle compania/Consultar reporte de detalle compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -620,7 +620,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Detalle Compañia"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF246 - Detalle compania/Exportar pdf de reporte de detalle compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -638,7 +638,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF247 - Detalle compania/Exportar excel de reporte de detalle compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -656,7 +656,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF248 - Detalle compania/Imprimir reporte de detalle compania
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -675,7 +675,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets/BP Usados por Media Hora, Hora, Día o Mes ########
-  #@reporte
+  @reporte
   Scenario: CPF249 - Tickets-BP usados por media hora, hora, dia o mes/Visualizar pantalla de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -685,7 +685,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets bp usados por media hora, hora, dia o mes
     And visualizar pantalla de "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
 
-  #@reporte
+  @reporte
   Scenario: CPF250 - Tickets-BP usados por media hora, hora, dia o mes/Consultar reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -709,7 +709,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Tickets / BP Usados por Media Hora, Hora, Día o Mes"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF251 - Tickets-BP usados por media hora, hora, dia o mes/Exportar pdf de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -734,7 +734,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF252 - Tickets-BP usados por media hora, hora, dia o mes/Exportar excel de reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -759,7 +759,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF253 - Tickets-BP usados por media hora, hora, dia o mes/Imprimir reporte de tickets-bp usados por media hora, hora, dia o mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -785,7 +785,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets / BP Usados por Día - Mes ########
-  #@reporte
+  @reporte
   Scenario: CPF254 - Tickets-BP usados por dia, mes/Visualizar pantalla de tickets-bp usados por dia, mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -795,7 +795,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets bp usados por dia mes
     And visualizar pantalla de "Tickets / BP Usados por Día - Mes"
 
-  #@reporte
+  @reporte
   Scenario: CPF255 - Tickets-BP usados por dia, mes/Consultar reporte de tickets-bp usados por dia, mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -828,7 +828,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Tickets / BP Usados por Día - Mes"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF256 - Tickets-BP usados por dia, mes/Exportar pdf de reporte de tickets-bp usados por dia, mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -862,7 +862,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF257 - Tickets-BP usados por dia, mes/Exportar excel de reporte de tickets-bp usados por dia, mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -896,7 +896,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF258 - Tickets-BP usados por dia, mes/Imprimir reporte de tickets-bp usados por dia, mes
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -931,7 +931,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Recaudacion Mensual ########
-  #@reporte
+  @reporte
   Scenario: CPF259 - Recaudacion mensual/Visualizar pantalla de recaudacion mensual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -941,7 +941,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion recaudacion mensual
     And visualizar pantalla de "Recaudación Mensual"
 
-  #@reporte
+  @reporte
   Scenario: CPF260 - Recaudacion mensual/Consultar reporte de recaudacion mensual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -952,7 +952,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar anio "2023"
     And click en el boton buscar
 
-  #@reporte
+  @reporte
   Scenario: CPF261 - Recaudacion mensual/Exportar pdf de reporte de recaudacion mensual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -964,7 +964,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF262 - Recaudacion mensual/Exportar excel de reporte de recaudacion mensual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -976,7 +976,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF263 - Recaudacion mensual/Imprimir reporte de recaudacion mensual
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -989,7 +989,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Liquidación Venta ########
-  #@reporte
+  @reporte
   Scenario: CPF264 - Liquidacion venta/Visualizar pantalla de liquidacion venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -999,7 +999,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion liquidacion venta
     And visualizar pantalla de "Liquidación Venta"
 
-  #@reporte
+  @reporte
   Scenario: CPF265 - Liquidacion venta/Consultar reporte de liquidacion venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1014,7 +1014,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Liquidación Venta"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF266 - Liquidacion venta/Exportar pdf de reporte de liquidacion venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1030,7 +1030,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF267 - Liquidacion venta/Exportar excel de reporte de liquidacion venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1046,7 +1046,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF268 - Liquidacion venta/Imprimir reporte de liquidacion venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1063,7 +1063,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Tickets Vencidos ########
-  #@reporte
+  @reporte
   Scenario: CPF269 - Tickets vencidos/Visualizar pantalla de tickets vencidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1073,7 +1073,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion tickets vencidos
     And visualizar pantalla de "Tickets Vencidos"
 
-  #@reporte
+  @reporte
   Scenario: CPF270 - Tickets vencidos/Consultar reporte de tickets vencidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1089,7 +1089,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Tickets Vencidos"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF271 - Tickets vencidos/Exportar pdf de reporte de tickets vencidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1106,7 +1106,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF272 - Tickets vencidos/Exportar excel de reporte de tickets vencidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1123,7 +1123,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF273 - Tickets vencidos/Imprimir reporte de tickets vencidos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1141,7 +1141,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Cuadre Stickers vendidos / BP usados ########
-  #@reporte
+  @reporte
   Scenario: CPF274 - Cuadre stickers vendidos-bp usados/Visualizar pantalla de cuadre stickers vendidos-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1151,7 +1151,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion cuadre stickers vendidos-bp usados
     And visualizar pantalla de "Cuadre Stickers vendidos / BP usados"
 
-  #@reporte
+  @reporte
   Scenario: CPF275 - Cuadre stickers vendidos-bp usados/Consultar reporte de cuadre stickers vendidos-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1165,7 +1165,7 @@ Feature: Funcionalidad del modulo Reportes
     And seleccionar tipo de documento ticket "no"
     And click en el boton buscar
 
-  #@reporte
+  @reporte
   Scenario: CPF276 - Cuadre stickers vendidos-bp usados/Exportar pdf de reporte de cuadre stickers vendidos-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1180,7 +1180,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF277 - Cuadre stickers vendidos-bp usados/Exportar excel de reporte de cuadre stickers vendidos-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1195,7 +1195,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF278 - Cuadre stickers vendidos-bp usados/Imprimir reporte de cuadre stickers vendidos-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1211,7 +1211,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Ticket / BP Rehabilitados ########
-  #@reporte
+  @reporte
   Scenario: CPF279 - Ticket-bp rehabilitados/Visualizar pantalla de ticket-bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1221,7 +1221,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion ticket bp rehabilitados
     And visualizar pantalla de "Ticket / BP Rehabilitados"
 
-  #@reporte
+  @reporte
   Scenario: CPF280 - Ticket-bp rehabilitados/Consultar reporte de ticket-bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1244,7 +1244,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar resumen "Ticket / BP Rehabilitados"
     And click en el boton cerrar
 
-  #@reporte
+  @reporte
   Scenario: CPF281 - Ticket-bp rehabilitados/Exportar pdf de reporte de ticket-bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1268,7 +1268,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF282 - Ticket-bp rehabilitados/Exportar excel de reporte de ticket-bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1292,7 +1292,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton cerrar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF283 - Ticket-bp rehabilitados/Imprimir reporte de ticket-bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1317,7 +1317,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## BP Rehabilitados ########
-  #@reporte
+  @reporte
   Scenario: CPF284 - BP rehabilitados/Visualizar pantalla de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1327,7 +1327,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion bp rehabilitados
     And visualizar pantalla de "BP Rehabilitados"
 
-  #@reporte
+  @reporte
   Scenario: CPF285 - BP rehabilitados/Consultar reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1346,7 +1346,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar numero de vuelo "H25079"
     And click en el boton buscar
 
-  #@reporte
+  @reporte
   Scenario: CPF286 - BP rehabilitados/Exportar pdf de reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1366,7 +1366,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF287 - BP rehabilitados/Exportar excel de reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1386,7 +1386,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF288 - BP rehabilitados/Imprimir reporte de bp rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1407,7 +1407,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Resumen Diario por Turno ########
-  #@reporte
+  @reporte
   Scenario: CPF289 - Resumen diario por turno/Visualizar pantalla de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1417,7 +1417,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion resumen diario por turno
     And visualizar pantalla de "Resumen Diario por Turno"
 
-  #@reporte
+  @reporte
   Scenario: CPF290 - Resumen diario por turno/Consultar reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1433,7 +1433,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar codigo de turno hasta "032230"
     And click en el boton buscar
 
-  #@reporte
+  @reporte
   Scenario: CPF291 - Resumen diario por turno/Exportar pdf de reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1453,7 +1453,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton pdf
 
-  #@reporte
+  @reporte
   Scenario: CPF292 - Resumen diario por turno/Exportar excel de reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1473,7 +1473,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton buscar
     And click en el boton excel
 
-  #@reporte
+  @reporte
   Scenario: CPF293 - Resumen diario por turno/Imprimir reporte de resumen diario por turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1494,7 +1494,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton imprimir
 
 ######## Extranet BP Diarios (Usados/Rehabilitados) ########
-  #@reporte
+  @reporte
   Scenario: CPF294 - Extranet BP diarios usados-rehabilitados/Visualizar pantalla de extranet bp diarios usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1504,7 +1504,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion extranet bp diarios usados rehabilitados
     And visualizar pantalla de "Extranet BP Diarios (Usados/Rehabilitados)"
 
-  #@reporte
+  @reporte
   Scenario: CPF295 - Extranet BP diarios usados-rehabilitados/Consultar reporte de extranet bp diarios usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1530,7 +1530,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar boarding pass anulados
     And visualizar resumen boarding neto
 
-  #@reporte
+  @reporte
   Scenario: CPF296 - Extranet BP diarios usados-rehabilitados/Exportar excel reporte de extranet bp diarios usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1558,7 +1558,7 @@ Feature: Funcionalidad del modulo Reportes
     And click en el boton excel
 
     ######## Extranet BP Mensual (Usados/Rehabilitados) ########
-  #@reporte
+  @reporte
   Scenario: CPF297 - Extranet BP mensual usados-rehabilitados/Visualizar pantalla de extranet bp mensual usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1568,7 +1568,7 @@ Feature: Funcionalidad del modulo Reportes
     And ingresar a la opcion extranet bp mensual usados rehabilitados
     And visualizar pantalla de "Extranet BP Mensual (Usados/Rehabilitados)"
 
-  #@reporte
+  @reporte
   Scenario: CPF298 - Extranet BP mensual usados-rehabilitados/Consultar reporte de extranet bp mensual usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1592,7 +1592,7 @@ Feature: Funcionalidad del modulo Reportes
     And visualizar boarding pass anulados
     And visualizar resumen boarding neto
 
-  #@reporte
+  @reporte
   Scenario: CPF299 - Extranet BP mensual usados-rehabilitados/Exportar excel reporte de extranet bp mensual usados-rehabilitados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

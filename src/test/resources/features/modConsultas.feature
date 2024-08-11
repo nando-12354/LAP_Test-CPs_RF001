@@ -1,5 +1,5 @@
 Feature: Funcionalidad del modulo Consultas
-  @reporte
+  #@reporte
   Scenario: CPF152 - Visualizar modulo consultas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -24,7 +24,7 @@ Feature: Funcionalidad del modulo Consultas
     And visualizar la opcion "Manifiesto"
 
 ######## USUARIOS ########
-  @reporte
+  #@reporte
   Scenario: CPF153 - Usuarios/Buscar usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -47,7 +47,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Días por vencer cuenta usuario"
     And validar columna "Días por vencer clave"
 
-  @reporte
+  #@reporte
   Scenario: CPF154 - Usuarios/Imprimir lista de usuarios
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -62,7 +62,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en imprimir
 
 ######## COMPAÑIAS ########
-  @reporte
+  #@reporte
   Scenario: CPF155 - Companias/Buscar companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -85,7 +85,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Días por vencer cuenta usuario"
     And validar columna "Días por vencer clave"
 
-  @reporte
+  #@reporte
   Scenario: CPF156 - Companias/Imprimir lista de companias
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -100,7 +100,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en imprimir
 
 ######## TURNOS ########
-  @reporte
+  #@reporte
   Scenario: CPF157 - Turnos/Buscar turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -127,7 +127,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna de moneda fin "DOL"
     And validar el campo "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF158 - Turnos/Ver detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -146,7 +146,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el registro de detalle del turno
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF159 - Turnos/Imprimir detalle de turno
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -166,7 +166,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton cerrar
     And click en imprimir
 
-  @reporte
+  #@reporte
   Scenario: CPF160 - Turnos/Imprimir consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -183,7 +183,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF161 - Turnos/Exportar excel consulta de turnos
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -201,7 +201,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## DETALLE TICKET / BP ########
-  @reporte
+  #@reporte
   Scenario: CPF162 - Detalle de ticket-bp/Buscar detalle de ticket-bp
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -224,7 +224,7 @@ Feature: Funcionalidad del modulo Consultas
     And ingresar persona "ESCOBEDO FARJE MERCY"
     And click en el boton buscar
 
-  @reporte
+  #@reporte
   Scenario: CPF163 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por numero de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -238,7 +238,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF164 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por rango de ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -253,7 +253,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF165 - Detalle de ticket-bp/Exportar excel e imprimir detalle de ticket-bp por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -272,7 +272,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en imprimir consulta
 
 ######## TICKET / BP POR FECHA ########
-  @reporte
+  #@reporte
   Scenario: CPF166 - Tickets-bp por fecha/Buscar tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -310,7 +310,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar datos de "Estado Turno"
     And validar el campo "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF167 - Tickets-bp por fecha/Ver detalle de tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -335,7 +335,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF168 - Tickets-bp por fecha/Imprimir tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -359,7 +359,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF169 - Tickets-bp por fecha/Exportar excel tickets-bp por fecha
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -384,7 +384,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## CUADRE DE STICKERS EMITIDOS O BP USADOS ########
-  @reporte
+  #@reporte
   Scenario: CPF170 - Cuadre de stickers emitidos o bp usados/Buscar por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -398,7 +398,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  @reporte
+  #@reporte
   Scenario: CPF171 - Cuadre de stickers emitidos o bp usados/Buscar por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -412,7 +412,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Cuadre de tickets emitidos"
 
-  @reporte
+  #@reporte
   Scenario: CPF172 - Cuadre de stickers emitidos o bp usados/Imprimir por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -426,7 +426,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF173 - Cuadre de stickers emitidos o bp usados/Imprimir por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -440,7 +440,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF174 - Cuadre de stickers emitidos o bp usados/Exportar excel por ticket
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -454,7 +454,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  @reporte
+  #@reporte
   Scenario: CPF175 - Cuadre de stickers emitidos o bp usados/Exportar excel por boarding
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -469,7 +469,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## OPERACION COMPRA / VENTA ########
-  @reporte
+  #@reporte
   Scenario: CPF176 - Operacion compra-venta/Buscar operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -489,7 +489,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Nuevo soles"
     And validar columna "Usuario"
 
-  @reporte
+  #@reporte
   Scenario: CPF177 - Operacion compra-venta/Imprimir operacion compra-venta
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -503,7 +503,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en imprimir
 
 ######## TICKETS / BP USADOS ########
-  @reporte
+  #@reporte
   Scenario: CPF178 - Tickets-bp usados/Buscar tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -543,7 +543,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar datos del "Asociado"
     And validar columna "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF179 - Tickets-bp usados/Ver detalle de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -566,7 +566,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF180 - Tickets-bp usados/Imprimir tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -588,7 +588,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF181 - Tickets-bp usados/Exportar excel de tickets-bp usados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -612,7 +612,7 @@ Feature: Funcionalidad del modulo Consultas
 
 
     ######## TICKETS / BP ANULADOS ########
-  @reporte
+  #@reporte
   Scenario: CPF182 - Tickets-bp anulados/Buscar tickets-bp anulados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -632,7 +632,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna de tabla "Adulto internacional normal"
     And validar columna de tabla "Adulto nacional normal"
 
-  @reporte
+  #@reporte
   Scenario: CPF183 - Tickets-bp anulados/Ver resumen de tickets-bp anulados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -651,7 +651,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna de tabla "Tipo Trasbordo"
     And validar columna de tabla "Cantidad"
 
-  @reporte
+  #@reporte
   Scenario: CPF184 - Tickets-bp anulados/Exportar excel de consulta de tickets-bp anulados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -665,7 +665,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
     And click en el boton excel
 
-  @reporte
+  #@reporte
   Scenario: CPF185 - Tickets-bp anulados/Exportar pdf de consulta de tickets-bp anulados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -679,7 +679,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar la "Información procesada con fecha de corte: 18/03/2024 05:01:24"
     And click en el boton pdf
 
-  @reporte
+  #@reporte
   Scenario: CPF186 - Tickets-bp anulados/Imprimir consulta de tickets-bp anulados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -694,7 +694,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton imprimir
 
 ######## AUDITORIA ########
-  @reporte
+  #@reporte
   Scenario: CPF187 - Auditoria/Buscar auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -722,7 +722,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Usuario"
     And validar columna "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF188 - Auditoria/Ver detalle de auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -743,7 +743,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF189 - Auditoria/Imprimir auditoria
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -764,7 +764,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton imprimir
 
 ######## TICKES PROCESADOS ########
-  @reporte
+  #@reporte
   Scenario: CPF190 - Tickets procesados/Buscar tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -785,7 +785,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Número de Tickets Vendidos"
     And validar columna "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF191 - Tickets procesados/Imprimir tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -800,7 +800,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF192 - Tickets procesados/Exportar excel de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -815,7 +815,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  @reporte
+  #@reporte
   Scenario: CPF193 - Tickets procesados/Ver detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -830,7 +830,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en boton ver detalle
 
-  @reporte
+  #@reporte
   Scenario: CPF194 - Tickets procesados/Ver detalle de tickets de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -847,7 +847,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton ver detalle de ticket
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF195 - Tickets procesados/Imprimir detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -862,7 +862,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en imprimir consulta
 
-  @reporte
+  #@reporte
   Scenario: CPF196 - Tickets procesados/Exportar excel de detalle de turno de tickets procesados
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -879,7 +879,7 @@ Feature: Funcionalidad del modulo Consultas
 
 ######## LOG DE ERRORES MOLINETE ########
 
-  @reporte
+  #@reporte
   Scenario: CPF197 - Log de errores de molinetes/Buscar tipo de error funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -916,7 +916,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Pasajero"
     And validar columna "Log Error"
 
-  @reporte
+  #@reporte
   Scenario: CPF198 - Log de errores de molinetes/Buscar tipo de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -941,7 +941,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And visualizar informacion de "Log de errores molinete"
 
-  @reporte
+  #@reporte
   Scenario: CPF199 - Log de errores de molinetes/Exportar excel de error funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -966,7 +966,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton buscar
     And click en exportar excel
 
-  @reporte
+  #@reporte
   Scenario: CPF200 - Log de errores de molinetes/Exportar excel de error no funcional
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -992,7 +992,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## SINCRONIZACION ########
-  @reporte
+  #@reporte
   Scenario: CPF201 - Sincronizacion/Buscar sincronizacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1000,8 +1000,8 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion sincronizacion
-    And seleccionar fecha desde "01/07/2023"
-    And seleccionar fecha hasta "01/07/2023"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
     And seleccionar el molinete "NORMAL INTER M4"
@@ -1021,7 +1021,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Número de Registro"
     And validar columna "Número Registro Error"
 
-  @reporte
+  #@reporte
   Scenario: CPF202 - Sincronizacion/Exportar informe de sincronizacion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1052,7 +1052,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en exportar excel
 
 ######## TRANSACCION CRITICA ########
-  @reporte
+  #@reporte
   Scenario: CPF203 - Transaccion critica/Buscar transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1060,8 +1060,8 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/11/2023"
-    And seleccionar fecha hasta "01/11/2023"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
     And seleccionar operacion "<Todos>"
@@ -1080,7 +1080,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar la columna "Usuario"
     And validar columna "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF204 - Transaccion critica/Ver detalle de transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1088,8 +1088,8 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/11/2023"
-    And seleccionar fecha hasta "01/11/2023"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
     And seleccionar operacion "<Todos>"
@@ -1101,7 +1101,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en boton ver detalle
     And click en el boton cerrar
 
-  @reporte
+  #@reporte
   Scenario: CPF205 - Transaccion critica/Imprimir transaccion critica
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1109,8 +1109,8 @@ Feature: Funcionalidad del modulo Consultas
     And click en el boton iniciar sesion
     And ingresar al modulo consultas
     And ingresar a la opcion transaccion critica
-    And seleccionar fecha desde "01/11/2023"
-    And seleccionar fecha hasta "01/11/2023"
+    And seleccionar fecha desde "01/01/2024"
+    And seleccionar fecha hasta "01/01/2024"
     And escribir hora desde "000000"
     And escribir hora hasta "100000"
     And seleccionar operacion "<Todos>"
@@ -1122,7 +1122,7 @@ Feature: Funcionalidad del modulo Consultas
     And click en imprimir
 
 ######## DEPURACION ########
-  @reporte
+  #@reporte
   Scenario: CPF206 - Depuracion/Buscar depuracion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -1149,7 +1149,7 @@ Feature: Funcionalidad del modulo Consultas
     And validar columna "Tipo de Depuración"
     And validar columna "Nro Registro"
 
-  @reporte
+  #@reporte
   Scenario: CPF207 - Depuracion/Exportar informe depuracion
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

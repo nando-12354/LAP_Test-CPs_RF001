@@ -2,6 +2,7 @@ package pageobject;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,7 +36,7 @@ public class modreportesPage extends util {
     @FindBy(xpath = "//div/app-input-date[@label='Hora Desde']/span//input") protected WebElement inputHoraDesde;
     @FindBy(xpath = "//div/app-input-date[@label='Hora Hasta']/span//input") protected WebElement inputHoraHasta;
     @FindBy(xpath = "//div/div//app-input-select-2[@formcontrolname='indicadorFecha']//p-dropdown/div/div") protected WebElement cmbIndicadorFecha;
-    @FindBy(xpath = "//div/div/app-input-select-2[@optionvalue='codTipoTicket']/span/p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
+    @FindBy(xpath = "//app-input-select-2[@optionvalue='codigoTipoTicket']//p-dropdown//div[@role='button']") protected WebElement cmbTipoTicket;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketInicio']//input") protected WebElement inputTicketDesde;
     @FindBy(xpath = "//div/div//app-input-text-2[@formcontrolname='rangoTicketFin']//input") protected WebElement inputTicketHasta;
     @FindBy(xpath = "//button[contains(.,'Resumen')]") protected WebElement btnResumen;
@@ -186,6 +187,20 @@ public class modreportesPage extends util {
     public void abrirComboboxTipoTicket(){
         wait.until(ExpectedConditions.visibilityOf(cmbTipoTicket));
         cmbTipoTicket.click();
+    }
+    public void abrirComboboxTipoTicketClicks() throws InterruptedException {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("ngx-spinner-overlay")));
+        wait.until(ExpectedConditions.visibilityOf(cmbTipoTicket));
+
+        for (int i = 0; i < 3; i++) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(cmbTipoTicket));
+                cmbTipoTicket.click();
+                break;
+            } catch (ElementClickInterceptedException e) {
+                Thread.sleep(1000);
+            }
+        }
     }
     public void seleccionarOpcion(String item) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/ul[@role='listbox']")));

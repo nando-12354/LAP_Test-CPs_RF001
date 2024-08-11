@@ -451,4 +451,10 @@ public class modreportesDefinition {
     public void ingreserElNumeroDeVuelo(String vuelo) {
         reportes.ingresarNumeroVueloC(vuelo);
     }
+
+    @And("ingresar tipo de ticket {string}")
+    public void ingresarTipoDeTicket(String clicks) throws InterruptedException{
+        reportes.abrirComboboxTipoTicketClicks();
+        reportes.seleccionarOpcion(clicks);
+    }
 }
