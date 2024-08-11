@@ -1,5 +1,5 @@
 Feature: Funcionalidad del modulo Alarmas
-  @reporte
+  #@reporte
   Scenario: CPF300 - Visualizar modulo alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -11,7 +11,7 @@ Feature: Funcionalidad del modulo Alarmas
     And visualizar la opcion "Alarmas Generadas"
 
 ######## CONFIGURAR ALARMAS ########
-  @reporte
+  #@reporte
   Scenario: CPF301 - Configurar alarma/Visualizar pantalla de configuracion alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -21,7 +21,7 @@ Feature: Funcionalidad del modulo Alarmas
     And ingresar a la opcion configurar alarmas
     And visualizar informacion de "Configuración Alarmas"
 
-  @reporte
+  #@reporte
   Scenario: CPF302 - Configurar alarma/Configurar nueva alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -42,7 +42,7 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje "Registro agregado correctamente"
 
-  @reporte
+  #@reporte
   Scenario: CPF303 - Configurar alarma/Editar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -61,7 +61,7 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje "Registro modificado correctamente"
 
-  @reporte
+  #@reporte
   Scenario: CPF304 - Configurar alarma/Eliminar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -74,7 +74,7 @@ Feature: Funcionalidad del modulo Alarmas
     And click en el boton aceptar
     And validar mensaje "Registro eliminado correctamente"
 
-  @reporte
+  #@reporte
   Scenario: CPF305 - Configurar alarma/Actualizar configuracion de alarma
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -93,7 +93,7 @@ Feature: Funcionalidad del modulo Alarmas
     And validar mensaje "Registro modificado correctamente"
 
 ######## MONITOREAR ALARMAS ########
-  @reporte
+  #@reporte
   Scenario: CPF306 - Monitorear alarmas/Visualizar pantalla de monitorear alarmas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -111,7 +111,7 @@ Feature: Funcionalidad del modulo Alarmas
     And validar columna "Importancia"
     And validar columna "Acciones"
 
-  @reporte
+  #@reporte
   Scenario: CPF307 - Monitorear alarmas/Atender alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -127,7 +127,7 @@ Feature: Funcionalidad del modulo Alarmas
     And validar mensaje "Atención realizada correctamente"
 
 ######## ALARMAS GENERADAS ########
-  @reporte
+  #@reporte
   Scenario: CPF308 - Alarmas generadas/Visualizar pantalla de alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -155,7 +155,7 @@ Feature: Funcionalidad del modulo Alarmas
     And validar columna "Descripción Actualización"
     And validar columna "Estado"
 
-  @reporte
+  #@reporte
   Scenario: CPF309 - Alarmas generadas/Consultar alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"
@@ -172,7 +172,7 @@ Feature: Funcionalidad del modulo Alarmas
     And seleccionar tipo de alarma "Todos"
     And click en el boton buscar
 
-  @reporte
+  #@reporte
   Scenario: CPF310 - Alarmas generadas/Exportar excel, pdf e imprimir alarmas generadas
     Given abre la ruta del aplicativo web
     And ingresa el usuario "fluyo"

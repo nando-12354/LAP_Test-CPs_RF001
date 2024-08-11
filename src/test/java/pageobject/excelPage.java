@@ -1,5 +1,7 @@
 package pageobject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -44,6 +46,7 @@ public class excelPage extends util {
             throw e;
         }
     }
+    /*
     public void clickBotonExcelC() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcelC));
         btnExcelC.click();
@@ -53,6 +56,22 @@ public class excelPage extends util {
             Thread.currentThread().interrupt();
             throw e;
         }
+    }
+    */
+    public void clickBotonExcelC() throws InterruptedException {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("ngx-spinner-overlay")));
+        wait.until(ExpectedConditions.visibilityOf(btnExcelC));
+
+        for (int i = 0; i < 3; i++) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(btnExcelC));
+                btnExcelC.click();
+                break;
+            } catch (ElementClickInterceptedException e) {
+                Thread.sleep(1000);
+            }
+        }
+        Thread.sleep(7000);
     }
     public void clickBotonExcelD() throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOf(btnExcelD));

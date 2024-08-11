@@ -45,7 +45,7 @@ public class botonPage extends util {
     @FindBy(xpath = "//button[contains(.,'Si')]") protected WebElement btnSi;
     @FindBy(xpath = "//button[contains(.,'Atrás')]") protected WebElement btnAtras;
     @FindBy(xpath = "//button[contains(.,'Representante')]") protected WebElement btnRepresentante;
-    @FindBy(xpath = "(//p-table//table//tbody/tr/td/span/i)[1]") protected WebElement btnVerDetalleC;
+    @FindBy(xpath = "(//p-table//table//tbody/tr/td//button)[1]") protected WebElement btnVerDetalleC;
     @FindBy(xpath = "(//table//tbody/tr/td/div/p-button[@icon='pi pi-eye']/button)[1]") protected WebElement btnVerDetalleB;
     @FindBy(xpath = "(//p-table//table//tbody/tr/td//button[@icon='pi pi-eye'])[1]") protected WebElement btnVerDetalle;
     @FindBy(xpath = "//button[contains(.,'Rehabilitar')]") protected WebElement btnRehabilitar;

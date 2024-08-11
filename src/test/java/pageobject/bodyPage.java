@@ -49,7 +49,7 @@ public class bodyPage extends util {
      */
     public void validarCuerpoGrillaB(String cuerpob) {
         boolean cuerpobValido = false;
-        String xpath = "//p-table//table/tbody/tr/td//strong[normalize-space(text())='" + cuerpob.trim() + "']";
+        String xpath = "//p-table//table/tbody/tr/td[normalize-space(text())='" + cuerpob.trim() + "']";
         try {
             WebElement cuerpobElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             String textoReal = cuerpobElemento.getText().trim();
